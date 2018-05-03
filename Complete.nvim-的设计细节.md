@@ -64,7 +64,7 @@ Buffer 和  Dictionary 提供了单词补全，这里要考虑已有的单词情
    * engross：独占模式，为 1 时运行时忽略所有其它补全，忽略 priority，必须提供 should_complete 方法
 * `complete#source#{name}#should_complete(opt)` 返回 1 或者 0 表示当前状态是否要运行补全，不提供该函数表示总是补全
    * `opt.line` 当前行字符串
-   * `opt.start` 补全其实字符
+   * `opt.start` 补全起始位置
    * `opt.input` 用户已输入的待补全部分
    * `opt.id` 补全 id 标识符
 * `complete#source#{name}#complete(opt, callback)` 提供执行补全的逻辑实现，调用 `callback` 传递结果，可返回 jobstart 返回的 channel id
