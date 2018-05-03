@@ -58,19 +58,23 @@ Buffer 和  Dictionary 提供了单词补全，这里要考虑已有的单词情
 
 * `complete#source#{name}#init()` 返回 source 配置信息，如 `name` `shortcut` `priority` `filetypes` `engross`， 除了 `name` 都是可选的
    * name： 唯一名称标识
-   * shortcut： 长度小于3的字符，标识 complete item 的类型
+   * shortcut： 长度小于等于3的字符，标识 complete item 的类型
    * priority： 优先度数值，越大则越优先
    * filetypes： 可作用的 filetype 列表，不提供则表示所有文件可用
-   * engross：独占模式，为 1 时运行时忽略所有其它补全，忽略 priority，必须提供 should_complete 方法
-* `complete#source#{name}#should_complete(opt)` 返回 1 或者 0 表示当前状态是否要运行补全，不提供该函数表示总是补全
+   * engross：独占模式，为 1 时运行时忽略所有其它补全，必须提供 should_complete 方法
+   * remote_filter: 为 1 时本身不做任何项目过滤，使用 complete.nvim 内置方法做过滤，此时插件需返还所有 complete items 
+
+* `complete#source#{name}#should_complete(opt)` 可选方法，不提供该函数表示总是补全，返回 1 或者 0 表示当前状态是否要运行补全
    * `opt.line` 当前行字符串
    * `opt.start` 补全起始位置
    * `opt.input` 用户已输入的待补全部分
    * `opt.id` 补全 id 标识符
+
+* `complete#source#{name}#get_offset(opt)` 可选方法，返回左右 offset，用于补全后额外清除补全项左右的多余字符，返回结果包含：
+   * `offsetLeft` 表示完成后清除插入位置之前的若干个字符，必须是 >= 0 整数
+   * `offsetRight` 表示完成后清除插入位置之后的若干个字符，必须是 >= 0 整数
+
 * `complete#source#{name}#complete(opt, callback)` 提供执行补全的逻辑实现，调用 `callback` 传递结果，可返回 jobstart 返回的 channel id
   *  `opt` 参数与 should_complete 相同
-  *  callback 函数可以传递一个 result 对象:
-    * items： 必须是 complete-items 数组，查看 `:h complete-items`
-    * offsetLeft: 必须正整数，表示完成后清除掉补全起始位置之前的若干个字符 （使用时 word 不允许换行）
-    * offsetRight: 必须正整数，表示完成后清除掉补全终止位置之后的若干个字符 （使用时 word 不允许换行）
+  *  callback 函数可以传递一个 complete-items 数组，`:h complete-items`，传递其它结果或者多次调用不会报错，但是返回结果会被忽略
 
