@@ -62,7 +62,7 @@ Buffer 和  Dictionary 提供了单词补全，这里要考虑已有的单词情
    * priority： 优先度数值，越大则越优先
    * filetypes： 可作用的 filetype 列表，不提供则表示所有文件可用
    * engross：独占模式，为 1 时运行时忽略所有其它补全，必须提供 should_complete 方法
-   * remote_filter: 为 1 时本身不做任何项目过滤，使用 complete.nvim 内置方法做过滤，此时插件需返还所有 complete items 
+   * filter: 可配置为 `remote` `word` `fuzzy` 表示使用默认过滤方式，`word` 过滤，`fuzzy` 过滤，配置后插件应返还所有 complete items 
 
 * `complete#source#{name}#should_complete(opt)` 可选方法，不提供该函数表示总是补全，返回 1 或者 0 表示当前状态是否要运行补全
    * `opt.line` 当前行字符串
