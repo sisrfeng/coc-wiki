@@ -71,6 +71,6 @@ Buffer 和  Dictionary 提供了单词补全，这里要考虑已有的单词情
   *  `opt` 参数与 should_complete 相同
   *  callback 函数可以传递一个 result 对象:
     * items： 必须是 complete-items 数组，查看 `:h complete-items`
-    * offset-left: 必须正整数，表示完成后清除掉补全起始位置之前的若干个字符 （使用时 word 不允许换行）
-    * offset-right: 必须正整数，表示完成后清除掉补全终止位置之后的若干个字符 （使用时 word 不允许换行）
+    * offsetLeft: 必须正整数，表示完成后清除掉补全起始位置之前的若干个字符 （使用时 word 不允许换行）
+    * offsetRight: 必须正整数，表示完成后清除掉补全终止位置之后的若干个字符 （使用时 word 不允许换行）
 
