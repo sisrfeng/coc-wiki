@@ -65,8 +65,12 @@ Buffer 和  Dictionary 提供了单词补全，这里要考虑已有的单词情
    * filter: 可配置为 `remote` `word` `fuzzy` 分别表示使用默认过滤方式，`word` 过滤，`fuzzy` 过滤，配置后插件应返还所有 complete items，建议通常情况配置为 `remote`
 
 * `complete#source#{name}#should_complete(opt)` 可选方法，不提供该函数表示总是补全，返回 1 或者 0 表示当前状态是否要运行补全
-   * `opt.line` 当前行字符串
-   * `opt.start` 补全起始位置
+   * `opt.bufnr` buffer number
+   * `opt.id` 补全 id
+   * `opt.filetype` 文件类型
+   * `opt.word` 光标当前单词
+   * `opt.line` 补全起始行
+   * `opt.col` 补全起始列
    * `opt.input` 用户已输入的待补全部分
    * `opt.id` 补全 id 标识符
 
