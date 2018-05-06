@@ -57,12 +57,9 @@ Buffer 和  Dictionary 提供了单词补全，这里要考虑已有的单词情
 ### 自定义补全扩展
 
 * `complete#source#{name}#init()` 返回 source 配置信息，如 `name` `shortcut` `priority` `filetypes` `engross`， 除了 `name` 都是可选的
-   * name： 唯一名称标识
    * shortcut： 长度小于等于3的字符，标识 complete item 的类型
-   * priority： 优先度数值，越大则越优先
    * filetypes： 可作用的 filetype 列表，不提供则表示所有文件可用
    * engross：独占模式，为 1 时运行时忽略所有其它补全，必须提供 should_complete 方法
-   * filter: 可配置为 `word` `fuzzy` 分别表示使用默认过滤方式，`word` 过滤，`fuzzy` 过滤，配置后插件应返还所有 complete items，建议通常情况配置为 `remote`。默认使用 g:complete_fuzzy_match，complete.nvim 总会对结果进行筛选和排序
 
 * `complete#source#{name}#should_complete(opt)` 可选方法，不提供该函数表示总是补全，返回 1 或者 0 表示当前状态是否要运行补全
    * `opt.bufnr` buffer number, string lei xin
