@@ -2,17 +2,11 @@
 
 ### 执行方式
 
-开启补全后，并发执行所以补全任务，全部返回结果或者超时（300ms）时将所有结果合并后使用 feedkey 方式调用 `<Plug_>` 快捷键调用 `<C-R>= complete#show()<CR>` 方法，`complete#show` 调用 vim 提供的 `complete` 方法。
 如果某个补全方法 300ms 没有返回，不进行中断处理，继续等待其返回值，如果 1s 后没有返回则对该方法进行中止（如果有提供 jobid）并忽略后续任何结果。
 
 多个补全容许同时执行，使用 buffer hash + col + lnum 生成补全唯一 Id，不同补全 Id 拥有独立的补全列表
 
 ### 针对补全列表的缓存
-
-如果任何一个补全方法失败（300ms 没有返回），不对结果进行缓存。
-针对当前 buffer 不同补全 Id 缓存最近 10 次补全列表。
-buffer 切换，dictionary 改变后缓存完全重置。
-每个补全 Id 的补全列表 20s 后无使用则自动清除。
 
 ### 默认的补全类型
 
@@ -21,13 +15,12 @@ buffer 切换，dictionary 改变后缓存完全重置。
 
 ### Buffer 补全中的关键词处理
 
-统一使用 `[\w_-$]`做为合法单词字符建立关键词列表。
 如果单词长度大于 8 且包含 `_` `-` 且补全发生在当前文件，给出分割后除最后一个单词做为可用关键词，这样做可以更方便编写较长名字的 css class
 
 ### Dictionary 补全中的特殊处理
 
-* 建立 buffer dictionary 映射，Buffer 进入时读取文件并载入，buffer 退出时如果没有 buffer 使用则清理掉该 dictionary 缓存。
-* 监听 dictionary 改变事件，改变时即时调整缓存
+* 针对每个文件缓存
+* 用户可以手工刷新缓存
 
 ### 针对带补全单词的不同处理
 
@@ -40,7 +33,7 @@ Buffer 和  Dictionary 提供了单词补全，这里要考虑已有的单词情
 ### 针对路径补全的处理逻辑
 
 路径补全应该只在特定条件下生效，例如 javascript 文件中当前行有 import， require 且单词处于字符串中。
-针对不个类型文件提供 vim 方法来判定是否需要使用路径补全。
+针对不同类型文件提供 vim 方法来判定是否需要使用路径补全。
 路径补全是排它的，生效时其它补全不可用
 路径补全时从 CWD 进行文件查找，补全后插入文件相对路径
 路径补全查找时使用路径专用算法排序：例如 fzy 的算法
@@ -48,7 +41,6 @@ Buffer 和  Dictionary 提供了单词补全，这里要考虑已有的单词情
 ### 错误处理
 
 针对后台报错使用 log4js 保存在 `$TMP/complete.log` 中，使用 fundebug 进行上报（用户没禁止的话）。
-需要提示用户的错误单行使用 `echoerr`，多行使用 `complete#util#show_error` 方法打开下方临时窗口 
 
 ### 针对 LSP 中定义的 `text_edit` 以及 `snippet` 类型的处理
 
@@ -62,17 +54,17 @@ Buffer 和  Dictionary 提供了单词补全，这里要考虑已有的单词情
    * engross：独占模式，为 1 时运行时忽略所有其它补全，必须提供 should_complete 方法
 
 * `complete#source#{name}#should_complete(opt)` 可选方法，不提供该函数表示总是补全，返回 1 或者 0 表示当前状态是否要运行补全
-   * `opt.bufnr` buffer number, string lei xin
+   * `opt.bufnr` buffer number, string 类型
    * `opt.filetype` 文件类型
    * `opt.word` 光标当前单词
    * `opt.line` 补全起始行
    * `opt.col` 补全起始列
    * `opt.input` 用户已输入的待补全部分
    * `opt.id` 补全 id 标识符
+   * `opt.colnr` 光标列数
+   * `opt.lnum` 光标行数
 
-* `complete#source#{name}#get_offset(opt)` 可选方法，返回左右 offset，用于补全后额外清除补全项左右的多余字符，返回结果包含：
-   * `offsetLeft` 表示完成后清除插入位置之前的若干个字符，必须是 >= 0 整数
-   * `offsetRight` 表示完成后清除插入位置之后的若干个字符，必须是 >= 0 整数
+* `complete#source#{name}#get_position(opt)` 可选方法，用于返回自定义补全起始列数（负数表示不参与补全，数值大于光标位置会被忽略），如果该列数与 `opt.col` 不同，且该方法有补全结果，则忽略其它补全结果。 
 
 * `complete#source#{name}#complete(opt, callback)` 提供执行补全的逻辑实现，调用 `callback` 传递结果，可返回 jobstart 返回的 channel id
   *  `opt` 参数与 should_complete 相同
