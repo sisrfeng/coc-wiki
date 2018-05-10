@@ -64,7 +64,7 @@ Buffer 和  Dictionary 提供了单词补全，这里要考虑已有的单词情
    * `opt.colnr` 光标列数
    * `opt.lnum` 光标行数
 
-* `complete#source#{name}#get_position(opt)` 可选方法，用于返回自定义补全起始列数（负数表示不参与补全，数值大于光标位置会被忽略），如果该列数与 `opt.col` 不同，且该方法有补全结果，则忽略其它补全结果。 
+* `complete#source#{name}#get_startcol(opt)` 可选方法，用于返回自定义补全起始列数（负数表示不参与补全，数值大于光标位置会被忽略），如果该列数与 `opt.col` 不同，且该方法有补全结果，则忽略其它补全结果。 
 
 * `complete#source#{name}#complete(opt, callback)` 提供执行补全的逻辑实现，调用 `callback` 传递结果，可返回 jobstart 返回的 channel id
   *  `opt` 参数与 should_complete 相同
