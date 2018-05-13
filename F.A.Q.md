@@ -1,0 +1,13 @@
+## Why `omni` source is not enabled by default?
+
+This is because `omni` function runs as vim script, it could be really slow and block your UI, if you're working on some complicated language, it's recommended to use async source, for example: the LSP based ones or somehow using a server for async communication. COC make the filetypes of `omni` source as user defined, so you could easily switch to server based sources without overhead. You could defined the filetypes of `omni` source like this:
+
+``` vim
+  let g:coc_source_config = {
+        \  'omni': {
+        \    'filetypes': ['css', 'html']
+        \  },
+        \}
+``` 
+This could enable COC to run `omni` functions on filetype `css` and `html`.
+BTW: The recommended css and html complete provider plugin are [othree/csscomplete.vim](https://github.com/othree/csscomplete.vim) [othree/html5.vim](https://github.com/othree/html5.vim)
