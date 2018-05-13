@@ -24,3 +24,7 @@ BTW: This concept is borrowed from [deoplete.nvim](https://github.com/Shougo/deo
 ## Input highlight not updated when selected complete item changed.
 
 That could only be resolved after [neovim/pull/8377](https://github.com/neovim/neovim/pull/8377) merged, and you have `TextChangedP` event available in your neovim.
+
+## Is it possible to highlight the characters in complete items?
+
+No, since vim/neovim doesn't have that kind of API, unless you're using [external UIs of neovim](https://github.com/neovim/neovim/wiki/Related-projects#gui) some of them could render complete items themself and provide custom highlight for complete items. 
