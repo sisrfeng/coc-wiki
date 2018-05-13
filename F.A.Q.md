@@ -11,4 +11,4 @@ This is because `omni` function runs as vim script, it could be really slow and 
 ``` 
 This could enable COC to run `omni` functions on filetype `css` and `html`.
 
-BTW: The recommended css and html complete provider plugin are [othree/csscomplete.vim](https://github.com/othree/csscomplete.vim) [othree/html5.vim](https://github.com/othree/html5.vim)
+BTW: The recommended css and html completion plugins are [othree/csscomplete.vim](https://github.com/othree/csscomplete.vim) [othree/html5.vim](https://github.com/othree/html5.vim)
