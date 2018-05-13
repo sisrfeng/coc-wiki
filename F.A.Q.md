@@ -13,12 +13,12 @@ This could enable COC to run `omni` functions on filetype `css` and `html`.
 
 BTW: The recommended css and html completion plugins are [othree/csscomplete.vim](https://github.com/othree/csscomplete.vim) [othree/html5.vim](https://github.com/othree/html5.vim)
 
-## Why `ultisnip` source requires user configuration to work?
+## Why `ultisnips` source requires user configuration to work?
 
-Because completion framework can't tell whether you're completing for snippet or words, it could just slow you down when the popup menu contains all of them. You could simplify define a custom complete keymap for UltiSnip like this:
+Because completion framework can't tell whether you're completing for snippest or words, it could just slow you down when the popup menu contains all of them. You could simply define a custom complete keymap for UltiSnips like this:
 
 ``` vim
-" improved ultisnip complete {{
+" improved ultisnips complete {{
 inoremap <C-l> <C-R>=SnipComplete()<CR>
 func! SnipComplete()
   let line = getline('.')
@@ -52,27 +52,25 @@ func! SnipComplete()
 endfunc
 " }}
 ```
-So then you can use `<C-l>` for snippet completion, it's much faster.  (Maybe I should send a PR to UltiSnip)
+So then you can use `<C-l>` for snippets completion, it's much faster.  (Maybe I should send a PR to UltiSnips)
 
-However, you can still have ultisnip source enabled for specified filetype by:
+However, you can still have ultisnips source enabled for specified filetype by:
 ``` vim
   let g:coc_source_config = {
-        \  'omni': {
+        \  'ultisnips': {
         \    'filetypes': ['javascript']
         \  },
         \}
 ```
 Or for all filetypes:
-```
+``` vim
   let g:coc_source_config = {
-        \  'omni': {
+        \  'ultisnips': {
         \    'filetypes': v:null
         \  },
         \}
 ```
-
-In general, COC is build for speed & flexible of completion, **not** for the beginners. 
-
+In general, COC is build for speed & flexible, **not** for the beginners. 
 
 ## Why `omni` doesn't work even if enabled in configuration?
 
