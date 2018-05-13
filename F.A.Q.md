@@ -15,7 +15,7 @@ BTW: The recommended css and html completion plugins are [othree/csscomplete.vim
 
 ## `omni` is enabled for current filetype, but not working!
 
-Some `omni` function implementation could be broken and they could affect how COC works, so they have to be blacklisted, the current blacklist is: `LanguageClient#complete`.
+Some `omni` function could affect how COC works, so they have to be blacklisted, the current blacklist is: `LanguageClient#complete`.
 
 Get us feedback if you found any `omnifunc` that not works with COC, thanks!
 
