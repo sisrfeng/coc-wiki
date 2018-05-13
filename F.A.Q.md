@@ -76,6 +76,13 @@ In general, COC is designed for speed & flexible, **not** for the beginners.
 
 ## Why `omni` doesn't work even if enabled in configuration?
 
+First, checkout you have set `omnifunc` option correctly for current filetype by:
+
+``` vim
+:verbose set omnifunc
+```
+COC would ignore `omni` complete silently if the value is not a existing function.
+
 Some `omni` function could affect how COC works, so they have to be blacklisted, the current blacklist is: `LanguageClient#complete`.
 
 Get us feedback if you found any `omnifunc` that not works with COC, thanks!
