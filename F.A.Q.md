@@ -72,7 +72,7 @@ Or for all filetypes:
         \  },
         \}
 ```
-In general, COC is build for speed & flexible, **not** for the beginners. 
+In general, COC is designed for speed & flexible, **not** for the beginners. 
 
 ## Why `omni` doesn't work even if enabled in configuration?
 
