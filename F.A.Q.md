@@ -20,3 +20,7 @@ Some `omni` function could affect how COC works, so they have to be blacklisted,
 Get us feedback if you found any `omnifunc` that not works with COC, thanks!
 
 BTW: This concept is borrowed from [deoplete.nvim](https://github.com/Shougo/deoplete.nvim/blob/5d78e1a75d36a719f1f66ee78c635ea05df72b8c/rplugin/python3/deoplete/source/omni.py#L63)
+
+## Input highlight not updated when selected complete item changed.
+
+That could only be resolved after [neovim/pull/8377](https://github.com/neovim/neovim/pull/8377) merged, and you have `TextChangedP` event available in your neovim.
