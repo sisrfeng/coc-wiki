@@ -1,4 +1,4 @@
-## Why `omni` source is not enabled by default?
+## Why `omni` source requires user configuration to work?
 
 This is because `omni` function runs as vim script, it could be really slow and block your UI, if you're working on some complicated language, it's recommended to use async source, for example: the LSP based ones or somehow using a server for async communication. COC make the filetypes of `omni` source as user defined, so you could easily switch to server based sources without overhead. You could define the filetypes of `omni` source like this:
 
@@ -12,6 +12,67 @@ This is because `omni` function runs as vim script, it could be really slow and 
 This could enable COC to run `omni` functions on filetype `css` and `html`.
 
 BTW: The recommended css and html completion plugins are [othree/csscomplete.vim](https://github.com/othree/csscomplete.vim) [othree/html5.vim](https://github.com/othree/html5.vim)
+
+## Why `ultisnip` source requires user configuration to work?
+
+Because completion framework can't tell whether you're completing for snippet or words, it could just slow you down when the popup menu contains all of them. You could simplify define a custom complete keymap for UltiSnip like this:
+
+``` vim
+" improved ultisnip complete {{
+inoremap <C-l> <C-R>=SnipComplete()<CR>
+func! SnipComplete()
+  let line = getline('.')
+  let start = col('.') - 1
+  while start > 0 && line[start - 1] =~# '\k'
+    let start -= 1
+  endwhile
+  let suggestions = []
+  let snips =  UltiSnips#SnippetsInCurrentScope(0)
+  for item in keys(snips)
+    let entry = {'word': item, 'menu': snips[item]}
+    call add(suggestions, entry)
+  endfor
+  if empty(suggestions)
+    echohl Error | echon 'no match' | echohl None
+  elseif len(suggestions) == 1
+    let pos = getcurpos()
+    if start == 0
+      let str = trigger
+    else
+      let str = line[0:start - 1] . trigger
+    endif
+    call setline('.', str)
+    let pos[2] = len(str) + 1
+    call setpos('.', pos)
+    call UltiSnips#ExpandSnippet()
+  else
+    call complete(start + 1, suggestions)
+  endif
+  return ''
+endfunc
+" }}
+```
+So then you can use `<C-l>` for snippet completion, it's much faster.  (Maybe I should send a PR to UltiSnip)
+
+However, you can still have ultisnip source enabled for specified filetype by:
+``` vim
+  let g:coc_source_config = {
+        \  'omni': {
+        \    'filetypes': ['javascript']
+        \  },
+        \}
+```
+Or for all filetypes:
+```
+  let g:coc_source_config = {
+        \  'omni': {
+        \    'filetypes': v:null
+        \  },
+        \}
+```
+
+In general, COC is build for speed & flexible of completion, **not** for the beginners. 
+
 
 ## Why `omni` doesn't work even if enabled in configuration?
 
