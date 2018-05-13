@@ -83,7 +83,7 @@ First, checkout you have set `omnifunc` option correctly for current filetype by
 ```
 COC would ignore `omni` complete silently if the value is not a existing function.
 
-Some `omni` function could affect how COC works, so they have to be blacklisted, the current blacklist is: `LanguageClient#complete`.
+Some `omni` function may badly implemented or could affect how COC works, so they have to be blacklisted, the current blacklist is: `LanguageClient#complete`.
 
 Get us feedback if you found any `omnifunc` that not works with COC, thanks!
 
