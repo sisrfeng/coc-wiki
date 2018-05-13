@@ -13,7 +13,7 @@ This could enable COC to run `omni` functions on filetype `css` and `html`.
 
 BTW: The recommended css and html completion plugins are [othree/csscomplete.vim](https://github.com/othree/csscomplete.vim) [othree/html5.vim](https://github.com/othree/html5.vim)
 
-## `omni` is enabled for current filetype, but not working!
+## Why `omni` doesn't work even if enabled in configuration?
 
 Some `omni` function could affect how COC works, so they have to be blacklisted, the current blacklist is: `LanguageClient#complete`.
 
