@@ -83,7 +83,7 @@ First, checkout you have set `omnifunc` option correctly for current filetype by
 ```
 COC would ignore `omni` complete silently if the value is not a existing function.
 
-Some `omni` function may badly implemented or could affect how COC works, so they have to be blacklisted, the current blacklist is: `LanguageClient#complete`.
+Some `omni` functions could be broken, so they have to be blacklisted, the current blacklist is: `LanguageClient#complete`.
 
 Get us feedback if you found any `omnifunc` that not works with COC, thanks!
 
@@ -91,7 +91,7 @@ BTW: This concept is borrowed from [deoplete.nvim](https://github.com/Shougo/deo
 
 ## Input highlight not updated when selected complete item changed.
 
-That could only be resolved after [neovim/pull/8377](https://github.com/neovim/neovim/pull/8377) merged, and you have `TextChangedP` event available in your neovim.
+The problem could be resolved after [neovim/pull/8377](https://github.com/neovim/neovim/pull/8377) merged, and you have `TextChangedP` event available in your neovim.
 
 ## Is it possible to highlight the characters in complete items?
 
