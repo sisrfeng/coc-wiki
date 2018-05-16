@@ -2,7 +2,7 @@ Here's some common problems that you may need to understand when working with CO
 
 ## Word of current buffer not shown by around source.
 
-This could happen when the file is larger than 3k lines code, for performance reason, the around source would then use words from the latest saved buffer cache, so it could be not accurate.
+This could happen when the file is larger than 5k lines code, for performance reason, the around source would then use words from the latest saved buffer cache, so it could be not accurate.
 
 ## Why `omni` source requires user configuration to work?
 
