@@ -1,5 +1,9 @@
 Here's some common problems that you may need to understand when working with COC.
 
+## Word of current buffer not shown by around source.
+
+This could happen when the file is larger than 3k lines code, for performance reason, the around source would then use words from the latest saved buffer cache, so it could be not accurate.
+
 ## Why `omni` source requires user configuration to work?
 
 This is because `omni` function runs as vim script, it could be really slow and block your UI, if you're working on some complicated language, it's recommended to use async source, for example: the LSP based ones or somehow using a server for async communication. COC make the filetypes of `omni` source as user defined, so you could easily switch to server based sources without overhead. You can define the filetypes of `omni` source like this:
