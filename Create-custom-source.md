@@ -1,3 +1,3 @@
-It's easy to create a custom source for COC [^1]
+It's easy to create a custom source for COC 
 
-[^1]: Footnote text goes here.
+Footnote text goes here.
