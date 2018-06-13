@@ -1,7 +1,6 @@
-
 # Configuration file
 
-COC.nvim could use some [json5](https://github.com/json5/json5) formated file as configurations.
+COC.nvim use [json5](https://github.com/json5/json5) formated file as configurations.
 
 There're three types of configuration file for COC.
 
