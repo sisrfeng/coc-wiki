@@ -63,7 +63,7 @@ Common sources and vim sources are configured with prefix `coc.source.{sourcenam
   // only show the complete item that first letter match the input, works for vim source only.
   "coc.source.neco.firstMatch": true,
   // List of none-word characters for trigger completion
-  "coc.source.file.triggerCharacters": [],
+  "coc.source.neco.triggerCharacters": [],
 ```
 
 ## Tsserver configuration
