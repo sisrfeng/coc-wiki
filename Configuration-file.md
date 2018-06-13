@@ -39,5 +39,39 @@ Common sources and vim sources are configured with prefix `coc.source.{sourcenam
   "coc.source.neco.priority": 9,
   // filetypes using this source, set empty means disable source, if not defined, it works for all filetypes
   "coc.source.neco.filetypes": ["vim"],
+  // only show the complete item that first letter match the input, works for vim source only.
+  "coc.source.neco.firstMatch": true,
+  // List of none-word characters for trigger completion
+  "coc.source.file.triggerCharacters": [],
+```
+
+## Tsserver configuration
+
+Tsserver configuration used for customize how tsserver works.
+
+``` js
+  // language locale
+  "tsserver.locale": null,
+  // folder of tsserver.js
+  // Default priority: module in node_modules > module in $PATH > bundled module
+  "tsserver.tsdk": "",
+  // absolute path of npm, infered from $PAHT if empty
+  "tsserver.npm": "",
+  // could be 'normal' 'terse' 'verbose' 'off'
+  "tsserver.log": "off",
+  // could be 'off' 'messages' 'verbose', could also be provided by environment variable 'TSS_TRACE'
+  "tsserver.trace": "off",
+  // module name of global plugins
+  "tserver.pluginNames": [],
+  // folder root of global plugins
+  "tsserver.pluginRoot": "",
+  // could also be provided by environment variable `TSS_DEBUG`
+  "tsserver.debugPort": null,
+  "tsserver.reportStyleChecksAsWarnings": true,
+  "tsserver.implicitProjectConfig.checkJs": false,
+  "tsserver.implicitProjectConfig.experimentalDecorators": false,
+  "tsserver.disableAutomaticTypeAcquisition": false,
+  // enable support for javascript file
+  "tsserver.enableJavascript": false,
 ``` 
 
