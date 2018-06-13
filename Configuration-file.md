@@ -1,3 +1,5 @@
+COC.nvim support different scope of configuration files in JSON5 format.
+
 # Configuration file format
 
 COC.nvim use [json5](https://github.com/json5/json5) as configurations file format, like VSCode.
