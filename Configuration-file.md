@@ -28,14 +28,16 @@ You don't have to create a configuration file from sketch, copy [settings/defaul
 
 ## Configuration for sources
 
-Common sources and vim sources are configured with prefix `coc.source.{sourcenam}` in configuration file, they share some common attributes, take 'buffer' source for example:
+Common sources and vim sources are configured with prefix `coc.source.{sourcenam}` in configuration file, they share some common attributes, take 'neco' source for example:
 
 ``` js
   // Set to true to disable a source totally
-  "coc.source.buffer.disabled": false,
+  "coc.source.neco.disabled": false,
   // Short words used for menu of complete item
-  "coc.source.buffer.shortcut": "B",
-  // priority of source
-  "coc.source.buffer.priority": 1,
+  "coc.source.neco.shortcut": "NEC",
+  // priority of this source
+  "coc.source.neco.priority": 9,
+  // filetypes using this source, set empty means disable source, if not defined, it works for all filetypes
+  "coc.source.neco.filetypes": ["vim"],
 ``` 
 
