@@ -22,7 +22,7 @@ There're three types of configuration file for COC.
 
 * The project configuration should be named with `coc-settings.json` and would be resolve in directory `.vim`. Just after vim started, COC would look up from current directory of vim to find it.
 
-The active configuration would be a merged result from 'default', 'user' and 'project' configuration file, the later one have higher priority.
+The active configuration would be a merged result from 'default', 'user' and 'project' configuration file, **the later one have higher priority**.
 
 You don't have to create a configuration file from sketch, copy [settings/default.json](https://github.com/neoclide/coc.nvim/blob/master/settings/default.json) to get start.
 
