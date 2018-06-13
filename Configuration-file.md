@@ -26,6 +26,27 @@ The active configuration would be a merged result from 'default', 'user' and 'pr
 
 You don't have to create a configuration file from sketch, copy [settings/default.json](https://github.com/neoclide/coc.nvim/blob/master/settings/default.json) to get start.
 
+## Default COC preferences
+
+``` js
+  // could be 'always' 'trigger' => for specified trigger characters only 'none'
+  "coc.preferences.autoTrigger": "always",
+  // timeout for completion
+  "coc.preferences.timeout": 300,
+  // not make vim select first item on completion start
+  "coc.preferences.noselect": true,
+  // highlight filter text on completion
+  "coc.preferences.enableHighlight": false,
+  // foreground color of filter text
+  "coc.preferences.highlighForeground": "#ffffff",
+  // background color of filter text
+  "coc.preferences.highlighBackground": "#b180a4",
+  // autocmd events for echo function signature
+  "coc.preferences.signatureEvents": ["CursorHold"],
+  // executable path for https://facebook.github.io/watchman/, detected from $PATH by default
+  "coc.preferences.watchmanPath": "",
+``` 
+
 ## Configuration for sources
 
 Common sources and vim sources are configured with prefix `coc.source.{sourcenam}` in configuration file, they share some common attributes, take 'neco' source for example:
