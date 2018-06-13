@@ -24,5 +24,18 @@ There're three types of configuration file for COC.
 
 The active configuration would be a merged result from 'default', 'user' and 'project' configuration file, the later one have higher priority.
 
-You don't have to create a configuration file from sketch, copy the file [settings/default.json](https://github.com/neoclide/coc.nvim/blob/master/settings/default.json) to get start.
+You don't have to create a configuration file from sketch, copy [settings/default.json](https://github.com/neoclide/coc.nvim/blob/master/settings/default.json) to get start.
+
+## Configuration for sources
+
+Common sources and vim sources are configured with prefix `coc.source.{sourcenam}` in configuration file, they share some common attributes, take 'buffer' source for example:
+
+``` js
+  // Set to true to disable a source totally
+  "coc.source.buffer.disabled": false,
+  // Short words used for menu of complete item
+  "coc.source.buffer.shortcut": "B",
+  // priority of source
+  "coc.source.buffer.priority": 1,
+``` 
 
