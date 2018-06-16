@@ -6,7 +6,7 @@
 * [Use `<Tab>` or custom key for trigger completion](https://github.com/neoclide/coc.nvim/wiki/Configuration-of-completion#use-tab-or-custom-key-for-trigger-completion)
 * [Improve completion experience](https://github.com/neoclide/coc.nvim/wiki/Configuration-of-completion#improve-completion-experience)
 
-## [Using-configuration-file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file)
+## [Using configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file)
 
 * [Configuration file format](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#configuration-file-format)
 * [Configuration file resolve](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#configuration-file-resolve)
