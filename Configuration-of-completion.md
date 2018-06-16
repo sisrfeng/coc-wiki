@@ -1,10 +1,10 @@
+COC support different kinds of completion modes, and should works well with your vim completion options.
+
 # Contents
 
 * [Trigger mode of completion](#trigger-mode-of-completion)
 * [Use `<Tab>` or custom key for trigger completion](#use-tab-or-custom-key-for-trigger-completion)
 * [Improve completion experience](#improve-completion-experience)
-
-COC support different kinds of completion modes, and should works well with your vim completion options.
 
 ## Trigger mode of completion
 
