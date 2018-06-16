@@ -10,7 +10,7 @@ COC have 3 different trigger modes:
 
 You can change trigger mode by [using configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file)
 
-## Using `<Tab>` or custom key for trigger completion
+## Use `<Tab>` or custom key for trigger completion
 
 You can make use of `coc#refresh()` for trigger completion like:
 
@@ -29,3 +29,17 @@ or
 ```
 imap <c-space> coc#refresh()
 ```
+
+## Improve completion experience
+
+* Use `<Tab>` and `<S-Tab>` for navigate completion list:
+
+   ``` vim
+   inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+   inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+   ```
+
+* Use `<enter>` to confirm complete
+   ``` vim
+   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+   ```
