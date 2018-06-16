@@ -30,6 +30,8 @@ or
 imap <c-space> coc#refresh()
 ```
 
+You can have automatic trigger and custom trigger keys work together.
+
 ## Improve completion experience
 
 * Use `<Tab>` and `<S-Tab>` for navigate completion list:
@@ -43,3 +45,8 @@ imap <c-space> coc#refresh()
    ``` vim
    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
    ```
+
+* Close preview window when completion is done.
+    ``` vim
+    autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+    ```
