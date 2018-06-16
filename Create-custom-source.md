@@ -43,17 +43,17 @@ all options are optional.
 ## Options for complete
 
 ``` typescript
-id:               number // unqiue        number
-bufnr:            number // current       buffer  number
-line:             string // current       line    string
-col:              number // the           start   column     number of input
-input:            string // the           input   string
-filetype:         string // filetype      of      current    buffer
-filepath:         string // fullpath      of      current    buffer
-changedtick:      number // b:changedtick when    start      completion
-triggerCharacter: string // the           trigger character, could  be empty string of single character
-colnr:            number // column        number  of         cursor 
-linenr:           number // line          number  of         cursor
+  id              : number // unqiue number
+  bufnr           : number // current buffer number
+  line            : string // current line string
+  col             : number // the start column number of input
+  input           : string // the input string
+  filetype        : string // filetype of current buffer
+  filepath        : string // fullpath of current buffer
+  changedtick     : number // b:changedtick when start completion
+  triggerCharacter: string // the trigger character, could be empty string of single character
+  colnr           : number // column number of cursor 
+  linenr          : number // line number of cursor
 ```
 
 ## Result of complete
