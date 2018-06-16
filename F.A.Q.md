@@ -2,7 +2,7 @@ Here's some common problems that you may need to understand when working with CO
 
 ## Why `omni` source requires user configuration to work?
 
-This is because `omni` function runs as vim script, it could be really slow and block your UI, if you're working on some complicated language, it's recommended to use async source, for example: the LSP based ones or somehow using a server for async communication. COC make the filetypes of `omni` source as user defined, so you could easily switch to server based sources without overhead. You can define the filetypes of `omni` source in your `coc-settings.json` like this:
+This is because `omni` function runs as vim script, it could be really slow and block your UI, if you're working on some complicated language, it's recommended to use async source, for example: the LSP based ones or somehow using a server for async communication. COC make the filetypes of `omni` source empty by default, so you could easily switch to server based sources without overhead. You can define the filetypes of `omni` source in your `coc-settings.json` like this:
 
 ``` js
 "coc.source.omni.filetypes": ["html", "css"],
