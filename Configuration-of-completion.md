@@ -1,3 +1,4 @@
+
 COC support different kinds of completion modes, and should works well with your vim completion options.
 
 ## Trigger mode of completion
