@@ -29,3 +29,11 @@
 * [How could separate `ultisnips` source from COC?](https://github.com/neoclide/coc.nvim/wiki/F.A.Q#how-could-separate-ultisnips-source-from-coc)
 * [Why `omni` doesn't work even if enabled in configuration?](https://github.com/neoclide/coc.nvim/wiki/F.A.Q#why-omni-doesnt-work-even-if-enabled-in-configuration)
 * [Is it possible to highlight the characters in complete items?](https://github.com/neoclide/coc.nvim/wiki/F.A.Q#is-it-possible-to-highlight-the-characters-in-complete-items)
+
+## Similar projects
+
+* [deoplete.nvim](https://github.com/Shougo/deoplete.nvim)
+* [asyncomplete.vim](https://github.com/prabirshrestha/asyncomplete.vim)
+* [vim-mucomplete](https://github.com/lifepillar/vim-mucomplete/)
+* [nvim-completion-manager](https://github.com/roxma/nvim-completion-manager)
+* [completor.vim](https://github.com/maralla/completor.vim)
