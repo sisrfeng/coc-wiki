@@ -1,5 +1,7 @@
 [Trigger mode of completion](#trigger-mode-of-completion)
+
 [Use `<Tab>` or custom key for trigger completion](#use-tab-or-custom-key-for-trigger-completion)
+
 [Improve completion experience](#improve-completion-experience)
 
 ***
