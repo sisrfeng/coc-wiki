@@ -1,6 +1,14 @@
 COC.nvim support different scope of configuration files in JSON5 format.
+# Contents
 
-# Configuration file format
+* [Configuration file format](#configuration-file-format)
+* [Configuration file resolve](#configuration-file-resolve)
+* [Default COC preferences](#default-coc-preferences)
+* [Configuration for sources](#configuration-for-sources)
+* [Tsserver configuration](#tsserver-configuration)
+* [Typescript/javascript configuration](#typescriptjavascript-configuration)
+
+## Configuration file format
 
 COC.nvim use [json5](https://github.com/json5/json5) as configurations file format, like VSCode.
 It's basically json with comment, like:
@@ -14,7 +22,7 @@ It's basically json with comment, like:
 
 You can make use of [json5.vim](https://github.com/gutenye/json5.vim) to get correct highlight for comment.
 
-# Configuration file resolve
+## Configuration file resolve
 
 There're three types of configuration file for COC.
 
@@ -100,3 +108,4 @@ Tsserver configuration used for customize how tsserver works.
 ## Typescript/javascript configuration
 
 The 'typescript' and 'javascript' configurations contains information about file format and complete option, they are used by module `typescript-service` only, check out [settings/default.json](https://github.com/neoclide/coc.nvim/blob/master/settings/default.json) for available options.
+
