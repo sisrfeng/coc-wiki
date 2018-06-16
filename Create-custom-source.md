@@ -1,5 +1,13 @@
 Custom vim completion source could be created with simple steps.
 
+# Contents
+
+* [Start by a simple example](#start-by-a-simple-example)
+* [Default options of source](#default-options-of-source)
+* [Options for complete](#options-for-complete)
+* [Result of complete](#result-of-complete)
+* [Optional functions](#optional-functions)
+
 ## Start by a simple example
 
 Assume `foo` as the source name.
