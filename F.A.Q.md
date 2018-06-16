@@ -1,27 +1,24 @@
 Here's some common problems that you may need to understand when working with COC.
 
-## Word of current buffer not shown by around source.
-
-This could happen when the file is larger than 5k lines code, for performance reason, the around source would then use words from the latest saved buffer cache, so it could be not accurate.
-
 ## Why `omni` source requires user configuration to work?
 
-This is because `omni` function runs as vim script, it could be really slow and block your UI, if you're working on some complicated language, it's recommended to use async source, for example: the LSP based ones or somehow using a server for async communication. COC make the filetypes of `omni` source as user defined, so you could easily switch to server based sources without overhead. You can define the filetypes of `omni` source like this:
+This is because `omni` function runs as vim script, it could be really slow and block your UI, if you're working on some complicated language, it's recommended to use async source, for example: the LSP based ones or somehow using a server for async communication. COC make the filetypes of `omni` source as user defined, so you could easily switch to server based sources without overhead. You can define the filetypes of `omni` source in your `coc-settings.json` like this:
 
-``` vim
-  let g:coc_source_config = {
-        \  'omni': {
-        \    'filetypes': ['css', 'html']
-        \  },
-        \}
+``` js
+"coc.source.omni.filetypes": ["html", "css"],
 ``` 
 This could enable COC to run `omni` functions on filetype `css` and `html`.
 
 BTW: The recommended css and html completion plugins are [othree/csscomplete.vim](https://github.com/othree/csscomplete.vim) [othree/html5.vim](https://github.com/othree/html5.vim)
 
-## Why `ultisnips` source requires user configuration to work?
+## How could separate `ultisnips` source from COC?
 
-Because completion framework can't tell whether you're completing for snippest or words, it could just slow you down when the popup menu contains all of them. You could simply define a custom complete keymap for UltiSnips like this:
+First, disable all filetypes for ultisnips in your `coc-settings.json`:
+
+``` js
+"coc.source.ultisnips.filetypes": [],
+```
+Second, create your own keymap by:
 
 ``` vim
 " improved ultisnips complete {{
@@ -58,25 +55,7 @@ func! SnipComplete()
 endfunc
 " }}
 ```
-So then you can use `<C-l>` for snippets completion, it's much faster.  (Maybe I should send a PR to UltiSnips)
-
-However, you can still have ultisnips source enabled for specified filetype by:
-``` vim
-  let g:coc_source_config = {
-        \  'ultisnips': {
-        \    'filetypes': ['javascript']
-        \  },
-        \}
-```
-Or for all filetypes:
-``` vim
-  let g:coc_source_config = {
-        \  'ultisnips': {
-        \    'filetypes': v:null
-        \  },
-        \}
-```
-In general, COC is designed for speed & flexible, **not** for the beginners. 
+Then you can use `<C-l>` for snippets completion.
 
 ## Why `omni` doesn't work even if enabled in configuration?
 
@@ -89,13 +68,9 @@ COC would ignore `omni` complete silently if the value is not a existing functio
 
 Some `omni` functions could be broken, so they have to be blacklisted, the current blacklist is: `LanguageClient#complete`.
 
-Get us feedback if you found any `omnifunc` that not works with COC, thanks!
+Send us feedback if you found any `omnifunc` that not works with COC!
 
 BTW: This concept is borrowed from [deoplete.nvim](https://github.com/Shougo/deoplete.nvim/blob/5d78e1a75d36a719f1f66ee78c635ea05df72b8c/rplugin/python3/deoplete/source/omni.py#L63)
-
-## Input highlight not updated when selected complete item changed.
-
-The problem could be resolved after [neovim/pull/8377](https://github.com/neovim/neovim/pull/8377) merged, and you have `TextChangedP` event available in your neovim.
 
 ## Is it possible to highlight the characters in complete items?
 
