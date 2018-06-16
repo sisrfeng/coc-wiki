@@ -1,5 +1,13 @@
 Here's some common problems that you may need to understand when working with COC.
 
+# Contents
+
+* [Why `omni` source requires user configuration to work?](#why-omni-source-requires-user-configuration-to-work)
+* [How could separate `ultisnips` source from COC?](#how-could-separate-ultisnips-source-from-coc)
+* [Why `omni` doesn't work even if enabled in configuration?](#why-omni-doesnt-work-even-if-enabled-in-configuration)
+* [Is it possible to highlight the characters in complete items?](#is-it-possible-to-highlight-the-characters-in-complete-items)
+
+
 ## Why `omni` source requires user configuration to work?
 
 This is because `omni` function runs as vim script, it could be really slow and block your UI, if you're working on some complicated language, it's recommended to use async source, for example: the LSP based ones or somehow using a server for async communication. COC make the filetypes of `omni` source empty by default, so you could easily switch to server based sources without overhead. You can define the filetypes of `omni` source in your `coc-settings.json` like this:
