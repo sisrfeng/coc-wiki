@@ -45,12 +45,6 @@ You don't have to create a configuration file from sketch, copy [settings/defaul
   "coc.preferences.timeout": 300,
   // not make vim select first item on completion start
   "coc.preferences.noselect": true,
-  // highlight filter text on completion
-  "coc.preferences.enableHighlight": false,
-  // foreground color of filter text
-  "coc.preferences.highlighForeground": "#ffffff",
-  // background color of filter text
-  "coc.preferences.highlighBackground": "#b180a4",
   // autocmd events for echo function signature
   "coc.preferences.signatureEvents": ["CursorHold"],
   // executable path for https://facebook.github.io/watchman/, detected from $PATH by default
