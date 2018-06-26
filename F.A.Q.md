@@ -83,3 +83,13 @@ BTW: This concept is borrowed from [deoplete.nvim](https://github.com/Shougo/deo
 ## Is it possible to highlight the characters in complete items?
 
 No, since vim/neovim doesn't have that kind of API, unless you're using [external UIs of neovim](https://github.com/neovim/neovim/wiki/Related-projects#gui) some of them could render complete items themself and provide custom highlight for complete items. 
+
+## How to change highlight of diagnostic signs?
+
+The sign highlight groups are `CocErrorSign` `CocWarningSign` `CocInfoSign` `CocHintSign`
+
+You can customize the highlight by adding something like:
+``` vim
+highlight link CocErrorSign GruvboxRed
+```
+to your `.vimrc`
