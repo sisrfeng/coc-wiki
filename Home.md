@@ -29,6 +29,7 @@
 * [How could separate `ultisnips` source from COC?](https://github.com/neoclide/coc.nvim/wiki/F.A.Q#how-could-separate-ultisnips-source-from-coc)
 * [Why `omni` doesn't work even if enabled in configuration?](https://github.com/neoclide/coc.nvim/wiki/F.A.Q#why-omni-doesnt-work-even-if-enabled-in-configuration)
 * [Is it possible to highlight the characters in complete items?](https://github.com/neoclide/coc.nvim/wiki/F.A.Q#is-it-possible-to-highlight-the-characters-in-complete-items)
+* [How to change highlight of diagnostic signs?](https://github.com/neoclide/coc.nvim/wiki/F.A.Q#how-to-change-highlight-of-diagnostic-signs)
 
 ## Similar projects
 
