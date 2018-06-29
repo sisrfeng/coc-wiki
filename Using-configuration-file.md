@@ -57,7 +57,7 @@ Common sources and vim sources are configured with prefix `coc.source.{sourcenam
 
 ``` js
   // Set to false to disable a source totally
-  "coc.source.neco.enable": false,
+  "coc.source.neco.enable": true,
   // Short words used for menu of complete item
   "coc.source.neco.shortcut": "NEC",
   // priority of this source
