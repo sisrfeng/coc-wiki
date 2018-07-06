@@ -10,7 +10,7 @@ COC.nvim support different scope of configuration files in JSON5 format.
 
 ## Configuration file format
 
-COC.nvim use [json5](https://github.com/json5/json5) as configurations file format, like VSCode.
+COC.nvim use [jsonc](https://code.visualstudio.com/docs/languages/json) as configurations file format, the same as VSCode.
 It's basically json with comment, like:
 
 ``` json
@@ -20,26 +20,26 @@ It's basically json with comment, like:
 }
 ```
 
-You can make use of [json5.vim](https://github.com/gutenye/json5.vim) to get correct highlight for comment.
+You can make use of [jsonc.vim](https://github.com/chemzqm/jsonc.vim) to get correct highlight for comment.
 
 ## Configuration file resolve
 
 There're three types of configuration file for COC.
 
-* The default one comes with this plugin, located at [settings/default.json](https://github.com/neoclide/coc.nvim/blob/master/settings/default.json)
+* The default one bundles with this plugin, which is [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json)
 
-* The user configuration should be named with `coc-settings.json` and placed inside folder `$VIMCONFIG` or `$XDG_CONFIG_HOME/nvim` or `$HOME/.vim`, it's recommended create one for yourself, but not required.
+* The user configuration should be named as `coc-settings.json` and placed inside folder `$VIMCONFIG` or `$XDG_CONFIG_HOME/nvim` or `$HOME/.vim`, it's recommended to have one for yourself.
 
 * The project configuration should be named with `coc-settings.json` and would be resolve in directory `.vim`. Just after vim started, COC would look up from current directory of vim to find it.
 
 The active configuration would be a merged result from 'default', 'user' and 'project' configuration file, **the later one have higher priority**.
 
-You don't have to create a configuration file from sketch, copy [settings/default.json](https://github.com/neoclide/coc.nvim/blob/master/settings/default.json) to get start.
+You don't have to create a configuration file from sketch, copy [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json) to get start.
 
 ## Default COC preferences
 
 ``` js
-  // could be 'always' 'trigger' => for specified trigger characters only 'none'
+  // could be 'always' 'trigger' => for specified trigger characters only, 'none' => for disable auto trigger
   "coc.preferences.autoTrigger": "always",
   // timeout for completion
   "coc.preferences.timeout": 300,
@@ -53,7 +53,7 @@ You don't have to create a configuration file from sketch, copy [settings/defaul
 
 ## Configuration for sources
 
-Common sources and vim sources are configured with prefix `coc.source.{sourcenam}` in configuration file, they share some common attributes, take 'neco' source for example:
+Sources are configured with prefix `coc.source.{sourcenam}` in configuration file, they share some common attributes, take 'neco' source for example:
 
 ``` js
   // Set to false to disable a source totally
@@ -99,6 +99,7 @@ Tsserver configuration used for customize how tsserver works.
   // enable support for javascript file
   "tsserver.enableJavascript": false,
 ``` 
+
 ## Typescript/javascript configuration
 
 The 'typescript' and 'javascript' configurations contains information about file format and complete option, they are used by module `typescript-service` only, check out [settings/default.json](https://github.com/neoclide/coc.nvim/blob/master/settings/default.json) for available options.
