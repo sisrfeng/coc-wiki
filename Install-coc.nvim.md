@@ -1,5 +1,9 @@
 Coc is a remote plugin of [neovim](https://github.com/neovim/neovim) which requires additional setup to make it work.
 
+## Install [neovim](https://github.com/neovim/neovim/releases/)
+
+Neovim > 0.3.0 is required for buffer updates API.
+
 ## Install [nodejs](https://nodejs.org/)
 
 Official download page: https://nodejs.org/en/download/package-manager/, for Mac user, [homebrew](https://brew.sh/) is recommended
