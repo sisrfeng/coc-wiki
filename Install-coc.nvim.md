@@ -2,7 +2,7 @@ Coc is a remote plugin of [neovim](https://github.com/neovim/neovim) which requi
 
 ## Install [nodejs](https://nodejs.org/)
 
-Official download page: https://nodejs.org/en/download/, for Mac user, [homebrew](https://brew.sh/) is recommended
+Official download page: https://nodejs.org/en/download/package-manager/, for Mac user, [homebrew](https://brew.sh/) is recommended
 
 ```
 brew install node
