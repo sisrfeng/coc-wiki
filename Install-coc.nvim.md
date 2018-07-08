@@ -14,7 +14,7 @@ Official download page: https://nodejs.org/en/download/package-manager/, for Mac
 brew install node
 ```
 
-For coc to work, the version of nodejs should >= 8.0, use command:
+Nodejs version should >= 8.0, use command:
 
 ```
 node -v
