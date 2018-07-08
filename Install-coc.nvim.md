@@ -82,5 +82,5 @@ For feature [workspace_didChangeWatchedFiles](https://microsoft.github.io/langua
 
 Watchman works great even when you have multiply neovim instance started inside the same folder.
 
-The `UpdatePathOnRename` feature provided by tsserver make use of file watching.
+The `UpdatePathOnRename` feature provided by tsserver requires file watching to work.
 
