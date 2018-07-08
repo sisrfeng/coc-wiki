@@ -30,9 +30,11 @@ yarn -h
 
 ## Install [node-client](https://github.com/neovim/node-client)
 
-It's a node module required for communication between neovim and node remote plugins.
+```
+npm install -g neovim
+```
 
-Use command `npm install -g neovim` or `yarn add -g neovim` to install it.
+It's a node module required for communication between neovim and node remote plugins.
 
 neovim could take almost 200ms to find out location of neovim node module, you can make your neovim faster by tell neovim where the module is.
 
