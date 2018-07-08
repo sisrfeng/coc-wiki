@@ -33,6 +33,7 @@ yarn -h
 ```
 npm install -g neovim
 ```
+**Note:** sudo might be required.
 
 It's a node module required for communication between neovim and node remote plugins.
 
