@@ -59,7 +59,7 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
 
 to your `.vimrc` and run command `:PlugInstall` in your neovim.
 
-Finally, run command `:UpdateRemotePlugins` in neovim after plugin install.
+Finally, run command `:UpdateRemotePlugins` in neovim after plugin installed.
 
 When coc is successfully registered, the output should looks like:
 
