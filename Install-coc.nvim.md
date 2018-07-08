@@ -2,7 +2,9 @@ Coc is a remote plugin of [neovim](https://github.com/neovim/neovim) which requi
 
 ## Install [neovim](https://github.com/neovim/neovim/releases/)
 
-Neovim > 0.3.0 is required for buffer updates API.
+Neovim > 0.3.0 is recommended. 
+
+The completion resolve feature and buffer increment sync feature would not be available if neovim < 0.3.0
 
 ## Install [nodejs](https://nodejs.org/)
 
