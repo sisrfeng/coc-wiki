@@ -66,4 +66,5 @@ When coc is successfully registered, the output should looks like:
 <img width="442" alt="screen shot 2018-07-08 at 10 46 12 pm" src="https://user-images.githubusercontent.com/251450/42421029-43c838f2-8301-11e8-88af-19203a5eca91.png">
 
 To check out coc service is running, use command `:checkhealth` in neovim, the output should looks like:
+
 <img width="344" alt="screen shot 2018-07-08 at 11 02 23 pm" src="https://user-images.githubusercontent.com/251450/42421117-001a81ee-8303-11e8-929a-91da4ac9feea.png">
