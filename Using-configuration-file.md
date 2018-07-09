@@ -45,8 +45,6 @@ You don't have to create a configuration file from sketch, copy [settings.json](
   "coc.preferences.timeout": 300,
   // not make vim select first item on completion start
   "coc.preferences.noselect": true,
-  // autocmd events for echo function signature
-  "coc.preferences.signatureEvents": ["CursorHold"],
   // executable path for https://facebook.github.io/watchman/, detected from $PATH by default
   "coc.preferences.watchmanPath": "",
 ``` 
