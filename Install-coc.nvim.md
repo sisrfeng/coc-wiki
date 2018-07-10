@@ -51,7 +51,7 @@ locate the global node module location by using command:
 npm --loglevel silent root -g
 ```
 
-retsulte should be something like `/usr/local/lib/node_modules`, and then add:
+result should be something like `/usr/local/lib/node_modules`, and then add:
 
 ``` vim
 let g:node_host_prog = '/usr/local/lib/node_modules/neovim/bin/cli.js'
