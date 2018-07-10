@@ -82,7 +82,7 @@ To check out coc service is running, use command `:checkhealth` in neovim, the o
 
 For feature [workspace_didChangeWatchedFiles](https://microsoft.github.io/language-server-protocol/specification#workspace_didChangeWatchedFiles) to work, you will need to install [watchman](https://facebook.github.io/watchman) by following https://facebook.github.io/watchman/docs/install.html.
 
-Watchman works great even when you have multiply neovim instance started inside the same folder.
+Watchman works great even when you have multiply neovim instance started in the same directory.
 
 The `UpdatePathOnRename` feature provided by tsserver requires file watching to work.
 
