@@ -3,7 +3,7 @@ COC support different kinds of completion modes, and should works well with you
 # Contents
 
 * [Trigger mode of completion](#trigger-mode-of-completion)
-* [Trigger snippet completion](#trigger-snippet-completion)
+* [Snippet completion](#snippet-completion)
 * [Use `<Tab>` or custom key for trigger completion](#use-tab-or-custom-key-for-trigger-completion)
 * [Improve completion experience](#improve-completion-experience)
 
