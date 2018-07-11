@@ -44,12 +44,10 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 ```
 
-``
+```
 " use <c-space>for trigger completion
 imap <c-space> coc#refresh()
 ```
-
-You can have automatic trigger and custom trigger keys work together.
 
 ## Improve completion experience
 
