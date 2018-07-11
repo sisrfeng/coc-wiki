@@ -44,7 +44,7 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 ```
 
-```
+``` vim
 " use <c-space>for trigger completion
 imap <c-space> coc#refresh()
 ```
