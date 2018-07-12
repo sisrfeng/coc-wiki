@@ -49,6 +49,8 @@ You don't have to create a configuration file from sketch, copy [settings.json](
   "coc.preferences.watchmanPath": "",
 ``` 
 
+**Note:** for configure keymappings of coc, vim global variable is used to make is easier to work with, check out `coc-variable` section at `doc/coc.txt`.
+
 ## Configuration for sources
 
 Sources are configured with prefix `coc.source.{sourcename}` in configuration file, they share some common attributes, take 'neco' source for example:
