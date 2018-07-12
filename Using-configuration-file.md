@@ -28,7 +28,7 @@ There're three types of configuration file for COC.
 
 * The default one bundles with this plugin, which is [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json)
 
-* The user configuration should be named as `coc-settings.json` and placed inside folder `$VIMCONFIG` or `$XDG_CONFIG_HOME/nvim` or `$HOME/.vim`, it's recommended to have one for yourself.
+* The user configuration should be named as `coc-settings.json` and placed inside folder `$VIMCONFIG` or `$XDG_CONFIG_HOME/nvim` or `$HOME/.config/nvim`, it's recommended to have one for yourself.
 
 * The project configuration should be named with `coc-settings.json` and would be resolve in directory `.vim`. Just after vim started, COC would look up from current directory of vim to find it.
 
@@ -51,7 +51,7 @@ You don't have to create a configuration file from sketch, copy [settings.json](
 
 ## Configuration for sources
 
-Sources are configured with prefix `coc.source.{sourcenam}` in configuration file, they share some common attributes, take 'neco' source for example:
+Sources are configured with prefix `coc.source.{sourcename}` in configuration file, they share some common attributes, take 'neco' source for example:
 
 ``` js
   // Set to false to disable a source totally
@@ -65,7 +65,7 @@ Sources are configured with prefix `coc.source.{sourcenam}` in configuration fil
   // only show the complete item that first letter match the input, works for vim source only.
   "coc.source.neco.firstMatch": true,
   // List of none-word characters for trigger completion
-  "coc.source.neco.triggerCharacters": [],
+  "coc.source.neco.triggerCharacters": [":"],
 ```
 
 ## Tsserver configuration
@@ -100,5 +100,5 @@ Tsserver configuration used for customize how tsserver works.
 
 ## Typescript/javascript configuration
 
-The 'typescript' and 'javascript' configurations contains information about file format and complete option, they are used by module `typescript-service` only, check out [settings/default.json](https://github.com/neoclide/coc.nvim/blob/master/settings/default.json) for available options.
+The 'typescript' and 'javascript' configurations contains information about file format and complete option, they are used by extension `tsserver`, check out [settings/default.json](https://github.com/neoclide/coc.nvim/blob/master/settings/default.json) for available options.
 
