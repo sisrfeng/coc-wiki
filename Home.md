@@ -8,7 +8,6 @@
 
 ## [Using configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file)
 
-* [Configuration file format](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#configuration-file-format)
 * [Configuration file resolve](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#configuration-file-resolve)
 * [Default COC preferences](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#default-coc-preferences)
 * [Configuration for sources](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#configuration-for-sources)
