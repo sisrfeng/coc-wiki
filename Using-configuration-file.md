@@ -28,13 +28,18 @@ There're three types of configuration file for COC.
 
 * The default one bundles with this plugin, which is [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json)
 
-* The user configuration should be named as `coc-settings.json` and placed inside folder `$VIMCONFIG` or `$XDG_CONFIG_HOME/nvim` or `$HOME/.config/nvim`, it's recommended to have one for yourself.
+* The user configuration should be named as `coc-settings.json` and placed inside folder `$VIMCONFIG` or `$XDG_CONFIG_HOME/nvim` or `$HOME/.config/nvim`, for Linux/MaxOS user, the file could be created by
+
+        echo -e '{\n  "$schema": "https://raw.githubusercontent.com/neoclide/coc.nvim/master/data/schema.json"\n}'\
+        > ~/.config/nvim/coc-settings.json
+
+    '$schema' is used for provide intellisense for json server.
 
 * The project configuration should be named with `coc-settings.json` and would be resolve in directory `.vim`. Just after vim started, COC would look up from current directory of vim to find it.
 
 The active configuration would be a merged result from 'default', 'user' and 'project' configuration file, **the later one have higher priority**.
 
-You don't have to create a configuration file from sketch, copy [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json) to get start.
+If your want to know all exists settings, check out[settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json).
 
 ## Default COC preferences
 
