@@ -1,10 +1,11 @@
 # Contents
 
-## [Configuration of completion](https://github.com/neoclide/coc.nvim/wiki/Configuration-of-completion)
+## [Completion with sources](https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources)
 
 * [Trigger mode of completion](https://github.com/neoclide/coc.nvim/wiki/Configuration-of-completion#trigger-mode-of-completion)
 * [Use `<Tab>` or custom key for trigger completion](https://github.com/neoclide/coc.nvim/wiki/Configuration-of-completion#use-tab-or-custom-key-for-trigger-completion)
 * [Improve completion experience](https://github.com/neoclide/coc.nvim/wiki/Configuration-of-completion#improve-completion-experience)
+* [Completion sources](https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources#completion-sources)
 
 ## [Using configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file)
 
