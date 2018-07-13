@@ -72,7 +72,7 @@ Two types have slight different configuration schema.
 
 An example of `module` language server:
 
-```
+``` json
   "languageserver": {
     "foo": {
       "module": "/usr/local/lib/node_modules/foo/index.js",
