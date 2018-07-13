@@ -12,8 +12,7 @@
 * [Configuration file resolve](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#configuration-file-resolve)
 * [Default COC preferences](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#default-coc-preferences)
 * [Configuration for sources](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#configuration-for-sources)
-* [Tsserver configuration](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#tsserver-configuration)
-* [Typescript/javascript configuration](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#typescriptjavascript-configuration)
+* [Extension configuration](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#extension-configuration)
 
 ## [Create custom source](https://github.com/neoclide/coc.nvim/wiki/Create-custom-source)
 
