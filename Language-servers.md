@@ -79,7 +79,6 @@ An example of `module` language server:
       "args": ["--node-ipc"],
       "filetypes": ["foo"],
       "cwd": "./src",
-      "enable": true,
       // Used for debugging
       "execArgv": ["--nolazy", "--inspect-brk=6045"],
       "initializationOptions": {
@@ -90,3 +89,26 @@ An example of `module` language server:
     }
   }
 ```
+`module` and `filetypes` are required for module language server.
+
+An example of `executable` language server:
+
+``` json
+  "languageserver": {
+    "bar": {
+      "command": "bar",
+      "args": ["--stdio"],
+      "filetypes": ["bar"],
+      "cwd": "./src",
+      "initializationOptions": {
+      },
+      "settings": {
+      }
+    }
+  }
+```
+`command` and `filetypes` are required for executable language server.
+
+* `initializationOptions` is the json object that passed to language server on initialize.
+* `settings` contains specific configuration of language server.
+* `cwd` could be path that relative from workspace root (directory contains `.vim` or `.git`).
