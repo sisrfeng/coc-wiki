@@ -1,4 +1,4 @@
-COC support different kinds of completion modes, and should works well with your `completeopt` of vim.
+Coc have full featured support for completion of LSP, and doesn't bother `completeopt` of vim.
 
 # Contents
 
