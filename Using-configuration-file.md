@@ -1,14 +1,3 @@
-COC.nvim support different scope of configuration files in JSON5 format.
-# Contents
-
-* [Configuration file format](#configuration-file-format)
-* [Configuration file resolve](#configuration-file-resolve)
-* [Default COC preferences](#default-coc-preferences)
-* [Configuration for sources](#configuration-for-sources)
-* [Extension configuration](#extension-configuration)
-
-## Configuration file format
-
 COC.nvim use [jsonc](https://code.visualstudio.com/docs/languages/json) as configurations file format, the same as VSCode.
 It's basically json with comment, like:
 
@@ -20,6 +9,16 @@ It's basically json with comment, like:
 ```
 
 You can make use of [jsonc.vim](https://github.com/chemzqm/jsonc.vim) to get correct highlight for comment.
+
+# Contents
+
+* [Configuration file resolve](#configuration-file-resolve)
+* [Default COC preferences](#default-coc-preferences)
+* [Configuration for sources](#configuration-for-sources)
+* [Extension configuration](#extension-configuration)
+
+## Configuration file format
+
 
 ## Configuration file resolve
 
