@@ -1,3 +1,9 @@
+# Contents
+
+* [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
+* [Built in server extensions](https://github.com/neoclide/coc.nvim/wiki/Language-servers#built-in-server-extensions)
+* [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#regist-custom-language-servers)
+
 ## Supported features
 
 Check out the official specification at https://microsoft.github.io/language-server-protocol/specification.
@@ -36,7 +42,7 @@ Check out the official specification at https://microsoft.github.io/language-ser
 
 You can find all the built extensions in `src/extensions`
 
-Name         | File types              | Original repository
+Name         | File types              | Server/extension repository
 ------------ | -------------           |------------
 tsserver     | typescript, javascript  | [typescript-language-features](https://github.com/Microsoft/vscode/tree/master/extensions/typescript-language-features)
 html         | html, handlebars, razor | [vscode-html-languageserver-bin](https://www.npmjs.com/package/vscode-html-languageserver-bin)
@@ -50,6 +56,5 @@ wxml         | wxml                    | [wxml-langserver](https://github.com/ch
 
 For settings of built in extensions, check out [Extension configuration](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#extension-configuration)
 
-## Regist custom language servers
+## Register custom language servers
 
-## Settings for customize language servers
