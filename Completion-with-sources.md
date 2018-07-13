@@ -6,6 +6,7 @@ COC support different kinds of completion modes, and should works well with you
 * [Snippet completion](#snippet-completion)
 * [Use `<Tab>` or custom key for trigger completion](#use-tab-or-custom-key-for-trigger-completion)
 * [Improve completion experience](#improve-completion-experience)
+* [Completion sources](#completion-sources)
 
 ## Trigger mode of completion
 
@@ -101,6 +102,8 @@ ultisnips      |Snippets name completion   |User defined | Install [ultisnips](h
 neco           |VimL completion            |vim          | Install [neco-vim](https://github.com/Shougo/neco-vim)
 
 ### Bundled service sources
+
+Like VSCode, coc comes with some language server extensions built in, some of them could provide completion for certain filetype(s).
 
 Name         | File types              
 ------------ | -------------           
