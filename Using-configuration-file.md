@@ -5,8 +5,7 @@ COC.nvim support different scope of configuration files in JSON5 format.
 * [Configuration file resolve](#configuration-file-resolve)
 * [Default COC preferences](#default-coc-preferences)
 * [Configuration for sources](#configuration-for-sources)
-* [Tsserver configuration](#tsserver-configuration)
-* [Typescript/javascript configuration](#typescriptjavascript-configuration)
+* [Extension configuration](#extension-configuration)
 
 ## Configuration file format
 
@@ -41,7 +40,7 @@ The intellisense of file `coc-settings.json` is enabled automatically. If your w
 ## Default COC preferences
 
 ``` js
-  // could be 'always' 'trigger' => for specified trigger characters only, 'none' => for disable auto trigger
+  // could be 'always' 'trigger' => for specified trigger characters only 'none'
   "coc.preferences.autoTrigger": "always",
   // timeout for completion
   "coc.preferences.timeout": 300,
@@ -49,6 +48,13 @@ The intellisense of file `coc-settings.json` is enabled automatically. If your w
   "coc.preferences.noselect": true,
   // executable path for https://facebook.github.io/watchman/, detected from $PATH by default
   "coc.preferences.watchmanPath": "",
+  // enable diagnostic
+  "coc.preferences.diagnostic.enable": true,
+  "coc.preferences.diagnostic.signOffset": 1000,
+  "coc.preferences.diagnostic.errorSign": ">>",
+  "coc.preferences.diagnostic.warningSign": "⚠",
+  "coc.preferences.diagnostic.infoSign": ">>",
+  "coc.preferences.diagnostic.hintSign": ">>",
 ``` 
 
 **Note:** for configure keymappings of coc, vim global variable is used to make is easier to work with, check out `coc-variable` section at `doc/coc.txt`.
@@ -72,37 +78,17 @@ Sources are configured with prefix `coc.source.{sourcename}` in configuration fi
   "coc.source.neco.triggerCharacters": [":"],
 ```
 
-## Tsserver configuration
+## Extension configuration
 
-Tsserver configuration used for customize how tsserver works.
+* `tsserver` configuration used for customize how tsserver works.
+* `typescript` and `javascript` configurations contains information about file format and complete option which are used by tsserver.
+* `csserver` is used by css server extension.
+* `http` and `json` is used by json server extension.
+* `html` is used by html server extension.
+* `wxml` is used by wxml server extension.
+* `tslint` is used by tslint server extension.
+* `eslint` is used by eslint server extension.
+* `stylelint` is used by stylelint server extension. 
+* `solargraph` is used by solargraph extension.
 
-``` js
-  // language locale
-  "tsserver.locale": null,
-  // folder of tsserver.js
-  // Default priority: module in node_modules > module in $PATH > bundled module
-  "tsserver.tsdk": "",
-  // absolute path of npm, infered from $PAHT if empty
-  "tsserver.npm": "",
-  // could be 'normal' 'terse' 'verbose' 'off'
-  "tsserver.log": "off",
-  // could be 'off' 'messages' 'verbose', could also be provided by environment variable 'TSS_TRACE'
-  "tsserver.trace": "off",
-  // module name of global plugins
-  "tserver.pluginNames": [],
-  // folder root of global plugins
-  "tsserver.pluginRoot": "",
-  // could also be provided by environment variable `TSS_DEBUG`
-  "tsserver.debugPort": null,
-  "tsserver.reportStyleChecksAsWarnings": true,
-  "tsserver.implicitProjectConfig.checkJs": false,
-  "tsserver.implicitProjectConfig.experimentalDecorators": false,
-  "tsserver.disableAutomaticTypeAcquisition": false,
-  // enable support for javascript file
-  "tsserver.enableJavascript": false,
-``` 
-
-## Typescript/javascript configuration
-
-The 'typescript' and 'javascript' configurations contains information about file format and complete option, they are used by extension `tsserver`.
 
