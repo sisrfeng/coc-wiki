@@ -2,7 +2,7 @@
 
 * [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
 * [Built in server extensions](https://github.com/neoclide/coc.nvim/wiki/Language-servers#built-in-server-extensions)
-* [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#regist-custom-language-servers)
+* [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
 
 ## Supported features
 
