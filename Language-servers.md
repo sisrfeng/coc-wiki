@@ -48,6 +48,8 @@ stylelint    | css, wxss, scss...      | [vscode-stylelint](https://github.com/s
 tslint       | typescript, javascript  | [vscode-tslint](https://github.com/Microsoft/vscode-tslint)
 wxml         | wxml                    | [wxml-langserver](https://github.com/chemzqm/wxml-languageserver)
 
+For settings of built in extensions, check out [Extension configuration](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#extension-configuration)
+
 ## Regist custom language servers
 
 ## Settings for customize language servers
