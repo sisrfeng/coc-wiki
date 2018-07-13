@@ -104,5 +104,5 @@ Tsserver configuration used for customize how tsserver works.
 
 ## Typescript/javascript configuration
 
-The 'typescript' and 'javascript' configurations contains information about file format and complete option, they are used by extension `tsserver`, check out [settings/default.json](https://github.com/neoclide/coc.nvim/blob/master/settings/default.json) for available options.
+The 'typescript' and 'javascript' configurations contains information about file format and complete option, they are used by extension `tsserver`.
 
