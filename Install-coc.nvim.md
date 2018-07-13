@@ -63,7 +63,7 @@ to your `.vimrc`.
 Take [junegunn/vim-plug](https://github.com/junegunn/vim-plug) for example, add
 
 ``` vim
-Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --prod'}
 ```
 
 to your `.vimrc` and run command `:PlugInstall` in your neovim.
