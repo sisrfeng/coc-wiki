@@ -17,9 +17,6 @@ You can make use of [jsonc.vim](https://github.com/chemzqm/jsonc.vim) to get cor
 * [Configuration for sources](#configuration-for-sources)
 * [Extension configuration](#extension-configuration)
 
-## Configuration file format
-
-
 ## Configuration file resolve
 
 There're three types of configuration file for COC.
@@ -30,11 +27,11 @@ There're three types of configuration file for COC.
 
         echo -e '{}' > ~/.config/nvim/coc-settings.json
 
-* The project configuration should be named with `coc-settings.json` and would be resolve in directory `.vim`. Just after vim started, COC would look up from current directory of vim to find it.
+* The workspace configuration should be named with `coc-settings.json` and would be resolve in directory `.vim`. Just after vim started, coc would look up from current directory of vim to find it.
 
-The active configuration would be a merged result from 'default', 'user' and 'project' configuration file, **the later one have higher priority**.
+The active configuration would be a merged result from 'default', 'user' and 'workspace' configuration file, **the later one have higher priority**.
 
-The intellisense of file `coc-settings.json` is enabled automatically. If your want to know all exists settings, check out [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json).
+The intellisense of file `coc-settings.json` is enabled automatically. If your want to know default settings, check out [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json).
 
 ## Default COC preferences
 
