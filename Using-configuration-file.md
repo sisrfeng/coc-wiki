@@ -91,4 +91,7 @@ Sources are configured with prefix `coc.source.{sourcename}` in configuration fi
 * `stylelint` is used by stylelint server extension. 
 * `solargraph` is used by solargraph extension.
 
+To get detailed options for configuration, just try completion in file `coc-settings.json`
+
+<img width="424" alt="screen shot 2018-07-13 at 2 17 26 pm" src="https://user-images.githubusercontent.com/251450/42675689-c9eb04e2-86a7-11e8-94b8-792f247a7394.png">
 
