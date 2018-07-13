@@ -109,6 +109,6 @@ An example of `executable` language server:
 ```
 `command` and `filetypes` are required for executable language server.
 
-* `initializationOptions` is the json object that passed to language server on initialize.
+* `initializationOptions` is the json object that passed to [language server on initialize](https://microsoft.github.io/language-server-protocol/specification#initialize).
 * `settings` contains specific configuration of language server.
 * `cwd` could be path that relative from workspace root (directory contains `.vim` or `.git`).
