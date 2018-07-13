@@ -36,7 +36,7 @@ There're three types of configuration file for COC.
 
 The active configuration would be a merged result from 'default', 'user' and 'project' configuration file, **the later one have higher priority**.
 
-The intellisense of file `coc-settings.json` is enabled automatically. If your want to know all exists settings, check out[settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json).
+The intellisense of file `coc-settings.json` is enabled automatically. If your want to know all exists settings, check out [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json).
 
 ## Default COC preferences
 
