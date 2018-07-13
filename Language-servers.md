@@ -1,3 +1,6 @@
+To make coc have best features like VSCode, coc bundles with some language server extensions itself, while users still able 
+configure custom language servers.
+
 # Contents
 
 * [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
@@ -58,3 +61,32 @@ For settings of built in extensions, check out [Extension configuration](https:/
 
 ## Register custom language servers
 
+User defined language servers are configured in `languageserver` field of [configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file).
+
+There're two types of language servers, `module` and `executable`.
+
+* `module` type language server are running by nodejs and using node IPC for connection.
+* `executable` type language server are spawned with executable command while using stdio for connection.
+
+Two types have slight different configuration schema.
+
+An example of `module` language server:
+
+```
+  "languageserver": {
+    "foo": {
+      "module": "/usr/local/lib/node_modules/foo/index.js",
+      "args": ["--node-ipc"],
+      "filetypes": ["foo"],
+      "cwd": "./src",
+      "enable": true,
+      // Used for debugging
+      "execArgv": ["--nolazy", "--inspect-brk=6045"],
+      "initializationOptions": {
+      },
+      "settings": {
+        "validate": true
+      }
+    }
+  }
+```
