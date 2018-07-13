@@ -7,6 +7,12 @@
 * [Improve completion experience](https://github.com/neoclide/coc.nvim/wiki/Configuration-of-completion#improve-completion-experience)
 * [Completion sources](https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources#completion-sources)
 
+## [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
+
+* [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
+* [Built in server extensions](https://github.com/neoclide/coc.nvim/wiki/Language-servers#built-in-server-extensions)
+* [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
+
 ## [Using configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file)
 
 * [Configuration file resolve](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#configuration-file-resolve)
