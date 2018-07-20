@@ -1,3 +1,8 @@
+# Contents
+
+* [Using output channel](https://github.com/neoclide/coc.nvim/wiki/Debug-language-server#using-output-channel)
+* [Using Chrome developer tools](https://github.com/neoclide/coc.nvim/wiki/Debug-language-server#using-chrome-developer-tools)
+
 ## Using output channel
 
 Like VSCode, each language server have a output channel itself, the output channel could be opened by
