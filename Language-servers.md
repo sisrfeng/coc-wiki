@@ -63,12 +63,13 @@ For settings of built in extensions, check out [Extension configuration](https:/
 
 User defined language servers are configured in `languageserver` field of [configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file).
 
-There're two types of language servers, `module` and `executable`.
+There're three types of language servers: `module`,`executable` and `socket`.
 
 * `module` type language server are running by nodejs and using node IPC for connection.
 * `executable` type language server are spawned with executable command while using stdio for connection.
+* `socket` language server are started in separated process, normally used for debugging purpose.
 
-Two types have slight different configuration schema.
+Different language server type have different configuration schema.
 
 An example of `module` language server:
 
@@ -108,6 +109,19 @@ An example of `executable` language server:
   }
 ```
 `command` and `filetypes` are required for executable language server.
+
+An example of socket language server:
+
+``` json
+"languageserver": {
+    "socketserver": {
+      "host": "127.0.0.1",
+      "port": 9527
+    }
+  }
+```
+
+`port` is required for socket service and user should start the socket server before coc started.
 
 * `initializationOptions` is the json object that passed to [language server on initialize](https://microsoft.github.io/language-server-protocol/specification#initialize).
 * `settings` contains specific configuration of language server.
