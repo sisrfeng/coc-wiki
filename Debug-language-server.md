@@ -5,7 +5,7 @@
 
 ## Using output channel
 
-Like VSCode, each language server have a output channel itself, the output channel could be opened by
+The same as VSCode, each language server have a output channel itself, the output channel could be opened by
 
 ```
 :call CocAction('runCommand', 'workspace.showOutput')
