@@ -90,6 +90,7 @@ Name         | Description                                             | Use cac
 `emoji`      | Eomji characters.                                       | ✓           | ['markdown']
 `include`    | Full path completion for include file paths.            | ✗           | ['javascript', 'typescript']
 `gocode`     | Completion using gocode                                 | ✗           | ['go']
+
 `omni` source could be really slow, it requires configuration for `filetypes` to work.
 
 ### Bundled vim sources
