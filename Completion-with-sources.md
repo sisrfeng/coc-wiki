@@ -98,8 +98,10 @@ Vim sources are implemented in viml, and usually requires other vim plugin to wo
 
 Name           |Description                |Filetype     | Requirement
 ------------   |------------               |------------ | -------------
-ultisnips      |Snippets name completion   |User defined | Install [ultisnips](https://github.com/SirVer/ultisnips)
+ultisnips      |Snippets completion        |all          | Install [ultisnips](https://github.com/SirVer/ultisnips)
 neco           |VimL completion            |vim          | Install [neco-vim](https://github.com/Shougo/neco-vim)
+neosnippet     |Snippets completion        |all          | Install [neosnippet.vim](https://github.com/Shougo/neosnippet.vim)
+languageclient |Completion from languageclient | user defined | Install [languageclient-neovim](https://github.com/autozimu/LanguageClient-neovim)
 
 ### Bundled service sources
 
