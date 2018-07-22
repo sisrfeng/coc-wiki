@@ -52,10 +52,11 @@ html         | html, handlebars, razor | [vscode-html-languageserver-bin](https:
 css          | css, less, scss, wxss   | [css-language-features](https://github.com/Microsoft/vscode/tree/master/extensions/css-language-features)
 eslint       | javascript              | [vscode-eslint](https://github.com/Microsoft/vscode-eslint)
 json         | json, jsonc             | [vscode-json-languageserver](https://www.npmjs.com/package/vscode-json-languageserver)
-solargraph   | ruby                    | [vscode-solargraph](https://github.com/castwide/vscode-solargraph)
 stylelint    | css, wxss, scss...      | [vscode-stylelint](https://github.com/shinnn/vscode-stylelint)
 tslint       | typescript, javascript  | [vscode-tslint](https://github.com/Microsoft/vscode-tslint)
 wxml         | wxml                    | [wxml-langserver](https://github.com/chemzqm/wxml-languageserver)
+solargraph   | ruby                    | [vscode-solargraph](https://github.com/castwide/vscode-solargraph)
+pyls         | python                  | [python-language-server](https://github.com/palantir/python-language-server)
 
 For settings of built in extensions, check out [Extension configuration](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#extension-configuration)
 
