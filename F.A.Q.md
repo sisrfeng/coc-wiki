@@ -21,10 +21,10 @@ BTW: The recommended css and html completion plugins are [othree/csscomplete.vim
 
 ## How could separate `ultisnips` source from COC?
 
-First, disable all filetypes for ultisnips in your `coc-settings.json`:
+First, disable ultisnips in your `coc-settings.json`:
 
 ``` js
-"coc.source.ultisnips.filetypes": [],
+"coc.source.ultisnips.enable": false,
 ```
 Second, create your own keymap by:
 
