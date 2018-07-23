@@ -86,6 +86,7 @@ Sources are configured with prefix `coc.source.{sourcename}` in configuration fi
 * `eslint` is used by eslint server extension.
 * `stylelint` is used by stylelint server extension. 
 * `solargraph` is used by solargraph extension.
+* `vetur` is used by vetur extension.
 
 To get detailed options for configuration, just try completion in file `coc-settings.json`
 
