@@ -56,6 +56,7 @@ stylelint    | css, wxss, scss...      | [vscode-stylelint](https://github.com/s
 tslint       | typescript, javascript  | [vscode-tslint](https://github.com/Microsoft/vscode-tslint)
 wxml         | wxml                    | [wxml-langserver](https://github.com/chemzqm/wxml-languageserver)
 solargraph   | ruby                    | [vscode-solargraph](https://github.com/castwide/vscode-solargraph)
+vetur        | vue                     | [vetur](https://github.com/vuejs/vetur)
 pyls         | python                  | [python-language-server](https://github.com/palantir/python-language-server)
 
 For settings of built in extensions, check out [Extension configuration](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#extension-configuration)
