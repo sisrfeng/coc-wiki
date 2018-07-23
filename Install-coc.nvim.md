@@ -1,10 +1,12 @@
-Coc is a remote plugin of [neovim](https://github.com/neovim/neovim) which requires additional setup to make it work.
+Coc is written is Typescript and runs in nodejs, code compile is required to make it work.
 
-## Install [neovim](https://github.com/neovim/neovim/releases/)
+## Install [neovim](https://github.com/neovim/neovim/releases/) or [vim](https://github.com/vim/vim) 
 
-Neovim > 0.3.0 is required. 
+Neovim >= 0.3.0 is required. 
 
-The completion resolve feature and buffer increment sync feature requires neovim >= 0.3.0
+vim >= 0.8.1 is supported.
+
+Use `:version` to checkout your vim version.
 
 ## Install [nodejs](https://nodejs.org/)
 
