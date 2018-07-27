@@ -78,7 +78,7 @@ Sources are configured with prefix `coc.source.{sourcename}` in configuration fi
 
 * `tsserver` configuration used for customize how tsserver works.
 * `typescript` and `javascript` configurations contains information about file format and complete option which are used by tsserver.
-* `csserver` is used by css server extension.
+* `csserver` `css` `less` `scss` `wxss` is used by css server extension.
 * `http` and `json` is used by json server extension.
 * `html` is used by html server extension.
 * `wxml` is used by wxml server extension.
