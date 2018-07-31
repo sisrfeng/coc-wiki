@@ -1,4 +1,4 @@
-Coc is written is Typescript and runs in nodejs, code compile is required to make it work.
+Coc is written is Typescript and runs in nodejs, you can download pre build binary file or build from source.
 
 ## Install [neovim](https://github.com/neovim/neovim/releases/) or [vim](https://github.com/vim/vim) 
 
@@ -8,47 +8,34 @@ vim >= 0.8.1 is supported.
 
 Use `:version` to checkout your vim version.
 
-## Install [nodejs](https://nodejs.org/)
-
-Official download page: https://nodejs.org/en/download/package-manager/, for Mac user, [homebrew](https://brew.sh/) is recommended
+## Install [nodejs](https://nodejs.org/) >= 8.0
 
 ```
-brew install node
+curl -sL install-node.now.sh | sh
 ```
 
-Nodejs version should >= 8.0, use command:
+## Optional install [yarn](https://yarnpkg.com/)
+
+If you want to build source code, yarn is requried.
 
 ```
-node -v
+curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 ```
-to check out.
-
-## Install [yarn](https://yarnpkg.com/)
-
-Official download page: https://yarnpkg.com/en/docs/install, for Mac user, [homebrew](https://brew.sh/) is recommended
-
-```
-brew install yarn
-```
-
-To make sure yarn available in your `$PATH`, use
-```
-yarn -h
-```
-
-**Note** Global [node-client](https://github.com/neovim/node-client) not required any more
 
 ## Install plugin coc.nvim
 
 Take [junegunn/vim-plug](https://github.com/junegunn/vim-plug) for example, add
 
 ``` vim
-Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
+Plug 'neoclide/coc.nvim', {'do': './install.sh'}
 ```
 
-to your `.vimrc` and run command `:PlugInstall` in your neovim.
+For build from source, add:
 
-**Note** `:UpdateRemotePlugins` not required any more.
+``` vim
+Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
+```
+to your `.vimrc` and run command `:PlugInstall` in your neovim.
 
 To check out coc service is running, use command `:checkhealth` in neovim, the output should include:
 
@@ -59,6 +46,3 @@ To check out coc service is running, use command `:checkhealth` in neovim, the o
 For feature [workspace_didChangeWatchedFiles](https://microsoft.github.io/language-server-protocol/specification#workspace_didChangeWatchedFiles) to work, you will need to install [watchman](https://facebook.github.io/watchman) by following https://facebook.github.io/watchman/docs/install.html.
 
 Watchman works great even when you have multiply neovim instance started in the same directory.
-
-The `UpdatePathOnRename` feature provided by tsserver requires file watching to work.
-
