@@ -12,11 +12,17 @@ Coc have full featured support for completion of LSP, and doesn't bother `comple
 
 COC have 3 different trigger modes:
 
-* `always`, the default mode, which trigger completion on both first word letter inserted and respect the `triggerCharacters` defined by sources.
+* `always`, the default mode, which trigger completion on word letter inserted, insert enter and `triggerCharacters` defined by sources inserted.
 * `trigger`, only trigger completion on `triggerCharacters` defined by completion sources.
 * `none`, disable auto trigger completion, you will have to trigger the completion by yourself.
 
 You can change trigger mode by [using configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file)
+
+To avoid completion trigger by insert enter, add
+  
+    "coc.preferences.triggerAfterInsertEnter": false
+
+to your `coc-settings.json`.
 
 ## Snippet completion
 
