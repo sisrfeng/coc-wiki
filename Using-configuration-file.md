@@ -21,29 +21,29 @@ You can make use of [jsonc.vim](https://github.com/chemzqm/jsonc.vim) to get cor
 
 There're three types of configuration file for COC.
 
-* The default one bundles with this plugin, which is [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json)
+* The global one bundles with this plugin, which is [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json)
 
-* The user configuration should be named as `coc-settings.json` and placed inside folder `$VIMCONFIG` or `$XDG_CONFIG_HOME/nvim` or `$HOME/.config/nvim`, for Linux/MaxOS user, the file could be created by
+* The user configuration should be named as `coc-settings.json` and placed inside folder `$VIMCONFIG` or `$XDG_CONFIG_HOME/nvim` or `$HOME/.config/nvim`. Run command `:CocConfig` to open your user configuration file. 
 
-        echo -e '{}' > ~/.config/nvim/coc-settings.json
-
-* The workspace configuration should be named with `coc-settings.json` and would be resolve in directory `.vim`. Just after vim started, coc would look up from current directory of vim to find it.
+* The workspace configuration should be named with `coc-settings.json` and would be resolve in directory `.vim`. Just after vim started, coc would look up from current directory of vim to find it. If your have changed your working project in vim, you may need run `:CocRestart` to make the language servers work as expected.
 
 The active configuration would be a merged result from 'default', 'user' and 'workspace' configuration file, **the later one have higher priority**.
 
-The intellisense of file `coc-settings.json` is enabled automatically. If your want to know default settings, check out [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json).
+The intellisense of file `coc-settings.json` is enabled automatically (as long as `vscode-json-languageserver` is installed). If your want to know default settings, check out [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json).
 
 ## Default COC preferences
 
 ``` js
   // could be 'always' 'trigger' => for specified trigger characters only 'none'
   "coc.preferences.autoTrigger": "always",
+  // only used when autoTrigger is always
+  "coc.preferences.triggerAfterInsertEnter": true,
   // timeout for completion
   "coc.preferences.timeout": 300,
   // not make vim select first item on completion start
   "coc.preferences.noselect": true,
   // executable path for https://facebook.github.io/watchman/, detected from $PATH by default
-  "coc.preferences.watchmanPath": "",
+  // "coc.preferences.watchmanPath": "",
   // enable diagnostic
   "coc.preferences.diagnostic.enable": true,
   "coc.preferences.diagnostic.signOffset": 1000,
@@ -53,7 +53,7 @@ The intellisense of file `coc-settings.json` is enabled automatically. If your w
   "coc.preferences.diagnostic.hintSign": ">>",
 ``` 
 
-**Note:** for configure keymappings of coc, vim global variable is used to make is easier to work with, check out `coc-variable` section at `doc/coc.txt`.
+**Note:** for configure keymappings of coc, vim global variable is used, check out `coc-variable` section at `doc/coc.txt`.
 
 ## Configuration for sources
 
