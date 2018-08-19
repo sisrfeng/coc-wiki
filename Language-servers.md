@@ -26,7 +26,7 @@ Check out the official specification at https://microsoft.github.io/language-ser
 
 * Telemetry
 
-  * [ ] event
+  * [x] event (just log the event)
 
 * Client
 
