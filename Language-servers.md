@@ -11,33 +11,76 @@ configure custom language servers.
 
 Check out the official specification at https://microsoft.github.io/language-server-protocol/specification.
 
-* ✓ Request cancellation support
-* ✓ Full features of workspace (except workspace folders related)
-* ✓ Full features of text synchronization
-* ✓ Full features of window support
-* ✓ Diagnostics
-* ✗ Telemetry
-* ✓ Completion
-* ✓ Completion resolve
-* ✓ Hover
-* ✓ Signature help
-* ✓ Definition
-* ✓ Type definition
-* ✓ Implementation
-* ✓ References
-* ✓ Document highlight
-* ✓ Document symbol
-* ✓ Code action
-* ✓ CodeLens
-* ✓ CodeLens resolve
-* ✗ Document link
-* ✗ Document link resolve
-* ✗ Document color
-* ✗ Color Presentation
-* ✓ Document Formatting
-* ✓ Document Range Formatting
-* ✗ Document on Type Formatting
-* ✓ Rename
+* General
+  * [x] initialize
+  * [x] initalized
+  * [x] shutdown
+  * [x] exit
+  * [x] $/cancelRequest
+
+* Window
+
+  * [x] showMessage
+  * [x] showMessageRequest
+  * [x] logMessage
+
+* Telemetry
+
+  * [ ] event
+
+* Client
+
+  * [x] registerCapability
+  * [x] unregisterCapability
+
+* Workspace
+
+  * [ ] workspaceFolders
+  * [ ] didChangeWorkspaceFolders
+  * [x] didChangeConfiguration
+  * [x] configuration
+  * [x] didChangeWatchedFiles
+  * [x] symbol
+  * [x] executeCommand
+  * [x] applyEdit
+
+* Text Synchronization
+
+  * [x] didOpen
+  * [x] didChange
+  * [x] willSave
+  * [x] willSaveWaitUntil
+  * [x] didSave
+  * [x] didClose
+
+* Diagnostics
+
+  * [x] publishDiagnostics
+
+* Language Features
+
+  * [x] completion
+  * [x] completion resolve
+  * [x] hover
+  * [x] signatureHelp
+  * [x] definition
+  * [x] typeDefinition
+  * [x] implementation
+  * [x] references
+  * [x] documentHighlight
+  * [x] documentSymbol
+  * [x] codeAction
+  * [x] codeLens
+  * [x] codeLens resolve
+  * [ ] documentLink
+  * [ ] documentLink resolve
+  * [ ] documentColor
+  * [ ] colorPresentation
+  * [x] formatting
+  * [x] rangeFormatting
+  * [x] onTypeFormatting
+  * [x] rename
+  * [ ] foldingRange
 
 **Note:** different server could have different capabilities.
 
