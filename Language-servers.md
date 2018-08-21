@@ -72,15 +72,15 @@ Check out the official specification at https://microsoft.github.io/language-ser
   * [x] codeAction
   * [x] codeLens
   * [x] codeLens resolve
-  * [ ] documentLink
-  * [ ] documentLink resolve
-  * [ ] documentColor
-  * [ ] colorPresentation
+  * [x] documentLink
+  * [x] documentLink resolve
+  * [x] documentColor
+  * [x] colorPresentation
   * [x] formatting
   * [x] rangeFormatting
   * [x] onTypeFormatting
   * [x] rename
-  * [ ] foldingRange
+  * [x] foldingRange
 
 **Note:** different server could have different capabilities.
 
