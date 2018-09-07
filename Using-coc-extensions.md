@@ -55,7 +55,7 @@ The extension would be loaded and activated after install succeed.
 
 ## Disable coc extension
 
-More extension provide an `enable` option. 
+Most extension provide an `enable` option. 
 
 For example, to disable `coc-json`, Open your config file by `:CocConfig` and add:
 
