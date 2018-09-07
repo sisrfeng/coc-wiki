@@ -108,18 +108,3 @@ Name           |Description                |Filetype     | Requirement
 ultisnips      |Snippets completion        |all          | Install [ultisnips](https://github.com/SirVer/ultisnips)
 neco           |VimL completion            |vim          | Install [neco-vim](https://github.com/Shougo/neco-vim)
 neosnippet     |Snippets completion        |all          | Install [neosnippet.vim](https://github.com/Shougo/neosnippet.vim)
-languageclient |Completion from languageclient | user defined | Install [languageclient-neovim](https://github.com/autozimu/LanguageClient-neovim)
-
-### Bundled service sources
-
-Like VSCode, coc comes with some language server extensions built in, some of them could provide completion for certain filetype(s).
-
-Name         | File types              
------------- | -------------           
-tsserver     | typescript, javascript  
-html         | html, handlebars, razor 
-css          | css, less, scss, wxss             
-json         | json, jsonc             
-solargraph   | ruby                   
-wxml         | wxml                    
-
