@@ -1,4 +1,4 @@
-**Note** start from coc 0.0.16, all extensions are separated from the core.
+Start from coc 0.0.16, all extensions are separated from the core.
 
 You **have to** install the extension you need by using vim command `CocInstall` like:
 
