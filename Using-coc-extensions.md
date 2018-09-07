@@ -23,6 +23,19 @@ Compare to the language server specified with `languageserver`, extensions have 
         ```
 * Extensions could have specified more client options, like `fileEvents` to watch files (require [watchman](https://facebook.github.io/watchman/) installed), and `middleware` which could be used to fix the result that returned from language server.
 
+## Implemented coc extensions
+
+* [coc-json](https://github.com/neoclide/coc-json): language server features for json.
+* [coc-css](https://github.com/neoclide/coc-css): language server features for css, less, scss and wxss.
+* [coc-eslint](https://github.com/neoclide/coc-eslint): language server using eslint for javascript files.
+* [coc-html](https://github.com/neoclide/coc-html): language server features for html.
+* [coc-pyls](https://github.com/neoclide/coc-pyls): language server features using [python-language-server](https://github.com/palantir/python-language-server).
+* [coc-solargraph](https://github.com/neoclide/coc-solargraph): language server features using [solargraph](http://solargraph.org) for ruby.
+* [coc-stylelint](https://github.com/neoclide/coc-stylelint): language server using stylelint for css files, just like [stylelint-vscode](https://github.com/shinnn/stylelint-vscode#readme)/
+* [coc-tslint](https://github.com/neoclide/coc-tslint): language server using tslint for typescript files.
+* [coc-vetur](https://github.com/neoclide/coc-vetur): language server features using [vue-language-server](https://www.npmjs.com/package/vue-language-server) for `vue` files.
+* [coc-wxml](https://github.com/neoclide/coc-wxml): language server features for wxml.
+
 ## Install/update coc extension
 
 Use command `:CocInstall` like:
