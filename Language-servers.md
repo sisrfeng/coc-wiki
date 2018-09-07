@@ -4,7 +4,6 @@ configure custom language servers.
 # Contents
 
 * [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
-* [Built in server extensions](https://github.com/neoclide/coc.nvim/wiki/Language-servers#built-in-server-extensions)
 * [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
 
 ## Supported features
@@ -79,30 +78,11 @@ Check out the official specification at https://microsoft.github.io/language-ser
   * [x] formatting
   * [x] rangeFormatting
   * [x] onTypeFormatting
+  * [x] prepare rename
   * [x] rename
   * [x] foldingRange
 
 **Note:** different server could have different capabilities.
-
-## Built in server extensions
-
-You can find all the built extensions in `src/extensions`
-
-Name         | File types              | Server/extension repository
------------- | -------------           |------------
-tsserver     | typescript, javascript  | [typescript-language-features](https://github.com/Microsoft/vscode/tree/master/extensions/typescript-language-features)
-html         | html, handlebars, razor | [vscode-html-languageserver-bin](https://www.npmjs.com/package/vscode-html-languageserver-bin)
-css          | css, less, scss, wxss   | [css-language-features](https://github.com/Microsoft/vscode/tree/master/extensions/css-language-features)
-eslint       | javascript              | [vscode-eslint](https://github.com/Microsoft/vscode-eslint)
-json         | json, jsonc             | [vscode-json-languageserver](https://www.npmjs.com/package/vscode-json-languageserver)
-stylelint    | css, wxss, scss...      | [vscode-stylelint](https://github.com/shinnn/vscode-stylelint)
-tslint       | typescript, javascript  | [vscode-tslint](https://github.com/Microsoft/vscode-tslint)
-wxml         | wxml                    | [wxml-langserver](https://github.com/chemzqm/wxml-languageserver)
-solargraph   | ruby                    | [vscode-solargraph](https://github.com/castwide/vscode-solargraph)
-vetur        | vue                     | [vetur](https://github.com/vuejs/vetur)
-pyls         | python                  | [python-language-server](https://github.com/palantir/python-language-server)
-
-For settings of built in extensions, check out [Extension configuration](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#extension-configuration)
 
 ## Register custom language servers
 
