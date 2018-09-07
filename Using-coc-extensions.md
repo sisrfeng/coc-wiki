@@ -15,8 +15,9 @@ Compare to the language server specified with `languageserver`, extensions have 
   <img width="466" alt="screen shot 2018-09-07 at 5 03 24 pm" src="https://user-images.githubusercontent.com/251450/45209588-f5f87a80-b2bf-11e8-80c0-fe5ff689f947.png">
 
 * Extensions could contribute commands (like VSCode), you can use the coc commands in different ways:
-    * Use command `:Denite coc-command` to open the command list and choose one your want.
-       <img width="476" alt="screen shot 2018-09-07 at 4 53 12 pm" src="https://user-images.githubusercontent.com/251450/45209334-4d4a1b00-b2bf-11e8-94e0-0c2b981a71f5.png">
+    * Use command `:Denite coc-command` to open the command list and choose one you need.
+
+    <img width="476" alt="screen shot 2018-09-07 at 4 53 12 pm" src="https://user-images.githubusercontent.com/251450/45209334-4d4a1b00-b2bf-11e8-94e0-0c2b981a71f5.png">
     * Use a custom command to invoke the command, for exmaple, create a `Tsc` command for `tsserver.watchBuild` could be
         ```
         command! -nargs=0 Tsc    :call CocAction('runCommand', 'tsserver.watchBuild')
