@@ -19,9 +19,9 @@ to get command list and run command by type `<enter>`.
 
 To make output channel track LSP communication, set `[languageserverId].trace.server` to `true` in your `coc-settings.json`.
 
-For example, to make `cssserver` track LSP communication, use:
+For example, to make `tsserver` track LSP communication, use:
 ```
-  "cssserver.trace.server": "verbose",
+  "tsserver.trace.server": "verbose",
 ```
 
 However, the output of LSP communication is difficult for human to read, you can upload the content to LSP inspector: https://microsoft.github.io/language-server-protocol/inspector/, which would be looks like:
@@ -35,9 +35,9 @@ You can use Chrome to debug language server which using node IPC for communicati
 First, add `execArgv` to the language server settings like:
 
 ```
- "cssserver.execArgv": ["--nolazy", "--inspect-brk=6045"]
+ "css.execArgv": ["--nolazy", "--inspect-brk=6045"]
 ```
 
-After the `cssserver` started, open Chrome with url `chrome://inspect`
+After the `css` service started, open Chrome with url `chrome://inspect`
 
 Make sure `Discover network targets` option is checked, and then you will have the debugging target.
