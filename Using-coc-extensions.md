@@ -32,8 +32,22 @@ Use command `:CocInstall` like:
 ```
 One or more plugin name could be provided.
 
+The extension would be loaded and activated after install succeed.
+
 ## Update all coc extensions
 
 ```
 :CocUpdate
 ```
+
+## Disable coc extension
+
+More extension provide an `enable` option. 
+
+For example, to disable `coc-json`, Open your config file by `:CocConfig` and add:
+
+```
+"json.enable": false
+```
+
+Run `:CocRestart` or restart your vim to make sure the change take effect.
