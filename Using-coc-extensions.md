@@ -21,7 +21,7 @@ Compare to the language server specified with `languageserver`, extensions have 
         ```
         command! -nargs=0 Tsc    :call CocAction('runCommand', 'tsserver.watchBuild')
         ```
-* Extensions could have specify more client options, like `fileEvents` to watch files (require [watchman](https://facebook.github.io/watchman/) installed), and `middleware` which could be used to fix the result that returned from language server.
+* Extensions could have specified more client options, like `fileEvents` to watch files (require [watchman](https://facebook.github.io/watchman/) installed), and `middleware` which could be used to fix the result that returned from language server.
 
 ## Install/update coc extension
 
