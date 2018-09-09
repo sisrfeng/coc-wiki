@@ -82,19 +82,12 @@ Sources are configured with prefix `coc.source.{sourcename}` in configuration fi
 
 ## Extension configuration
 
-* `tsserver` configuration used for customize how tsserver works.
-* `typescript` and `javascript` configurations contains information about file format and complete option which are used by tsserver.
-* `csserver` `css` `less` `scss` `wxss` is used by css server extension.
-* `http` and `json` is used by json server extension.
-* `html` is used by html server extension.
-* `wxml` is used by wxml server extension.
-* `tslint` is used by tslint server extension.
-* `eslint` is used by eslint server extension.
-* `stylelint` is used by stylelint server extension. 
-* `solargraph` is used by solargraph extension.
-* `vetur` is used by vetur extension.
+Just like VSCode, each coc extension could contribute configuration sections, for example.
 
-To get detailed options for configuration, just try completion in file `coc-settings.json`
+* [coc-tsserver](https://github.com/neoclide/coc-tsserver) use section `tsserver`, `typescript` and `javascript`
+* [coc-json](https://github.com/neoclide/coc-json) use section `json` and `http`
+
+To get detailed options for existing configurations, just try completion in file `coc-settings.json`:
 
 <img width="424" alt="screen shot 2018-07-13 at 2 17 26 pm" src="https://user-images.githubusercontent.com/251450/42675689-c9eb04e2-86a7-11e8-94b8-792f247a7394.png">
 
