@@ -1,4 +1,4 @@
-COC.nvim use [jsonc](https://code.visualstudio.com/docs/languages/json) as configurations file format, the same as VSCode.
+COC.nvim use [jsonc](https://code.visualstudio.com/docs/languages/json) as configuration file format, the same as VSCode.
 It's basically json with comment, like:
 
 ``` json
@@ -8,7 +8,7 @@ It's basically json with comment, like:
 }
 ```
 
-You can make use of [jsonc.vim](https://github.com/chemzqm/jsonc.vim) to get correct highlight for comment.
+You can make use of [jsonc.vim](https://github.com/neoclide/jsonc.vim) to get correct highlight for comment.
 
 # Contents
 
@@ -23,13 +23,17 @@ There're three types of configuration file for COC.
 
 * The global one bundles with this plugin, which is [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json)
 
-* The user configuration should be named as `coc-settings.json` and placed inside folder `$VIMCONFIG` or `$XDG_CONFIG_HOME/nvim` or `$HOME/.config/nvim`. Run command `:CocConfig` to open your user configuration file. 
+* The user configuration is named as `coc-settings.json` and placed inside folder `$XDG_CONFIG_HOME/nvim` or `$HOME/.config/nvim` by default. Run command `:CocConfig` to open your user configuration file. 
 
 * The workspace configuration should be named with `coc-settings.json` and would be resolve in directory `.vim`. Just after vim started, coc would look up from current directory of vim to find it. If your have changed your working project in vim, you may need run `:CocRestart` to make the language servers work as expected.
 
 The active configuration would be a merged result from 'default', 'user' and 'workspace' configuration file, **the later one have higher priority**.
 
-The intellisense of file `coc-settings.json` is enabled automatically (as long as `vscode-json-languageserver` is installed). If your want to know default settings, check out [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json).
+To enable intellisense of `coc-settings.json`, install json language extension [coc-json](https://github.com/neoclide/coc-json) by:
+```
+:CocInstall coc-json
+```
+in your vim.
 
 ## Default COC preferences
 
@@ -52,6 +56,8 @@ The intellisense of file `coc-settings.json` is enabled automatically (as long a
   "coc.preferences.diagnostic.infoSign": ">>",
   "coc.preferences.diagnostic.hintSign": ">>",
 ``` 
+
+To get complete list, checkout [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json)
 
 **Note:** for configure keymappings of coc, vim global variable is used, check out `coc-variable` section at `doc/coc.txt`.
 
