@@ -14,9 +14,9 @@ Use `:version` to checkout your vim version.
 curl -sL install-node.now.sh | sh
 ```
 
-## Optional install [yarn](https://yarnpkg.com/)
+## Install [yarn](https://yarnpkg.com/)
 
-If you want to build source code, yarn is requried.
+If you want to build source code or install extension, yarn is requried.
 
 ```
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
@@ -27,17 +27,17 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 Take [junegunn/vim-plug](https://github.com/junegunn/vim-plug) for example, add
 
 ``` vim
-Plug 'neoclide/coc.nvim', {'do': './install.sh'}
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 ```
 
-For build from source, add:
+To build from source, add:
 
 ``` vim
 Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
 ```
 to your `.vimrc` and run command `:PlugInstall` in your neovim.
 
-To check out coc service is running, use command `:checkhealth` in neovim, the output should include:
+To check out coc service is running, use command `:checkhealth` in neovim (not supported by vim), the output should include:
 
 <img width="344" alt="screen shot 2018-07-08 at 11 02 23 pm" src="https://user-images.githubusercontent.com/251450/42421117-001a81ee-8303-11e8-929a-91da4ac9feea.png">
 
