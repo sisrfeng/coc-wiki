@@ -35,6 +35,7 @@ Compare to the language server specified with `languageserver`, extensions have 
   * `activationEvents` in package.json.
   * Configuration support: `contributes.configuration` in package.json.
   * Commands support: `contributes.commands`.
+  * Json shemas assosication: `contributes.jsonValidation`.
 
 ## Implemented coc extensions
 
@@ -58,7 +59,7 @@ Use command `:CocInstall` like:
 ```
 One or more plugin name could be provided.
 
-The extension would be loaded and activated after install succeed.
+The extension would be loaded  after install succeed.
 
 ## Update all coc extensions
 
