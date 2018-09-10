@@ -65,14 +65,23 @@ The extension would be loaded and activated after install succeed.
 :CocUpdate
 ```
 
-## Disable coc extension
+## Manage extenions using denite
 
-Most extension provide an `enable` option. 
+Denite interface could be used for manage extensions, if you have
+[denite.nvim](https://github.com/Shougo/denite.nvim) installed.
 
-For example, to disable `coc-json`, Open your config file by `:CocConfig` and add:
-
+Run command:
 ```
-"json.enable": false
+Denite coc-extension
 ```
+to open denite buffer, like:
+<img width="619" alt="screen shot 2018-09-10 at 10 28 06 pm" src="https://user-images.githubusercontent.com/251450/45303659-e475d380-b548-11e8-9671-8a3e8e116db4.png">
 
-Run `:CocRestart` or restart your vim to make sure the change take effect.
+`*` means extension is activited, `+` means loaded and `-` means disabled.
+
+Supported actions:
+
+* `toggle` default action. Enable/disable selected extension(s).
+* `activate`: activate selected extension(s).
+* `deactivate`: deactivate selected extension(s).
+* `reload`: reload selected extension(s).
