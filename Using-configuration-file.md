@@ -19,7 +19,7 @@ You can make use of [jsonc.vim](https://github.com/neoclide/jsonc.vim) to get co
 
 ## Configuration file resolve
 
-There're three types of configuration file for COC.
+Same as VSCode settings file, there're three types of configuration file for COC.
 
 * The global one bundles with this plugin, which is [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json)
 
