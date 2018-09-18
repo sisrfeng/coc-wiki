@@ -8,6 +8,23 @@ Here's some common problems that you may need to understand when working with CO
 * [Is it possible to highlight the characters in complete items?](#is-it-possible-to-highlight-the-characters-in-complete-items)
 * [How to change highlight of diagnostic signs?](#how-to-change-highlight-of-diagnostic-signs)
 
+## Why it takes seconds to show the diagnostic message on hover?
+
+Coc use `CursorHold` to the diagnostic messages, you should change `updatetime` to a smaller number, for example:
+
+```
+set updatetime=300
+```
+
+## How could I add highlight to the markdown documentation?
+
+Use a markdown plugin which could provide fency code higlight, like https://github.com/tpope/vim-markdown, and use settings like:
+
+```
+  let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'typescript']
+```
+in your `.vimrc`
+
 ## Why `omni` source requires user configuration to work?
 
 This is because `omni` function runs as vim script, it could be really slow and block your UI, if you're working on some complicated language, it's recommended to use async source, for example: the LSP based ones or somehow using a server for async communication. COC make the filetypes of `omni` source empty by default, so you could easily switch to server based sources without overhead. You can define the filetypes of `omni` source in your `coc-settings.json` like this:
