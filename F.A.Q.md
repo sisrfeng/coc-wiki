@@ -2,6 +2,8 @@ Here's some common problems that you may need to understand when working with CO
 
 # Contents
 
+* [Why it takes seconds to show the diagnostic message on hover?](#why-it-takes-seconds-to-show-the-diagnostic-message-on-hover)
+* [How could I add highlight to the markdown documentation?](#how-could-i-add-highlight-to-the-markdown-documentation)
 * [Why `omni` source requires user configuration to work?](#why-omni-source-requires-user-configuration-to-work)
 * [How could separate `ultisnips` source from COC?](#how-could-separate-ultisnips-source-from-coc)
 * [Why `omni` doesn't work even if enabled in configuration?](#why-omni-doesnt-work-even-if-enabled-in-configuration)
