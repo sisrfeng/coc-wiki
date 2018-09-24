@@ -14,7 +14,7 @@ Here's some common problems that you may need to understand when working with CO
 
 It's possible that underline is not usable in your terminal, you can add background color to error characters by use command like:
 
-```
+``` vim
 hi default CocUnderline gui=underline guisp=red term=underline cterm=underline
 ```
 in your `.vimrc`.
