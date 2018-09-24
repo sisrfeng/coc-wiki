@@ -10,6 +10,10 @@ Here's some common problems that you may need to understand when working with CO
 * [Is it possible to highlight the characters in complete items?](#is-it-possible-to-highlight-the-characters-in-complete-items)
 * [How to change highlight of diagnostic signs?](#how-to-change-highlight-of-diagnostic-signs)
 
+## Why location list sometimes doesn't work?
+
+Some plugin like [ale](https://github.com/w0rp/ale) would clear location list that created by other plugin, check out https://github.com/w0rp/ale/issues/1945, it's recommended to use `Denite coc-diagnostic` to get all location list of diagnostics instead of using location list.
+
 ## Why it takes seconds to show the diagnostic message on hover?
 
 Coc use `CursorHold` to the diagnostic messages, you should change `updatetime` to a smaller number, for example:
