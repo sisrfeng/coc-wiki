@@ -15,7 +15,7 @@ Remove emoji from custom sources, by adding:
 ```
 "coc.preferences.customSources": ["word","include"]
 ```
-to your `coc-settings.json`, then it will be triggered by `:` by default.
+to your `coc-settings.json`, then it will be triggered by type `:` and more characters.
 
 ## Why location list sometimes doesn't work?
 
