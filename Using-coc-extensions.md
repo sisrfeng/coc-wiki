@@ -49,6 +49,7 @@ Compare to the language server specified with `languageserver`, extensions have 
 * [coc-tslint](https://github.com/neoclide/coc-tslint): language server using tslint for typescript files.
 * [coc-vetur](https://github.com/neoclide/coc-vetur): language server features using [vue-language-server](https://www.npmjs.com/package/vue-language-server) for `vue` files.
 * [coc-wxml](https://github.com/neoclide/coc-wxml): language server features for wxml.
+* [coc-prettier](https://github.com/neoclide/coc-prettier): fork of [prettier-vscode](https://github.com/prettier/prettier-vscode)
 
 ## Install/update coc extension
 
