@@ -2,7 +2,6 @@ Here's some common problems that you may need to understand when working with CO
 
 # Contents
 
-* [Why it takes seconds to show the diagnostic message on hover?](#why-it-takes-seconds-to-show-the-diagnostic-message-on-hover)
 * [How could I add highlight to the markdown documentation?](#how-could-i-add-highlight-to-the-markdown-documentation)
 * [Why `omni` source requires user configuration to work?](#why-omni-source-requires-user-configuration-to-work)
 * [How could separate `ultisnips` source from COC?](#how-could-separate-ultisnips-source-from-coc)
@@ -10,26 +9,17 @@ Here's some common problems that you may need to understand when working with CO
 * [Is it possible to highlight the characters in complete items?](#is-it-possible-to-highlight-the-characters-in-complete-items)
 * [How to change highlight of diagnostic signs?](#how-to-change-highlight-of-diagnostic-signs)
 
-## Why highlight not added for error locations?
+## How to make emoji autocomplete?
 
-It's possible that underline is not usable in your terminal, you can add background color to error characters by use command like:
-
-``` vim
-hi default CocUnderline gui=underline guisp=red term=underline cterm=underline
+Remove emoji from custom sources, by adding:
 ```
-in your `.vimrc`.
+"coc.preferences.customSources": ["word","include"]
+```
+to your `coc-settings.json`, then it will be triggered by `:` by default.
 
 ## Why location list sometimes doesn't work?
 
 Some plugin like [ale](https://github.com/w0rp/ale) would clear location list that created by other plugin, check out https://github.com/w0rp/ale/issues/1945, it's recommended to use `Denite coc-diagnostic` to get all location list of diagnostics instead of using location list.
-
-## Why it takes seconds to show the diagnostic message on hover?
-
-Coc use `CursorHold` to the diagnostic messages, you should change `updatetime` to a smaller number, for example:
-
-```
-set updatetime=300
-```
 
 ## How could I add highlight to the markdown documentation?
 
