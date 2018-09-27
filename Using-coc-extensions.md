@@ -24,18 +24,20 @@ Compare to the language server specified with `languageserver`, extensions have 
         command! -nargs=0 Tsc    :call CocAction('runCommand', 'tsserver.watchBuild')
         ```
 * Extensions could contribute json schemas (same as VSCode)
+* Extensions could contribute snippets (same as VSCode)
 * Extensions could have specified more client options, like `fileEvents` to watch files (require [watchman](https://facebook.github.io/watchman/) installed), and `middleware` which could be used to fix the result that returned from language server.
 
 ## Differencse between coc extension and VSCode extension.
 
 * Coc extensions use [coc.nvim](https://www.npmjs.org/package/coc.nvim) as dependency instead of [VSCode](https://www.npmjs.com/package/vscode)
-* Coc extensions support language server features by using API from coc.nvim instead of [vscode-languageclient](https://www.npmjs.com/package/vscode-languageclient) which is bundled with VSCode.
-* Coc extensions support some of features that VSCode extensions have:
+* Coc extensions support language server features by using API from coc.nvim instead of [vscode-languageclient](https://www.npmjs.com/package/vscode-languageclient) which could only be used with VSCode.
+* Coc extensions support some of features of VSCode extensions:
   * `activate` and `deactivate` api.
   * `activationEvents` in package.json.
   * Configuration support: `contributes.configuration` in package.json.
   * Commands support: `contributes.commands`.
   * Json shemas assosication: `contributes.jsonValidation`.
+  * Snippets support.
 
 ## Implemented coc extensions
 
@@ -88,3 +90,4 @@ Supported actions:
 * `activate`: activate selected extension(s).
 * `deactivate`: deactivate selected extension(s).
 * `reload`: reload selected extension(s).
+* `uninstall`: remove selected extension(s).
