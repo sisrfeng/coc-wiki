@@ -1,14 +1,5 @@
 Here's some common problems that you may need to understand when working with COC.
 
-# Contents
-
-* [How could I add highlight to the markdown documentation?](#how-could-i-add-highlight-to-the-markdown-documentation)
-* [Why `omni` source requires user configuration to work?](#why-omni-source-requires-user-configuration-to-work)
-* [How could separate `ultisnips` source from COC?](#how-could-separate-ultisnips-source-from-coc)
-* [Why `omni` doesn't work even if enabled in configuration?](#why-omni-doesnt-work-even-if-enabled-in-configuration)
-* [Is it possible to highlight the characters in complete items?](#is-it-possible-to-highlight-the-characters-in-complete-items)
-* [How to change highlight of diagnostic signs?](#how-to-change-highlight-of-diagnostic-signs)
-
 ## How to make emoji autocomplete?
 
 Remove emoji from custom sources, by adding:
