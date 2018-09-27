@@ -31,7 +31,7 @@ Compare to the language server specified with `languageserver`, extensions have 
 
 * Coc extensions use [coc.nvim](https://www.npmjs.org/package/coc.nvim) as dependency instead of [VSCode](https://www.npmjs.com/package/vscode)
 * Coc extensions support language server features by using API from coc.nvim instead of [vscode-languageclient](https://www.npmjs.com/package/vscode-languageclient) which could only be used with VSCode.
-* Coc extensions support some of features of VSCode extensions:
+* Coc extensions support some features of VSCode extensions:
   * `activate` and `deactivate` api.
   * `activationEvents` in package.json.
   * Configuration support: `contributes.configuration` in package.json.
