@@ -27,7 +27,7 @@ Compare to the language server specified with `languageserver`, extensions have 
 * Extensions could contribute snippets (same as VSCode)
 * Extensions could have specified more client options, like `fileEvents` to watch files (require [watchman](https://facebook.github.io/watchman/) installed), and `middleware` which could be used to fix the result that returned from language server.
 
-## Differencse between coc extension and VSCode extension.
+## Differences between coc extension and VSCode extension.
 
 * Coc extensions use [coc.nvim](https://www.npmjs.org/package/coc.nvim) as dependency instead of [VSCode](https://www.npmjs.com/package/vscode)
 * Coc extensions support language server features by using API from coc.nvim instead of [vscode-languageclient](https://www.npmjs.com/package/vscode-languageclient) which could only be used with VSCode.
@@ -79,6 +79,7 @@ Run command:
 ```
 Denite coc-extension
 ```
+
 to open denite buffer, which looks like:
 <img width="619" alt="screen shot 2018-09-10 at 10 28 06 pm" src="https://user-images.githubusercontent.com/251450/45303659-e475d380-b548-11e8-9671-8a3e8e116db4.png">
 
