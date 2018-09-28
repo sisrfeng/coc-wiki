@@ -32,8 +32,6 @@ First, install a VSCode snippet extension from github by command like:
 :CocInstall https://github.com/andys8/vscode-jest-snippets.git#master
 ```
 
-Run command `:CocRestart` to restart coc server.
-
 Open file with snippet related filetype, like `foo.js` as `javascript`, try complete by type part of prefix characters.
 
 <img width="724" alt="screen shot 2018-09-27 at 2 25 41 pm" src="https://user-images.githubusercontent.com/251450/46127038-edadb280-c261-11e8-8e94-957b6d62c9a9.png">
