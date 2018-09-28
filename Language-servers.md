@@ -42,6 +42,7 @@ Check out the official specification at https://microsoft.github.io/language-ser
   * [x] symbol
   * [x] executeCommand
   * [x] applyEdit
+  * [x] resource operations
 
 * Text Synchronization
 
