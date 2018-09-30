@@ -43,7 +43,7 @@ in your vim.
   // only used when autoTrigger is always
   "coc.preferences.triggerAfterInsertEnter": true,
   // timeout for completion
-  "coc.preferences.timeout": 300,
+  "coc.preferences.timeout": 500,
   // not make vim select first item on completion start
   "coc.preferences.noselect": true,
   // executable path for https://facebook.github.io/watchman/, detected from $PATH by default
