@@ -192,3 +192,15 @@ Using [rust-lang-nursery/rls](https://github.com/rust-lang-nursery/rls)
     }
   }
 ```
+
+### C/C++/Objective-C
+
+Using [cquery](https://github.com/cquery-project/cquery)
+
+``` json
+```
+
+Using [clangd](http://llvm.org/viewvc/llvm-project/clang-tools-extra/trunk/clangd/)
+
+``` json
+```
