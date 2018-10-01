@@ -244,3 +244,15 @@ Using [sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
 ```
 
 ### PHP
+
+Using [felixfbecker/php-language-server](https://github.com/felixfbecker/php-language-server)
+
+``` json
+  "languageserver": {
+    "phplang": {
+      "command": "php",
+      "args": ["vendor/felixfbecker/language-server/bin/php-language-server.php"],
+      "filetypes": ["php"]
+    }
+  }
+```
