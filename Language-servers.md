@@ -213,4 +213,12 @@ Using [cquery](https://github.com/cquery-project/cquery)
 Using [clangd](http://llvm.org/viewvc/llvm-project/clang-tools-extra/trunk/clangd/)
 
 ``` json
+  "languageserver": {
+    "clangd": {
+      "command": "clangd",
+      "filetypes": ["c", "cpp", "objc", "objcpp"]
+    }
+  }
 ```
+
+Like many tools, clangd relies on the presence of a [JSON compilation database](https://clang.llvm.org/docs/JSONCompilationDatabase.html)
