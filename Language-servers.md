@@ -152,3 +152,43 @@ An example of socket language server:
 * `initializationOptions` is the json object that passed to [language server on initialize](https://microsoft.github.io/language-server-protocol/specification#initialize).
 * `settings` contains specific configuration of language server.
 * `cwd` could be path that relative from workspace root (directory contains `.vim` or `.git`).
+
+## Example configuration for custom language servers
+
+Add `languageserver` section in your `coc-settings.json` for regist custom language servers.
+
+### Dart
+
+Using [natebosch/dart_language_server](https://github.com/natebosch/dart_language_server):
+
+``` json
+  "languageserver": {
+    "dart": {
+      "command": "dart_language_server",
+      "args": [],
+      "filetypes": ["dart"],
+      "initializationOptions": {},
+      "settings": {
+        "dart": {
+          "validation": {},
+          "completion": {}
+        }
+      }
+    }
+  }
+```
+
+### Rust
+
+Using [rust-lang-nursery/rls](https://github.com/rust-lang-nursery/rls)
+
+``` json
+  "languageserver": {
+    "rls": {
+      "command": "rustup",
+      "args": ["run", "stable", "rls"],
+      "filetypes": ["rust"],
+      "settings": {}
+    }
+  }
+```
