@@ -202,6 +202,8 @@ Using [cquery](https://github.com/cquery-project/cquery)
     "cquery": {
       "command": "cquery",
       "args": ["--log-file=/tmp/cq.log"],
+      // disable automatic reveal output channel
+      "revealOutputChannelOn": "never",
       "filetypes": ["c", "cpp"],
       "initializationOptions": {
         "cacheDirectory": "/tmp/cquery"
@@ -222,3 +224,23 @@ Using [clangd](http://llvm.org/viewvc/llvm-project/clang-tools-extra/trunk/clang
 ```
 
 Like many tools, clangd relies on the presence of a [JSON compilation database](https://clang.llvm.org/docs/JSONCompilationDatabase.html)
+
+### Go
+
+Using [sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
+
+``` json
+  "coc.source.gocode.enable": false,
+  "languageserver": {
+    "golang": {
+      "command": "go-langserver",
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "funcSnippetEnabled": true,
+        "gocodeCompletionEnabled": true
+      }
+    }
+  }
+```
+
+### PHP
