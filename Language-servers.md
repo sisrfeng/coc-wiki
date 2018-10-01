@@ -198,6 +198,16 @@ Using [rust-lang-nursery/rls](https://github.com/rust-lang-nursery/rls)
 Using [cquery](https://github.com/cquery-project/cquery)
 
 ``` json
+  "languageserver": {
+    "cquery": {
+      "command": "cquery",
+      "args": ["--log-file=/tmp/cq.log"],
+      "filetypes": ["c", "cpp"],
+      "initializationOptions": {
+        "cacheDirectory": "/tmp/cquery"
+      }
+    }
+  }
 ```
 
 Using [clangd](http://llvm.org/viewvc/llvm-project/clang-tools-extra/trunk/clangd/)
