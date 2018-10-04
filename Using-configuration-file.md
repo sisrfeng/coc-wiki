@@ -41,11 +41,15 @@ in your vim.
   // could be 'always' 'trigger' => for specified trigger characters only 'none'
   "coc.preferences.autoTrigger": "always",
   // only used when autoTrigger is always
-  "coc.preferences.triggerAfterInsertEnter": true,
+  "coc.preferences.triggerAfterInsertEnter": false,
   // timeout for completion
   "coc.preferences.timeout": 500,
   // not make vim select first item on completion start
   "coc.preferences.noselect": true,
+  // enable formatOnType feature
+  "coc.preferences.formatOnType": false,
+  // command used for jump to other buffer
+  "coc.preferences.jumpCommand": "edit",
   // executable path for https://facebook.github.io/watchman/, detected from $PATH by default
   // "coc.preferences.watchmanPath": "",
   // enable diagnostic
@@ -90,4 +94,3 @@ Just like VSCode, each coc extension could contribute configuration sections, fo
 To get detailed options for existing configurations, just try completion in file `coc-settings.json`:
 
 <img width="424" alt="screen shot 2018-07-13 at 2 17 26 pm" src="https://user-images.githubusercontent.com/251450/42675689-c9eb04e2-86a7-11e8-94b8-792f247a7394.png">
-
