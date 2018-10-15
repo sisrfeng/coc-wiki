@@ -1,6 +1,3 @@
-To make coc have best features like VSCode, coc bundles with some language server extensions itself, while users still able 
-configure custom language servers.
-
 # Contents
 
 * [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
