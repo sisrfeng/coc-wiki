@@ -8,20 +8,25 @@
 The same as VSCode, each language server have a output channel itself, the output channel could be opened by
 
 ```
-:call CocAction('runCommand', 'workspace.showOutput')
+:CocCommand workspace.showOutput
 ```
-
-Or
-```
-:Denite coc-command
-```
-to get command list and run command by type `<enter>`.
 
 To make output channel track LSP communication, set `[languageserverId].trace.server` to `true` in your `coc-settings.json`.
 
 For example, to make `tsserver` track LSP communication, use:
-```
+``` json
   "tsserver.trace.server": "verbose",
+```
+
+to make custom language server to track LSP communication, add `trace.server` section in language server configuration, like:
+``` json
+    "rls": {
+      "command": "rustup",
+      "trace.server": "verbose",
+      "args": ["run", "stable", "rls"],
+      "filetypes": ["rust"],
+      "settings": {}
+    }
 ```
 
 However, the output of LSP communication is difficult for human to read, you can upload the content to LSP inspector: https://microsoft.github.io/language-server-protocol/inspector/, which would be looks like:
