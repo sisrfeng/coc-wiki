@@ -11,7 +11,7 @@ The same as VSCode, each language server have a output channel itself, the outpu
 :CocCommand workspace.showOutput
 ```
 
-To make output channel track LSP communication, set `[languageserverId].trace.server` to `true` in your `coc-settings.json`.
+To make output channel track all LSP communication, set `[languageserverId].trace.server` to `verbose` in your `coc-settings.json`.
 
 For example, to make `tsserver` track LSP communication, use:
 ``` json
