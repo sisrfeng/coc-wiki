@@ -60,7 +60,9 @@ Use command `:CocInstall` like:
 ```
 :CocInstall coc-json coc-css
 ```
-One or more plugin name could be provided.
+One or more extension name could be provided.
+
+The extension name could also be url of git repository, like: `https://github.com/andys8/vscode-jest-snippets.git#master` which could be accepted by `yarn install`
 
 The extension would be loaded  after install succeed.
 
@@ -92,3 +94,11 @@ Supported actions:
 * `deactivate`: deactivate selected extension(s).
 * `reload`: reload selected extension(s).
 * `uninstall`: remove selected extension(s).
+
+## Debug coc extension
+
+For extension using language server, you can use output channel, check out https://github.com/neoclide/coc.nvim/wiki/Debug-language-server#using-output-channel.
+
+If the extension using stdio to write messages, you can get the output from the log file of coc, the log file could be find by run command: `node -e 'console.log(path.join(os.tmpdir(), "coc-nvim.log"))'`.
+
+The default log level is info, to get the debug information, set `NVIM_COC_LOG_LEVEL` environment variable by command: `export NVIM_COC_LOG_LEVEL=debug`.
