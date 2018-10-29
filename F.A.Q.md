@@ -1,5 +1,13 @@
 Here's some common problems that you may need to understand when working with COC.
 
+## Weired completion behaviour in vim8.
+
+Upgrade global [vim-node-rpc](https://github.com/neoclide/vim-node-rpc) module by command:
+```
+npm i -g vim-node-rpc
+```
+and make sure `vim-node-rpc` exists in your `$PATH`, some fixes of that module have been made.
+
 ## No completion triggered after type trigger character sometimes.
 
 Some language server could be slow for receiving document change before trigger completion, you can change the wait time for language server to finish the document change process before completion by change `coc.preferences.triggerCompletionWait` in your `coc-settings.json`, it's default to `60` in milliseconds.
@@ -10,15 +18,11 @@ Remove emoji from custom sources, by adding:
 ```
 "coc.preferences.customSources": ["word","include"]
 ```
-to your `coc-settings.json`, then it will be triggered by type `:` and more characters.
-
-## Why location list sometimes doesn't work?
-
-Some plugin like [ale](https://github.com/w0rp/ale) would clear location list that created by other plugin, check out https://github.com/w0rp/ale/issues/1945, it's recommended to use `Denite coc-diagnostic` to get all location list of diagnostics instead of using location list.
+to your `coc-settings.json`.
 
 ## How could I add highlight to the markdown documentation?
 
-Use a markdown plugin which could provide fency code higlight, like https://github.com/tpope/vim-markdown, and use settings like:
+Use a markdown plugin which could provide fency code highlight, like https://github.com/tpope/vim-markdown, and use settings like:
 
 ```
   let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'typescript']
