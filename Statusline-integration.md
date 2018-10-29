@@ -24,7 +24,11 @@ endfunction
 ```
 Then add `%{StatusDiagnostic()}` ` to your 'statusline' option.
 
-## Integration [vim-airline](https://github.com/vim-airline/vim-airline)
+## Integration with [eleline.vim](https://github.com/liuchengxu/eleline.vim)
+
+Just works.
+
+## Integration with [vim-airline](https://github.com/vim-airline/vim-airline)
 
 To make airline show the diagnostic information from coc, you can configure airline like:
 
