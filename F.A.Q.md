@@ -1,6 +1,6 @@
 Here's some common problems that you may need to understand when working with COC.
 
-## Weired completion behaviour in vim8.
+## Weired completion behaviour on vim8.
 
 Upgrade global [vim-node-rpc](https://github.com/neoclide/vim-node-rpc) module by command:
 ```
