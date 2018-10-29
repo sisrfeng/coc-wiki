@@ -8,6 +8,10 @@ npm i -g vim-node-rpc
 ```
 and make sure `vim-node-rpc` exists in your `$PATH`, some fixes of that module have been made.
 
+## Why location list sometimes doesn't work?
+
+Some plugin like [ale](https://github.com/w0rp/ale) would clear location list that created by other plugin, check out https://github.com/w0rp/ale/issues/1945, it's recommended to use Denite coc-diagnostic to get all location list of diagnostics instead of using location list.
+
 ## No completion triggered after type trigger character sometimes.
 
 Some language server could be slow for receiving document change before trigger completion, you can change the wait time for language server to finish the document change process before completion by change `coc.preferences.triggerCompletionWait` in your `coc-settings.json`, it's default to `60` in milliseconds.
