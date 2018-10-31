@@ -1,4 +1,8 @@
-Here's some common problems that you may need to understand when working with COC.
+Here's some common problems that you may need to understand when working with coc.nvim.
+
+## Not working after upgrade node.
+
+Run command `:CocRebuild` to rebuild coc extensions, some of them could be using C++ addons, which requires rebuild after upgrade.
 
 ## Weired completion behaviour on vim8.
 
