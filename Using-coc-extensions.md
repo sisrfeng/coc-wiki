@@ -97,6 +97,8 @@ Supported actions:
 
 ## Debug coc extension
 
+If extension throw uncaught errors, you can get the error message by command: `:call coc#rpc#show_error()`.
+
 For extension using language server, you can use output channel, check out https://github.com/neoclide/coc.nvim/wiki/Debug-language-server#using-output-channel.
 
 If the extension using stdio to write messages, you can get the output from the log file of coc, the log file could be find by run command: `node -e 'console.log(path.join(os.tmpdir(), "coc-nvim.log"))'`.
