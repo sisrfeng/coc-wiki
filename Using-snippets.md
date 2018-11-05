@@ -1,7 +1,7 @@
 Coc have snippets support in different ways:
 
 * Snippet completion items from different vim snippet plugins, including [ultisnips](https://github.com/SirVer/ultisnips) and [neosnippet.vim](https://github.com/Shougo/neosnippet.vim).
-* Snippet kind of completion item from language servers.
+* Snippet kind of completion item from language servers, which are snipmate format.
 * Snippet completion items from coc extensions that contribute VSCode snippets.
 
 ## Snippet completion
