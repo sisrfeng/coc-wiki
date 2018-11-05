@@ -17,9 +17,9 @@ COC have 3 different trigger modes:
 
 You can change trigger mode by [using configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file)
 
-To avoid completion trigger by insert enter, add
+To support completion trigger on insert enter, add
   
-    "coc.preferences.triggerAfterInsertEnter": false
+    "coc.preferences.triggerAfterInsertEnter": true
 
 to your `coc-settings.json`.
 
