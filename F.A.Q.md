@@ -124,3 +124,15 @@ You can customize the highlight by adding something like:
 highlight link CocErrorSign GruvboxRed
 ```
 to your `.vimrc`
+
+## How to get log of coc.nvim?
+
+Enable debug mode for coc in your terminal:
+```
+export NVIM_COC_LOG_LEVEL=debug
+```
+Get the log file by command:
+```
+node -e 'console.log(path.join(os.tmpdir(), "coc-nvim.log"))'
+```
+open the log with vim or other editor.
