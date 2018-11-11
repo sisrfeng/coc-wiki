@@ -31,8 +31,8 @@ Check out the official specification at https://microsoft.github.io/language-ser
 
 * Workspace
 
-  * [ ] workspaceFolders
-  * [ ] didChangeWorkspaceFolders
+  * [x] workspaceFolders
+  * [x] didChangeWorkspaceFolders
   * [x] didChangeConfiguration
   * [x] configuration
   * [x] didChangeWatchedFiles
