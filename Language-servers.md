@@ -192,6 +192,12 @@ Using [rust-lang-nursery/rls](https://github.com/rust-lang-nursery/rls)
 
 ### C/C++/Objective-C
 
+To remove the function params from insert text of vim's completion item, you need to add:
+``` json
+"coc.preferences.splitLabelForWord": true,
+```
+to your coc-settings.json, this also add `dup:1` to vim's completion item and disable completion resolve on select change.
+
 Using [cquery](https://github.com/cquery-project/cquery)
 
 ``` json
