@@ -175,21 +175,6 @@ Using [natebosch/dart_language_server](https://github.com/natebosch/dart_languag
   }
 ```
 
-### Rust
-
-Using [rust-lang-nursery/rls](https://github.com/rust-lang-nursery/rls)
-
-``` json
-  "languageserver": {
-    "rls": {
-      "command": "rustup",
-      "args": ["run", "stable", "rls"],
-      "filetypes": ["rust"],
-      "settings": {}
-    }
-  }
-```
-
 ### C/C++/Objective-C
 
 To remove the function params from insert text of vim's completion item, you need to add:
