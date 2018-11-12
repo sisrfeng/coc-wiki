@@ -7,9 +7,11 @@ Coc have snippets support in different ways:
 ## Snippet completion
 
 Complete item of snippet kind would be shown with ~ appended:
+
 ![](https://user-images.githubusercontent.com/251450/42562999-b4eb9634-852f-11e8-9f61-bab2bc19db3f.png)
 
-The snippet is designed to expand only when the `completionDone` is triggered by using <C-y> for confirm, so that user could decide expand the snippet or not. To make `<cr>` for confirm completion, add
+The snippet is designed to expand only when the `completionDone` is triggered by using `<C-y> `for confirm, so that user could decide expand the snippet or not. To make `<cr>` for confirm completion, add
+
 ``` vim
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 ```
