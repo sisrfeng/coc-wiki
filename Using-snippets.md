@@ -24,6 +24,8 @@ Vim global variable `g:coc_snippet_next` and `g:coc_snippet_prev` can be used to
 
 For configure complete source of `ultisnip` and `neosnippet` try type `ultisnips` and `neosnippet` in your `coc-settings.json` to get completion for all related options.
 
+If you don't like `~` as snippet indicator of complete item in completion menu, you can change that by use `coc.preferences.snippetIndicator` in your `coc-settings.json`.
+
 ## Using VSCode snippet extension
 
 Coc could use snippets from VSCode extensions.
