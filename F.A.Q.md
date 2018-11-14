@@ -20,7 +20,7 @@ Some plugin like [ale](https://github.com/w0rp/ale) would clear location list th
 
 ## No completion triggered after type trigger character sometimes.
 
-Some language server could be slow for receiving document change before trigger completion, you can change the wait time for language server to finish the document change process before completion by change `coc.preferences.triggerCompletionWait` in your `coc-settings.json`, it's default to `60` in milliseconds.
+Some language server could be slow for receiving document change before trigger completion, you can change the wait time for language server to finish the document change process before completion by change `coc.preferences.triggerCompletionWait` in your `coc-settings.json`, it's default to `2000` in milliseconds.
 
 ## How to make emoji autocomplete?
 
