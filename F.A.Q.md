@@ -26,7 +26,7 @@ Some language server could be slow for receiving document change before trigger 
 
 Remove emoji from custom sources, by adding:
 ```
-"coc.preferences.customSources": ["word","include"]
+"coc.preferences.customSources": ["include"]
 ```
 to your `coc-settings.json`.
 
@@ -46,9 +46,7 @@ This is because `omni` function runs as vim script, it could be really slow and 
 ``` js
 "coc.source.omni.filetypes": ["html", "css"],
 ``` 
-This could enable COC to run `omni` functions on filetype `css` and `html`.
-
-BTW: The recommended css and html completion plugins are [othree/csscomplete.vim](https://github.com/othree/csscomplete.vim) [othree/html5.vim](https://github.com/othree/html5.vim)
+This would enable COC to run `omni` functions on filetype `css` and `html`.
 
 ## How could separate `ultisnips` source from COC?
 
@@ -96,7 +94,7 @@ endfunc
 ```
 Then you can use `<C-l>` for snippets completion.
 
-## Why `omni` doesn't work even if enabled in configuration?
+## Why `omni` doesn't work even it's enabled in configuration?
 
 First, checkout you have set `omnifunc` option correctly for current filetype by:
 
@@ -120,10 +118,13 @@ No, since vim/neovim doesn't have that kind of API, unless you're using [externa
 The sign highlight groups are `CocErrorSign` `CocWarningSign` `CocInfoSign` `CocHintSign`
 
 You can customize the highlight by adding something like:
+
 ``` vim
 highlight link CocErrorSign GruvboxRed
 ```
-to your `.vimrc`
+to your `.vimrc`.
+
+See `:h coc-highlights` for more highlight groups.
 
 ## How to get log of coc.nvim?
 
@@ -131,8 +132,8 @@ Enable debug mode for coc in your terminal:
 ```
 export NVIM_COC_LOG_LEVEL=debug
 ```
+
 Get the log file by command:
 ```
 node -e 'console.log(path.join(os.tmpdir(), "coc-nvim.log"))'
 ```
-open the log with vim or other editor.
