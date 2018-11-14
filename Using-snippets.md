@@ -6,7 +6,7 @@ Coc have snippets support in different ways:
 
 ## Snippet completion
 
-Complete item of snippet kind would be shown with ~ appended:
+Complete item of snippet kind would be shown with `~` appended in label by default:
 
 ![](https://user-images.githubusercontent.com/251450/42562999-b4eb9634-852f-11e8-9f61-bab2bc19db3f.png)
 
