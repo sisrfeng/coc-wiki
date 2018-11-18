@@ -26,6 +26,15 @@ For configure complete source of `ultisnip` and `neosnippet` try type `ultisnips
 
 If you don't like `~` as snippet indicator of complete item in completion menu, you can change that by use `coc.preferences.snippetIndicator` in your `coc-settings.json`.
 
+To make completion works like VSCode, add:
+
+```
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
+```
+to your `.vimrc`.
+
 ## Using VSCode snippet extension
 
 Coc could use snippets from VSCode extensions.
