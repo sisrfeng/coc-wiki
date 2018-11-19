@@ -1,6 +1,4 @@
-Start from coc 0.0.15, all extensions are separated from the core.
-
-You **have to** install the extension you need by using vim command `CocInstall` like:
+Install coc extensions by use vim command `CocInstall` like:
 
 ``` vim
 :CocInstall coc-json coc-html coc-css
@@ -66,6 +64,12 @@ One or more extension name could be provided.
 The extension name could also be url of git repository, like: `https://github.com/andys8/vscode-jest-snippets.git#master` which could be accepted by `yarn install`
 
 The extension would be loaded  after install succeed.
+
+# Uninstall coc extension
+
+```
+:CocUninstall coc-css
+```
 
 ## Update all coc extensions
 
