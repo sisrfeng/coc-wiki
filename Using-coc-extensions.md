@@ -18,11 +18,12 @@ Compare to the language server specified with `languageserver`, extensions have 
     * Use command `:Denite coc-command` to open the command list and choose one you need.
 
       <img width="476" alt="screen shot 2018-09-07 at 4 53 12 pm" src="https://user-images.githubusercontent.com/251450/45209334-4d4a1b00-b2bf-11e8-94e0-0c2b981a71f5.png">
-
+    * Use `:CocCommand` with `<tab>` for command line completion.
     * Use a custom command to invoke the command, for exmaple, create a `Tsc` command for `tsserver.watchBuild` could be
         ```
-        command! -nargs=0 Tsc    :call CocAction('runCommand', 'tsserver.watchBuild')
+        command! -nargs=0 Tsc    :CocCommand tsserver.watchBuild
         ```
+
 * Extensions could contribute json schemas (same as VSCode)
 * Extensions could contribute snippets (same as VSCode)
 * Extensions could have specified more client options, like `fileEvents` to watch files (require [watchman](https://facebook.github.io/watchman/) installed), and `middleware` which could be used to fix the result that returned from language server.
