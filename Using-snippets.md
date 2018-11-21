@@ -17,6 +17,15 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 ```
 to your `init.vim`.
 
+A snippet session would cancel on following conditation:
+
+* `InsertEnter` triggered outside snippet.
+* Content change at final placeholder.
+* Content added after snippet.
+* Content change in snippet but not happens to a placeholder.
+
+You can nest snippet in active snippet session, just like VSCode.
+
 ## Configuring snippet completion
 
 To navigate forward/backward of snippet placeholder, use `<C-j>` and `<C-k>`.
