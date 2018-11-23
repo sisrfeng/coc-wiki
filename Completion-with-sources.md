@@ -73,27 +73,13 @@ There're three types of completion sources,`common`, `vim` and `service`.
 
 ### Bundled common sources.
 
-Name         | Description                                             | Use cache   | Default filetypes
------------- | -------------                                           | ------------|------------
-`around`     | Words of current buffer.                                | ✗           | all
-`buffer`     | Words of none current buffer.                           | ✓           | all
-`dictionary` | Words from files of local `dictionary` option.          | ✓           | all
-`tag`        | Words from `taglist` of current buffer.                 | ✓           | all
-`file`       | Filename completion, auto detected.                     | ✗           | all
-`omni`       | Invoke `omnifunc` of current buffer for complete items. | ✗           | []
-`word`       | Words from google 10000 english repo.                   | ✓           | all
-`emoji`      | Eomji characters.                                       | ✓           | ['markdown']
-`include`    | Full path completion for include file paths.            | ✗           | ['javascript', 'typescript']
-`gocode`     | Completion using gocode                                 | ✗           | ['go']
+Name         | Description                                             
+------------ | -------------                                           
+`around`     | Words of current buffer.                                
+`buffer`     | Words of none current buffer.                           
+`file`       | Filename completion, auto detected.                    
 
-`omni` source could be really slow, it requires configuration for `filetypes` to work.
+### More sources
 
-### Bundled vim sources
-
-Vim sources are implemented in viml, and usually requires other vim plugin to work.
-
-Name           |Description                |Filetype     | Requirement
-------------   |------------               |------------ | -------------
-ultisnips      |Snippets completion        |all          | Install [ultisnips](https://github.com/SirVer/ultisnips)
-neco           |VimL completion            |vim          | Install [neco-vim](https://github.com/Shougo/neco-vim)
-neosnippet     |Snippets completion        |all          | Install [neosnippet.vim](https://github.com/Shougo/neosnippet.vim)
+* [coc-sources](https://github.com/neoclide/coc-sources)
+* [coc-neco](https://github.com/neoclide/coc-neco)
