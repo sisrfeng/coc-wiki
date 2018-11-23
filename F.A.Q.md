@@ -20,15 +20,7 @@ Some plugin like [ale](https://github.com/w0rp/ale) would clear location list th
 
 ## No completion triggered after type trigger character sometimes.
 
-Some language server could be slow for receiving document change before trigger completion, you can change the wait time for language server to finish the document change process before completion by change `coc.preferences.triggerCompletionWait` in your `coc-settings.json`, it's default to `2000` in milliseconds.
-
-## How to make emoji autocomplete?
-
-Remove emoji from custom sources, by adding:
-```
-"coc.preferences.customSources": ["include"]
-```
-to your `coc-settings.json`.
+Some language server could be slow for receiving document change before trigger completion, you can change the wait time for language server to finish the document change process before completion by change `coc.preferences.triggerCompletionWait` in your `coc-settings.json`, it's default to `60` in milliseconds.
 
 ## How could I add highlight to the markdown documentation?
 
@@ -37,81 +29,7 @@ Use a markdown plugin which could provide fency code highlight, like https://git
 ```
   let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'typescript']
 ```
-in your `.vimrc`
-
-## Why `omni` source requires user configuration to work?
-
-This is because `omni` function runs as vim script, it could be really slow and block your UI, if you're working on some complicated language, it's recommended to use async source, for example: the LSP based ones or somehow using a server for async communication. COC make the filetypes of `omni` source empty by default, so you could easily switch to server based sources without overhead. You can define the filetypes of `omni` source in your `coc-settings.json` like this:
-
-``` js
-"coc.source.omni.filetypes": ["html", "css"],
-``` 
-This would enable COC to run `omni` functions on filetype `css` and `html`.
-
-## How could separate `ultisnips` source from COC?
-
-First, disable ultisnips in your `coc-settings.json`:
-
-``` js
-"coc.source.ultisnips.enable": false,
-```
-Second, create your own keymap by:
-
-``` vim
-" improved ultisnips complete {{
-inoremap <C-l> <C-R>=SnipComplete()<CR>
-func! SnipComplete()
-  let line = getline('.')
-  let start = col('.') - 1
-  while start > 0 && line[start - 1] =~# '\k'
-    let start -= 1
-  endwhile
-  let suggestions = []
-  let snips =  UltiSnips#SnippetsInCurrentScope(0)
-  for item in keys(snips)
-    let entry = {'word': item, 'menu': snips[item]}
-    call add(suggestions, entry)
-  endfor
-  if empty(suggestions)
-    echohl Error | echon 'no match' | echohl None
-  elseif len(suggestions) == 1
-    let pos = getcurpos()
-    if start == 0
-      let str = trigger
-    else
-      let str = line[0:start - 1] . trigger
-    endif
-    call setline('.', str)
-    let pos[2] = len(str) + 1
-    call setpos('.', pos)
-    call UltiSnips#ExpandSnippet()
-  else
-    call complete(start + 1, suggestions)
-  endif
-  return ''
-endfunc
-" }}
-```
-Then you can use `<C-l>` for snippets completion.
-
-## Why `omni` doesn't work even it's enabled in configuration?
-
-First, checkout you have set `omnifunc` option correctly for current filetype by:
-
-``` vim
-:verbose set omnifunc
-```
-COC would ignore `omni` complete silently if the value is not a existing function.
-
-Some `omni` functions could be broken, so they have to be blacklisted, the current blacklist is: `LanguageClient#complete`.
-
-Send us feedback if you found any `omnifunc` that not works with COC!
-
-BTW: This concept is borrowed from [deoplete.nvim](https://github.com/Shougo/deoplete.nvim/blob/5d78e1a75d36a719f1f66ee78c635ea05df72b8c/rplugin/python3/deoplete/source/omni.py#L63)
-
-## Is it possible to highlight the characters in complete items?
-
-No, since vim/neovim doesn't have that kind of API, unless you're using [external UIs of neovim](https://github.com/neovim/neovim/wiki/Related-projects#gui) some of them could render complete items themself and provide custom highlight for complete items. 
+in your `.vimrc`.
 
 ## How to change highlight of diagnostic signs?
 
@@ -124,16 +42,19 @@ highlight link CocErrorSign GruvboxRed
 ```
 to your `.vimrc`.
 
-See `:h coc-highlights` for more highlight groups.
+See `:h coc-highlights` for all highlight groups.
 
 ## How to get log of coc.nvim?
 
 Enable debug mode for coc in your terminal:
+
 ```
 export NVIM_COC_LOG_LEVEL=debug
 ```
 
-Get the log file by command:
+Open log file by command:
 ```
-node -e 'console.log(path.join(os.tmpdir(), "coc-nvim.log"))'
+:CocOpenLog
 ```
+
+The log would be cleared just after coc server started.
