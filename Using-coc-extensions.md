@@ -55,7 +55,7 @@ The extension name could also be url of git repository, like: `https://github.co
 
 The extension would be loaded  after install succeed.
 
-# Uninstall coc extension
+## Uninstall coc extension
 
 ```
 :CocUninstall coc-css
