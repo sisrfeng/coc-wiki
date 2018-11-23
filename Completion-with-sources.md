@@ -71,7 +71,7 @@ There're three types of completion sources,`common`, `vim` and `service`.
 * `vim` sources are implemented in viml and could comes from other vim plugins, coc has some bundled vim sources.
 * `service` sources are registered by language servers, they have higher priority.
 
-### Bundled common sources.
+### Bundled sources.
 
 Name         | Description                                             
 ------------ | -------------                                           
