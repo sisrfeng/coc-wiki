@@ -65,12 +65,6 @@ imap <c-space> coc#refresh()
     ```
 ## Completion sources
 
-There're three types of completion sources,`common`, `vim` and `service`.
-
-* `common` sources are bundled with coc, and implemented in javascript.
-* `vim` sources are implemented in viml and could comes from other vim plugins, coc has some bundled vim sources.
-* `service` sources are registered by language servers, they have higher priority.
-
 ### Bundled sources.
 
 Name         | Description                                             
