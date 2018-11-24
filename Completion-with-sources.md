@@ -7,6 +7,19 @@ Coc have full featured support for completion of LSP, and doesn't bother `comple
 * [Improve completion experience](#improve-completion-experience)
 * [Completion sources](#completion-sources)
 
+## Highlights of coc completion
+
+* All completion sources runs in parallel.
+* Use buffer update events of neovim for synchronize buffer contents.
+* Trigger async completion without timer, does filter with new input on completion finished . 
+* Filter previous completion items when possible to prevent unnecessary completion request.
+* Filter completion items on `<backspace>` when possible.
+* Full support of completion item definition in LSP, including `snippetTextFormat`, `additionalTextEdit`, `sortText` etc.
+* Fuzzy match with smart case (lower case letter is case insensitive, upper case letter must have strict match).
+* Does filter on TextChangedP when necessary to prevent wrong filtered result from vim.
+* Does completion resolve on change completion item, echo detail when found.
+* Change and restore your `completeopt` option during completion (possible to keep use `preview,menu` on omni completion).
+
 ## Trigger mode of completion
 
 COC have 3 different trigger modes:
