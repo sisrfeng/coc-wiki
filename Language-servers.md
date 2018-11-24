@@ -177,11 +177,17 @@ Using [natebosch/dart_language_server](https://github.com/natebosch/dart_languag
 
 ### C/C++/Objective-C
 
-To remove the function params from insert text of vim's completion item, you need to add:
+Using [ccls](https://github.com/MaskRay/ccls)
+
 ``` json
-"coc.preferences.splitLabelForWord": true,
+  "ccls": {
+    "command": "ccls",
+    "filetypes": ["c", "cpp", "objc", "objcpp"],
+    "initializationOptions": {
+      "cacheDirectory": "/tmp/ccls"
+    }
+  }
 ```
-to your coc-settings.json, this also add `dup:1` to vim's completion item and disable completion resolve on select change.
 
 Using [cquery](https://github.com/cquery-project/cquery)
 
