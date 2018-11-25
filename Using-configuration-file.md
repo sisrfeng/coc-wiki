@@ -1,7 +1,7 @@
 COC.nvim use [jsonc](https://code.visualstudio.com/docs/languages/json) as configuration file format, the same as VSCode.
 It's json that support comment, like:
 
-``` json
+``` jsonc
 {
   // my variable
   "foo": "bar"
@@ -37,7 +37,7 @@ in your vim.
 
 ## Default COC preferences
 
-``` js
+``` jsonc
   // could be 'always' 'trigger' => for specified trigger characters only 'none'
   "coc.preferences.autoTrigger": "always",
   // only used when autoTrigger is always
@@ -69,7 +69,7 @@ To get complete list, checkout [settings.json](https://github.com/neoclide/coc.n
 
 Sources are configured with prefix `coc.source.{sourcename}` in configuration file, they share some common attributes, take 'neco' source for example:
 
-``` js
+``` jsonc
   // Set to false to disable a source totally
   "coc.source.neco.enable": true,
   // Short words used for menu of complete item
