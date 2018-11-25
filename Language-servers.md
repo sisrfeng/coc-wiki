@@ -224,7 +224,6 @@ Like many tools, clangd relies on the presence of a [JSON compilation database](
 Using [sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
 
 ``` json
-  "coc.source.gocode.enable": false,
   "languageserver": {
     "golang": {
       "command": "go-langserver",
