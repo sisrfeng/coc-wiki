@@ -228,9 +228,12 @@ Using [sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
     "golang": {
       "command": "go-langserver",
       "filetypes": ["go"],
+      // disable output channel to hide server errors
+      "revealOutputChannelOn": "never",
       "initializationOptions": {
-        "funcSnippetEnabled": true,
-        "gocodeCompletionEnabled": true
+        "gocodeCompletionEnabled": true,
+        "diagnosticsEnabled": true,
+        "lintTool": "golint"
       }
     }
   }
