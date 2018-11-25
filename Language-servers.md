@@ -96,7 +96,7 @@ Different language server type have different configuration schema.
 
 An example of `module` language server:
 
-``` json
+``` jsonc
   "languageserver": {
     "foo": {
       "module": "/usr/local/lib/node_modules/foo/index.js",
@@ -117,7 +117,7 @@ An example of `module` language server:
 
 An example of `executable` language server:
 
-``` json
+``` jsonc
   "languageserver": {
     "bar": {
       "command": "bar",
@@ -135,7 +135,7 @@ An example of `executable` language server:
 
 An example of socket language server:
 
-``` json
+``` jsonc
 "languageserver": {
     "socketserver": {
       "host": "127.0.0.1",
@@ -158,7 +158,7 @@ Add `languageserver` section in your `coc-settings.json` for regist custom langu
 
 Using [natebosch/dart_language_server](https://github.com/natebosch/dart_language_server):
 
-``` json
+``` jsonc
   "languageserver": {
     "dart": {
       "command": "dart_language_server",
@@ -179,7 +179,7 @@ Using [natebosch/dart_language_server](https://github.com/natebosch/dart_languag
 
 Using [ccls](https://github.com/MaskRay/ccls)
 
-``` json
+``` jsonc
   "ccls": {
     "command": "ccls",
     "filetypes": ["c", "cpp", "objc", "objcpp"],
@@ -191,7 +191,7 @@ Using [ccls](https://github.com/MaskRay/ccls)
 
 Using [cquery](https://github.com/cquery-project/cquery)
 
-``` json
+``` jsonc
   "languageserver": {
     "cquery": {
       "command": "cquery",
@@ -208,7 +208,7 @@ Using [cquery](https://github.com/cquery-project/cquery)
 
 Using [clangd](http://llvm.org/viewvc/llvm-project/clang-tools-extra/trunk/clangd/)
 
-``` json
+``` jsonc
   "languageserver": {
     "clangd": {
       "command": "clangd",
@@ -223,7 +223,7 @@ Like many tools, clangd relies on the presence of a [JSON compilation database](
 
 Using [sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
 
-``` json
+``` jsonc
   "languageserver": {
     "golang": {
       "command": "go-langserver",
@@ -243,7 +243,7 @@ Using [sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
 
 Using [felixfbecker/php-language-server](https://github.com/felixfbecker/php-language-server)
 
-``` json
+``` jsonc
   "languageserver": {
     "phplang": {
       "command": "php",
