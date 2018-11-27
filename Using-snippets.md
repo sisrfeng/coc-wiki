@@ -44,7 +44,7 @@ let g:coc_snippet_prev = '<S-TAB>'
 ```
 to your `.vimrc`.
 
-And:
+And add:
 
 ``` jsonc
   // make vim select first item on completion
@@ -52,6 +52,7 @@ And:
   // when snippet activated and pumvisible, prefer complete completion.
   "coc.preferences.preferCompleteThanJumpPlaceholder": true,
 ```
+to your `coc-settings.json`.
 
 ## Using VSCode snippet extension
 
