@@ -33,8 +33,6 @@ You can nest snippet in active snippet session, just like VSCode.
 To navigate forward/backward of snippet placeholder, use `<C-j>` and `<C-k>`.
 Vim global variable `g:coc_snippet_next` and `g:coc_snippet_prev` can be used to change the keymapping.
 
-For configure complete source of `ultisnip` and `neosnippet` try type `ultisnips` and `neosnippet` in your `coc-settings.json` to get completion for all related options.
-
 If you don't like `~` as snippet indicator of complete item in completion menu, you can change that by use `coc.preferences.snippetIndicator` in your `coc-settings.json`.
 
 To make completion works like VSCode, add:
