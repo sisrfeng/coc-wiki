@@ -1,6 +1,6 @@
 Coc have snippets support in different ways:
 
-* Snippet completion items from different vim snippet plugins, including [ultisnips](https://github.com/SirVer/ultisnips) and [neosnippet.vim](https://github.com/Shougo/neosnippet.vim).
+* Snippet completion items from different vim snippet plugins, by use extenion like: [coc-ultinip](https://www.npmjs.com/package/coc-ultisnips) and [coc-neosnippet](https://www.npmjs.com/package/coc-neosnippet).
 * Snippet kind of completion item from language servers, which are snipmate format.
 * Snippet completion items from coc extensions that contribute VSCode snippets.
 
@@ -10,10 +10,12 @@ Complete item of snippet kind would be shown with `~` appended in label by defau
 
 ![](https://user-images.githubusercontent.com/251450/42562999-b4eb9634-852f-11e8-9f61-bab2bc19db3f.png)
 
+Note: when snippet format of complete item is set on completion resolve, you won't see `~`, since it's impossible for vim to update label of complete item during completion.
+
 The snippet is designed to expand only when the `completionDone` is triggered by using `<C-y> `for confirm, so that user could decide expand the snippet or not. To make `<cr>` for confirm completion, add
 
 ``` vim
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
 ```
 to your `init.vim`.
 
@@ -43,6 +45,15 @@ let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
 ```
 to your `.vimrc`.
+
+And:
+
+``` jsonc
+  // make vim select first item on completion
+  "coc.preferences.noselect": false,
+  // when snippet activated and pumvisible, prefer complete completion.
+  "coc.preferences.preferCompleteThanJumpPlaceholder": true,
+```
 
 ## Using VSCode snippet extension
 
