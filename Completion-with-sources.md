@@ -18,7 +18,7 @@ Coc have full featured support for completion of LSP, and doesn't bother `comple
 * Fuzzy match with smart case (lower case letter is case insensitive, upper case letter must have strict match).
 * Does filter on TextChangedP when necessary to prevent wrong filtered result from vim.
 * Does completion resolve on change completion item, echo detail when found.
-* Change and restore your `completeopt` option during completion (possible to keep use `preview,menu` on omni completion).
+* Change and restore your `completeopt` option during completion (you can keep use `preview,menu` for other completion).
 
 ## Trigger mode of completion
 
