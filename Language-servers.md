@@ -252,3 +252,17 @@ Using [felixfbecker/php-language-server](https://github.com/felixfbecker/php-lan
     }
   }
 ```
+
+### Dockerfile
+
+Using [rcjsuen/dockerfile-language-server-nodejs](https://github.com/rcjsuen/dockerfile-language-server-nodejs)
+
+``` jsonc
+  "languageserver": {
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
+    }
+  }
+```
