@@ -14,7 +14,6 @@ You can make use of [jsonc.vim](https://github.com/neoclide/jsonc.vim) to get co
 
 * [Configuration file resolve](#configuration-file-resolve)
 * [Default COC preferences](#default-coc-preferences)
-* [Configuration for sources](#configuration-for-sources)
 * [Extension configuration](#extension-configuration)
 
 ## Configuration file resolve
@@ -25,7 +24,8 @@ Same as VSCode settings file, there're three types of configuration file for COC
 
 * The user configuration is named as `coc-settings.json` and placed inside folder `$XDG_CONFIG_HOME/nvim` or `$HOME/.config/nvim` by default. Run command `:CocConfig` to open your user configuration file. 
 
-* The workspace configuration should be named with `coc-settings.json` and would be resolve in directory `.vim`. Just after vim started, coc would look up from current directory of vim to find it. If your have changed your working project in vim, you may need run `:CocRestart` to make the language servers work as expected.
+* The workspace configuration should be named with `coc-settings.json` and would be resolve in directory `.vim`. 
+After a file opened in vim, this directory would be resolved from parent directory of file. If the directory is not resolved for you, try restart coc server by command `:CocRestart`.
 
 The active configuration would be a merged result from 'default', 'user' and 'workspace' configuration file, **the later one have higher priority**.
 
@@ -43,7 +43,7 @@ in your vim.
   // only used when autoTrigger is always
   "coc.preferences.triggerAfterInsertEnter": false,
   // timeout for completion
-  "coc.preferences.timeout": 500,
+  "coc.preferences.timeout": 2000,
   // not make vim select first item on completion start
   "coc.preferences.noselect": true,
   // enable formatOnType feature
@@ -63,26 +63,7 @@ in your vim.
 
 To get complete list, checkout [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json)
 
-**Note:** for configure keymappings of coc, vim global variable is used, check out `coc-variable` section at `doc/coc.txt`.
-
-## Configuration for sources
-
-Sources are configured with prefix `coc.source.{sourcename}` in configuration file, they share some common attributes, take 'neco' source for example:
-
-``` jsonc
-  // Set to false to disable a source totally
-  "coc.source.neco.enable": true,
-  // Short words used for menu of complete item
-  "coc.source.neco.shortcut": "NEC",
-  // priority of this source
-  "coc.source.neco.priority": 9,
-  // filetypes using this source, set empty means disable source, if not defined, it works for all filetypes
-  "coc.source.neco.filetypes": ["vim"],
-  // only show the complete item that first letter match the input, works for vim source only.
-  "coc.source.neco.firstMatch": true,
-  // List of none-word characters for trigger completion
-  "coc.source.neco.triggerCharacters": [":"],
-```
+**Note:** for configure keymaps of coc, vim global variable is used, check out `coc-variable` section at `doc/coc.txt`.
 
 ## Extension configuration
 
