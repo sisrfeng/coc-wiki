@@ -280,3 +280,16 @@ Using [mads-hartmann/bash-language-server/issues](https://github.com/mads-hartma
     }
   }
 ```
+
+### Lua
+
+Using [Alloyed/lua-lsp](https://github.com/Alloyed/lua-lsp)
+
+``` jsonc
+  "languageserver": {
+    "lua": {
+      "command": "lua-lsp",
+      "filetypes": ["lua"]
+    }
+  }
+```
