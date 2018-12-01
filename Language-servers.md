@@ -266,3 +266,17 @@ Using [rcjsuen/dockerfile-language-server-nodejs](https://github.com/rcjsuen/doc
     }
   }
 ```
+
+### Bash
+
+Using [mads-hartmann/bash-language-server/issues](https://github.com/mads-hartmann/bash-language-server/issues)
+
+``` jsonc
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "filetypes": ["sh"],
+      "args": ["start"]
+    }
+  }
+```
