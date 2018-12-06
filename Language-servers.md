@@ -227,8 +227,6 @@ Using [sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
   "languageserver": {
     "golang": {
       "command": "go-langserver",
-      "filetypes": ["go"],
-      // disable output channel to hide server errors
       "revealOutputChannelOn": "never",
       "initializationOptions": {
         "gocodeCompletionEnabled": true,
