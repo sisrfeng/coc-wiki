@@ -227,6 +227,7 @@ Using [sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
   "languageserver": {
     "golang": {
       "command": "go-langserver",
+      "filetypes": ["go"],
       "revealOutputChannelOn": "never",
       "initializationOptions": {
         "gocodeCompletionEnabled": true,
