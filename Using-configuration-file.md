@@ -20,7 +20,7 @@ You can make use of [jsonc.vim](https://github.com/neoclide/jsonc.vim) to get co
 
 Same as VSCode settings file, there're three types of configuration file for COC.
 
-* The global one bundles with this plugin, which is [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json)
+* The global one bundles with this plugin, which is [schema.json](https://github.com/neoclide/coc.nvim/blob/master/data/schema.json)
 
 * The user configuration is named as `coc-settings.json` and placed inside folder `$XDG_CONFIG_HOME/nvim` or `$HOME/.config/nvim` by default. Run command `:CocConfig` to open your user configuration file. 
 
