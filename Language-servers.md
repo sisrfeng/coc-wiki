@@ -307,7 +307,7 @@ Using [ocaml-language-server](https://github.com/freebroccolo/ocaml-language-ser
   }
 ```
 
-Using [reason-language-server](https://github.com/jaredly/reason-language-server)
+Using [reason-language-server](https://github.com/jaredly/reason-language-server#what-about-the-ocaml-language-server)
 
 ``` jsonc
   "languageserver": {
