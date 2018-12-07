@@ -20,13 +20,16 @@ For example, to make `tsserver` track LSP communication, use:
 
 to make custom language server to track LSP communication, add `trace.server` section in language server configuration, like:
 ``` json
-    "rls": {
-      "command": "rustup",
-      "trace.server": "verbose",
-      "args": ["run", "stable", "rls"],
-      "filetypes": ["rust"],
-      "settings": {}
+"languageserver":{
+   "ccls": {
+    "command": "ccls",
+    "filetypes": ["c", "cpp", "objc", "objcpp"],
+    "trace.server": "verbose",
+    "initializationOptions": {
+      "cacheDirectory": "/tmp/ccls"
     }
+  }
+}
 ```
 
 However, the output of LSP communication is difficult for human to read, you can upload the content to LSP inspector: https://microsoft.github.io/language-server-protocol/inspector/, which would be looks like:
