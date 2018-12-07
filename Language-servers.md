@@ -293,21 +293,27 @@ Using [Alloyed/lua-lsp](https://github.com/Alloyed/lua-lsp)
   }
 ```
 
-### ReasonML and OCaml
+### OCaml and ReasonML
 
 Using [ocaml-language-server](https://github.com/freebroccolo/ocaml-language-server)
 
 ``` jsonc
   "languageserver": {
-     "reason": {
-      "command": "ocaml-language-server",
-      "args": ["--stdio"],
-      "filetypes": ["reason"]
-     },
      "ocaml": {
        "command": "ocaml-language-server",
        "args": ["--stdio"],
-       "filetypes": ["ocaml"]
-     },
+       "filetypes": ["ocaml", "reason"]
+     }
+  }
+```
+
+Using [reason-language-server](https://github.com/jaredly/reason-language-server)
+
+``` jsonc
+  "languageserver": {
+     "reason": {
+      "command": "/absolute/path/to/reason-language-server",
+      "filetypes": ["reason"]
+     }
   }
 ```
