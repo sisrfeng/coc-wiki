@@ -102,7 +102,8 @@ An example of `module` language server:
       "module": "/usr/local/lib/node_modules/foo/index.js",
       "args": ["--node-ipc"],
       "filetypes": ["foo"],
-      "cwd": "./src",
+      "trace.server": "verbose",
+      "rootPatterns": ["root.yml"],
       // Used for debugging
       "execArgv": ["--nolazy", "--inspect-brk=6045"],
       "initializationOptions": {
@@ -148,7 +149,8 @@ An example of socket language server:
 
 * `initializationOptions` is the json object that passed to [language server on initialize](https://microsoft.github.io/language-server-protocol/specification#initialize).
 * `settings` contains specific configuration of language server.
-* `cwd` could be path that relative from workspace root (directory contains `.vim` or `.git`).
+* `trace.server` controls trace level of communication between server and client, default `"off"`, change to `"verbose"` if you want to checkout all communication.
+* `rootPatterns` is used for resolve root path which should contain one of patterns as child directory or file, it will use `g:rooter_patterns` (default to `['.vim/', '.git/', '.hg/', '.projections.json']`)  when not specified,  
 
 ## Example configuration for custom language servers
 
