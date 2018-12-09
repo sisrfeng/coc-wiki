@@ -185,7 +185,7 @@ Using [ccls](https://github.com/MaskRay/ccls)
   "ccls": {
     "command": "ccls",
     "filetypes": ["c", "cpp", "objc", "objcpp"],
-    "rootPatterns": [".ccls", "compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+    "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
     "initializationOptions": {
       "cacheDirectory": "/tmp/ccls"
     }
