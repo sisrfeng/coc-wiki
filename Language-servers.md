@@ -185,6 +185,7 @@ Using [ccls](https://github.com/MaskRay/ccls)
   "ccls": {
     "command": "ccls",
     "filetypes": ["c", "cpp", "objc", "objcpp"],
+    "rootPatterns": [".ccls", "compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"],
     "initializationOptions": {
       "cacheDirectory": "/tmp/ccls"
     }
@@ -214,6 +215,7 @@ Using [clangd](http://llvm.org/viewvc/llvm-project/clang-tools-extra/trunk/clang
   "languageserver": {
     "clangd": {
       "command": "clangd",
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"],
       "filetypes": ["c", "cpp", "objc", "objcpp"]
     }
   }
