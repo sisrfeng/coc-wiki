@@ -199,8 +199,6 @@ Using [cquery](https://github.com/cquery-project/cquery)
     "cquery": {
       "command": "cquery",
       "args": ["--log-file=/tmp/cq.log"],
-      // disable automatic reveal output channel
-      "revealOutputChannelOn": "never",
       "filetypes": ["c", "cpp"],
       "initializationOptions": {
         "cacheDirectory": "/tmp/cquery"
@@ -232,7 +230,6 @@ Using [sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
     "golang": {
       "command": "go-langserver",
       "filetypes": ["go"],
-      "revealOutputChannelOn": "never",
       "initializationOptions": {
         "gocodeCompletionEnabled": true,
         "diagnosticsEnabled": true,
