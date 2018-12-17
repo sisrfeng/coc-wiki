@@ -319,3 +319,19 @@ Using [reason-language-server](https://github.com/jaredly/reason-language-server
      }
   }
 ```
+
+### Flow
+
+Using [flow-language-server](https://github.com/flowtype/flow-language-server)
+
+``` jsonc
+  // disable tsserver for javascript
+  "tsserver.enableJavascript": true,
+  "languageserver": {
+    "flow": {
+      "command": "flow-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["javascript", "javascriptreact"]
+    },
+  }
+```
