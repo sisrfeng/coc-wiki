@@ -331,7 +331,8 @@ Using [flow-language-server](https://github.com/flowtype/flow-language-server)
     "flow": {
       "command": "flow-language-server",
       "args": ["--stdio"],
-      "filetypes": ["javascript", "javascriptreact"]
+      "filetypes": ["javascript", "javascriptreact"],
+      "rootPatterns": [".flowconfig"]
     },
   }
 ```
