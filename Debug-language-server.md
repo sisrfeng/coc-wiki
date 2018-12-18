@@ -48,4 +48,4 @@ First, add `execArgv` to the language server settings like:
 
 After the `css` service started, open Chrome with url `chrome://inspect`
 
-Make sure `Discover network targets` option is checked, and then you will have the debugging target.
+Make sure `Discover network targets` option is checked and you have the address added to `Target discovery settings`, and then you will have the debugging target.
