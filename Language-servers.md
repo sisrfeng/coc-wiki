@@ -224,6 +224,18 @@ Like many tools, clangd relies on the presence of a [JSON compilation database](
 
 ### Go
 
+Using [saibing/bingo](https://github.com/saibing/bingo)
+
+``` jsonc
+  "languageserver": {
+    "golang": {
+      "command": "bingo",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    }
+  }
+```
+
 Using [sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
 
 ``` jsonc
