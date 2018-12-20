@@ -288,8 +288,9 @@ Using [mads-hartmann/bash-language-server](https://github.com/mads-hartmann/bash
   "languageserver": {
     "bash": {
       "command": "bash-language-server",
+      "args": ["start"],
       "filetypes": ["sh"],
-      "args": ["start"]
+      "ignoreRootPaths": ["~"]
     }
   }
 ```
