@@ -290,7 +290,7 @@ Using [mads-hartmann/bash-language-server](https://github.com/mads-hartmann/bash
       "command": "bash-language-server",
       "args": ["start"],
       "filetypes": ["sh"],
-      "ignoreRootPaths": ["~"]
+      "ignoredRootPaths": ["~"]
     }
   }
 ```
