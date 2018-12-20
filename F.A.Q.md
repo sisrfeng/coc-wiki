@@ -6,14 +6,6 @@ Run command `:CocRebuild` to rebuild coc extensions, some of them could be using
 
 If still not working, you can force coc started with specified node executable, in your .vimrc add a line like `let g:coc_node_path = '/usr/local/opt/node@10/bin/node'`
 
-## Weired completion behaviour on vim8.
-
-Upgrade global [vim-node-rpc](https://github.com/neoclide/vim-node-rpc) module by command:
-```
-npm i -g vim-node-rpc
-```
-and make sure `vim-node-rpc` exists in your `$PATH`, some fixes of that module have been made.
-
 ## Why location list sometimes doesn't work?
 
 Some plugin like [ale](https://github.com/w0rp/ale) would clear location list that created by other plugin, check out https://github.com/w0rp/ale/issues/1945, it's recommended to use Denite coc-diagnostic to get all location list of diagnostics instead of using location list.
