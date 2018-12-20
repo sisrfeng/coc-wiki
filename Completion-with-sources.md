@@ -90,3 +90,4 @@ Name         | Description
 
 * [coc-sources](https://github.com/neoclide/coc-sources)
 * [coc-neco](https://github.com/neoclide/coc-neco)
+* [coc-neoinclude](https://github.com/jsfaint/coc-neoinclude)
