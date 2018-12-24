@@ -1,12 +1,5 @@
 Coc have full featured support for completion of LSP, and doesn't bother `completeopt` of vim.
 
-# Contents
-
-* [Trigger mode of completion](#trigger-mode-of-completion)
-* [Use `<Tab>` or custom key for trigger completion](#use-tab-or-custom-key-for-trigger-completion)
-* [Improve completion experience](#improve-completion-experience)
-* [Completion sources](#completion-sources)
-
 ## Highlights of coc completion
 
 * All completion sources runs in parallel.
@@ -15,8 +8,8 @@ Coc have full featured support for completion of LSP, and doesn't bother `comple
 * Filter previous completion items when possible to prevent unnecessary completion request.
 * Filter completion items on `<backspace>` when possible.
 * Full support of completion item definition in LSP, including `snippetTextFormat`, `additionalTextEdit`, `sortText` etc.
-* Fuzzy match with smart case (lower case letter is case insensitive, upper case letter must have strict match).
-* Does filter on TextChangedP when necessary to prevent wrong filtered result from vim.
+* Always fuzzy match and smart case (lower case letter is case insensitive, upper case letter must have strict match).
+* Does filter on TextChangedP when necessary.
 * Does completion resolve on change completion item, echo detail when found.
 * Change and restore your `completeopt` option during completion (you can keep use `preview,menu` for other completion).
 
@@ -24,9 +17,9 @@ Coc have full featured support for completion of LSP, and doesn't bother `comple
 
 COC have 3 different trigger modes:
 
-* `always`, the default mode, which trigger completion on word letter inserted, insert enter and `triggerCharacters` defined by sources inserted.
-* `trigger`, only trigger completion on `triggerCharacters` defined by completion sources.
-* `none`, disable auto trigger completion, you will have to trigger the completion by yourself.
+* `always`, the default mode, which trigger completion on word letter inserted and `triggerCharacters` defined by current activated sources.
+* `trigger`, only trigger completion when type `triggerCharacters` defined by completion sources.
+* `none`, disable auto trigger completion, you will have to trigger the completion manually.
 
 You can change trigger mode by [using configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file)
 
@@ -35,13 +28,32 @@ To support completion trigger on insert enter, add
     "coc.preferences.triggerAfterInsertEnter": true
 
 to your `coc-settings.json`.
+To change the timeout of completion, use:
+
+	"coc.preferences.timeout": 500,
+
+To make the first complete item selected automatically, use: 
+
+	"coc.preferences.noselect": false,
+
+To make completion triggered with two input characters, use: 
+
+	"coc.preferences.minTriggerInputLength": 2
+
+To enable commit characters feature, use: 
+
+	"coc.preferences.acceptSuggestionOnCommitCharacter": true
+
+To change the indicator of snippet item, use:
+
+	"coc.preferences.snippetIndicator": "⭐︎"
 
 ## Use `<Tab>` or custom key for trigger completion
 
 You can make use of `coc#refresh()` for trigger completion like:
 
 ``` vim
-" use <tab> for trigger completion and navigate next complete item
+" use <tab> for trigger completion and navigate to next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
@@ -70,6 +82,10 @@ imap <c-space> coc#refresh()
 * Use `<enter>` to confirm complete
    ``` vim
    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+   ```
+  To force coc select complete item before confirm, use:
+   ``` vim
+   inoremap <expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
    ```
 
 * Close preview window when completion is done.
