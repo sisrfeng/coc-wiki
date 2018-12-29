@@ -1,5 +1,16 @@
 Here's some common problems that you may need to understand when working with coc.nvim.
 
+## Completion for function parameter not working.
+
+Completion for function parameter requries server send the completion as snippet, some language server doesn't support that. It could also be done by use a coc extension which use middleware for request and provide snippet for function completion item.
+
+## Linting is slow.
+
+There could be debounce at server side or the server is busy.
+
+For performance reason, coc also have debounce for show diagnostics, it's 50ms.
+So it's probably problem of language server you're using.
+
 ## Not working after upgrade node.
 
 Run command `:CocRebuild` to rebuild coc extensions, some of them could be using C++ addons, which requires rebuild after upgrade.
