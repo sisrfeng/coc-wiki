@@ -33,7 +33,7 @@ To enable commit characters feature, use:
 
 To change the indicator of snippet item, use:
 
-	"coc.preferences.snippetIndicator": "⭐︎"
+	"coc.preferences.snippetIndicator": "►"
 
 ## Use `<Tab>` or custom key for trigger completion
 
@@ -70,12 +70,13 @@ imap <c-space> coc#refresh()
 
 * Use `<enter>` to confirm complete
    ``` vim
-   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
    ```
   To force coc select complete item before confirm, use:
    ``` vim
    inoremap <expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
    ```
+  **Note:** `\<C-g>u` is used to break undo level.
 
 * Close preview window when completion is done.
     ``` vim
@@ -95,4 +96,5 @@ Name         | Description
 
 * [coc-sources](https://github.com/neoclide/coc-sources)
 * [coc-neco](https://github.com/neoclide/coc-neco)
+* [coc-snippets](https://github.com/neoclide/coc-snippets)
 * [coc-neoinclude](https://github.com/jsfaint/coc-neoinclude)
