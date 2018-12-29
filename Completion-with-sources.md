@@ -1,18 +1,5 @@
 Coc have full featured support for completion of LSP, and doesn't bother `completeopt` of vim.
 
-## Highlights of coc completion
-
-* All completion sources runs in parallel.
-* Use buffer update events of neovim for synchronize buffer contents.
-* Trigger async completion without timer, does filter with new input on completion finished . 
-* Filter previous completion items when possible to prevent unnecessary completion request.
-* Filter completion items on `<backspace>` when possible.
-* Full support of completion item definition in LSP, including `snippetTextFormat`, `additionalTextEdit`, `sortText` etc.
-* Always fuzzy match and smart case (lower case letter is case insensitive, upper case letter must have strict match).
-* Does filter on TextChangedP when necessary.
-* Does completion resolve on change completion item, echo detail when found.
-* Change and restore your `completeopt` option during completion (you can keep use `preview,menu` for other completion).
-
 ## Trigger mode of completion
 
 COC have 3 different trigger modes:
@@ -64,6 +51,8 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 ```
+
+**Note:** the `<tab>` could be mapped by other plugin, use `:verbose imap <tab>` to check it's mapped as expected.
 
 ``` vim
 " use <c-space>for trigger completion
