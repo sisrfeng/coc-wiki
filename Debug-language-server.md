@@ -19,7 +19,7 @@ For example, to make `tsserver` track LSP communication, use:
   "tsserver.trace.server": "verbose",
 ```
 
-to make a custom language server to track LSP communication, add `trace.server` section in language server configuration, like:
+to make a custom language server track LSP communication, add `trace.server` section in language server configuration, like:
 
 ``` json
 "languageserver":{
