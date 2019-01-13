@@ -349,3 +349,18 @@ Using [flow-language-server](https://github.com/flowtype/flow-language-server)
     },
   }
 ```
+
+### Haskell
+
+Using [Haskell IDE Engine](https://github.com/haskell/haskell-ide-engine)
+
+```jsonc
+"languageserver": {
+  "haskell": {
+    "command": "hie-wrapper",
+    "rootPatterns": [".stack.yaml", "cabal.config", "package.yaml"],
+    "filetypes": ["hs", "lhs", "haskell"],
+    "initializationOptions": {}
+  }
+}
+```
