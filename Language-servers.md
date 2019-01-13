@@ -200,7 +200,7 @@ Using [cquery](https://github.com/cquery-project/cquery)
       "command": "cquery",
       "args": ["--log-file=/tmp/cq.log"],
       "filetypes": ["c", "cpp"],
-      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"]，
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"],
       "initializationOptions": {
         "cacheDirectory": "/tmp/cquery"
       }
