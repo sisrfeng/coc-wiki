@@ -48,3 +48,40 @@ For feature [workspace_didChangeWatchedFiles](https://microsoft.github.io/langua
 Watchman works great even when you have multiple neovim instance started in the same directory.
 
 **Warning** don't create `.watchmanconfig` file in your home directory.
+
+## Automation script
+
+For setup coc and extensions faster on different machines, you can use shell script, for example:
+
+``` sh
+#!/bin/sh
+
+set -o nounset    # error when referencing undefined variable
+set -o errexit    # exit when command fails
+
+# Install latest nodejs
+if ! command -v node > /dev/null; then
+  curl --fail -L https://install-node.now.sh/latest | sh
+  # Or use apt-get 
+  # sudo apt-get install nodejs
+fi
+
+# Install yarn
+if ! command -v yarn > /dev/null; then
+  curl --fail -L https://yarnpkg.com/install.sh | sh
+fi
+
+# Install vim-node-rpc for vim
+# yarn global add -g vim-node-rpc
+
+# Change the path to where coc installed
+cd ~/.vim/bundle/coc.nvim
+yarn install
+
+# Install extensions
+mkdir -p ~/.config/coc/extensions
+cd ~/.config/coc/extensions
+echo '{"dependencies":{}}'> package.json
+# Change arguments to extensions you need
+yarn add coc-json coc-snippets
+```
