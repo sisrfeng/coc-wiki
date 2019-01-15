@@ -62,7 +62,7 @@ set -o errexit    # exit when command fails
 # Install latest nodejs
 if ! command -v node > /dev/null; then
   curl --fail -L https://install-node.now.sh/latest | sh
-  # Or use apt-get 
+  # Or use apt-get
   # sudo apt-get install nodejs
 fi
 
@@ -71,11 +71,18 @@ if ! command -v yarn > /dev/null; then
   curl --fail -L https://yarnpkg.com/install.sh | sh
 fi
 
-# Install vim-node-rpc for vim
+# vim-node-rpc is required for vim only
 # yarn global add -g vim-node-rpc
 
-# Change the path to where coc installed
-cd ~/.vim/bundle/coc.nvim
+# Use package feature to install coc.nvim
+# If you want to use plugin manager, change DIR to plugin directory used by that manager.
+DIR=~/.local/share/nvim/site/pack/coc/start
+# For vim user, the directory is different
+# DIR=~/.vim/pack/coc/start
+mkdir -p $DIR
+cd $DIR
+git clone https://github.com/neoclide/coc.nvim.git --depth=1
+cd $DIR/coc.nvim
 yarn install
 
 # Install extensions
