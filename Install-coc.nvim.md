@@ -81,7 +81,10 @@ yarn install
 # Install extensions
 mkdir -p ~/.config/coc/extensions
 cd ~/.config/coc/extensions
-echo '{"dependencies":{}}'> package.json
+if [ ! -f package.json ]
+then
+  echo '{"dependencies":{}}'> package.json
+fi
 # Change arguments to extensions you need
 yarn add coc-json coc-snippets
 ```
