@@ -54,11 +54,9 @@ And add:
 ```
 to your `coc-settings.json`.
 
-## Using VSCode snippet extension
+## Using VSCode snippet from extensions
 
-Coc could use snippets from VSCode extensions.
-
-First, install a VSCode snippet extension from github by command like:
+If you want to load VSCode snippets from coc extensions, install [coc-snippets](https://github.com/neoclide/coc-snippets) extension, and then install a VSCode snippet extension from github by command like:
 
 ```
 :CocInstall https://github.com/andys8/vscode-jest-snippets.git#master
