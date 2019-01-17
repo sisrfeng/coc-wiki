@@ -43,5 +43,5 @@
 * [deoplete.nvim](https://github.com/Shougo/deoplete.nvim)
 * [asyncomplete.vim](https://github.com/prabirshrestha/asyncomplete.vim)
 * [vim-mucomplete](https://github.com/lifepillar/vim-mucomplete/)
-* [nvim-completion-manager](https://github.com/roxma/nvim-completion-manager)
+* [ncm2](https://github.com/ncm2/ncm2)
 * [completor.vim](https://github.com/maralla/completor.vim)
