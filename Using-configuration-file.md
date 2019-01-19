@@ -61,7 +61,7 @@ in your vim.
   "coc.preferences.diagnostic.hintSign": ">>",
 ``` 
 
-To get complete list, checkout [settings.json](https://github.com/neoclide/coc.nvim/blob/master/settings.json)
+To get complete list, checkout [schema.json](https://github.com/neoclide/coc.nvim/blob/master/data/schema.json)
 
 **Note:** for configure keymaps of coc, vim global variable is used, check out `coc-variable` section at `doc/coc.txt`.
 
