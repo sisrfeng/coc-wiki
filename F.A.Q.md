@@ -1,8 +1,14 @@
 Here's some common problems that you may need to understand when working with coc.nvim.
 
+## Language server doesn't work for new buffer.
+
+Some language server doesn't work when the buffer not saved to disk, this is because they only tested on VSCode which always create file before create buffer.
+
+Save to buffer to disk and restart coc by `:CocRestart` to make the language server work.
+
 ## Completion for function parameter not working.
 
-Completion for function parameter requries server send the completion as snippet, some language server doesn't support that. It could also be done by use a coc extension which use middleware for request and provide snippet for function completion item.
+Completion for function parameter requries server send the completion as snippet, some language server doesn't support that. 
 
 ## Linting is slow.
 
@@ -10,6 +16,8 @@ There could be debounce at server side or the server is busy.
 
 For performance reason, coc also have debounce for show diagnostics, it's 50ms.
 So it's probably problem of language server you're using.
+
+For vim, coc doesn't show diagnostics in UI when you're in insert mode to avoid unnecessary redraw.
 
 ## Not working after upgrade node.
 
