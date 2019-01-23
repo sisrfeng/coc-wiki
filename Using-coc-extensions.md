@@ -13,7 +13,7 @@ Compare to the language server specified with `languageserver`, extensions have 
   <img width="466" alt="screen shot 2018-09-07 at 5 03 24 pm" src="https://user-images.githubusercontent.com/251450/45209588-f5f87a80-b2bf-11e8-80c0-fe5ff689f947.png">
 
 * Extensions could contribute commands (like VSCode), you can use the coc commands in different ways:
-    * Use command `:Denite coc-command` to open the command list and choose one you need.
+    * Use command `:CocList commands` to open the command list and choose one you need.
 
       <img width="476" alt="screen shot 2018-09-07 at 4 53 12 pm" src="https://user-images.githubusercontent.com/251450/45209334-4d4a1b00-b2bf-11e8-94e0-0c2b981a71f5.png">
     * Use `:CocCommand` with `<tab>` for command line completion.
@@ -67,26 +67,23 @@ The extension would be loaded  after install succeed.
 :CocUpdate
 ```
 
-## Manage extenions using denite
-
-Denite interface could be used for manage extensions, if you have
-[denite.nvim](https://github.com/Shougo/denite.nvim) installed.
+## Manage extenions using CocList
 
 Run command:
 ```
-Denite coc-extension
+CocList extensions
 ```
 
-to open denite buffer, which looks like:
+to open CocList buffer, which looks like:
 <img width="619" alt="screen shot 2018-09-10 at 10 28 06 pm" src="https://user-images.githubusercontent.com/251450/45303659-e475d380-b548-11e8-9671-8a3e8e116db4.png">
 
 `*` means extension is activited, `+` means loaded and `-` means disabled.
 
 Supported actions:
 
-* `toggle` default action. Enable/disable selected extension(s).
-* `activate`: activate selected extension(s).
-* `deactivate`: deactivate selected extension(s).
+* `toggle` default action. astivate/deactivate selected extension(s).
+* `enable`: enable selected extension(s).
+* `disable`: disable selected extension(s).
 * `reload`: reload selected extension(s).
 * `uninstall`: remove selected extension(s).
 
