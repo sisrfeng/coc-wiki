@@ -19,23 +19,23 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
 ```
 to your `init.vim`.
 
-A snippet session would cancel on following conditation:
+A snippet session would cancel under the following conditions:
 
 * `InsertEnter` triggered outside snippet.
 * Content change at final placeholder.
 * Content added after snippet.
-* Content change in snippet but not happens to a placeholder.
+* Content changed in a snippet but not happens to a placeholder.
 
-You can nest snippet in active snippet session, just like VSCode.
+You can nest snippets in an active snippet session, just like VSCode.
 
 ## Configuring snippet completion
 
-To navigate forward/backward of snippet placeholder, use `<C-j>` and `<C-k>`.
-Vim global variable `g:coc_snippet_next` and `g:coc_snippet_prev` can be used to change the keymapping.
+To navigate forward/backward of a snippet placeholder, use `<C-j>` and `<C-k>`.
+Vim global variable `g:coc_snippet_next` and `g:coc_snippet_prev` can be used to change the key-mapping.
 
-If you don't like `~` as snippet indicator of complete item in completion menu, you can change that by use `coc.preferences.snippetIndicator` in your `coc-settings.json`.
+If you don't like `~` as snippet indicator of complete item in completion menu, you can change that by using `coc.preferences.snippetIndicator` in your `coc-settings.json`.
 
-To make completion works like VSCode, add:
+To make snippet completion work just like VSCode, add:
 
 ``` vim
 inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
@@ -56,12 +56,12 @@ to your `coc-settings.json`.
 
 ## Using VSCode snippet from extensions
 
-If you want to load VSCode snippets from coc extensions, install [coc-snippets](https://github.com/neoclide/coc-snippets) extension, and then install a VSCode snippet extension from github by command like:
+If you want to load VSCode snippets from coc extensions, install the [coc-snippets](https://github.com/neoclide/coc-snippets) extension, and then install a VSCode snippet extension from GitHub with a command like:
 
 ```
 :CocInstall https://github.com/andys8/vscode-jest-snippets.git#master
 ```
 
-Open file with snippet related filetype, like `foo.js` as `javascript`, try complete by type part of prefix characters.
+To open a file with a snippet related filetype, like `foo.js` as `javascript`, you only need to type part of the prefix characters.
 
 <img width="724" alt="screen shot 2018-09-27 at 2 25 41 pm" src="https://user-images.githubusercontent.com/251450/46127038-edadb280-c261-11e8-8e94-957b6d62c9a9.png">
