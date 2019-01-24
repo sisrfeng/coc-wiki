@@ -11,9 +11,10 @@ Coc list is ispired by [denite.nvim](https://github.com/Shougo/denite.nvim), it'
    - `:CocListResume` reopen last list, restore window and cursor postion.
    - `:CocNext` do default action with next item.
    - `:CocPrev` do default action with previous item.
-- **Different match mode**, coc use fuzzy match by default, but you can change to use strict match or regex match.
+- **Different match modes**, coc use fuzzy match by default, but you can change to use strict match or regex match.
 - **Interactive mode**, use `--interactive` in `:CocList` command to start list in interactive mode, when activated, all items would be fetched on input change, and the list was sorted and filtered by list implementation. 
   - Some source like `symbols` (use workspace symbols feature of language server) only works on interactive mode.
+  - Interactive is only available when list support it.
 - **Default keymappings**, check out `:h coc-list-mappings` for default mappings, you can override them by use `"list.normalMappings"` and `"list.insertMappings"` in configuration file.
 - **Auto preview feature:** the preview window would be adjusted when cursor moved in list window.
     ![2019-01-25 00_10_59](https://user-images.githubusercontent.com/251450/51693855-af22db80-203a-11e9-9bfe-a62cc49df23f.gif)
