@@ -1,5 +1,9 @@
 Here's some common problems that you may need to understand when working with coc.nvim.
 
+## Neovim crash when `rightleft` is on.
+
+It's bug of neovim.  Checkout https://github.com/neovim/neovim/issues/9542 for a patch of neovim.
+
 ## Language server doesn't work for new buffer.
 
 Some language server doesn't work when the buffer not saved to disk, this is because they only tested on VSCode which always create file before create buffer.
