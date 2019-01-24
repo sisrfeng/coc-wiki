@@ -34,5 +34,6 @@ Coc list is ispired by [denite.nvim](https://github.com/Shougo/denite.nvim), it'
 
    _Only best match characters get highlighted_
 
+- **Input history**, you can use `<C-n>` and `<C-p>` on insert mode to navigate command history list, the list is filtered with CWD and fuzzy match of current input (when not empty).
 
 Checkout `:h coc-list` for detailed documentation.
