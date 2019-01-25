@@ -37,3 +37,22 @@ Coc list is ispired by [denite.nvim](https://github.com/Shougo/denite.nvim), it'
 - **Input history**, you can use `<C-n>` and `<C-p>` on insert mode to navigate command history list, the list is filtered with CWD and fuzzy match of current input (when not empty).
 
 Checkout `:h coc-list` for detailed documentation.
+
+## Tips
+
+* When list is opened, you can still use mouse to scroll other vim windows.
+* Create custom key-mappings for do action easier, for example:
+
+    ``` json
+    "list.normalMappings": {
+      "t": "action:tabe",
+      "v": "action:vsplit",
+      "s": "action:split",
+      "d": "expr:GetDeleteAction"
+    },
+    "list.insertMappings": {
+      "<C-t>": "action:tabe",
+      "<C-w>": "command:wincmd k"
+    },
+    ```
+* You can move to other window when list is opened, the prompt would be deactivated then.
