@@ -56,3 +56,9 @@ Checkout `:h coc-list` for detailed documentation.
     },
     ```
 * You can move to other window when list is opened, the prompt would be deactivated then.
+
+## Extensions
+
+Some coc extensions make use of list feature:
+
+- [coc-lists](https://github.com/neoclide/coc-lists) provide some basic lists, including `files`, `mru`, `grep` etc.
