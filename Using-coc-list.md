@@ -56,9 +56,11 @@ Checkout `:h coc-list` for detailed documentation.
     },
     ```
 * You can move to other window when list is opened, the prompt would be deactivated then.
+* Use variables `g:terminal_color_{0-7}` to customize ansi highlight colors, same as terminal colors of neovim `:h terminal-configuration`.
 
 ## Extensions
 
 Some coc extensions make use of list feature:
 
 - [coc-lists](https://github.com/neoclide/coc-lists) provide some basic lists, including `files`, `mru`, `grep` etc.
+- [coc-snippets](https://github.com/neoclide/coc-snippets) provide snippets list.
