@@ -335,7 +335,7 @@ Using [reason-language-server](https://github.com/jaredly/reason-language-server
 
 ### Flow
 
-Using [flow-language-server](https://github.com/flowtype/flow-language-server)
+Using [flow-language-server](https://github.com/flowtype/flow-language-server), note: flow-language-server is no longer maintained
 
 ``` jsonc
   // disable tsserver for javascript
@@ -348,6 +348,22 @@ Using [flow-language-server](https://github.com/flowtype/flow-language-server)
       "rootPatterns": [".flowconfig"]
     },
   }
+```
+
+Using [flow lsp](https://github.com/facebook/flow)
+
+```jsonc
+  "languageserver": {
+    "flow": {
+      "command": "flow",
+      "args": ["lsp"],
+      "filetypes": ["javascript", "javascript.jsx"],
+      "initializationOptions": {},
+      "requireRootPattern": true,
+      "settings": {},
+      "rootPatterns": [".flowconfig"]
+    }
+  },
 ```
 
 ### Haskell
