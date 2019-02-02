@@ -230,6 +230,7 @@ Using [saibing/bingo](https://github.com/saibing/bingo)
   "languageserver": {
     "golang": {
       "command": "bingo",
+      "args": ["--diagnostics-style=instant"],
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
     }
