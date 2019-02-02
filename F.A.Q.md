@@ -1,10 +1,17 @@
 Here's some common problems that you may need to understand when working with coc.nvim.
 
+## My vim is blocked sometimes.
+
+* Make sure your have `set hidden` in your `.vimrc`.
+* Use `CocActionAsync` instead of `CocAction` in your autocmd, except for `BufWritePre`.
+* Use `CocRequestAsync` instead of `CocRequest` when possible.
+* Don't make request to coc before the service initialized, use `autocmd User CocNvimInit` to send request when you want to send request at startup.
+
 ## Neovim crash when `rightleft` is on.
 
 It's bug of neovim.  Checkout https://github.com/neovim/neovim/issues/9542 for a patch of neovim.
 
-## Language server doesn't work for new buffer.
+## Language server doesn't work unsaved buffer.
 
 Some language server doesn't work when the buffer not saved to disk, this is because they only tested on VSCode which always create file before create buffer.
 
