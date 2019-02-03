@@ -358,7 +358,7 @@ Using [flow lsp](https://github.com/facebook/flow)
     "flow": {
       "command": "flow",
       "args": ["lsp"],
-      "filetypes": ["javascript", "javascript.jsx"],
+      "filetypes": ["javascript", "javascriptreact"],
       "initializationOptions": {},
       "requireRootPattern": true,
       "settings": {},
