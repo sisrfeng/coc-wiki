@@ -8,7 +8,11 @@ It's json that support comment, like:
 }
 ```
 
-You can make use of [jsonc.vim](https://github.com/neoclide/jsonc.vim) to get correct highlight for comment.
+To get correct comment highlight, add:
+``` vim
+  autocmd FileType json syntax match Comment +\/\/.\+$+
+```
+to your `.vimrc` or `init.vim`.
 
 ## Why use JSON?
 
