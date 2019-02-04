@@ -1,14 +1,14 @@
-Coc list is created to make work with list of things easier, like locations.
+Coc list is created to make work with list of things easier, ex: locations & extensions.
 
 Coc list is inspired by [denite.nvim](https://github.com/Shougo/denite.nvim), it's faster and doesn't require python support (mostly, you still need python available for vim8).
 
 ## List features
 
 - **Insert mode and normal mode**, use insert mode for filter and normal mode to do everything else.
-- **Actions for items**, each list item have different actions, you can create kepmapping for them and type `<tab>` to run one of them.
-- **Multiple selection**, press `<space>` to toggle selection of an item or drag your mosue to select items.
+- **Actions for items**, each list provide different actions, you can create key-mapping for them and type `<tab>` to run one of them.
+- **Multiple selection**, press `<space>` to toggle selection of an item or drag your mouse to select items.
 - **Commands** for previous list:
-   - `:CocListResume` reopen last list, restore window and cursor postion.
+   - `:CocListResume` reopen last list, restore window and cursor position.
    - `:CocNext` do default action with next item.
    - `:CocPrev` do default action with previous item.
 - **Different match modes**, coc use fuzzy match by default, but you can change to use strict match or regex match.
@@ -57,6 +57,10 @@ Checkout `:h coc-list` for detailed documentation.
     ```
 * You can move to other window when list is opened, the prompt would be deactivated then.
 * Use variables `g:terminal_color_{0-7}` to customize ansi highlight colors, same as terminal colors of neovim `:h terminal-configuration`.
+* Press `?` on normal mode to get help.
+  <img width="1158" alt="screen shot 2019-02-04 at 8 16 29 am" src="https://user-images.githubusercontent.com/251450/52185008-731b2200-2855-11e9-8bea-9068d016e8c9.png">
+
+
 
 ## Extensions
 
