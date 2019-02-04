@@ -1,4 +1,4 @@
-COC.nvim use [jsonc](https://code.visualstudio.com/docs/languages/json) as configuration file format, the same as VSCode.
+coc.nvim use [jsonc](https://code.visualstudio.com/docs/languages/json) as configuration file format, the same as VSCode.
 It's json that support comment, like:
 
 ``` jsonc
@@ -10,6 +10,12 @@ It's json that support comment, like:
 
 You can make use of [jsonc.vim](https://github.com/neoclide/jsonc.vim) to get correct highlight for comment.
 
+## Why use JSON?
+
+* LSP use JSON for language server configuration.
+* Extensions could contribute JSON schema for json validation.
+* [coc-json](https://github.com/neoclide/coc-json) could provide completion and validation for settings file, which makes configuration much easier and reliable.
+
 ## Configuration file resolve
 
 There're two types of user configuration file.
@@ -17,7 +23,7 @@ There're two types of user configuration file.
 * The user configuration is named as `coc-settings.json` and placed inside folder `$XDG_CONFIG_HOME/nvim` or `$HOME/.config/nvim` by default（or `$HOME/.vim` for vim）. Run command `:CocConfig` to open your user configuration file. 
 
 * The workspace configuration should be named with `coc-settings.json` and would be resolve in directory `.vim`. 
-After a file opened in vim, this directory would be resolved from parent directory of file.
+After a file opened in vim, this directory would be resolved from parent directories of that file.
 
 The active configuration would be a merged result from 'default', 'user' and 'workspace' configuration file, **the later one have higher priority**.
 
@@ -29,40 +35,16 @@ in your vim.
 
 ## Default COC preferences
 
-``` jsonc
-  // could be 'always' 'trigger' => for specified trigger characters only 'none'
-  "coc.preferences.autoTrigger": "always",
-  // only used when autoTrigger is always
-  "coc.preferences.triggerAfterInsertEnter": false,
-  // timeout for completion
-  "coc.preferences.timeout": 2000,
-  // not make vim select first item on completion start
-  "coc.preferences.noselect": true,
-  // enable formatOnType feature
-  "coc.preferences.formatOnType": false,
-  // command used for jump to other buffer
-  "coc.preferences.jumpCommand": "edit",
-  // executable path for https://facebook.github.io/watchman/, detected from $PATH by default
-  // "coc.preferences.watchmanPath": "",
-  // enable diagnostic
-  "coc.preferences.diagnostic.enable": true,
-  "coc.preferences.diagnostic.signOffset": 1000,
-  "coc.preferences.diagnostic.errorSign": ">>",
-  "coc.preferences.diagnostic.warningSign": "⚠",
-  "coc.preferences.diagnostic.infoSign": ">>",
-  "coc.preferences.diagnostic.hintSign": ">>",
-``` 
+Checkout [schema.json](https://github.com/neoclide/coc.nvim/blob/master/data/schema.json)
 
-To get complete list, checkout [schema.json](https://github.com/neoclide/coc.nvim/blob/master/data/schema.json)
-
-**Note:** for configure keymaps of coc, vim global variable is used, check out `coc-variable` section at `doc/coc.txt`.
+**Note:** there're also some vim global variable used for configuration, check out `:h coc-variable`.
 
 ## Extension configuration
 
 Just like VSCode, each coc extension could contribute configuration sections, for example.
 
 * [coc-tsserver](https://github.com/neoclide/coc-tsserver) use section `tsserver`, `typescript` and `javascript`
-* [coc-json](https://github.com/neoclide/coc-json) use section `json` and `http`
+* [coc-json](https://github.com/neoclide/coc-json) use section `json`
 
 To get detailed options for existing configurations, just try completion in file `coc-settings.json`:
 
