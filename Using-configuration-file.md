@@ -15,6 +15,7 @@ You can make use of [jsonc.vim](https://github.com/neoclide/jsonc.vim) to get co
 * LSP use JSON for language server configuration.
 * Extensions could contribute JSON schema for json validation.
 * [coc-json](https://github.com/neoclide/coc-json) could provide completion and validation for settings file, which makes configuration much easier and reliable.
+* Most configurations would take effect just after settings file saved, you don't need to restart vim or coc.
 
 ## Configuration file resolve
 
