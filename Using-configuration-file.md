@@ -10,12 +10,6 @@ It's json that support comment, like:
 
 You can make use of [jsonc.vim](https://github.com/neoclide/jsonc.vim) to get correct highlight for comment.
 
-# Contents
-
-* [Configuration file resolve](#configuration-file-resolve)
-* [Default COC preferences](#default-coc-preferences)
-* [Extension configuration](#extension-configuration)
-
 ## Configuration file resolve
 
 Same as VSCode settings file, there're three types of configuration file for COC.
