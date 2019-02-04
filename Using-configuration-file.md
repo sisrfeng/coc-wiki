@@ -12,14 +12,12 @@ You can make use of [jsonc.vim](https://github.com/neoclide/jsonc.vim) to get co
 
 ## Configuration file resolve
 
-Same as VSCode settings file, there're three types of configuration file for COC.
+There're two types of user configuration file.
 
-* The global one bundles with this plugin, which is [schema.json](https://github.com/neoclide/coc.nvim/blob/master/data/schema.json)
-
-* The user configuration is named as `coc-settings.json` and placed inside folder `$XDG_CONFIG_HOME/nvim` or `$HOME/.config/nvim` by default. Run command `:CocConfig` to open your user configuration file. 
+* The user configuration is named as `coc-settings.json` and placed inside folder `$XDG_CONFIG_HOME/nvim` or `$HOME/.config/nvim` by default（or `$HOME/.vim` for vim）. Run command `:CocConfig` to open your user configuration file. 
 
 * The workspace configuration should be named with `coc-settings.json` and would be resolve in directory `.vim`. 
-After a file opened in vim, this directory would be resolved from parent directory of file. If the directory is not resolved for you, try restart coc server by command `:CocRestart`.
+After a file opened in vim, this directory would be resolved from parent directory of file.
 
 The active configuration would be a merged result from 'default', 'user' and 'workspace' configuration file, **the later one have higher priority**.
 
