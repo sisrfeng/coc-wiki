@@ -381,3 +381,46 @@ Using [Haskell IDE Engine](https://github.com/haskell/haskell-ide-engine)
   }
 }
 ```
+
+### vim/erb/markdown
+
+Using [efm-langserver](https://github.com/mattn/efm-langserver)
+
+Location of efm-langserver config.yaml is:
+
+- UNIX: `$HOME/.config/efm-langserver/config.yaml`
+- Windows: `%APPDATA%\efm-langserver\config.yaml`
+
+efm-langserver config:
+
+```yaml
+languages:
+  eruby:
+    lint-command: 'erb -x -T - | ruby -c'
+    lint-stdin: true
+    lint-offset: 1
+    format-command: 'htmlbeautifier'
+
+  vim:
+    lint-command: 'vint -'
+    lint-stdin: true
+
+  markdown:
+    lint-command: 'markdownlint -s'
+    lint-stdin: true
+    lint-formats:
+      - '%f: %l: %m'
+```
+
+coc-settings.json
+```jsonc
+  "languageserver": {
+    "efm": {
+      "command": "efm-langserver",
+      "args": [],
+      // custom config path
+      // "args": ["-c", "/path/to/your/config.yaml"],
+      "filetypes": ["vim", "eruby", "markdown"]
+    }
+  }
+```
