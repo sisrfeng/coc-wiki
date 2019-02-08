@@ -261,11 +261,13 @@ Using [felixfbecker/php-language-server](https://github.com/felixfbecker/php-lan
   "languageserver": {
     "phplang": {
       "command": "php",
-      "args": ["vendor/felixfbecker/language-server/bin/php-language-server.php"],
+      "args": ["/path/to/vendor/felixfbecker/language-server/bin/php-language-server.php"],
       "filetypes": ["php"]
     }
   }
 ```
+
+note: make sure you can start the server by use command and args.
 
 ### Dockerfile
 
