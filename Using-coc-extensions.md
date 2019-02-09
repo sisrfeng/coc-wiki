@@ -63,7 +63,7 @@ The extension would be loaded  after install succeed.
 
 ## Update all coc extensions
 
-You don't need to update coc extensions manually, coc detect acceptable new version of installed extension everyday(by default) when the first it started, when it found new version of extensions, it update them for you automatically.
+You don't need to update coc extensions manually, coc detect acceptable new version of installed extension everyday(by default) the first time it started, when it found new version of extensions, it update them for you automatically.
 
 To disable autoupdate, change settings: `coc.preferences.extensionUpdateCheck` to `"never"`.
 
