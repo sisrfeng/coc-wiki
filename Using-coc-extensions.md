@@ -42,7 +42,7 @@ Compare to the language server specified with `languageserver`, extensions have 
 
 https://www.npmjs.com/search?q=keywords%3Acoc.nvim
 
-## Install/update coc extension
+## Install coc extension
 
 Use command `:CocInstall` like:
 
@@ -62,6 +62,10 @@ The extension would be loaded  after install succeed.
 ```
 
 ## Update all coc extensions
+
+You don't need to update coc extensions manually, coc detect acceptable new version of installed extension everyday(by default) when the first it started, when it found new version of extensions, it update them for you automatically.
+
+To disable autoupdate, change settings: `coc.preferences.extensionUpdateCheck` to `"never"`.
 
 ```
 :CocUpdate
