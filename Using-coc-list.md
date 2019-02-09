@@ -60,7 +60,19 @@ Checkout `:h coc-list` for detailed documentation.
 * Press `?` on normal mode to get help.
   <img width="1158" alt="screen shot 2019-02-04 at 8 16 29 am" src="https://user-images.githubusercontent.com/251450/52185008-731b2200-2855-11e9-8bea-9068d016e8c9.png">
 
+## Builtin list sources
 
+- `outline` outline of current document, provided by language server or `ctags`.
+- `sources` loaded completion sources.
+- `symbols` search workspace symbol.
+- `commands` registered coc commands.
+- `location` latest jump locations.
+- `services` registered language client services.
+- `extensions` installed extensions.
+- `diagnostics` diagnostics of current workspace
+- `links` links of current document, provided by language server.
+- `lists` available list sources.
+- `output` current output channels.
 
 ## Extensions
 
