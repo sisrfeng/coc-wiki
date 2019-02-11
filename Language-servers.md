@@ -163,7 +163,7 @@ Using [natebosch/dart_language_server](https://github.com/natebosch/dart_languag
 ``` jsonc
   "languageserver": {
     "dart": {
-      "command": "dart_language_server",
+      "command": "dart_language_server", // in windows is dart_language_server.bat
       "args": [],
       "filetypes": ["dart"],
       "initializationOptions": {},
