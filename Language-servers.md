@@ -426,3 +426,16 @@ coc-settings.json
     }
   }
 ```
+
+### Elixir
+
+Using [elixir-ls](https://github.com/JakeBecker/elixir-ls)
+
+``` jsonc
+  "languageserver": {
+     "elixirLS": {
+      "command": "/absolute/path/to/elixir-ls/release/language_server.sh",
+      "filetypes": ["elixir", "eelixir"]
+     }
+  }
+```
