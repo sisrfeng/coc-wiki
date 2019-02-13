@@ -28,7 +28,7 @@ Completion for function parameter requries server send the completion as snippet
 
 Some language server is known to have performance issue sometimes, including https://github.com/palantir/python-language-server, https://github.com/sourcegraph/go-langserver.
 
-Don't report issue when you found those language server is slow.
+Don't report issue here when you found those language server is slow.
 
 For vim, coc doesn't show diagnostics in UI when you're in insert mode to avoid unnecessary redraw.
 
