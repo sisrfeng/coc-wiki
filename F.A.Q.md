@@ -26,10 +26,9 @@ Completion for function parameter requries server send the completion as snippet
 
 ## Linting is slow.
 
-There could be debounce at server side or the server is busy.
+Some language server is known to have performance issue sometimes, including https://github.com/palantir/python-language-server, https://github.com/sourcegraph/go-langserver.
 
-For performance reason, coc also have debounce for show diagnostics, it's 50ms.
-So it's probably problem of language server you're using.
+Don't report issue when you found those language server is slow.
 
 For vim, coc doesn't show diagnostics in UI when you're in insert mode to avoid unnecessary redraw.
 
