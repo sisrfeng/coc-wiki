@@ -72,13 +72,6 @@ imap <c-space> coc#refresh()
    ``` vim
    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
    ```
-  To work with [vim-endwise](https://github.com/tpope/vim-endwise), use:
-
-   ``` vim
-   let g:endwise_no_mappings = 1
-   imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-   imap <silent> <CR> <CR><Plug>DiscretionaryEnd
-   ```
   **Note:** `\<C-g>u` is used to break undo level.
 
 * Close preview window when completion is done.
