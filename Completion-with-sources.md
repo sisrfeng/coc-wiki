@@ -72,9 +72,12 @@ imap <c-space> coc#refresh()
    ``` vim
    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
    ```
-  To force coc select complete item before confirm, use:
+  To work with [vim-endwise](https://github.com/tpope/vim-endwise), use:
+
    ``` vim
-   inoremap <expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+   let g:endwise_no_mappings = 1
+   imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+   imap <silent> <CR> <CR><Plug>DiscretionaryEnd
    ```
   **Note:** `\<C-g>u` is used to break undo level.
 
