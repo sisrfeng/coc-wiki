@@ -27,7 +27,11 @@ Completion for function parameter requries server send the completion as snippet
 
 ## Linting is slow.
 
-Some language server is known to have performance issue sometimes, including https://github.com/palantir/python-language-server, https://github.com/sourcegraph/go-langserver.
+Some language server is known to have performance issue sometimes, including:
+
+https://github.com/palantir/python-language-server
+
+https://github.com/sourcegraph/go-langserver.
 
 Don't report issue here when you found those language server is slow.
 
