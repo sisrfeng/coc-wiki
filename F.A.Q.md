@@ -1,7 +1,8 @@
 Here's some common problems that you may need to understand when working with coc.nvim.
-## I got invalid cursor postion during completion.
 
-It's fixed on latest vim and macvim, try upgrade your vim.
+## My pum flick when typing.
+
+Try latest neovim release, coc fix this issue by trigger completion on `InsertCharPre`, but it doesn't work on vim.
 
 ## My vim is blocked sometimes.
 
