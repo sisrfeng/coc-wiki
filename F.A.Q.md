@@ -1,5 +1,23 @@
 Here's some common problems that you may need to understand when working with coc.nvim.
 
+## How to make preview window shown aside with pum?
+
+**Floating window support is not merged into master of neovim yet.**
+
+For floating features to work, you need compile neovim with [PR 6619](https://github.com/neovim/neovim/pull/6619) and
+[PR 9616](https://github.com/neovim/neovim/pull/9616) or use my fork at
+[chemzqm/neovim](https://github.com/chemzqm/neovim).
+
+To make sure floating preview window could work:
+
+- Add `let g:coc_force_debug = 1` to your `init.vim` which make sure your're
+  using code build by yourself.
+- Run `call coc#util#build()` to build from source.
+- `echo exists('##CompleteChanged')` should echo `1`.
+- `echo exists('*nvim_open_float_win')` should echo `1`.
+
+Be aware that the API could change at any time.
+
 ## My pum flick when typing.
 
 Try latest neovim release, coc fix this issue by trigger completion on `InsertCharPre`, but it doesn't work on vim.
