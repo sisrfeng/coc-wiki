@@ -13,7 +13,7 @@ To make sure floating preview window could work:
 - Add `let g:coc_force_debug = 1` to your `init.vim` which make sure your're
   using code build by yourself.
 - Run `call coc#util#build()` to build from source.
-- `echo exists('##CompleteChanged')` should echo `1`.
+- `echo exists('##PumRender')` should echo `1`.
 - `echo exists('*nvim_open_float_win')` should echo `1`.
 
 Be aware that the API could change at any time.
