@@ -14,7 +14,7 @@ To make sure floating preview window could work:
   using code build by yourself.
 - Run `call coc#util#build()` to build from source.
 - `echo exists('##PumRender')` should echo `1`.
-- `echo exists('*nvim_open_float_win')` should echo `1`.
+- `echo exists('*nvim_open_win')` should echo `1`.
 
 Be aware that the API could change at any time.
 
