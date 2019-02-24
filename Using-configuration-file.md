@@ -14,6 +14,19 @@ To get correct comment highlight, add:
 ```
 to your `.vimrc` or `init.vim`.
 
+## Open configuration file
+
+Use command `:CocConfig` to open your user configuration file, you can create a shortcut for command like:
+``` vim
+function! SetupCommandAbbrs(from, to)
+  exec 'cnoreabbrev <expr> '.a:from
+        \ .' ((getcmdtype() ==# ":" && getcmdline() ==# "'.a:from.'")'
+        \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+endfunction
+
+call SetupCommandAbbrs('C', 'CocConfig')
+```
+
 ## Why use JSON?
 
 * LSP use JSON for language server configuration.
@@ -42,7 +55,7 @@ in your vim.
 
 Checkout [schema.json](https://github.com/neoclide/coc.nvim/blob/master/data/schema.json)
 
-**Note:** there're also some vim global variable used for configuration, check out `:h coc-variable`.
+**Note:** there're also some vim global variables used for configuration, check out `:h coc-variable`.
 
 ## Extension configuration
 
