@@ -12,28 +12,28 @@ You can change trigger mode by [using configuration file](https://github.com/neo
 
 To support completion trigger on insert enter, add
   
-    "coc.preferences.triggerAfterInsertEnter": true
+    "suggest.triggerAfterInsertEnter": true
 
 to your `coc-settings.json`.
 To change the timeout of completion, use:
-
-	"coc.preferences.timeout": 500,
+ 
+    "suggest.timeout": 500,
 
 To make the first complete item selected automatically, use: 
 
-	"coc.preferences.noselect": false,
+	"suggests.noselect": false,
 
 To make completion triggered with two input characters, use: 
 
-	"coc.preferences.minTriggerInputLength": 2
+	"suggest.minTriggerInputLength": 2
 
 To enable commit characters feature, use: 
 
-	"coc.preferences.acceptSuggestionOnCommitCharacter": true
+	"suggest.acceptSuggestionOnCommitCharacter": true
 
 To change the indicator of snippet item, use:
 
-	"coc.preferences.snippetIndicator": "►"
+	"suggest.snippetIndicator": "►"
 
 ## Use `<Tab>` or custom key for trigger completion
 
