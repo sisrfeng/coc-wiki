@@ -45,6 +45,8 @@ Completion for function parameter requries server send the completion as snippet
 
 ## Linting is slow.
 
+If the message get shown after several seconds, add `set updatetime=300` to your `init.vim` or `.vimrc` and restart vim.
+
 Some language server is known to have performance issue sometimes, including:
 
 https://github.com/palantir/python-language-server
