@@ -55,7 +55,8 @@ https://github.com/sourcegraph/go-langserver.
 
 Don't report issue here when you found those language server is slow.
 
-For vim, coc doesn't show diagnostics in UI when you're in insert mode to avoid unnecessary redraw.
+By default, coc doesn't show diagnostics in UI when you're in insert mode, 
+add `"diagnostic.refreshOnInsertMode": true` to settings file to enable refresh on insert mode.
 
 ## Not working after upgrade node.
 
