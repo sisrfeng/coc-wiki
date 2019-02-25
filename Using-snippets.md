@@ -48,9 +48,9 @@ And add:
 
 ``` jsonc
   // make vim select first item on completion
-  "coc.preferences.noselect": false,
+  "suggest.noselect": false,
   // when snippet activated and pumvisible, prefer complete completion.
-  "coc.preferences.preferCompleteThanJumpPlaceholder": true,
+  "suggest.preferCompleteThanJumpPlaceholder": true,
 ```
 to your `coc-settings.json`.
 
