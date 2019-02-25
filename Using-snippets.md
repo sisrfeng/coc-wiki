@@ -56,12 +56,14 @@ to your `coc-settings.json`.
 
 ## Using VSCode snippet from extensions
 
-If you want to load VSCode snippets from coc extensions, install the [coc-snippets](https://github.com/neoclide/coc-snippets) extension, and then install a VSCode snippet extension from GitHub with a command like:
+To load VSCode snippets, you need install [coc-snippets](https://github.com/neoclide/coc-snippets) extension.
+
+Then install a VSCode snippet extension from GitHub with a command like:
 
 ```
 :CocInstall https://github.com/andys8/vscode-jest-snippets.git#master
 ```
 
-To open a file with a snippet related filetype, like `foo.js` as `javascript`, you only need to type part of the prefix characters.
+Open a file with a snippet related filetype, like `foo.js` as `javascript` and type part of the prefix characters.
 
 <img width="724" alt="screen shot 2018-09-27 at 2 25 41 pm" src="https://user-images.githubusercontent.com/251450/46127038-edadb280-c261-11e8-8e94-957b6d62c9a9.png">
