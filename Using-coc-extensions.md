@@ -85,7 +85,7 @@ to open CocList buffer, which looks like:
 
 Supported actions:
 
-* `toggle` default action. astivate/deactivate selected extension(s).
+* `toggle` default action. activate/deactivate selected extension(s).
 * `enable`: enable selected extension(s).
 * `disable`: disable selected extension(s).
 * `reload`: reload selected extension(s).
@@ -93,7 +93,7 @@ Supported actions:
 
 ## Debug coc extension
 
-If extension throw uncaught errors, you can get the error message by command: `:CocErrors`.
+If extension throw uncaught errors, you can get the error message by: `:messages`.
 
 For extension using language server, you can use output channel, check out https://github.com/neoclide/coc.nvim/wiki/Debug-language-server#using-output-channel.
 
