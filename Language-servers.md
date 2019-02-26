@@ -182,12 +182,16 @@ Using [natebosch/dart_language_server](https://github.com/natebosch/dart_languag
 Using [ccls](https://github.com/MaskRay/ccls)
 
 ``` jsonc
-  "ccls": {
-    "command": "ccls",
-    "filetypes": ["c", "cpp", "objc", "objcpp"],
-    "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
-    "initializationOptions": {
-      "cacheDirectory": "/tmp/ccls"
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+      "initializationOptions": {
+         "cache": {
+           "directory": ".ccls-cache"
+         }
+       }
     }
   }
 ```
