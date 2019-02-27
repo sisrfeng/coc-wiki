@@ -185,11 +185,11 @@ Using [ccls](https://github.com/MaskRay/ccls)
   "languageserver": {
     "ccls": {
       "command": "ccls",
-      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
       "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
       "initializationOptions": {
          "cache": {
-           "directory": ".ccls-cache"
+           "directory": "/tmp/ccls"
          }
        }
     }
