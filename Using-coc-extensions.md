@@ -1,14 +1,10 @@
-Install coc extensions by use vim command `CocInstall` like:
-
-``` vim
-:CocInstall coc-json coc-html coc-css
-```
-
 ### Why should I use coc extensions?
 
-Compare to the language server specified with `languageserver`, extensions have more features.
+The main reason is that some language servers provided by community behavior badly compare to extensions of VSCode, coc extensions could be forked from VSCode extensions to provide with user best experience. 
 
-* Extensions could contribute properties to schema of `coc-settings.json`, like VSCode, you can write the configuration with completion support when you have `coc-json` installed.
+Compare to the language server, extensions have more features.
+
+* Extensions could contribute properties to schema of `coc-settings.json`, like VSCode, you can write the configuration with completion and validation support when you have `coc-json` installed.
     
   <img width="466" alt="screen shot 2018-09-07 at 5 03 24 pm" src="https://user-images.githubusercontent.com/251450/45209588-f5f87a80-b2bf-11e8-80c0-fe5ff689f947.png">
 
@@ -23,8 +19,8 @@ Compare to the language server specified with `languageserver`, extensions have 
         ```
 
 * Extensions could contribute json schemas (same as VSCode)
-* Extensions could contribute snippets (same as VSCode)
-* Extensions could have specified more client options, like `fileEvents` to watch files (require [watchman](https://facebook.github.io/watchman/) installed), and `middleware` which could be used to fix the result that returned from language server.
+* Extensions could contribute snippets that can be loaded by [coc-snippets](https://github.com/neoclide/coc-snippets) extension.
+* Extensions could specify more client options, like `fileEvents` to watch files (require [watchman](https://facebook.github.io/watchman/) installed), and `middleware` which could be used to fix the result that returned from language server.
 
 ## Differences between coc extension and VSCode extension.
 
@@ -38,11 +34,9 @@ Compare to the language server specified with `languageserver`, extensions have 
   * Json shemas assosication: `contributes.jsonValidation`.
   * Snippets support.
 
-## Implemented coc extensions
+## Manage coc extensions
 
-https://www.npmjs.com/search?q=keywords%3Acoc.nvim
-
-## Install coc extension
+### Install extensions
 
 Use command `:CocInstall` like:
 
@@ -51,24 +45,22 @@ Use command `:CocInstall` like:
 ```
 One or more extension name could be provided.
 
-The extension name could also be url of git repository, like: `https://github.com/andys8/vscode-jest-snippets.git#master` which could be accepted by `yarn install`
+The extension name could also be url of git repository, like: `https://github.com/andys8/vscode-jest-snippets.git#master` which could be accepted by `yarn install`.
 
-The extension would be loaded  after install succeed.
+Extensions would be loaded and activated after install succeed.
+
+### Update extensions
+
+You **don't** need to update coc extensions manually, coc detect acceptable new version of installed extension everyday(by default) the first time it started, when it found new version of extensions, it update them for you automatically.
+
+To disable automatic update, change settings: `coc.preferences.extensionUpdateCheck` to `"never"`.
+
+Use command `:CocUpdate` or `:CocUpdateSync` to update all extensions to latest version, the upgrade won't work if you're not using latest version of coc.nvim to avoid possible break change.
 
 ## Uninstall coc extension
 
 ```
 :CocUninstall coc-css
-```
-
-## Update all coc extensions
-
-You don't need to update coc extensions manually, coc detect acceptable new version of installed extension everyday(by default) the first time it started, when it found new version of extensions, it update them for you automatically.
-
-To disable autoupdate, change settings: `coc.preferences.extensionUpdateCheck` to `"never"`.
-
-```
-:CocUpdate
 ```
 
 ## Manage extenions using CocList
@@ -79,6 +71,7 @@ CocList extensions
 ```
 
 to open CocList buffer, which looks like:
+
 <img width="619" alt="screen shot 2018-09-10 at 10 28 06 pm" src="https://user-images.githubusercontent.com/251450/45303659-e475d380-b548-11e8-9671-8a3e8e116db4.png">
 
 `*` means extension is activited, `+` means loaded and `-` means disabled.
@@ -100,3 +93,7 @@ For extension using language server, you can use output channel, check out https
 If the extension using stdio to write messages, you can get the output from the log file of coc, the log file could be find by run command: `node -e 'console.log(path.join(os.tmpdir(), "coc-nvim.log"))'`.
 
 The default log level is info, to get the debug information, set `NVIM_COC_LOG_LEVEL` environment variable by command: `export NVIM_COC_LOG_LEVEL=debug`.
+
+## Implemented coc extensions
+
+https://www.npmjs.com/search?q=keywords%3Acoc.nvim
