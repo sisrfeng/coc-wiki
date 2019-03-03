@@ -1,6 +1,6 @@
 ### Why should I use coc extensions?
 
-The main reason is that some language servers provided by community behavior badly compare to extensions of VSCode, coc extensions could be forked from VSCode extensions to provide with user best experience. 
+The main reason is that some language servers provided by community behavior badly compare to extensions of VSCode, coc extensions could be forked from VSCode extensions to provide best user experience. 
 
 Compare to the language server, extensions have more features.
 
