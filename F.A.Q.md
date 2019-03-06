@@ -2,18 +2,15 @@ Here's some common problems that you may need to understand when working with co
 
 ## How to make preview window shown aside with pum?
 
-Floating window of neovim is merged, but still need to wait for [PR 9616](https://github.com/neovim/neovim/pull/9616)
-get merged for floating preview.
-
-You can use my fork at [chemzqm/neovim](https://github.com/chemzqm/neovim) to test floating preview window.
+[PR 9616](https://github.com/neovim/neovim/pull/9616) is required, you can merge the PR from master of neovim or use my fork at [chemzqm/neovim](https://github.com/chemzqm/neovim) to test floating preview window.
 
 To make sure floating preview window could work:
 
+- Make sure pull master code instead of use `{'tag': '*'}` for `vim-plug`.
 - Add `let g:coc_force_debug = 1` to your `init.vim` which make sure your're
   using code build by yourself.
 - Run `call coc#util#build()` to build from source.
-- `echo exists('##PumRender')` should echo `1`.
-- `echo exists('*nvim_open_win')` should echo `1`.
+- `exists('##MenuPopupChanged') && exists('*nvim_open_win')` should echo `1`.
 
 Be aware that the API could change at any time.
 
