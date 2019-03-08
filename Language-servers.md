@@ -340,6 +340,21 @@ Using [reason-language-server](https://github.com/jaredly/reason-language-server
   }
 ```
 
+### PureScript
+
+Using [purescript-language-server](https://github.com/nwolverson/purescript-language-server)
+
+``` jsonc
+  "languageserver": {
+     "purescript": {
+       "command": "purescript-language-server",
+       "args": ["--stdio"],
+       "filetypes": ["purescript"],
+       "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall']
+     }
+  }
+```
+
 ### Flow
 
 Using [flow-language-server](https://github.com/flowtype/flow-language-server), note: flow-language-server is no longer maintained
