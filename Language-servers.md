@@ -350,7 +350,7 @@ Using [purescript-language-server](https://github.com/nwolverson/purescript-lang
        "command": "purescript-language-server",
        "args": ["--stdio"],
        "filetypes": ["purescript"],
-       "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall']
+       "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"]
      }
   }
 ```
