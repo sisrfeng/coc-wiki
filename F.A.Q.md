@@ -6,10 +6,6 @@ Here's some common problems that you may need to understand when working with co
 
 To make sure floating preview window could work:
 
-- Make sure pull master code instead of use `{'tag': '*'}` for `vim-plug`.
-- Add `let g:coc_force_debug = 1` to your `init.vim` which make sure your're
-  using code build by yourself.
-- Run `call coc#util#build()` to build from source.
 - `exists('##MenuPopupChanged') && exists('*nvim_open_win')` should echo `1`.
 
 Be aware that the API could change at any time.
