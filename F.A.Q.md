@@ -6,7 +6,7 @@ Here's some common problems that you may need to understand when working with co
 
 To make sure floating preview window could work:
 
-- `exists('##MenuPopupChanged') && exists('*nvim_open_win')` should echo `1`.
+- `:echo exists('##MenuPopupChanged') && exists('*nvim_open_win')` should echo `1`.
 
 Be aware that the API could change at any time.
 
