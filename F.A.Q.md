@@ -2,7 +2,7 @@ Here's some common problems that you may need to understand when working with co
 
 ## How to make preview window shown aside with pum?
 
-[PR 9616](https://github.com/neovim/neovim/pull/9616) is required, you can merge the PR from master of neovim or use my fork at [chemzqm/neovim](https://github.com/chemzqm/neovim) to test floating preview window.
+[PR 9616](https://github.com/neovim/neovim/pull/9616) is required, you can merge the PR from master of neovim or use my fork at [chemzqm/neovim](https://github.com/chemzqm/neovim) and compile neovim to test floating preview window.
 
 To make sure floating preview window could work:
 
