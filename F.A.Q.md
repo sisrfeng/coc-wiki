@@ -8,8 +8,6 @@ To make sure floating preview window could work:
 
 - `:echo exists('##MenuPopupChanged') && exists('*nvim_open_win')` should echo `1`.
 
-Be aware that the API could change at any time.
-
 ## My pum flick when typing.
 
 Try latest neovim release, coc fix this issue by trigger completion on `InsertCharPre`, but it doesn't work on vim.
