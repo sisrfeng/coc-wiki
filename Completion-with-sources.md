@@ -68,11 +68,17 @@ imap <c-space> coc#refresh()
    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
    ```
 
-* Use `<enter>` to confirm complete
-   ``` vim
-   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-   ```
+* Use `<cr>` to confirm complete
+    ``` vim
+    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+    ```
   **Note:** `\<C-g>u` is used to break undo level.
+   
+  To make `<cr>` select the first completion item and confirm completion when no item have selected:
+    ``` vim
+    inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+    ```
+
 
 * Close preview window when completion is done.
     ``` vim
