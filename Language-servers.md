@@ -259,6 +259,22 @@ Using [sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
 
 ### PHP
 
+Using [bmewburn/intelephense-docs](https://github.com/bmewburn/intelephense-docs)
+
+**Recommended** (way faster than php-language-server)
+
+``` jsonc
+{
+    "languageserver": {
+        "intelephense": {
+            "command": "node",
+            "args": ["/usr/local/lib/node_modules/intelephense/lib/intelephense.js", "--stdio"],
+            "filetypes": ["php"]
+        }
+    },
+}
+```
+
 Using [felixfbecker/php-language-server](https://github.com/felixfbecker/php-language-server)
 
 ``` jsonc
@@ -270,8 +286,10 @@ Using [felixfbecker/php-language-server](https://github.com/felixfbecker/php-lan
     }
   }
 ```
-
 note: make sure you can start the server by use command and args.
+
+
+
 
 ### Dockerfile
 
