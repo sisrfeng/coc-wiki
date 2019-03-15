@@ -1,4 +1,4 @@
-### Why should I use coc extensions?
+### Why coc extensions is needed?
 
 The main reason is that some language servers provided by community behavior badly compare to extensions of VSCode, coc extensions could be forked from VSCode extensions to provide best user experience. 
 
@@ -48,6 +48,8 @@ One or more extension name could be provided.
 The extension name could also be url of git repository, like: `https://github.com/andys8/vscode-jest-snippets.git#master` which could be accepted by `yarn install`.
 
 Extensions would be loaded and activated after install succeed.
+
+**Note** you can add extension names to `g:coc_global_extensions` variable, coc would install the missing extensions for you on server start.
 
 ### Update extensions
 
