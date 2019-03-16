@@ -2,7 +2,7 @@ Here's some common problems that you may need to understand when working with co
 
 ## How to make preview window shown aside with pum?
 
-Build neovim from source code or use nightly build.
+Build neovim from master code or use nightly build.
 
 To make sure floating preview window could work:
 
