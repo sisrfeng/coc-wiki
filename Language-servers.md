@@ -151,6 +151,7 @@ An example of socket language server:
 * `settings` contains specific configuration of language server.
 * `trace.server` controls trace level of communication between server and client, default `"off"`, change to `"verbose"` if you want to checkout all communication.
 * `rootPatterns` is used for resolve root path which should contain one of patterns as child directory or file, it will use `"coc.preferences.rootPatterns"` (default to `[".vim", ".git", ".hg", ".projections.json"]`)  when not specified,  
+* `requireRootPattern` when is true, language server only started when any matched rootPatterns found.
 
 ## Example configuration for custom language servers
 
