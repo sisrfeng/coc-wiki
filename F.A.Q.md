@@ -8,6 +8,10 @@ To make sure floating preview window could work:
 
 - `:echo exists('##MenuPopupChanged') && exists('*nvim_open_win')` should echo `1`.
 
+**Note:** Floating preview window will not be shown when there're no detail and documentation with current complete item.
+
+**Note:** To preview expanded snippet body, you can use [coc-snippets](https://github.com/neoclide/coc-snippets).
+
 ## My pum flick when typing.
 
 Try latest neovim release, coc fix this issue by trigger completion on `InsertCharPre`, but it doesn't work on vim.
