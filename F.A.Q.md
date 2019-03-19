@@ -14,7 +14,7 @@ To make sure floating preview window could work:
 
 ## My pum flick when typing.
 
-Try latest neovim release, coc fix this issue by trigger completion on `InsertCharPre`, but it doesn't work on vim.
+It's much better with latest neovim, there is setting `suggest.reloadPumOnInsertChar`, when it's `true` the flick could be avoided on neovim, but it has bug with neovim's floating window, so not recommended.
 
 ## My vim is blocked sometimes.
 
