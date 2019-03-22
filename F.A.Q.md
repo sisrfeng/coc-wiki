@@ -14,7 +14,7 @@ To make sure floating preview window could work:
 
 If you got errors including:
 
-> Wrong number of arguments: expecting 3 but got 5.
+> Wrong number of arguments: expecting 5 but got 3.
 
 It means you're using old version of neovim, upgrade to master to avoid this issue.
 
