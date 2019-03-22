@@ -12,6 +12,12 @@ To make sure floating preview window could work:
 
 **Note:** To preview expanded snippet body, you can use [coc-snippets](https://github.com/neoclide/coc-snippets).
 
+If you got errors including:
+
+> Wrong number of arguments: expecting 3 but got 5.
+
+It means you're using old version of neovim, upgrade to master to avoid this issue.
+
 ## My pum flick when typing.
 
 It's much better with latest neovim, there is setting `suggest.reloadPumOnInsertChar`, when it's `true` the flick could be avoided on neovim, but it has bug with neovim's floating window, so not recommended.
