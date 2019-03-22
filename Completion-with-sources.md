@@ -56,7 +56,7 @@ inoremap <silent><expr> <TAB>
 
 ``` vim
 " use <c-space>for trigger completion
-imap <c-space> coc#refresh()
+inoremap <silent><expr> <c-space> coc#refresh()
 ```
 
 ## Improve completion experience
