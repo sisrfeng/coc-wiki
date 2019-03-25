@@ -4,7 +4,7 @@ Coc is written is Typescript and runs in nodejs, you can download pre build bina
 
 Neovim >= 0.3.0 is required. 
 
-vim >= 0.8.1 is supported.
+vim >= 8.1 is supported.
 
 Use `:version` to checkout your vim version.
 
