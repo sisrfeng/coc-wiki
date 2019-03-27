@@ -1,6 +1,6 @@
 Here's some common problems that you may need to understand when working with coc.nvim.
 
-## How to install coc.nvim from master branch?
+## How to use coc.nvim from master branch?
 
 * Make user you don't have `{"tag": "*"}` in `Plug` command if you're using vim-plug as plugin manager.
 * Use `Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}` in your vimrc if you're using vim-plug.
