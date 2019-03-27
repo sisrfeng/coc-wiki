@@ -83,6 +83,10 @@ Some language server could be slow for receiving document change before trigger 
 
 in your `.vimrc`.
 
+## My custom keymap not working.
+
+Some plugins like [Ultisnips](https://github.com/SirVer/ultisnips) and [vim-closer](https://github.com/rstacruz/vim-closer) would remap your `<tab>` or `<cr>` without configuration, you can checkout your keymap by command like `:verbose imap <tab>`.
+
 ## How to change highlight of diagnostic signs?
 
 The sign highlight groups are `CocErrorSign` `CocWarningSign` `CocInfoSign` `CocHintSign`
