@@ -1,5 +1,14 @@
 Here's some common problems that you may need to understand when working with coc.nvim.
 
+## How to install coc.nvim from master branch?
+
+* Make user you don't have `{"tag": "*"}` in `Plug` command if you're using vim-plug as plugin manager.
+* Use `Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}` in your vimrc if you're using vim-plug.
+* Add `let g:coc_force_debug = 1` to make sure coc use compiled code instead of binary.
+* Update coc.nvim with `:PlugUpdate` command if you're using vim-plug, for other plugin manager run `:call coc#util#build()` after plugin update.
+* Run `:echo coc#util#job_command()` to get command used for start coc.nvim service.
+* Run `:checkhealth` when you have issue on neovim.
+
 ## How to make preview window shown aside with pum?
 
 Build neovim from master code or [use nightly build](https://github.com/neovim/neovim/releases/tag/nightly).
@@ -72,13 +81,6 @@ Some plugin like [ale](https://github.com/w0rp/ale) would clear location list th
 
 Some language server could be slow for receiving document change before trigger completion, you can change the wait time for language server to finish the document change process before completion by change `coc.preferences.triggerCompletionWait` in your `coc-settings.json`, it's default to `60` in milliseconds.
 
-## How could I add highlight to the markdown documentation?
-
-Use a markdown plugin which could provide fency code highlight, like https://github.com/tpope/vim-markdown, and use settings like:
-
-```
-  let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'typescript']
-```
 in your `.vimrc`.
 
 ## How to change highlight of diagnostic signs?
