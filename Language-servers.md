@@ -260,6 +260,8 @@ Using [sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
 
 ### PHP
 
+Try [marlonfan/coc-phpls](https://github.com/marlonfan/coc-phpls) or one of the following methods:
+
 Using [bmewburn/intelephense-docs](https://github.com/bmewburn/intelephense-docs)
 
 **Recommended** (way faster than php-language-server)
