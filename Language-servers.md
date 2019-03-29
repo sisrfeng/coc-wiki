@@ -482,16 +482,6 @@ Using [elixir-ls](https://github.com/JakeBecker/elixir-ls)
 
 ### Ruby
 
-Using [solargraph](https://github.com/castwide/solargraph)
+Use [coc-solargraph](https://github.com/neoclide/coc-solargraph) extension is recommended.
 
-``` jsonc
-  "languageserver": {
-     "solargraph": {
-      "command": "solargraph",
-      "args": ["stdio"],
-      "filetypes": ["ruby"]
-     }
-  }
-```
-
-> Make sure solargraph is in your $PATH (sudo gem install solargraph) or change the command above to point to the binary in case you install to a custom folder.
+Make sure solargraph is in your $PATH (sudo gem install solargraph) or use `solargraph.commandPath` to configure executable path of solargraph.
