@@ -46,7 +46,7 @@ to your `.vimrc` and run command `:PlugInstall` in your neovim.
 It's recommended to build coc.nvim from source code since dein can't upgrade with new release only.
 
 Add:
-```
+``` vim
 call dein#add('neoclide/coc.nvim', {'merge':0, 'build': 'yarn install --frozen-lockfile'})
 ```
 **Note:** when `'merge':0` not present, coc.nvim would be unable to start. 
@@ -55,7 +55,7 @@ call dein#add('neoclide/coc.nvim', {'merge':0, 'build': 'yarn install --frozen-l
 
 You your have trouble with compile source code, try command:
 
-```
+``` sh
 cd ~/.cache/dein/repos/github.com/neoclide/coc.nvim
 git clean -xfd
 yarn install --frozen-lockfile
