@@ -21,7 +21,7 @@ To change the timeout of completion, use:
 
 To make the first complete item selected automatically, use: 
 
-	"suggests.noselect": false,
+	"suggest.noselect": false,
 
 To make completion triggered with two input characters, use: 
 
