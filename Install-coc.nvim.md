@@ -67,7 +67,7 @@ To check out coc service is running, use command `:checkhealth` in neovim (not s
 
 <img width="344" alt="screen shot 2018-07-08 at 11 02 23 pm" src="https://user-images.githubusercontent.com/251450/42421117-001a81ee-8303-11e8-929a-91da4ac9feea.png">
 
-Another useful command is `:CocInfo`, after service started, you can use it get some useful information abort the service.
+Another useful command is `:CocInfo`, after service started, you can use it get some useful information about the service.
 
 ## Optional install watchman for file watching
 
