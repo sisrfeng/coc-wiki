@@ -2,11 +2,11 @@ Coc is written is Typescript and runs in nodejs, you can download pre build bina
 
 ## Install [neovim](https://github.com/neovim/neovim/releases/) or [vim](https://github.com/vim/vim) 
 
-Neovim >= 0.3.1 is required. 
+* `neovim` >= `0.3.1` is required.
+* `vim` >= `8.1` is required.
+* Use command `:version` to checkout your vim version.
 
-vim >= 8.1 is supported.
-
-Use `:version` to checkout your vim version.
+**Note:** it will not load at all when version not match.
 
 ## Install [nodejs](https://nodejs.org/) >= 8.0
 
@@ -16,7 +16,7 @@ curl -sL install-node.now.sh | sh
 
 ## Install [yarn](https://yarnpkg.com/)
 
-If you want to build source code or install extension, yarn is requried.
+Yarn is required for build coc.nvim from source code and manage extensions.
 
 ```
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
@@ -27,8 +27,10 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 Take [junegunn/vim-plug](https://github.com/junegunn/vim-plug) for example, add
 
 ``` vim
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 ```
+
+If you're using binary release `'tag': '*'` is recommended, it helps you upgrade coc.nvim only when new release available.
 
 To build from source of latest master, add:
 
