@@ -24,7 +24,9 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 ## Install plugin coc.nvim
 
-Take [junegunn/vim-plug](https://github.com/junegunn/vim-plug) for example, add
+### Using [vim-plug](https://github.com/junegunn/vim-plug)
+
+Install binary release:
 
 ``` vim
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
@@ -32,16 +34,32 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 If you're using binary release `'tag': '*'` is recommended, it helps you upgrade coc.nvim only when new release available.
 
-To build from source of latest master, add:
+Build from source code:
 
 ``` vim
-Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 ```
 to your `.vimrc` and run command `:PlugInstall` in your neovim.
+
+## Using [dein.vim](https://github.com/Shougo/dein.vim)
+
+It's recommended to build coc.nvim from source code since dein can't upgrade with new release only.
+
+Add:
+```
+call dein#add('neoclide/coc.nvim', {'merge':0, 'build': 'yarn install --frozen-lockfile'})
+```
+**Note:** when `'merge':0` not present, coc.nvim would be unable to start. 
+
+**Note:** depends on your network and CPU, it might take a long time for the first time build. 
+
+## Checkout service state.
 
 To check out coc service is running, use command `:checkhealth` in neovim (not supported by vim), the output should include:
 
 <img width="344" alt="screen shot 2018-07-08 at 11 02 23 pm" src="https://user-images.githubusercontent.com/251450/42421117-001a81ee-8303-11e8-929a-91da4ac9feea.png">
+
+
 
 ## Optional install watchman for file watching
 
