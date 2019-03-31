@@ -6,7 +6,7 @@ Coc is written is Typescript and runs in nodejs, you can download pre build bina
 * `vim` >= `8.1` is required.
 * Use command `:version` to checkout your vim version.
 
-**Note:** it will not load at all when version not match.
+**Note:** it will not load at all when (neo)vim is too old.
 
 ## Install [nodejs](https://nodejs.org/) >= 8.0
 
@@ -26,34 +26,44 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 ### Using [vim-plug](https://github.com/junegunn/vim-plug)
 
-Install binary release:
+Install with compiled nightly build (recommended):
 
 ``` vim
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 ```
+to upgrade with new release only:
 
-If you're using binary release `'tag': '*'` is recommended, it helps you upgrade coc.nvim only when new release available.
+``` vim
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install({'tag':1})}}
+```
 
 Build from source code:
 
 ``` vim
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 ```
-to your `.vimrc` and run command `:PlugInstall` in your neovim.
+
+run command `:PlugInstall` in your (neo)vim.
 
 ## Using [dein.vim](https://github.com/Shougo/dein.vim)
 
-It's recommended to build coc.nvim from source code since dein can't upgrade with new release only.
+Install with compiled nightly build (recommended):
 
-Add:
+``` vim
+call dein#add('neoclide/coc.nvim', {'merge':0, 'build': './install.sh nightly'})
+```
+
+Build from source code:
+
 ``` vim
 call dein#add('neoclide/coc.nvim', {'merge':0, 'build': 'yarn install --frozen-lockfile'})
 ```
+
 **Note:** when `'merge':0` not present, coc.nvim would be unable to start. 
 
 **Note:** depends on your network and CPU, it might take a long time for the first time build. 
 
-You your have trouble with compile source code, try command:
+If your have trouble with compile source code, try command:
 
 ``` sh
 cd ~/.cache/dein/repos/github.com/neoclide/coc.nvim
