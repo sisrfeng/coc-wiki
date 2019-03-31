@@ -15,7 +15,7 @@ Build neovim from master code or [use nightly build](https://github.com/neovim/n
 
 To make sure floating preview window could work:
 
-- `:echo exists('##MenuPopupChanged') && exists('*nvim_open_win')` should echo `1`.
+- `:echo exists('##CompleteChanged') && exists('*nvim_open_win')` should echo `1`.
 
 **Note:** Floating preview window will not be shown when there're no detail and documentation with current complete item.
 
