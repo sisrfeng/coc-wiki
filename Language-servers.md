@@ -232,7 +232,6 @@ Like many tools, clangd relies on the presence of a [JSON compilation database](
 Using [gopls](https://github.com/saibing/tools)
 
 ```jsonc
-{
   "languageserver": {
     "golang": {
       "command": "gopls",
@@ -241,7 +240,6 @@ Using [gopls](https://github.com/saibing/tools)
       "filetypes": ["go"]
     }
   }
-}
 ```
 
 Using [saibing/bingo](https://github.com/saibing/bingo)
