@@ -10,9 +10,11 @@ autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 
 When `b:coc_root_patterns` not exists, `"coc.preferences.rootPatterns"` is used, it's default to `[".vim", ".git", ".hg", ".projections.json"]`.  
 
-Workspace folder is resolved from up to down, the resolved folder would never be user's home directory. 
+Workspace folder is resolved from up to down, the resolved folder would never be user's home directory.
 
-**Important** since it works by resolve from files, to enable multiple workspace folders, you **have to** open at least one file of each folders.
+**Note** when the file is inside current cwd, cwd is checked first. 
+
+**Note** since it works by resolve from files, to enable multiple workspace folders, you **have to** open at least one file of each folders.
 
 ## List current workspace folders
 
