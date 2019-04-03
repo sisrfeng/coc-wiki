@@ -31,3 +31,7 @@ Use command `:echo coc#util#root_patterns()` to get patterns used for resolve wo
 ## Disable workspace folders support
 
 You can add `"disableWorkspaceFolders": true` to the configuration section of the language server when you don't want the language server make use of workspaceFolders feature.
+
+## Persist workspace folders
+
+Variable `g:WorkspaceFolders` is used for store current workspace folders, use `set sessionoptions+=globals` in your vimrc if want to restore workspace folders from session.
