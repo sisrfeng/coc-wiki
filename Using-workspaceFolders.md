@@ -22,9 +22,9 @@ autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 
 **Note** since it works by resolve from files, to enable multiple workspace folders, you **have to** open at least one file of each folders.
 
-## List current workspace folders
+## Manage workspace folders
 
-Use command `:CocCommand workspace.workspaceFolders` to get the list of current workspace folders.
+Use command `CocList folders` to open list of workspace folders, `delete` and `edit` actions are supported.
 
 Use command `:echo coc#util#root_patterns()` to get patterns used for resolve workspace folder of current buffer.
 
