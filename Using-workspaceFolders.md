@@ -24,7 +24,7 @@ autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 
 ## Manage workspace folders
 
-Use command `CocList folders` to open list of workspace folders, `delete` and `edit` actions are supported.
+Use command `:CocList folders` to open list of workspace folders, `delete` and `edit` actions are supported.
 
 Use command `:echo coc#util#root_patterns()` to get patterns used for resolve workspace folder of current buffer.
 
