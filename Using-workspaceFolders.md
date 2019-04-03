@@ -2,13 +2,13 @@ Unlike VSCode，vim doesn't have workspace support. The solution is resolve work
 
 ## Resolve workspace folder
 
-A list of file/folder names is used for resolve workspace folder, the patterns could comes from three places:
+A list of file/folder names is used for resolve workspace folder, the patterns could comes from:
 
 * `b:coc_root_patterns` variable of current buffer.
 * `rootPatterns` specified for language server used for current buffer.
 * `"coc.preferences.rootPatterns"` settings, which default to `[".vim", ".git", ".hg", ".projections.json"]`.
 
-The later one have lower priority, which means it's only used when previous patterns not exists or failed to match workspace folder.
+The later one have lower priority, which means it's only used when previous patterns failed to match workspace folder.
 
 To configure `rootPatterns` for specified filetype, use autocmd like:
 
@@ -16,7 +16,7 @@ To configure `rootPatterns` for specified filetype, use autocmd like:
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 ``` 
 
-**Note** when the file is inside current vim's cwd, cwd is checked first. 
+**Note** workspace folder is resolved from up to down, cwd is checked first when the file is inside cwd,. 
 
 **Note** for performance reason, user's home directory would never considered as workspace folder.
 
