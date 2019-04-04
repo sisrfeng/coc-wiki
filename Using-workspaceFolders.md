@@ -10,6 +10,8 @@ A list of file/folder names is used for resolve workspace folder, the patterns c
 
 The later one have lower priority, which means it's only used when previous patterns failed to match workspace folder.
 
+When resolve of workspace folder failed, cwd is used for workspaceFolder.
+
 To configure `rootPatterns` for specified filetype, use autocmd like:
 
 ``` vim
