@@ -283,9 +283,12 @@ Using [bmewburn/intelephense-docs](https://github.com/bmewburn/intelephense-docs
 {
     "languageserver": {
         "intelephense": {
-            "command": "node",
-            "args": ["/usr/local/lib/node_modules/intelephense/lib/intelephense.js", "--stdio"],
-            "filetypes": ["php"]
+            "command": "intelephense",
+            "args": ["--stdio"],
+            "filetypes": ["php"],
+            "initializationOptions": {
+                "storagePath": "/tmp/intelephense"
+            }
         }
     },
 }
