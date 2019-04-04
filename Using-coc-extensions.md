@@ -56,7 +56,7 @@ Extensions would be loaded and activated after install succeed.
 Start from recent master of coc.nvim, you can manage coc extension by use plugin manager for vim, like [vim-plug](https://github.com/junegunn/vim-plug), coc would try to load coc extensions from your `&rtp`, for example, install coc-tsserver would be add:
 
 ``` vim
-Plug 'neoclide/coc-tsserver', {'do', 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 ```
 
 to your vimrc, and run `PlugInstall`, the limitation is your can't uninstall the extension by use `:CocUninstall` and automatic update support is not available.
