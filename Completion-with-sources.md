@@ -88,11 +88,20 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 ### Bundled sources.
 
-Name         | Description                                             
------------- | -------------                                           
-`around`     | Words of current buffer.                                
-`buffer`     | Words of none current buffer.                           
-`file`       | Filename completion, auto detected.                    
+Name         |Shortcut| Description                                             
+------------ |--------| -------------                                           
+`around`     |[A]     |Words of current buffer.                                
+`buffer`     |[B]     |Words of none current buffer.                           
+`file`       |[F]     |Filename completion, auto detected.  
+
+### Configuring sources
+
+You can configure completion source by use coc-settings.json
+
+* `"coc.source.{name}.enable"`: controls enable the source or not.
+* `"coc.source.{name}.shortcut"`: shortcut used in completion menu.
+* `"coc.source.{name}.priority"`: priority of source, lower priority source would be sorted after high priority source when they have same score.
+* `"coc.source.{name}.disableSyntaxes"`: syntax names used to disable source from complete, ex: `["comment", "string"]`        
 
 ### More sources
 
