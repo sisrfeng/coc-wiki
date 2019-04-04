@@ -51,7 +51,7 @@ Extensions would be loaded and activated after install succeed.
 
 **Note** you can add extension names to `g:coc_global_extensions` variable, coc would install the missing extensions for you on server start.
 
-### Use other vim's plugin manager for coc extension
+### Use vim's plugin manager for coc extension
 
 Start from recent master of coc.nvim, you can manage coc extension by use plugin manager for vim, like [vim-plug](https://github.com/junegunn/vim-plug), coc would try to load coc extensions from your `&rtp`, for example, install coc-tsserver would be add:
 
