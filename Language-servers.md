@@ -349,6 +349,23 @@ Using [Alloyed/lua-lsp](https://github.com/Alloyed/lua-lsp)
   }
 ```
 
+Using [sumneko/lua-language-server](https://github.com/sumneko/lua-language-server) on Windows, which can downloaded by the extension manager of VSCode.
+
+```viml
+let lua_lsp = glob('~/.vscode/extensions/sumneko.lua*', 0, 1)
+if len(lua_lsp)
+    let lua_lsp = lua_lsp[-1] . '\server'
+    call coc#config('languageserver', {
+        \ 'lua-language-server': {
+        \     'cwd': lua_lsp,
+        \     'command': lua_lsp . '\bin\lua-language-server.exe',
+        \     'args': ['-E', '-e', 'LANG="zh-cn"', lua_lsp . '\main.lua'],
+        \     'filetypes': ['lua'],
+        \ }
+    \ })
+endif
+```
+
 ### OCaml and ReasonML
 
 Using [ocaml-language-server](https://github.com/freebroccolo/ocaml-language-server)
