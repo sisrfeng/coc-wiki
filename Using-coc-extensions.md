@@ -1,8 +1,8 @@
 ### Why coc extensions is needed?
 
-The main reason is that some language servers provided by community behavior badly compare to extensions of VSCode, coc extensions could be forked from VSCode extensions to provide best user experience. 
+The main reason is that some language servers provided by community behavior badly compare to extensions of VSCode, coc extensions could be forked from VSCode extensions to provide better user experience. 
 
-Compare to the language server, extensions have more features.
+Compare to configured language server, extensions have more features.
 
 * Extensions could contribute properties to schema of `coc-settings.json`, like VSCode, you can write the configuration with completion and validation support when you have `coc-json` installed.
     
@@ -13,7 +13,7 @@ Compare to the language server, extensions have more features.
 
       <img width="476" alt="screen shot 2018-09-07 at 4 53 12 pm" src="https://user-images.githubusercontent.com/251450/45209334-4d4a1b00-b2bf-11e8-94e0-0c2b981a71f5.png">
     * Use `:CocCommand` with `<tab>` for command line completion.
-    * Use a custom command to invoke the command, for exmaple, create a `Tsc` command for `tsserver.watchBuild` could be
+    * Use a custom command to invoke the command, for example, create a `Tsc` command for `tsserver.watchBuild` could be
         ```
         command! -nargs=0 Tsc    :CocCommand tsserver.watchBuild
         ```
@@ -63,11 +63,11 @@ to your vimrc, and run `PlugInstall`, the limitation is your can't uninstall the
 
 ### Update extensions
 
-You **don't** need to update coc extensions manually, coc detect acceptable new version of installed extension everyday(by default) the first time it started, when it found new version of extensions, it update them for you automatically.
+You **don't** need to update coc extensions manually, coc detect acceptable new version of installed extension everyday (by default) the first time it started, when it found new version of extensions, it update them for you automatically.
 
 To disable automatic update, change settings: `coc.preferences.extensionUpdateCheck` to `"never"`.
 
-Use command `:CocUpdate` or `:CocUpdateSync` to update all extensions to latest version, the upgrade won't work if you're not using latest version of coc.nvim to avoid possible break change.
+Use command `:CocUpdate` or `:CocUpdateSync` to update all extensions to latest version, the upgrade won't work if you're not using latest release version of coc.nvim to avoid possible break change.
 
 ## Uninstall coc extension
 
@@ -86,7 +86,10 @@ to open CocList buffer, which looks like:
 
 <img width="619" alt="screen shot 2018-09-10 at 10 28 06 pm" src="https://user-images.githubusercontent.com/251450/45303659-e475d380-b548-11e8-9671-8a3e8e116db4.png">
 
-`?` means invalid extension, `*` means extension is activated, `+` means loaded and `-` means disabled
+- `?` means invalid extension
+- `*` means extension is activated
+- `+` means extension is loaded
+- `-` means extension is disabled
 
 Supported actions:
 
@@ -105,6 +108,8 @@ For extension using language server, you can use output channel, check out https
 If the extension using stdio to write messages, you can get the output from the log file of coc, the log file could be find by run command: `node -e 'console.log(path.join(os.tmpdir(), "coc-nvim.log"))'`.
 
 The default log level is info, to get the debug information, set `NVIM_COC_LOG_LEVEL` environment variable by command: `export NVIM_COC_LOG_LEVEL=debug`.
+
+You can also use chrome to debug extension, checkout https://github.com/neoclide/coc.nvim/wiki/Debug-coc.nvim.
 
 ## Implemented coc extensions
 
