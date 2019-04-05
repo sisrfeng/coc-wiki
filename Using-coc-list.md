@@ -6,7 +6,10 @@ Coc list is inspired by [denite.nvim](https://github.com/Shougo/denite.nvim), it
 
 - **Insert mode and normal mode**, use insert mode for filter and normal mode to do everything else.
 - **Actions for items**, each list provide different actions, you can create key-mapping for them and type `<tab>` to run one of them.
-- **Multiple selection**, press `<space>` to toggle selection of an item or drag your mouse to select items.
+- **Multiple selection**, you can do multiple selection in different ways:
+  - Press `<space>` to toggle selection of an item.
+  - Drag your mouse to select items.
+  - On normal mode, select lines in visual select mode and then press `<space>` to toggle selection of lines.
 - **Commands** for previous list:
    - `:CocListResume` reopen last list, restore window and cursor position.
    - `:CocNext` do default action with next item.
