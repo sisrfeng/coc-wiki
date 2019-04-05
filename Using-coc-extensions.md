@@ -86,7 +86,7 @@ to open CocList buffer, which looks like:
 
 <img width="619" alt="screen shot 2018-09-10 at 10 28 06 pm" src="https://user-images.githubusercontent.com/251450/45303659-e475d380-b548-11e8-9671-8a3e8e116db4.png">
 
-`?` means invalid extension, `*` means extension is activited, `+` means loaded and `-` means disabled
+`?` means invalid extension, `*` means extension is activated, `+` means loaded and `-` means disabled
 
 Supported actions:
 
