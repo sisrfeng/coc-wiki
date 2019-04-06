@@ -28,29 +28,36 @@ A snippet session would cancel under the following conditions:
 
 You can nest snippets in an active snippet session, just like VSCode.
 
-## Configuring snippet completion
+## Configure snippets workflow
 
 To navigate forward/backward of a snippet placeholder, use `<C-j>` and `<C-k>`.
 Vim global variable `g:coc_snippet_next` and `g:coc_snippet_prev` can be used to change the key-mapping.
 
 If you don't like `~` as snippet indicator of complete item in completion menu, you can change that by using `coc.preferences.snippetIndicator` in your `coc-settings.json`.
 
-To make snippet completion work just like VSCode, add:
+To make snippet completion work just like VSCode, you need install [coc-snippets](https://github.com/neoclide/coc-snippets) then configure your `<tab>` in vim like:
 
 ``` vim
-inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
-let g:coc_snippet_next = '<TAB>'
-let g:coc_snippet_prev = '<S-TAB>'
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? coc#rpc#request('doKeymap', ['snippets-expand-jump','']) :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<Tab>'
+let g:coc_snippet_prev = '<S-Tab>'
 ```
-to your `.vimrc`.
 
 And add:
 
 ``` jsonc
   // make vim select first item on completion
-  "suggest.noselect": false,
-  // when snippet activated and pumvisible, prefer complete completion.
-  "suggest.preferCompleteThanJumpPlaceholder": true,
+  "suggest.noselect": false
 ```
 to your `coc-settings.json`.
 
