@@ -27,6 +27,13 @@ which enable watch option for tsserver, it would be much faster for rebuild sour
 
 After each compile, restart coc service by `:CocRestart` to make new server take control.
 
+**TIP** you can use watch build feature provided by `coc-tsserver` like:
+
+``` vim
+command! -nargs=0 Tsc :call CocAction('runCommand', 'tsserver.watchBuild')
+```
+With statusline integration, you can have realtime feedback of the compilation.
+
 ## Get result form console
 
 **Warning:** your can't use stdout by `console.log` or `stdout.write`, since coc have to use stdio for communication between neovim.
@@ -62,6 +69,8 @@ You can use logger to debug any variable, like:
 logger.debug('variable:', variable)
 ```
 Use command `node -e 'console.log(path.join(os.tmpdir(), "coc-nvim.log"))'` to get the log file, and `tail` command to trace the log.
+
+For extension, logger exists as `logger` property of `ExtensionContext`.
 
 ## Use chrome developer tools
 
