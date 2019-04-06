@@ -35,7 +35,7 @@ Vim global variable `g:coc_snippet_next` and `g:coc_snippet_prev` can be used to
 
 If you don't like `~` as snippet indicator of complete item in completion menu, you can change that by using `coc.preferences.snippetIndicator` in your `coc-settings.json`.
 
-To make snippet completion work just like VSCode, you need install [coc-snippets](https://github.com/neoclide/coc-snippets) then configure your `<tab>` in vim like:
+To make snippet completion work just like VSCode, you need to install [coc-snippets](https://github.com/neoclide/coc-snippets) then configure your `<tab>` in vim like:
 
 ``` vim
 inoremap <silent><expr> <TAB>
