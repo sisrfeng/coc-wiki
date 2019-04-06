@@ -235,7 +235,6 @@ Using [gopls](https://github.com/saibing/tools)
   "languageserver": {
     "golang": {
       "command": "gopls",
-      "args": [],
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
     }
