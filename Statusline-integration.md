@@ -1,8 +1,16 @@
-## Use build in function
+## Use built-in function
 
+### Coc status (Typescript version and reported issues)
 Add section `%{coc#status()}` to your `statusline` option.
 
 Function `coc#status()` including status information of diagnostic of current buffer and all status message received from extensions.
+
+### Current Function Symbol
+If you want to display the name of the current enclosing symbol (eg. function name), you can use the `b:coc_current_function` buffer-bound variable.
+
+To update its value automatically (updated on `CursorHold`), you need to set `"coc.preferences.currentFunctionSymbolAutoUpdate": true` in your config. 
+
+Alternatively, if you want to handle the updates manually, you can call `CocAction("getCurrentFunctionSymbol")`, which will return the symbol name and update the `b:coc_current_function` variable.
 
 ## Use manual function
 
@@ -47,14 +55,19 @@ Check out `:h coc-status-airline` for detail.
 Use configuration like:
 
 ``` vim
+function! CocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
+endfunction
+
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'cocstatus', 'currentfunction' 'readonly', 'filename', 'modified' ] ]
       \ },
       \ 'component_function': {
-      \   'cocstatus': 'coc#status'
+      \   'cocstatus': 'coc#status',
+      \   'currentfunction': 'CocCurrentFunction'
       \ },
       \ }
 ```
