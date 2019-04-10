@@ -22,6 +22,8 @@ Yarn is required for build coc.nvim from source code and manage extensions.
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 ```
 
+**Note** yarn is not required if you want to use vim's plugin manager to manage coc extensions.
+
 ## Install plugin coc.nvim
 
 ### Using [vim-plug](https://github.com/junegunn/vim-plug)
