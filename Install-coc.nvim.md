@@ -1,4 +1,4 @@
-Coc is written is Typescript and runs in nodejs, you can download pre build binary file or build from source.
+Coc is written is Typescript and runs in nodejs, you can download precompiled bundle or build from source.
 
 ## Install [neovim](https://github.com/neovim/neovim/releases/) or [vim](https://github.com/vim/vim) 
 
@@ -26,7 +26,7 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 ### Using [vim-plug](https://github.com/junegunn/vim-plug)
 
-Install with compiled nightly build (recommended):
+Install with compiled nightly bundle (recommended):
 
 ``` vim
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
@@ -63,7 +63,7 @@ call dein#add('neoclide/coc.nvim', {'merge':0, 'build': 'yarn install --frozen-l
 
 **Note:** depends on your network and CPU, it might take a long time for the first time build. 
 
-If your have trouble with compile source code, try command:
+If your have trouble with compile source code when using dein, try command:
 
 ``` sh
 cd ~/.cache/dein/repos/github.com/neoclide/coc.nvim
@@ -73,11 +73,11 @@ yarn install --frozen-lockfile
 
 ## Checkout service state.
 
-To check out coc service is running, use command `:checkhealth` in neovim (not supported by vim), the output should include:
+To check out coc service is running, use command `:checkhealth` in neovim (not supported by vim), the output looks like:
 
 <img width="344" alt="screen shot 2018-07-08 at 11 02 23 pm" src="https://user-images.githubusercontent.com/251450/42421117-001a81ee-8303-11e8-929a-91da4ac9feea.png">
 
-If you want to use old version of node or current environment node have problem with coc.nvim, you can specify `g:coc_node_path` variable to the path of node executable that start service of coc.nvim.
+Use `g:coc_node_path` variable to specify node executable that start service of coc.nvim.
 
 Another useful command is `:CocInfo`, after service started, you can use it get some useful information about the service.
 
