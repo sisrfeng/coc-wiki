@@ -73,6 +73,10 @@ Don't report issue here when you found those language server is slow.
 By default, coc doesn't show diagnostics in UI when you're in insert mode, 
 add `"diagnostic.refreshOnInsertMode": true` to settings file to enable refresh on insert mode.
 
+## Sign of diagnostics not shown.
+
+If there are other signs that have higher offset, sign of coc.nvim can't be shown, you can change offset of coc.nvim's signs by add `"diagnostic.signOffset": 9999999` to your coc-settings.json to make it higher priority, the default value is 1000.
+
 ## Not working after upgrade node.
 
 Run command `:CocRebuild` to rebuild coc extensions, some of them could be using C++ addons, which requires rebuild after upgrade.
