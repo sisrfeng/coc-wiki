@@ -75,7 +75,7 @@ add `"diagnostic.refreshOnInsertMode": true` to settings file to enable refresh 
 
 ## Sign of diagnostics not shown.
 
-If there are other signs that have higher offset, sign of coc.nvim can't be shown, you can change offset of coc.nvim's signs by add `"diagnostic.signOffset": 9999999` to your coc-settings.json to make it higher priority, the default value is 1000.
+If there are other signs that have higher offset, sign of coc.nvim can't be shown, you can change offset of coc.nvim's signs by add `"diagnostic.signOffset": 9999999` to your coc-settings.json to make it higher priority, the default value is 1000. Otherwise you could add signcolumn thanks the Vim option `set signcolumn=auto:2`.
 
 ## Not working after upgrade node.
 
