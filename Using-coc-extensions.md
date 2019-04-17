@@ -1,31 +1,31 @@
-### Why coc extensions is needed?
+### Why are coc extensions needed?
 
-The main reason is that some language servers provided by community behavior badly compare to extensions of VSCode, coc extensions could be forked from VSCode extensions to provide better user experience. 
+The main reason is that some language servers provided by the community behave badly compared to extensions of VSCode, coc extensions can be forked from VSCode extensions to provide a better user experience. 
 
-Compare to configured language server, extensions have more features.
+Compared to configured language servers, extensions have more features.
 
-* Extensions could contribute properties to schema of `coc-settings.json`, like VSCode, you can write the configuration with completion and validation support when you have `coc-json` installed.
+* Extensions can contribute properties to the schema `coc-settings.json`, like in VSCode you can write the configuration with completion and validation support yourself when you have `coc-json` installed.
     
   <img width="466" alt="screen shot 2018-09-07 at 5 03 24 pm" src="https://user-images.githubusercontent.com/251450/45209588-f5f87a80-b2bf-11e8-80c0-fe5ff689f947.png">
 
-* Extensions could contribute commands (like VSCode), you can use the coc commands in different ways:
-    * Use command `:CocList commands` to open the command list and choose one you need.
+* Extensions can contribute commands (like VSCode), you can use the coc commands in different ways:
+    * Use the command `:CocList commands` to open the command list and choose one you need.
 
       <img width="476" alt="screen shot 2018-09-07 at 4 53 12 pm" src="https://user-images.githubusercontent.com/251450/45209334-4d4a1b00-b2bf-11e8-94e0-0c2b981a71f5.png">
     * Use `:CocCommand` with `<tab>` for command line completion.
-    * Use a custom command to invoke the command, for example, create a `Tsc` command for `tsserver.watchBuild` could be
+    * An example config to use the custom command `Tsc` for `tsserver.watchBuild`:
         ```
         command! -nargs=0 Tsc    :CocCommand tsserver.watchBuild
         ```
 
-* Extensions could contribute json schemas (same as VSCode)
-* Extensions could contribute snippets that can be loaded by [coc-snippets](https://github.com/neoclide/coc-snippets) extension.
-* Extensions could specify more client options, like `fileEvents` to watch files (require [watchman](https://facebook.github.io/watchman/) installed), and `middleware` which could be used to fix the result that returned from language server.
+* Extensions can contribute json schemas (same as VSCode)
+* Extensions can contribute snippets that can be loaded by [coc-snippets](https://github.com/neoclide/coc-snippets) extension.
+* Extensions can specify more client options, like `fileEvents` to watch files (requires [watchman](https://facebook.github.io/watchman/) installed), and `middleware` which could be used to fix the result that returned from language server.
 
 ## Differences between coc extension and VSCode extension.
 
 * Coc extensions use [coc.nvim](https://www.npmjs.org/package/coc.nvim) as dependency instead of [VSCode](https://www.npmjs.com/package/vscode)
-* Coc extensions support language server features by using API from coc.nvim instead of [vscode-languageclient](https://www.npmjs.com/package/vscode-languageclient) which could only be used with VSCode.
+* Coc extensions support language server features by using the API from coc.nvim instead of [vscode-languageclient](https://www.npmjs.com/package/vscode-languageclient) which can only be used with VSCode.
 * Coc extensions support some features of VSCode extensions:
   * `activate` and `deactivate` api.
   * `activationEvents` in package.json.
@@ -38,36 +38,38 @@ Compare to configured language server, extensions have more features.
 
 ### Install extensions
 
-Use command `:CocInstall` like:
+Using `:CocInstall`:
 
 ```
 :CocInstall coc-json coc-css
 ```
-One or more extension name could be provided.
+One or more extension names can be provided.
 
-The extension name could also be url of git repository, like: `https://github.com/andys8/vscode-jest-snippets.git#master` which could be accepted by `yarn install`.
+The extension name can also be the url of a git repository, like: `https://github.com/andys8/vscode-jest-snippets.git#master` which could be accepted by `yarn install`.
 
-Extensions would be loaded and activated after install succeed.
+Extensions will be loaded and activated after the install succeeds.
 
-**Note** you can add extension names to `g:coc_global_extensions` variable, coc would install the missing extensions for you on server start.
+**Note** you can add extension names to the `g:coc_global_extensions` variable, coc will install the missing extensions for you on server start.
 
 ### Use vim's plugin manager for coc extension
 
-Start from recent master of coc.nvim, you can manage coc extension by use plugin manager for vim, like [vim-plug](https://github.com/junegunn/vim-plug), coc would try to load coc extensions from your `&rtp`, for example, install coc-tsserver would be add:
+Starting from recent master of coc.nvim, you can manage coc extension by using a plugin manager for vim, like [vim-plug](https://github.com/junegunn/vim-plug), coc will try to load coc extensions from your `&rtp`
+
+Example for coc-tsserver:
 
 ``` vim
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 ```
 
-to your vimrc, and run `PlugInstall`, the limitation is your can't uninstall the extension by use `:CocUninstall` and automatic update support is not available.
+After adding this to your vimrc run `PlugInstall`. This has the limitation that you can't uninstall the extension by using `:CocUninstall` and that automatic update support is not available.
 
 ### Update extensions
 
-You **don't** need to update coc extensions manually, coc detect acceptable new version of installed extension everyday (by default) the first time it started, when it found new version of extensions, it update them for you automatically.
+You **don't** need to update coc extensions manually, coc detects acceptable new version of installed extension everyday (by default) the first time it starts. When it finds a new version of an extension, it will update it for you automatically.
 
-To disable automatic update, change settings: `coc.preferences.extensionUpdateCheck` to `"never"`.
+To disable automatic updates, change the setting: `coc.preferences.extensionUpdateCheck` to `"never"`.
 
-Use command `:CocUpdate` or `:CocUpdateSync` to update all extensions to latest version, the upgrade won't work if you're not using latest release version of coc.nvim to avoid possible break change.
+Use the command `:CocUpdate` or `:CocUpdateSync` to update all extensions to the latest version, the upgrade won't work if you're not using latest release version of coc.nvim to avoid possible breaking changes.
 
 ## Uninstall coc extension
 
@@ -101,15 +103,15 @@ Supported actions:
 
 ## Debug coc extension
 
-If extension throw uncaught errors, you can get the error message by: `:messages`.
+If an extension throws uncaught errors, you can get the error message by: `:messages`.
 
-For extension using language server, you can use output channel, check out https://github.com/neoclide/coc.nvim/wiki/Debug-language-server#using-output-channel.
+For extensions using a language server, you can use the output channel, check out https://github.com/neoclide/coc.nvim/wiki/Debug-language-server#using-output-channel.
 
-If the extension using stdio to write messages, you can get the output from the log file of coc, the log file could be find by run command: `node -e 'console.log(path.join(os.tmpdir(), "coc-nvim.log"))'`.
+If the extension is using stdio to write messages, you can get the output from the log file of coc, the log file can be found by runnung the command: `node -e 'console.log(path.join(os.tmpdir(), "coc-nvim.log"))'`.
 
-The default log level is info, to get the debug information, set `NVIM_COC_LOG_LEVEL` environment variable by command: `export NVIM_COC_LOG_LEVEL=debug`.
+The default log level is info, to get the debug information, set the `NVIM_COC_LOG_LEVEL` environment variable by command: `export NVIM_COC_LOG_LEVEL=debug`.
 
-You can also use chrome to debug extension, checkout https://github.com/neoclide/coc.nvim/wiki/Debug-coc.nvim.
+You can also use chrome to debug extensions, checkout https://github.com/neoclide/coc.nvim/wiki/Debug-coc.nvim.
 
 ## Implemented coc extensions
 
