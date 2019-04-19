@@ -35,7 +35,7 @@ It means you're using old version of neovim, upgrade to master to avoid this iss
 
 ## My pum flick when typing.
 
-It's much better with latest neovim, there is setting `suggest.reloadPumOnInsertChar`, when it's `true` the flick could be avoided on neovim, but it has bug with neovim's floating window, so not recommended.
+Use latest neovim/vim which support `equal` field of completion item, checkout `:h complete-items` to see if it's supported.
 
 ## My vim is blocked sometimes.
 
@@ -56,7 +56,7 @@ Save to buffer to disk and restart coc by `:CocRestart` to make the language ser
 
 ## Completion for function parameter not working.
 
-Completion for function parameter requries server send the completion as snippet, some language server doesn't support that. 
+Completion for function parameter require server send the completion as snippet, some language server doesn't support that. 
 
 ## Linting is slow.
 
@@ -71,11 +71,11 @@ https://github.com/sourcegraph/go-langserver.
 Don't report issue here when you found those language server is slow.
 
 By default, coc doesn't show diagnostics in UI when you're in insert mode, 
-add `"diagnostic.refreshOnInsertMode": true` to settings file to enable refresh on insert mode.
+add `"diagnostic.refreshOnInsertMode": true` in settings file to enable refresh on insert mode.
 
 ## Sign of diagnostics not shown.
 
-If there are other signs that have higher offset, sign of coc.nvim can't be shown, you can change offset of coc.nvim's signs by add `"diagnostic.signOffset": 9999999` to your coc-settings.json to make it higher priority, the default value is 1000. Otherwise you could add signcolumn thanks the Vim option `set signcolumn=auto:2`.
+If there are other signs that have higher offset, sign of coc.nvim can't be shown, you can change offset of coc.nvim's signs by add `"diagnostic.signOffset": 9999999` to your coc-settings.json to make it higher priority, the default value is 1000. Or change `signcolumn` option (available with latest neovim) like: `set signcolumn=auto:2`.
 
 ## Not working after upgrade node.
 
@@ -93,7 +93,7 @@ Some language server could be slow for receiving document change before trigger 
 
 in your `.vimrc`.
 
-## My custom keymap not working.
+## My custom key-mapping not working.
 
 Some plugins like [Ultisnips](https://github.com/SirVer/ultisnips) and [vim-closer](https://github.com/rstacruz/vim-closer) would remap your `<tab>` or `<cr>` without configuration, you can checkout your keymap by command like `:verbose imap <tab>`.
 
