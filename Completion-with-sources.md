@@ -1,14 +1,14 @@
-Coc have full featured support for completion of LSP, and doesn't bother `completeopt` of vim.
+Coc has full featured support for completion of LSP, and doesn't bother `completeopt` of vim.
 
 ## Trigger mode of completion
 
-COC have 3 different trigger modes:
+COC has 3 different trigger modes:
 
-* `always`, the default mode, which trigger completion on word letter inserted and `triggerCharacters` defined by current activated sources.
+* `always`, the default mode, which triggers completion on word letter inserted and `triggerCharacters` defined by current activated sources.
 * `trigger`, only trigger completion when type `triggerCharacters` defined by completion sources.
 * `none`, disable auto trigger completion, you will have to trigger the completion manually.
 
-You can change trigger mode by [using configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file)
+You can change the trigger mode by [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file)
 
 To support completion trigger on insert enter, add
   
@@ -40,7 +40,7 @@ To change the indicator of snippet item, use:
 You can make use of `coc#refresh()` for trigger completion like:
 
 ``` vim
-" use <tab> for trigger completion and navigate to next complete item
+" use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
@@ -52,7 +52,7 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 ```
 
-**Note:** the `<tab>` could be mapped by other plugin, use `:verbose imap <tab>` to check it's mapped as expected.
+**Note:** the `<tab>` could be mapped by another plugin, use `:verbose imap <tab>` to check if it's mapped as expected.
 
 ``` vim
 " use <c-space>for trigger completion
