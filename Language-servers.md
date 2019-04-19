@@ -517,3 +517,19 @@ Using [elixir-ls](https://github.com/JakeBecker/elixir-ls)
 Use [coc-solargraph](https://github.com/neoclide/coc-solargraph) extension is recommended.
 
 Make sure solargraph is in your $PATH (sudo gem install solargraph) or use `solargraph.commandPath` to configure executable path of solargraph.
+
+### Scala
+
+Using [scalameta/metals](https://github.com/scalameta/metals):
+
+Make sure the generated metals-vim binary is available on your $PATH. Installation instructions can be found on the [Scalameta Metals website](https://scalameta.org/metals/docs/editors/vim.html).
+
+``` jsonc
+  "languageserver": {
+    "metals": {
+      "command": "metals-vim",
+      "rootPatterns": ["build.sbt"],
+      "filetypes": ["scala", "sbt"]
+    }
+  }
+```
