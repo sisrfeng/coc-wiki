@@ -1,20 +1,20 @@
-Custom vim completion source could be created with simple steps.
+A custom vim completion source can be created with a few simple steps.
 
 # Contents
 
-* [Start by a simple example](#start-by-a-simple-example)
+* [Start with a simple example](#start-with-a-simple-example)
 * [Default options of source](#default-options-of-source)
-* [Options for complete](#options-for-complete)
-* [Result of complete](#result-of-complete)
+* [Options for completion](#options-for-completion)
+* [Results of completion](#result-of-completion)
 * [Optional functions](#optional-functions)
 
-## Start by a simple example
+## Start with a simple example
 
-Assume `foo` as the source name.
+Assume `foo` is the source name.
 
 * Create folder `autoload/coc/source` in any of your vim `runtimepath`, the default user runtimepath of neovim is `$XDG_CONFIG_HOME/nvim`
 
-* Create a file name `foo.vim` in folder `autoload/coc/source`
+* Create a file named `foo.vim` in folder `autoload/coc/source`
 
 * Add content:
     ``` vim
@@ -35,20 +35,20 @@ Assume `foo` as the source name.
       call a:cb(items)
     endfunction
     ```
-That's all you need to get a basic custom completion source works.
+That's all you need to do in order to get a basic custom completion source working.
 
 ## Default options of source
 
 The options are returned by `coc#source#{name}#init` function, available options are:
 
-* `shortcut`: used by menu, use source name if omitted.
-* `priority`: a number for adjust sort results completion items, should be number of 0-99, default is `1`.
-* `filetypes`: array of filetype names this source should be triggered, available for all filetypes if ommited.
-* `firstMatch`: if not falsy, only the completion item that have first letter matched with user input would be shown.
+* `shortcut`: used by menu, uses source name if omitted.
+* `priority`: a number for adjusting the sort results completion items. It should be number between 0-99. The  default is `1`.
+* `filetypes`: array of filetype names this source should be triggered by. Available for all filetypes if ommited.
+* `firstMatch`: if not falsy, only the completion item that has the first letter matching the user input will be shown.
 
-all options are optional.
+All options are optional.
 
-## Options for complete
+## Options for completion
 
 ``` typescript
   id              : number // unqiue number
@@ -64,15 +64,15 @@ all options are optional.
   linenr          : number // line number of cursor
 ```
 
-## Result of complete
+## Result of completion
 
-Result are return by call the callback function (second argument), the result should be list of vim completion item, or fasly value for invalid results.
+Result are returned by a callback function (second argument). The result should be list of vim completion items, or fasly value for invalid results.
 
 Check out `:h complete-items` for available fields.
 
 ## Optional functions
 
-* `coc#source#{name}#refresh()`: called when user do refresh action for source.
-* `coc#source#{name}#should_complete(option)`: called with complete option, return 0 or other fasly value to skip completion for current completion.
-* `coc#source#{name}#get_startcol(option)`: called with complete option, should return completion start column number when function exists, other source is disabled if the returned column number is not `option.col`
+* `coc#source#{name}#refresh()`: called when user does a refresh action for source.
+* `coc#source#{name}#should_complete(option)`: called with completion option, returns 0 or other fasly value to skip completion for current completion.
+* `coc#source#{name}#get_startcol(option)`: called with completion option, should return completion start column number when function exists, other source is disabled if the returned column number is not `option.col`
 * `coc#source#{name}#on_complete(item)`: called with vim complete item when it's selected by user.
