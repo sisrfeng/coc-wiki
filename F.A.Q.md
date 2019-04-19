@@ -11,7 +11,7 @@ Here's some common problems that you may need to understand when working with co
 * Make user you don't have `{"tag": "*"}` in `Plug` command if you're using vim-plug as plugin manager.
 * Use `Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}` in your vimrc if you're using vim-plug.
 * Add `let g:coc_force_debug = 1` to vimrc to make sure coc use compiled code.
-* Update coc.nvim with `:PlugUpdate` command if you're using vim-plug, for other plugin manager run `:call coc#util#build()` after plugin update.
+* Update coc.nvim with `:PlugUpdate` command if you're using vim-plug, for other plugin manager run `:call coc#util#install()` after plugin update.
 * Run `:echo coc#util#job_command()` to get command used for start coc.nvim service.
 * Run `:checkhealth` when you have issue on neovim.
 
