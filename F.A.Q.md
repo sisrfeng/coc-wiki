@@ -1,6 +1,6 @@
 Here's some common problems that you may need to understand when working with coc.nvim.
 
-## How could I disable floating window on neovim?
+## How could I not use floating window on neovim?
 
 * For diagnostic messages, use `"diagnostic.messageTarget": "echo"` in settings.json.
 * For signature help, use `"signature.target": "echo"` in settings.json.
