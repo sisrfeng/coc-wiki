@@ -10,7 +10,7 @@ Complete item of snippet kind would be shown with `~` appended in label by defau
 
 ![](https://user-images.githubusercontent.com/251450/42562999-b4eb9634-852f-11e8-9f61-bab2bc19db3f.png)
 
-Note: when snippet format of complete item is set on completion resolve, you won't see `~`, since it's impossible for vim to update label of complete item during completion.
+**Note:** when snippet format of complete item is set on completion resolve, you won't see `~`, it's limitation of vim.
 
 The snippet is designed to expand only when the `completionDone` is triggered by using `<C-y> `for confirm, so that user could decide expand the snippet or not. 
 
@@ -24,6 +24,8 @@ to your `init.vim`.
 * `coc#_select_confirm()` helps select first completion item when necessary and send `<C-y>` to vim for confirm completion.
 * `\<C-g>u` used for break undo chain at current position.
 * `coc#on_enter()` notify coc that you have pressed `<enter>`, so it can format your code on `<enter>`.
+
+**Note:** some plugins are known to overwrite your `<CR>` mappings, so your custom keymap won't work, checkout your `<CR>` mapping by `:verbose imap <CR>`. 
 
 A snippet session would cancel under the following conditions:
 
