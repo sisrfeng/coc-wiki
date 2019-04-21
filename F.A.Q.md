@@ -8,32 +8,32 @@ Here's some common problems that you may need to understand when working with co
 
 ## How to use coc.nvim from master branch?
 
-* Make user you don't have `{"tag": "*"}` in `Plug` command if you're using vim-plug as plugin manager.
+* Make sure you don't have `{"tag": "*"}` in `Plug` command if you're using vim-plug as plugin manager.
 * Use `Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}` in your vimrc if you're using vim-plug.
-* Add `let g:coc_force_debug = 1` to vimrc to make sure coc use compiled code.
-* Update coc.nvim with `:PlugUpdate` command if you're using vim-plug, for other plugin manager run `:call coc#util#install()` after plugin update.
+* Add `let g:coc_force_debug = 1` to your vimrc to make sure coc uses compiled code.
+* Update coc.nvim with `:PlugUpdate` command if you're using vim-plug, for other plugin managers run `:call coc#util#install()` after plugin update.
 * Run `:echo coc#util#job_command()` to get command used for start coc.nvim service.
-* Run `:checkhealth` when you have issue on neovim.
+* Run `:checkhealth` when you have an issue with neovim.
 
 ## How to make preview window shown aside with pum?
 
 Build neovim from master code or [use nightly build](https://github.com/neovim/neovim/releases/tag/nightly).
 
-To make sure floating preview window could work:
+To make sure floating preview window can work:
 
 - `:echo (exists('##CompleteChanged') || exists('##MenuPopupChanged')) && exists('*nvim_open_win')` should echo `1`.
 
-**Note:** Floating preview window will not be shown when there're no detail and documentation with current complete item.
+**Note:** Floating preview window will not be shown when there're no details or documentation with current completion item.
 
 **Note:** To preview expanded snippet body, you can use [coc-snippets](https://github.com/neoclide/coc-snippets).
 
-If you got errors including:
+If you have errors including:
 
 > Wrong number of arguments: expecting 5 but got 3.
 
-It means you're using old version of neovim, upgrade to master to avoid this issue.
+It means you're using an old version of neovim. Upgrade to master to avoid this issue.
 
-## My pum flick when typing.
+## My pum flickers when typing.
 
 Use latest neovim/vim which support `equal` field of completion item, checkout `:h complete-items` to see if it's supported.
 
@@ -42,60 +42,58 @@ Use latest neovim/vim which support `equal` field of completion item, checkout `
 * Make sure your have `set hidden` in your `.vimrc`.
 * Use `CocActionAsync` instead of `CocAction` in your autocmd, except for `BufWritePre`.
 * Use `CocRequestAsync` instead of `CocRequest` when possible.
-* Don't make request to coc before the service initialized, use `autocmd User CocNvimInit` to send request when you want to send request at startup.
+* Don't make request to coc before the service initialized. Use `autocmd User CocNvimInit` to send request when you want to send request at startup.
 
-## Neovim crash when `rightleft` is on.
+## Neovim crashes when `rightleft` is on.
 
 It's bug of neovim.  Checkout https://github.com/neovim/neovim/issues/9542 for a patch of neovim.
 
 ## Language server doesn't work unsaved buffer.
 
-Some language server doesn't work when the buffer not saved to disk, this is because they only tested on VSCode which always create file before create buffer.
+Some language servers don't work when the buffer not saved to disk. This is because they only tested on VSCode which always create file before create buffer.
 
 Save to buffer to disk and restart coc by `:CocRestart` to make the language server work.
 
 ## Completion for function parameter not working.
 
-Completion for function parameter require server send the completion as snippet, some language server doesn't support that. 
+Completion for function parameter requires the server to send the completion as a snippet. Some language servers don't support this. 
 
 ## Linting is slow.
 
-If the message get shown after several seconds, add `set updatetime=300` to your `init.vim` or `.vimrc` and restart vim.
+If the messages get shown after several seconds, add `set updatetime=300` to your `init.vim` or `.vimrc` and restart vim.
 
-Some language server is known to have performance issue sometimes, including:
+Some language servers are known to have performance issues, including:
 
 https://github.com/palantir/python-language-server
 
 https://github.com/sourcegraph/go-langserver.
 
-Don't report issue here when you found those language server is slow.
+Please don't report an issue here when you find those language servers are slow.
 
 By default, coc doesn't show diagnostics in UI when you're in insert mode, 
 add `"diagnostic.refreshOnInsertMode": true` in settings file to enable refresh on insert mode.
 
 ## Sign of diagnostics not shown.
 
-If there are other signs that have higher offset, sign of coc.nvim can't be shown, you can change offset of coc.nvim's signs by add `"diagnostic.signOffset": 9999999` to your coc-settings.json to make it higher priority, the default value is 1000. Or change `signcolumn` option (available with latest neovim) like: `set signcolumn=auto:2`.
+If there are other signs that have higher offset, sign of coc.nvim can't be shown. You can change the offset of coc.nvim's signs by add `"diagnostic.signOffset": 9999999` to your coc-settings.json to make it higher priority. The default value is 1000. You can also change the `signcolumn` option (available with latest neovim) like: `set signcolumn=auto:2`.
 
 ## Not working after upgrade node.
 
-Run command `:CocRebuild` to rebuild coc extensions, some of them could be using C++ addons, which requires rebuild after upgrade.
+Run command `:CocRebuild` to rebuild coc extensions. Some of them could be using C++ addons, which require a  rebuild after upgrade.
 
-If still not working, you can force coc started with specified node executable, in your .vimrc add a line like `let g:coc_node_path = '/usr/local/opt/node@10/bin/node'`
+If it's still not working, you can force coc to start with a specified node executable. In your .vimrc add a line like `let g:coc_node_path = '/usr/local/opt/node@10/bin/node'`
 
-## Why location list sometimes doesn't work?
+## Why doesn't the location list work sometimes?
 
-Some plugin like [ale](https://github.com/w0rp/ale) would clear location list that created by other plugin, check out https://github.com/w0rp/ale/issues/1945, it's recommended to use `CocList diagnostics` to get all location list of diagnostics instead of using location list.
+Some plugins like [ale](https://github.com/w0rp/ale) will clear location lists that are created by other plugins. Check out https://github.com/w0rp/ale/issues/1945, it's recommended to use `CocList diagnostics` to get all location lists of diagnostics instead of using location list.
 
 ## No completion triggered after type trigger character sometimes.
 
-Some language server could be slow for receiving document change before trigger completion, you can change the wait time for language server to finish the document change process before completion by change `coc.preferences.triggerCompletionWait` in your `coc-settings.json`, it's default to `60` in milliseconds.
+Some language servers can be slow for receiving document change before trigger completion. You can change the wait time for language server to finish the document change process before completion by changing `coc.preferences.triggerCompletionWait` in your `coc-settings.json`, it's default to `60` in milliseconds.
 
-in your `.vimrc`.
+## My custom key-mapping is not working.
 
-## My custom key-mapping not working.
-
-Some plugins like [Ultisnips](https://github.com/SirVer/ultisnips) and [vim-closer](https://github.com/rstacruz/vim-closer) would remap your `<tab>` or `<cr>` without configuration, you can checkout your keymap by command like `:verbose imap <tab>`.
+Some plugins like [Ultisnips](https://github.com/SirVer/ultisnips) and [vim-closer](https://github.com/rstacruz/vim-closer) would remap your `<tab>` or `<cr>` without configuration. You can checkout your keymap by command like `:verbose imap <tab>`.
 
 ## How to change highlight of diagnostic signs?
 
@@ -106,7 +104,7 @@ You can customize the highlight by adding something like:
 ``` vim
 highlight link CocErrorSign GruvboxRed
 ```
-to your `.vimrc`.
+in your `.vimrc`.
 
 See `:h coc-highlights` for all highlight groups.
 
@@ -123,4 +121,4 @@ Open log file by command:
 :CocOpenLog
 ```
 
-The log would be cleared just after coc server started.
+The log will be cleared just after coc server starts.
