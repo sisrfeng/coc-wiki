@@ -80,19 +80,19 @@ Check out the official specification at https://microsoft.github.io/language-ser
   * [x] rename
   * [x] foldingRange
 
-**Note:** different server could have different capabilities.
+**Note:** different servers can have different capabilities.
 
 ## Register custom language servers
 
-User defined language servers are configured in `languageserver` field of [configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file).
+User defined language servers are configured in the `languageserver` field of the [configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file).
 
 There're three types of language servers: `module`,`executable` and `socket`.
 
-* `module` type language server are running by nodejs and using node IPC for connection.
-* `executable` type language server are spawned with executable command while using stdio for connection.
-* `socket` language server are started in separated process, normally used for debugging purpose.
+* `module` type language servers are run by nodejs and using node IPC for connection.
+* `executable` type language servers are spawned with an executable command while using stdio for connection.
+* `socket` language servers are started in a separated process, normally used for debugging purpose.
 
-Different language server type have different configuration schema.
+Different language server types have different configuration schema.
 
 An example of `module` language server:
 
@@ -145,17 +145,17 @@ An example of socket language server:
   }
 ```
 
-`port` is required for socket service and user should start the socket server before coc started.
+`port` is required for a socket service and user should start the socket server before coc starts.
 
 * `initializationOptions` is the json object that passed to [language server on initialize](https://microsoft.github.io/language-server-protocol/specification#initialize).
-* `settings` contains specific configuration of language server.
-* `trace.server` controls trace level of communication between server and client, default `"off"`, change to `"verbose"` if you want to checkout all communication.
-* `rootPatterns` is used for resolve root path which should contain one of patterns as child directory or file, it will use `"coc.preferences.rootPatterns"` (default to `[".vim", ".git", ".hg", ".projections.json"]`)  when not specified,  
-* `requireRootPattern` when is true, language server only started when any matched rootPatterns found.
+* `settings` contains specific configuration of the language server.
+* `trace.server` controls trace level of communication between server and client. The default is `"off"`. Change to `"verbose"` if you want to checkout all communication.
+* `rootPatterns` is used to resolve the root path which should contain one of the patterns as a child directory or file, it will use `"coc.preferences.rootPatterns"` (default to `[".vim", ".git", ".hg", ".projections.json"]`)  when not specified,  
+* `requireRootPattern` when this is true, the language server will only start when any matched rootPatterns found.
 
 ## Example configuration for custom language servers
 
-Add `languageserver` section in your `coc-settings.json` for regist custom language servers.
+Add `languageserver` section in your `coc-settings.json` for registering custom language servers.
 
 ### Dart
 
