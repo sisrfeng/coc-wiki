@@ -1,4 +1,4 @@
-Coc is written is Typescript and runs in nodejs, you can download precompiled bundle or build from source.
+Coc is written in Typescript and runs on nodejs, you can download a precompiled bundle or build from source.
 
 ## Install [neovim](https://github.com/neovim/neovim/releases/) or [vim](https://github.com/vim/vim) 
 
@@ -6,7 +6,7 @@ Coc is written is Typescript and runs in nodejs, you can download precompiled bu
 * `vim` >= `8.1` is required.
 * Use command `:version` to checkout your vim version.
 
-**Note:** it will not load at all when (neo)vim is too old.
+**Note:** it will not load at all if (neo)vim is too old.
 
 ## Install [nodejs](https://nodejs.org/) >= 8.0
 
@@ -45,7 +45,7 @@ Build from source code:
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 ```
 
-run command `:PlugInstall` in your (neo)vim.
+run the command `:PlugInstall` in your (neo)vim.
 
 ## Using [dein.vim](https://github.com/Shougo/dein.vim)
 
@@ -61,11 +61,11 @@ Build from source code:
 call dein#add('neoclide/coc.nvim', {'merge':0, 'build': 'yarn install --frozen-lockfile'})
 ```
 
-**Note:** when `'merge':0` not present, coc.nvim would be unable to start. 
+**Note:** when `'merge':0` not present, coc.nvim will be unable to start. 
 
-**Note:** depends on your network and CPU, it might take a long time for the first time build. 
+**Note:** depends on your network and CPU, it might take a long time for your first build. 
 
-If your have trouble with compile source code when using dein, try command:
+If your have trouble with compiling the source code when using dein, try command:
 
 ``` sh
 cd ~/.cache/dein/repos/github.com/neoclide/coc.nvim
@@ -75,7 +75,7 @@ yarn install --frozen-lockfile
 
 ## Checkout service state.
 
-To check out coc service is running, use command `:checkhealth` in neovim (not supported by vim), the output looks like:
+To check to see if the coc service is running, use command `:checkhealth` in neovim (not supported by vim), the output looks like:
 
 <img width="344" alt="screen shot 2018-07-08 at 11 02 23 pm" src="https://user-images.githubusercontent.com/251450/42421117-001a81ee-8303-11e8-929a-91da4ac9feea.png">
 
@@ -93,7 +93,7 @@ Watchman works great even when you have multiple neovim instance started in the 
 
 ## Automation script
 
-For setup coc and extensions faster on different machines, you can use shell script, for example:
+To setup coc and extensions faster on different machines, you can use a shell script, for example:
 
 ``` sh
 #!/bin/sh
@@ -134,6 +134,6 @@ if [ ! -f package.json ]
 then
   echo '{"dependencies":{}}'> package.json
 fi
-# Change arguments to extensions you need
+# Change arguments to the extensions you need
 yarn add coc-json coc-snippets
 ```
