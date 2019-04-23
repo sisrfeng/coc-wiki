@@ -3,7 +3,7 @@
 ### Coc status (Typescript version and reported issues)
 Add section `%{coc#status()}` to your `statusline` option.
 
-Function `coc#status()` including status information of diagnostic of current buffer and all status message received from extensions.
+Function `coc#status()` includes status information of diagnostic of current buffer and all status messages received from extensions.
 
 ### Current Function Symbol
 If you want to display the name of the current enclosing symbol (eg. function name), you can use the `b:coc_current_function` buffer-bound variable.
@@ -34,7 +34,7 @@ Then add `%{StatusDiagnostic()}` ` to your 'statusline' option.
 
 ## Integration with [eleline.vim](https://github.com/liuchengxu/eleline.vim)
 
-Just works.
+It just works.
 
 ## Integration with [vim-airline](https://github.com/vim-airline/vim-airline)
 
