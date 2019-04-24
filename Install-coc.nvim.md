@@ -122,7 +122,7 @@ mkdir -p $DIR
 cd $DIR
 git clone https://github.com/neoclide/coc.nvim.git --depth=1
 cd $DIR/coc.nvim
-yarn install
+./install.sh nightly
 
 # Install extensions
 mkdir -p ~/.config/coc/extensions
