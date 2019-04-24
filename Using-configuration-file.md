@@ -1,4 +1,4 @@
-coc.nvim use [json](https://code.visualstudio.com/docs/languages/json) as configuration file format, the same as VSCode.
+coc.nvim use [jsonc](https://code.visualstudio.com/docs/languages/json) as configuration file format, the same as VSCode.
 It's json that support comment, like:
 
 ``` jsonc
