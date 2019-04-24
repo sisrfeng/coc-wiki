@@ -113,9 +113,6 @@ if ! command -v yarn > /dev/null; then
   curl --fail -L https://yarnpkg.com/install.sh | sh
 fi
 
-# vim-node-rpc is required for vim only
-# yarn global add -g vim-node-rpc
-
 # Use package feature to install coc.nvim
 # If you want to use plugin manager, change DIR to plugin directory used by that manager.
 DIR=~/.local/share/nvim/site/pack/coc/start
