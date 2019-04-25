@@ -20,11 +20,11 @@ Compared to configured language servers, extensions have more features.
 
 * Extensions can contribute json schemas (same as VSCode)
 * Extensions can contribute snippets that can be loaded by [coc-snippets](https://github.com/neoclide/coc-snippets) extension.
-* Extensions can specify more client options, like `fileEvents` to watch files (requires [watchman](https://facebook.github.io/watchman/) installed), and `middleware` which could be used to fix the result that returned from language server.
+* Extensions can specify more client options, like `fileEvents` to watch files (requires [watchman](https://facebook.github.io/watchman/) installed), and `middleware` which can be used to fix results that return from the language server.
 
-## Differences between coc extension and VSCode extension.
+## Differences between coc extensions and VSCode extensions.
 
-* Coc extensions use [coc.nvim](https://www.npmjs.org/package/coc.nvim) as dependency instead of [VSCode](https://www.npmjs.com/package/vscode)
+* Coc extensions use [coc.nvim](https://www.npmjs.org/package/coc.nvim) as a dependency instead of [VSCode](https://www.npmjs.com/package/vscode)
 * Coc extensions support language server features by using the API from coc.nvim instead of [vscode-languageclient](https://www.npmjs.com/package/vscode-languageclient) which can only be used with VSCode.
 * Coc extensions support some features of VSCode extensions:
   * `activate` and `deactivate` api.
@@ -49,7 +49,7 @@ The extension name can also be the url of a git repository, like: `https://githu
 
 Extensions will be loaded and activated after the install succeeds.
 
-**Note** you can add extension names to the `g:coc_global_extensions` variable, coc will install the missing extensions for you on server start.
+**Note** you can add extension names to the `g:coc_global_extensions` variable, and coc will install the missing extensions for you on server start.
 
 ### Use vim's plugin manager for coc extension
 
@@ -77,7 +77,7 @@ Use the command `:CocUpdate` or `:CocUpdateSync` to update all extensions to the
 :CocUninstall coc-css
 ```
 
-## Manage extenions using CocList
+## Manage extensions using CocList
 
 Run command:
 ```
@@ -105,11 +105,11 @@ Supported actions:
 
 If an extension throws uncaught errors, you can get the error message by: `:messages`.
 
-For extensions using a language server, you can use the output channel, check out https://github.com/neoclide/coc.nvim/wiki/Debug-language-server#using-output-channel.
+For extensions using a language server, you can use the output channel. Check out https://github.com/neoclide/coc.nvim/wiki/Debug-language-server#using-output-channel.
 
 If the extension is using stdio to write messages, you can get the output from the log file of coc, the log file can be found by runnung the command: `node -e 'console.log(path.join(os.tmpdir(), "coc-nvim.log"))'`.
 
-The default log level is info, to get the debug information, set the `NVIM_COC_LOG_LEVEL` environment variable by command: `export NVIM_COC_LOG_LEVEL=debug`.
+The default log level is info. To get the debug information, set the `NVIM_COC_LOG_LEVEL` environment variable by the command: `export NVIM_COC_LOG_LEVEL=debug`.
 
 You can also use chrome to debug extensions, checkout https://github.com/neoclide/coc.nvim/wiki/Debug-coc.nvim.
 
