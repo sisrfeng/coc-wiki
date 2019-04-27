@@ -1,5 +1,15 @@
 Here's some common problems that you may need to understand when working with coc.nvim.
 
+## How could I use omnifunc option to trigger completion of coc.nvim?
+
+You can't, there's no such function provided of omnifunc option, because vim's omnifunc always block and LSP features like triggerCharacters and incomplete response can't work.
+
+If you want to manual trigger completion add `"suggest.autoTrigger": "trigger",` to coc-settings.json and bind a trigger key like:
+
+``` vim
+  inoremap <silent><expr> <c-space> coc#refresh()
+```
+
 ## How could I not use floating window on neovim?
 
 * For diagnostic messages, use `"diagnostic.messageTarget": "echo"` in settings.json.
