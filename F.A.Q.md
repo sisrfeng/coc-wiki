@@ -2,7 +2,7 @@ Here's some common problems that you may need to understand when working with co
 
 ## How could I use omnifunc option to trigger completion of coc.nvim?
 
-You can't, there's no such function provided of omnifunc option, because vim's omnifunc always block and LSP features like triggerCharacters and incomplete response can't work.
+You can't, there's no such function provided for omnifunc option, because vim's omnifunc always block and LSP features like triggerCharacters and incomplete response can't work.
 
 If you want to manual trigger completion add `"suggest.autoTrigger": "trigger",` to coc-settings.json and bind a trigger key like:
 
