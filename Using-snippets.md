@@ -20,7 +20,7 @@ To make `<cr>` for confirm completion, add
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
                                            \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 ```
-to your `init.vim`.
+to your vimrc.
 
 * `coc#_select_confirm()` helps select first completion item when necessary and send `<C-y>` to vim for confirm completion.
 * `\<C-g>u` used for break undo chain at current position.
