@@ -1,11 +1,11 @@
-Coc list is created to make work with list of things easier, ex: locations & extensions.
+Coc list is created to make working with lists of things easier, ex: locations & extensions.
 
-Coc list is inspired by [denite.nvim](https://github.com/Shougo/denite.nvim), it's faster and doesn't require python support (mostly, you still need python available for vim8).
+Coc list is inspired by [denite.nvim](https://github.com/Shougo/denite.nvim). It's faster and doesn't require python support (mostly, you still need python available for vim8).
 
 ## List features
 
 - **Insert mode and normal mode**, use insert mode for filter and normal mode to do everything else.
-- **Actions for items**, each list provide different actions, you can create key-mapping for them and type `<tab>` to run one of them.
+- **Actions for items**, each list provides different actions. You can create key-mappings for them and type `<tab>` to run one of them.
 - **Multiple selection**, you can do multiple selection in different ways:
   - Press `<space>` to toggle selection of an item.
   - Drag your mouse to select items.
@@ -17,7 +17,7 @@ Coc list is inspired by [denite.nvim](https://github.com/Shougo/denite.nvim), it
 - **Different match modes**, coc use fuzzy match by default, but you can change to use strict match or regex match.
 - **Interactive mode**, use `--interactive` in `:CocList` command to start list in interactive mode, when activated, all items would be fetched on input change, and the list was sorted and filtered by list implementation. 
   - Some source like `symbols` (use workspace symbols feature of language server) only works on interactive mode.
-  - Interactive is only available when list support it.
+  - Interactive is only available when the list supports it.
 - **Default key-mappings**, check out `:h coc-list-mappings` for default mappings, you can override them by use `"list.normalMappings"` and `"list.insertMappings"` in configuration file.
 - **Auto preview feature:** the preview window would be adjusted when cursor moved in list window.
     ![2019-01-25 00_10_59](https://user-images.githubusercontent.com/251450/51693855-af22db80-203a-11e9-9bfe-a62cc49df23f.gif)
@@ -29,9 +29,9 @@ Coc list is inspired by [denite.nvim](https://github.com/Shougo/denite.nvim), it
     
     _Using highlight form output of ripgrep_
 
-- **Mouse support**, you can click to change cursor position, use double click to select item and do default action, use drag to select multiple items.
+- **Mouse support**, you can click to change cursor position, use double click to select item and do default action, and use drag to select multiple items.
 
-- **Advanced fuzzy score**, for items with location, the match of filename would have higher score, beginning of path segment have higher score
+- **Advanced fuzzy score**, for items with location, the match of filename will have a higher score, beginning of path segment have higher score
 
    <img width="435" alt="screen shot 2019-01-25 at 1 06 16 am" src="https://user-images.githubusercontent.com/251450/51695213-759f9f80-203d-11e9-97bf-aeae5a09fdc5.png">
 
@@ -43,7 +43,7 @@ Checkout `:h coc-list` for detailed documentation.
 
 ## Tips
 
-* When list is opened, you can still use mouse to scroll other vim windows.
+* When list is open, you can still use mouse to scroll other vim windows.
 * Create custom key-mappings for do action easier, for example:
 
     ``` json
@@ -58,7 +58,7 @@ Checkout `:h coc-list` for detailed documentation.
       "<C-w>": "command:wincmd k"
     },
     ```
-* You can move to other window when list is opened, the prompt would be deactivated then.
+* You can move to another window when the list is opened, the prompt would be deactivated then.
 * Use variables `g:terminal_color_{0-7}` to customize ansi highlight colors, same as terminal colors of neovim `:h terminal-configuration`.
 * Press `?` on normal mode to get help.
   <img width="1158" alt="screen shot 2019-02-04 at 8 16 29 am" src="https://user-images.githubusercontent.com/251450/52185008-731b2200-2855-11e9-8bea-9068d016e8c9.png">
