@@ -1,6 +1,6 @@
 Coc list is created to make working with lists of things easier, ex: locations & extensions.
 
-Coc list is inspired by [denite.nvim](https://github.com/Shougo/denite.nvim). It's faster and doesn't require python support (mostly, you still need python available for vim8).
+Coc list is inspired by [denite.nvim](https://github.com/Shougo/denite.nvim). It's faster.
 
 ## List features
 
