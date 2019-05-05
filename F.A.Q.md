@@ -2,7 +2,7 @@ Here's some common problems that you may need to understand when working with co
 
 ## Highlight of floating window doesn't looks right.
 
-Some colorscheme use highlight contrast background colors for `Pmenu` which is linked with `CocFloating` used for floating window highlight, you can overwrite `CocFloating` with a low contrast background color or use colorscheme that works fine by default, for example: https://github.com/morhetz/gruvbox
+Some colorscheme use high contrast background colors for `Pmenu` which is linked with `CocFloating` used for floating window highlight, you can overwrite `CocFloating` with a low contrast background color or use colorscheme that works fine by default, for example: https://github.com/morhetz/gruvbox
 
 ## How could I use omnifunc option to trigger completion of coc.nvim?
 
