@@ -533,3 +533,18 @@ Make sure the generated metals-vim binary is available on your $PATH. Installati
     }
   }
 ```
+
+### LaTeX
+
+Using [astoff/digestif](https://github.com/astoff/digestif):
+
+Make sure the digestif executable is available on your $PATH. Installation instructions can be found [here](https://github.com/astoff/digestif#installation-and-set-up).
+
+``` jsonc
+  "languageserver": {
+    "digestif": {
+      "command": "digestif",
+      "filetypes": ["tex", "plaintex", "context"]
+    }
+  }
+```
