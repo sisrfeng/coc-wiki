@@ -538,7 +538,17 @@ Make sure the generated metals-vim binary is available on your $PATH. Installati
 
 Using [astoff/digestif](https://github.com/astoff/digestif):
 
-Make sure the digestif executable is available on your $PATH. Installation instructions can be found [here](https://github.com/astoff/digestif#installation-and-set-up).
+Make sure the digestif executable is available on your $PATH or use absolute path as command. Installation instructions can be found [here](https://github.com/astoff/digestif#installation-and-set-up).
+
+To correct filetype send to server, you may need add:
+
+``` vim
+let g:coc_filetype_map = {
+  \ 'tex': 'latext',
+  \ 'plaintex': 'tex',
+  \ }
+```
+to your vimrc.
 
 ``` jsonc
   "languageserver": {
