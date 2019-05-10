@@ -109,6 +109,17 @@ Some language servers can be slow for receiving document change before trigger c
 
 Some plugins like [Ultisnips](https://github.com/SirVer/ultisnips) and [vim-closer](https://github.com/rstacruz/vim-closer) would remap your `<tab>` or `<cr>` without configuration. You can checkout your keymap by command like `:verbose imap <tab>`.
 
+## How could I profile vim.
+
+* Enter these commands:
+  ``` vim
+  :profile start profile.log
+  :profile func *
+  :profile file *
+  ```
+* Make issue happen.
+* Exit vim, and open the newly generated profile.log file in your current directory.
+
 ## How to change highlight of diagnostic signs?
 
 The sign highlight groups are `CocErrorSign` `CocWarningSign` `CocInfoSign` `CocHintSign`
