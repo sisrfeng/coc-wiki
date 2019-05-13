@@ -93,7 +93,7 @@ to open CocList buffer, which looks like:
 - `+` means extension is loaded
 - `-` means extension is disabled
 
-Supported actions:
+Supported actions (hit tab to activate action menu):
 
 * `toggle` default action. activate/deactivate selected extension(s).
 * `enable`: enable selected extension(s).
