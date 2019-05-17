@@ -68,9 +68,12 @@ Some language servers don't work when the buffer not saved to disk. This is beca
 
 Save to buffer to disk and restart coc by `:CocRestart` to make the language server work.
 
-## Completion for function parameter not working.
+## Function parameter/auto import not work on complete done.
 
-Completion for function parameter requires the server to send the completion as a snippet. Some language servers don't support this. 
+* Make sure the language server your're using have support for function snippet/auto import.
+* You must use confirm completion to make coc does extra edit after complete done, which is `<C-y>` by default.
+* Some language servers are known to have issues with responsed textEdit on completion.
+* Some language servers doesn't have support for textEdit on completion but coc extension does, so it's better to use extension when it exists.
 
 ## Linting is slow.
 
