@@ -451,7 +451,14 @@ Using [Haskell IDE Engine](https://github.com/haskell/haskell-ide-engine)
     "command": "hie-wrapper",
     "rootPatterns": [".stack.yaml", "cabal.config", "package.yaml"],
     "filetypes": ["hs", "lhs", "haskell"],
-    "initializationOptions": {}
+    "initializationOptions": {},
+    "settings": {
+	"languageServerHaskell": {
+		"hlintOn": false,
+		"maxNumberOfProblems": 10,
+		"completionSnippetsOn": true
+	}
+     }
   }
 }
 ```
