@@ -631,7 +631,7 @@ To correct filetype send to server, you may need add:
 
 ``` vim
 let g:coc_filetype_map = {
-  \ 'tex': 'latext',
+  \ 'tex': 'latex',
   \ 'plaintex': 'tex',
   \ }
 ```
