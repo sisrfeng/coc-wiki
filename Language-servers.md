@@ -627,13 +627,10 @@ Using [astoff/digestif](https://github.com/astoff/digestif):
 
 Make sure the digestif executable is available on your $PATH or use absolute path as command. Installation instructions can be found [here](https://github.com/astoff/digestif#installation-and-set-up).
 
-To correct filetype send to server, you may need add:
+To correct filetype sent to server, you may need add:
 
 ``` vim
-let g:coc_filetype_map = {
-  \ 'tex': 'latex',
-  \ 'plaintex': 'tex',
-  \ }
+let g:coc_filetype_map = {'plaintex': 'tex'}
 ```
 to your vimrc.
 
