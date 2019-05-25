@@ -227,6 +227,22 @@ Using [clangd](http://llvm.org/viewvc/llvm-project/clang-tools-extra/trunk/clang
 
 Like many tools, clangd relies on the presence of a [JSON compilation database](https://clang.llvm.org/docs/JSONCompilationDatabase.html)
 
+### Rust
+
+You may simply install the [coc-rls](https://github.com/neoclide/coc-rls/) extension or try [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer), which plans to replace RLS eventually:
+
+``` jsonc
+  "languageserver": {
+    "rust": {
+      "command": "ra_lsp_server",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
+    }
+  }
+```
+
+It's necessary to `rustup component add rust-src` and build `rust-analyzer` from sources (just `cargo install-lsp`).
+
 ### Go
 
 Using [gopls](https://github.com/saibing/tools)
@@ -305,41 +321,6 @@ Using [felixfbecker/php-language-server](https://github.com/felixfbecker/php-lan
   }
 ```
 note: make sure you can start the server by use command and args.
-
-### C/C++/Objective-C
-
-Using [ccls](https://github.com/MaskRay/ccls)
-
-``` jsonc
-  "languageserver": {
-    "ccls": {
-      "command": "ccls",
-      "filetypes": ["c", "cpp", "objc", "objcpp"],
-      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
-      "initializationOptions": {
-         "cache": {
-           "directory": "/tmp/ccls"
-         }
-       }
-    }
-  }
-```
-
-### Rust
-
-You may simply install the [coc-rls](https://github.com/neoclide/coc-rls/) extension or try [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer), which plans to replace RLS eventually:
-
-``` jsonc
-  "languageserver": {
-    "rust": {
-      "command": "ra_lsp_server",
-      "filetypes": ["rust"],
-      "rootPatterns": ["Cargo.toml"]
-    }
-  }
-```
-
-It's necessary to `rustup component add rust-src` and build `rust-analyzer` from sources (just `cargo install-lsp`).
 
 ### Dockerfile
 
