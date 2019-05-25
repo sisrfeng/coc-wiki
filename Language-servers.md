@@ -323,7 +323,9 @@ Using [ccls](https://github.com/MaskRay/ccls)
        }
     }
   }
-```### Rust
+```
+
+### Rust
 
 You may simply install the [coc-rls](https://github.com/neoclide/coc-rls/) extension or try [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer), which plans to replace RLS eventually:
 
