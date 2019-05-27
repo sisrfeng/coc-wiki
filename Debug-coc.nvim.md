@@ -68,7 +68,7 @@ You can use the logger to debug any variable, like:
 ``` js
 logger.debug('variable:', variable)
 ```
-Use command `node -e 'console.log(path.join(os.tmpdir(), "coc-nvim.log"))'` to get the log file, and `tail` command to trace the log.
+Use command `:CocOpenLog` to open the log file.
 
 For extension, logger exists as `logger` property of `ExtensionContext`.
 
