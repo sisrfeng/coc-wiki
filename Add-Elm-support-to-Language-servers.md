@@ -648,3 +648,24 @@ Make sure the digestif executable is available on your $PATH or use absolute pat
     }
   }
 ```
+
+### Elm
+Using [elm-tooling/elm-language-server](https://github.com/elm-tooling/elm-language-server)
+
+``` jsonc
+{
+  "languageserver": {
+    "elmLS": {
+      "command": "elm-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"],
+      "initializationOptions": {
+        "runtime": "node",
+        "elmPath": "elm",
+        "elmFormatPath": "elm-format"
+      }
+    }
+  }
+}
+```
