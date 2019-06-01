@@ -8,7 +8,7 @@
 * [Completion sources](https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources#completion-sources)
 
 
-## [Using configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file)
+## [Using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file)
 
 * [Configuration file resolve](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#configuration-file-resolve)
 * [Default COC preferences](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#default-coc-preferences)
