@@ -38,17 +38,9 @@ It just works.
 
 ## Integration with [vim-airline](https://github.com/vim-airline/vim-airline)
 
-To make airline show the diagnostic information from coc, you can configure airline like:
+airline now works out of box.
 
-``` vim
-" if you want to disable auto detect, comment out those two lines
-"let g:airline#extensions#disable_rtp_load = 1
-"let g:airline_extensions = ['branch', 'hunks', 'coc']
-
-let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
-let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
-```
-Check out `:h coc-status-airline` for detail.
+Check out `:h airline-coc` for customization details.
 
 ## Integration with [lightline.vim](https://github.com/itchyny/lightline.vim)
 
