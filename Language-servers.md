@@ -366,6 +366,8 @@ Using [Alloyed/lua-lsp](https://github.com/Alloyed/lua-lsp)
 
 Using [sumneko/lua-language-server](https://github.com/sumneko/lua-language-server) on Windows, which can downloaded by the extension manager of VSCode.
 
+
+
 ```viml
 let lua_lsp = glob('~/.vscode/extensions/sumneko.lua*', 0, 1)
 if len(lua_lsp)
@@ -379,6 +381,21 @@ if len(lua_lsp)
         \ }
     \ })
 endif
+```
+
+Using [EmmyLua-LanguageServer](https://github.com/EmmyLua/EmmyLua-LanguageServer):
+
+Make sure your Java environment variables are rights and change the path in the args field according to your installation.
+
+``` jsonc
+  "languageserver": {
+    "lua": {
+      "command": "java",
+      "args": ["-cp", "/your/path/to/EmmyLua-LanguageServer/EmmyLua-LS/build/libs/EmmyLua-LS-all.jar", "com.tang.vscode.MainKt"],
+      "filetypes": ["lua"],
+      "rootPatterns": [".git/"]
+    }
+  }
 ```
 
 ### OCaml and ReasonML
@@ -669,3 +686,21 @@ Using [elm-tooling/elm-language-server](https://github.com/elm-tooling/elm-langu
   }
 }
 ```
+### Fortran
+
+Using [fortran-language-server](https://github.com/hansec/fortran-language-server):
+
+Make sure the fortls executable is available on your $PATH.
+
+``` jsonc
+  "languageserver": {
+     "fortran": {
+       "command": "fortls",
+       "filetypes": ["fortran"],
+       "rootPatterns": [".fortls", ".git/"]
+     }
+  }
+```
+### Clojure
+
+Using [clojure-lsp](https://github.com/snoe/clojure-lsp). Specific configuration for Coc.nvim can be found on the [github page](https://github.com/snoe/clojure-lsp#vim).
