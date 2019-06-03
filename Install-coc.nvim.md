@@ -103,26 +103,35 @@ set -o errexit    # exit when command fails
 
 # Install latest nodejs
 if ! command -v node > /dev/null; then
-  curl --fail -L https://install-node.now.sh/latest | sh
+  curl --fail -LSs https://install-node.now.sh/latest | sh
+  export PATH="/usr/local/bin/:$PATH"
   # Or use apt-get
   # sudo apt-get install nodejs
 fi
 
 # Install yarn
 if ! command -v yarn > /dev/null; then
-  curl --fail -L https://yarnpkg.com/install.sh | sh
+  curl --fail -o- -LSs https://yarnpkg.com/install.sh | sh
+  export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 fi
 
 # Use package feature to install coc.nvim
-# If you want to use plugin manager, change DIR to plugin directory used by that manager.
-DIR=~/.local/share/nvim/site/pack/coc/start
-# For vim user, the directory is different
-# DIR=~/.vim/pack/coc/start
-mkdir -p $DIR
-cd $DIR
 git clone https://github.com/neoclide/coc.nvim.git --depth=1
-cd $DIR/coc.nvim
-./install.sh nightly
+# If you want to use plugin manager, change DIR to plugin directory used by that manager.
+DIR_NEOVIM=~/.local/share/nvim/site/pack/coc/start
+# For vim user, the directory is different
+DIR_VIM=~/.vim/pack/coc/start
+DIRS=( $DIR_NEOVIM $DIR_VIM)
+for DIR in "${DIRS[@]}"
+do
+    mkdir -p $DIR
+    cp -rf coc.nvim $DIR
+done
+rm -rf coc.nvim
+for DIR in "${DIRS[@]}"
+do
+    cd $DIR/coc.nvim && ./install.sh nightly
+done
 
 # Install extensions
 mkdir -p ~/.config/coc/extensions
@@ -132,5 +141,5 @@ then
   echo '{"dependencies":{}}'> package.json
 fi
 # Change arguments to the extensions you need
-yarn add coc-json coc-snippets
+yarn add coc-snippets coc-highlight
 ```
