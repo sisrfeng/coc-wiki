@@ -96,7 +96,7 @@ Watchman works great even when you have multiple neovim instance started in the 
 To setup coc and extensions faster on different machines, you can use a shell script, for example:
 
 ``` sh
-#!/bin/sh
+#!/bin/bash
 
 set -o nounset    # error when referencing undefined variable
 set -o errexit    # exit when command fails
@@ -121,7 +121,7 @@ git clone https://github.com/neoclide/coc.nvim.git --depth=1
 DIR_NEOVIM=~/.local/share/nvim/site/pack/coc/start
 # For vim user, the directory is different
 DIR_VIM=~/.vim/pack/coc/start
-DIRS=( $DIR_NEOVIM $DIR_VIM)
+DIRS=( $DIR_NEOVIM $DIR_VIM )
 for DIR in "${DIRS[@]}"
 do
     mkdir -p $DIR
