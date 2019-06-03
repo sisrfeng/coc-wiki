@@ -96,23 +96,23 @@ Watchman works great even when you have multiple neovim instance started in the 
 To setup coc and extensions faster on different machines, you can use a shell script, for example:
 
 ``` sh
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -o nounset    # error when referencing undefined variable
 set -o errexit    # exit when command fails
 
 # Install latest nodejs
-if ! command -v node > /dev/null; then
-  curl --fail -LSs https://install-node.now.sh/latest | sh
-  export PATH="/usr/local/bin/:$PATH"
-  # Or use apt-get
-  # sudo apt-get install nodejs
+if [ ! -x "$(command -v node)" ]; then
+    curl --fail -LSs https://install-node.now.sh/latest | sh
+    export PATH="/usr/local/bin/:$PATH"
+    # Or use apt-get
+    # sudo apt-get install nodejs
 fi
 
 # Install yarn
-if ! command -v yarn > /dev/null; then
-  curl --fail -o- -LSs https://yarnpkg.com/install.sh | sh
-  export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+if [ ! -x "$(command -v yarn)" ]; then
+    curl --fail -o- -LSs https://yarnpkg.com/install.sh | sh
+    export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 fi
 
 # Use package feature to install coc.nvim
@@ -121,7 +121,7 @@ git clone https://github.com/neoclide/coc.nvim.git --depth=1
 DIR_NEOVIM=~/.local/share/nvim/site/pack/coc/start
 # For vim user, the directory is different
 DIR_VIM=~/.vim/pack/coc/start
-DIRS=( $DIR_NEOVIM $DIR_VIM )
+DIRS=($DIR_NEOVIM $DIR_VIM)
 for DIR in "${DIRS[@]}"
 do
     mkdir -p $DIR
