@@ -100,7 +100,7 @@ Run command `:CocRebuild` to rebuild coc extensions. Some of them could be using
 
 If it's still not working, you can force coc to start with a specified node executable. In your .vimrc add a line like `let g:coc_node_path = '/usr/local/opt/node@10/bin/node'`
 
-## Why doesn't the location list work sometimes?
+## Why vim's location list not work sometimes?
 
 Some plugins like [ale](https://github.com/w0rp/ale) will clear location lists that are created by other plugins. Check out https://github.com/w0rp/ale/issues/1945, it's recommended to use `CocList diagnostics` to get all location lists of diagnostics instead of using location list.
 
