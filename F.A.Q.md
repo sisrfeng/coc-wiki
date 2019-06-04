@@ -148,5 +148,3 @@ Open log file by command:
 ```
 :CocOpenLog
 ```
-
-The log will be cleared just after coc server starts.
