@@ -18,8 +18,9 @@ If you want to manual trigger completion add `"suggest.autoTrigger": "trigger",`
   inoremap <silent><expr> <c-space> coc#refresh()
 ```
 
-## How could I not use floating window on neovim?
+## How could I disable floating window?
 
+* For documentation of completion, use `"suggest.floatEnable": false` in settings.json.
 * For diagnostic messages, use `"diagnostic.messageTarget": "echo"` in settings.json.
 * For signature help, use `"signature.target": "echo"` in settings.json.
 * For documentation on doHover, use `"coc.preferences.hoverTarget": "echo"` in settings.json.
