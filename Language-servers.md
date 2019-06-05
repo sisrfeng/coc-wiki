@@ -196,6 +196,12 @@ Using [ccls](https://github.com/MaskRay/ccls)
     }
   }
 ```
+To make header completion work with clang < 8 on Mac OS X, [use a shell script wrapper](https://github.com/MaskRay/ccls/wiki/Install#shell-script-wrapper):
+
+``` sh
+#!/bin/sh
+exec /path/to/ccls/Release/ccls -init='{"clang":{"extraArgs":["-isystem", "/Library/Developer/CommandLineTools/usr/include/c++/v1"]}}' "$@"
+```
 
 Using [cquery](https://github.com/cquery-project/cquery)
 
