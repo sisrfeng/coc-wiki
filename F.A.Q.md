@@ -4,6 +4,10 @@ Here's some common problems that you may need to understand when working with co
 
 Some colorscheme use high contrast background colors for `Pmenu` which is linked with `CocFloating` used for floating window highlight, you can overwrite `CocFloating` with a low contrast background color or use colorscheme that works fine by default, for example: https://github.com/morhetz/gruvbox
 
+## Floating window position is wrong after scroll the screen.
+
+It's limitation of (neo)vim, it should either adjust floating window postion according to relative option or provide scroll autocmd so plugin can adjust the window position.
+
 ## How could I use omnifunc option to trigger completion of coc.nvim?
 
 You can't, there's no such function provided for omnifunc option, because vim's omnifunc always block and LSP features like triggerCharacters and incomplete response can't work.
