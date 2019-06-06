@@ -747,3 +747,39 @@ Using [clojure-lsp](https://github.com/snoe/clojure-lsp):
 
 * Make sure `clojure-lsp` is in your $PATH.
 * Checkout [github page](https://github.com/snoe/clojure-lsp#vim) for more information.
+
+### Julia
+
+Using [`LanguageServer.jl`](https://github.com/JuliaEditorSupport/LanguageServer.jl).
+
+The `LanguageServer`, `SymbolServer` and `StaticLint` packages must be installed in Julia (1.x), i.e.
+
+``` julia
+julia> using Pkg
+julia> Pkg.add("LanguageServer")
+julia> Pkg.add("SymbolServer")
+julia> Pkg.add("StaticLint")
+```
+Registering the server:
+
+``` jsonc
+  "languageserver": {
+    "julia": {
+      "command": "/usr/bin/julia",
+      "args" : ["--startup-file=no", "--history-file=no", "-e",
+      "using LanguageServer;\
+       using Pkg;\
+       import StaticLint;\
+       import SymbolServer;\
+       env_path = dirname(Pkg.Types.Context().env.project_file);\
+       debug = false;\
+       server = LanguageServer.LanguageServerInstance(stdin, stdout, debug, env_path, \"\", Dict());\
+       server.runlinter = true;\
+       run(server);"
+       ],
+      "filetypes": ["julia"]
+     }
+  }
+```
+
+Checkout [JuliaEditorSupport/LanguageServer.jl](https://github.com/JuliaEditorSupport/LanguageServer.jl/wiki/Vim-and-Neovim) for more information.
