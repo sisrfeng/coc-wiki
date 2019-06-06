@@ -728,4 +728,22 @@ Make sure the fortls executable is available on your $PATH.
 ```
 ### Clojure
 
-Using [clojure-lsp](https://github.com/snoe/clojure-lsp). Specific configuration for Coc.nvim can be found on the [github page](https://github.com/snoe/clojure-lsp#vim).
+Using [clojure-lsp](https://github.com/snoe/clojure-lsp):
+
+``` jsonc
+  "languageserver": {
+    "clojure-lsp": {
+      "command": "bash",
+      "args": ["-c", "clojure-lsp"],
+      "filetypes": ["clojure"],
+      "rootPatterns": ["project.clj"],
+      "additionalSchemes": ["jar", "zipfile"],
+      "trace.server": "verbose",
+      "initializationOptions": {
+      }
+    }
+  }
+```
+
+* Make sure `clojure-lsp` is in your $PATH.
+* Checkout [github page](https://github.com/snoe/clojure-lsp#vim) for more information.
