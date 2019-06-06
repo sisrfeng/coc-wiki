@@ -672,6 +672,25 @@ Make sure the digestif executable is available on your $PATH or use absolute pat
   }
 ```
 
+Using [Texlab](https://texlab.netlify.com/):
+
+``` jsonc
+  "languageserver": {
+    "latex": {
+      "command": "java",
+      "args": ["-jar", "/PATH/TO/texlab.jar"],
+      // not start server at home directory, since it won't work.
+      "ignoredRootPaths": ["~"],
+      "filetypes": ["tex", "bib", "plaintex", "context"]
+    }
+  }
+```
+
+* Make sure `java` in your $PAHT.
+* May need to add `let g:tex_flavor = "latex"` to correct buffer filetype, check it by `:echo &filetype`.
+* Adjsut the path to textlab.jar accordingly.
+* For bibTeX integration, you should use package `biblatex`, check the gif on https://texlab.netlify.com/
+
 ### Elm
 Using [elm-tooling/elm-language-server](https://github.com/elm-tooling/elm-language-server)
 
