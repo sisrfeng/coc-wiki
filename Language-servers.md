@@ -84,7 +84,7 @@ Check out the official specification at https://microsoft.github.io/language-ser
 
 ## Register custom language servers
 
-User defined language servers are configured in the `languageserver` field of the [configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file).
+User defined language servers are configured in the `languageserver` field of the [configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file).
 
 There're three types of language servers: `module`,`executable` and `socket`.
 
