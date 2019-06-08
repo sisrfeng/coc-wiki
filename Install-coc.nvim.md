@@ -77,6 +77,14 @@ cd ~/.cache/dein/repos/github.com/neoclide/coc.nvim
 git clean -xfd
 yarn install --frozen-lockfile
 ```
+## Using vim8's native package manager
+
+Clone coc.vim to ~/.vim/pack/plugins/start and run its install.sh:
+
+```sh
+git clone https://github.com/neoclide/coc.nvim ~/.vim/pack/plugins/start/coc.nvim
+cd ~/.vim/pack/plugins/start/coc.nvim && ./install.sh && yarn install --frozen-lockfile
+```
 
 ## Checkout service state.
 
