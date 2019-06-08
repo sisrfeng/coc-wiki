@@ -86,6 +86,11 @@ git clone https://github.com/neoclide/coc.nvim ~/.vim/pack/plugins/start/coc.nvi
 cd ~/.vim/pack/plugins/start/coc.nvim && ./install.sh && yarn install --frozen-lockfile
 ```
 
+Then generate helptags:
+```sh
+vim -c "helptags ~/.vim/pack/plugins/start/coc.nvim"
+```
+
 ## Checkout service state.
 
 To check to see if the coc service is running, use command `:checkhealth` in neovim (not supported by vim), the output looks like:
