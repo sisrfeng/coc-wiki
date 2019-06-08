@@ -8,6 +8,11 @@ Coc is written in Typescript and runs on nodejs, you can download a precompiled 
 
 **Note:** it will not load at all if (neo)vim is too old.
 
+## Install [nodejs](https://nodejs.org/) >= 8.0 and [yarn](https://yarnpkg.com/) on Mac OS X
+```bash
+brew install yarn node
+```
+
 ## Install [nodejs](https://nodejs.org/) >= 8.0
 
 ```
