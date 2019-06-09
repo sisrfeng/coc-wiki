@@ -196,7 +196,23 @@ Using [ccls](https://github.com/MaskRay/ccls)
     }
   }
 ```
-To make header completion work with clang < 8 on Mac OS X, [use a shell script wrapper](https://github.com/MaskRay/ccls/wiki/Install#shell-script-wrapper):
+To make header completion work with clang < 8 on Mac OS X, use `"initializationOptions"` like:
+
+``` jsonc
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        },
+        "clang": {
+           // make sure you have installed commandLineTools
+          "resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0",
+          "extraArgs": [
+            "-isystem",
+            "/usr/local/Cellar/llvm/8.0.0/include/c++/v1"
+          ]
+        }
+      },
+```
 
 ``` sh
 #!/bin/sh
