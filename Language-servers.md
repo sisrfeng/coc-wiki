@@ -214,11 +214,6 @@ To make header completion work with clang < 8 on Mac OS X, use `"initializationO
       },
 ```
 
-``` sh
-#!/bin/sh
-exec /path/to/ccls/Release/ccls -init='{"clang":{"extraArgs":["-isystem", "/Library/Developer/CommandLineTools/usr/include/c++/v1"]}}' "$@"
-```
-
 Using [cquery](https://github.com/cquery-project/cquery)
 
 ``` jsonc
