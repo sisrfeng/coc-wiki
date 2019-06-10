@@ -66,13 +66,13 @@ All options are optional.
 
 ## Result of completion
 
-Result are returned by a callback function (second argument). The result should be list of vim completion items, or fasly value for invalid results.
+Result are returned by a callback function (second argument). The result should be list of vim completion items, or falsy value for invalid results.
 
 Check out `:h complete-items` for available fields.
 
 ## Optional functions
 
 * `coc#source#{name}#refresh()`: called when user does a refresh action for source.
-* `coc#source#{name}#should_complete(option)`: called with completion option, returns 0 or other fasly value to skip completion for current completion.
+* `coc#source#{name}#should_complete(option)`: called with completion option, returns 0 or other falsy value to skip completion for current completion.
 * `coc#source#{name}#get_startcol(option)`: called with completion option, should return completion start column number when function exists, other source is disabled if the returned column number is not `option.col`
 * `coc#source#{name}#on_complete(item)`: called with vim complete item when it's selected by user.
