@@ -58,6 +58,7 @@ exports.activate = context => {
   }))
 }
 ```
+**Note:** it's not possible to use package.json to add additional contributions for single file extensions.
 
 ### Install extensions
 
