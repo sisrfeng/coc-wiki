@@ -36,7 +36,7 @@ Compared to configured language servers, extensions have more features.
 
 ## Manage coc extensions
 
-## Single file extensions
+### Single file extensions
 
 Coc.nvim will try to load javascript files in the folder `$VIMCONFIG/coc-extensions`, each javascript file should be extension of coc.nvim.
 
