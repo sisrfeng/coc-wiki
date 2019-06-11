@@ -8,12 +8,12 @@
 * [Completion sources](https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources#completion-sources)
 
 
-## [Using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file)
+## [Using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file)
 
-* [Configuration file resolve](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#configuration-file-resolve)
-* [Default COC preferences](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#default-coc-preferences)
-* [Configuration for sources](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#configuration-for-sources)
-* [Extension configuration](https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file#extension-configuration)
+* [Configuration file resolve](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file#configuration-file-resolve)
+* [Default COC preferences](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file#default-coc-preferences)
+* [Configuration for sources](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file#configuration-for-sources)
+* [Extension configuration](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file#extension-configuration)
 
 
 ## [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
