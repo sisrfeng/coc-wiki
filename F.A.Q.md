@@ -1,5 +1,11 @@
 Here's some common problems that you may need to understand when working with coc.nvim.
 
+## Environment node doesn't meet the requirement.
+
+Use `let g:coc_node_path = '/path/to/node'` to make coc.nvim use custom node executable.
+
+**Note**, yarn doesn't work with node < 4.0, so make sure your environment node version >= 4.
+
 ## Highlight of floating window doesn't looks right.
 
 Some colorscheme use high contrast background colors for `Pmenu` which is linked with `CocFloating` used for floating window highlight, you can overwrite `CocFloating` with a low contrast background color or use colorscheme that works fine by default, for example: https://github.com/morhetz/gruvbox
