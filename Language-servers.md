@@ -794,3 +794,7 @@ Registering the server:
 ```
 
 Checkout [JuliaEditorSupport/LanguageServer.jl](https://github.com/JuliaEditorSupport/LanguageServer.jl/wiki/Vim-and-Neovim) for more information.
+
+### R
+
+Use [coc-r-lsp](https://github.com/neoclide/coc-r-lsp) extension.
