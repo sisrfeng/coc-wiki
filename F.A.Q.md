@@ -42,15 +42,15 @@ If you want to manual trigger completion add `"suggest.autoTrigger": "trigger",`
 
 ## How to make preview window shown aside with pum?
 
-Build neovim from master code or [use nightly build](https://github.com/neovim/neovim/releases/tag/nightly).
+For vim, make sure `echo has('textprop') && has('patch-8.1.1522')` echo `1`.
 
-To make sure floating preview window can work:
+Higlight on vim doesn't always work on vim yet, because can't highlight by using a seperated vim process.
 
-- `:echo exists('##CompleteChanged') && exists('*nvim_open_win')` should echo `1`.
+For neovim, build neovim from master code or [use nightly build](https://github.com/neovim/neovim/releases/tag/nightly).
 
-**Note:** Floating preview window will not be shown when there're no details or documentation with current completion item.
+Make sure `:echo exists('##CompleteChanged') && exists('*nvim_open_win')` echo `1`.
 
-**Note:** To preview expanded snippet body, you can use [coc-snippets](https://github.com/neoclide/coc-snippets).
+To preview expanded snippet body, you can use [coc-snippets](https://github.com/neoclide/coc-snippets).
 
 If you have errors including:
 
