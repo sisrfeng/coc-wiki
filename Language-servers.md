@@ -643,7 +643,8 @@ Using [elm-tooling/elm-language-server](https://github.com/elm-tooling/elm-langu
       "initializationOptions": {
         "runtime": "node",
         "elmPath": "elm",
-        "elmFormatPath": "elm-format"
+        "elmFormatPath": "elm-format",
+        "elmTestPath": "elm-test"
       }
     }
   }
