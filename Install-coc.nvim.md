@@ -3,17 +3,17 @@ Coc is written in Typescript and runs on nodejs, you can download a precompiled 
 ## Install [neovim](https://github.com/neovim/neovim/releases/) or [vim](https://github.com/vim/vim) 
 
 * `neovim` >= `0.3.1` is required.
-* `vim` >= `8.1` is required.
+* `vim` >= `8.0.1453` is required.
 * Use command `:version` to checkout your vim version.
 
 **Note:** it will not load at all if (neo)vim is too old.
 
-## Install [nodejs](https://nodejs.org/) >= 8.0 and [yarn](https://yarnpkg.com/) on Mac OS X
+## Install [nodejs](https://nodejs.org/) >= 8.10.0 and [yarn](https://yarnpkg.com/) on Mac OS X
 ```bash
 brew install yarn node
 ```
 
-## Install [nodejs](https://nodejs.org/) >= 8.0
+## Install latest stable [nodejs](https://nodejs.org/), may not work on windows.
 
 ```
 curl -sL install-node.now.sh | sh
@@ -33,10 +33,10 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 ### Using [vim-plug](https://github.com/junegunn/vim-plug)
 
-Install with compiled nightly bundle (recommended):
+Use release branch (recommended):
 
 ``` vim
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 ```
 to upgrade with new release only:
 
@@ -57,7 +57,7 @@ run the command `:PlugInstall` in your (neo)vim.
 Install with compiled nightly build (recommended):
 
 ``` vim
-call dein#add('neoclide/coc.nvim', {'merge':0, 'build': './install.sh nightly'})
+call dein#add('neoclide/coc.nvim', {'merge':0, 'rev': 'release'})
 ```
 
 Build from source code:
@@ -79,16 +79,17 @@ yarn install --frozen-lockfile
 ```
 ## Using vim8's native package manager
 
-Clone coc.vim to ~/.vim/pack/plugins/start and run its install.sh:
+Unzip source code from release branch:
 
 ```sh
-git clone https://github.com/neoclide/coc.nvim ~/.vim/pack/plugins/start/coc.nvim
-cd ~/.vim/pack/plugins/start/coc.nvim && ./install.sh && yarn install --frozen-lockfile
-```
-
-Then generate helptags:
-```sh
-vim -c "helptags ~/.vim/pack/plugins/start/coc.nvim"
+# for vim8
+mkdir -p ~/.vim/pack
+cd ~/.vim/pack
+curl --fail -L https://github.com/neoclide/coc.nvim/archive/release.tar.gz|tar xzfv -
+# for neovim
+mkdir -p ~/.local/share/nvim/site/pack
+cd ~/.local/share/nvim/site/pack
+curl --fail -L https://github.com/neoclide/coc.nvim/archive/release.tar.gz|tar xzfv -
 ```
 
 ## Checkout service state.
