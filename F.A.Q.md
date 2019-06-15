@@ -44,7 +44,7 @@ If you want to manual trigger completion add `"suggest.autoTrigger": "trigger",`
 
 For vim, make sure `echo has('textprop') && has('patch-8.1.1522')` echo `1`.
 
-Higlight on vim doesn't always work on vim yet, because can't highlight by using a seperated vim process.
+Higlight on vim doesn't always work yet, because can't highlight by using a seperated vim process.
 
 For neovim, build neovim from master code or [use nightly build](https://github.com/neovim/neovim/releases/tag/nightly).
 
