@@ -630,10 +630,10 @@ Using [Texlab](https://texlab.netlify.com/):
 * For bibTeX integration, you should use package `biblatex`, check the gif on https://texlab.netlify.com/
 
 ### Elm
-Using [elm-tooling/elm-language-server](https://github.com/elm-tooling/elm-language-server)
+
+Using [elm-tooling/elm-language-server](https://github.com/elm-tooling/elm-language-server):
 
 ``` jsonc
-{
   "languageserver": {
     "elmLS": {
       "command": "elm-language-server",
@@ -648,8 +648,11 @@ Using [elm-tooling/elm-language-server](https://github.com/elm-tooling/elm-langu
       }
     }
   }
-}
 ```
+
+* Make sure `elm-language-server`, `elm`, `elm-format` and `elm-test` are in your $PATH.
+* Checkout [github page](https://github.com/elm-tooling/elm-language-server#cocnvim) for more information.
+
 ### Fortran
 
 Using [fortran-language-server](https://github.com/hansec/fortran-language-server):
