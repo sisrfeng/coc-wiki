@@ -135,7 +135,9 @@ To make header completion work with clang < 8 on Mac OS X, use `"initializationO
           "resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0",
           "extraArgs": [
             "-isystem",
-            "/usr/local/Cellar/llvm/8.0.0/include/c++/v1"
+            "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"，
+            "-I",
+            "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/"        
           ]
         }
       },
