@@ -132,7 +132,7 @@ To make header completion work with clang < 8 on Mac OS X, use `"initializationO
         },
         "clang": {
            // make sure you have installed commandLineTools
-          "resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0",
+          "resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0",
           "extraArgs": [
             "-isystem",
             "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"，
