@@ -581,6 +581,21 @@ Use [coc-solargraph](https://github.com/neoclide/coc-solargraph) extension is re
 
 Make sure solargraph is in your $PATH (sudo gem install solargraph) or use `solargraph.commandPath` to configure executable path of solargraph.
 
+#### Using [Sorbet](https://sorbet.org)
+
+```json
+  "languageserver": {
+    "sorbet": {
+      "command": "srb",
+      "args": ["tc", "--lsp", "--enable-all-experimental-lsp-features"],
+      "filetypes": ["ruby"],
+      "rootPatterns": ["sorbet/config"],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  }
+}
+```
 
 ### Scala
 
