@@ -8,19 +8,19 @@ Coc.nvim is written in Typescript and runs on nodejs, you can use release branch
 
 **Note:** it will not load at all if (neo)vim is too old.
 
-## Install [nodejs](https://nodejs.org/) >= 8.10.0 on MacOS:
+Install [nodejs](https://nodejs.org/) >= 8.10.0 on MacOS:
 
 ```bash
 brew install node
 ```
 
-## Install the latest stable [nodejs](https://nodejs.org/), may not work on windows.
+Install the latest stable [nodejs](https://nodejs.org/), may not work on windows.
 
 ```
 curl -sL install-node.now.sh | sh
 ```
 
-## Install [yarn](https://yarnpkg.com/)
+Install [yarn](https://yarnpkg.com/)
 
 Yarn is required for build coc.nvim from source code and manage extensions.
 
