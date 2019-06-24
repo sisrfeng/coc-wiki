@@ -77,6 +77,17 @@ cd ~/.cache/dein/repos/github.com/neoclide/coc.nvim
 git clean -xfd
 yarn install --frozen-lockfile
 ```
+
+## Using [NeoBundle](https://github.com/Shougo/neobundle.vim)
+
+Due to [this bug](https://github.com/Shougo/neobundle.vim/issues/530), using the standard `'rev': 'release'` won't work.
+
+Use this work-around to check out the recommended `release` branch:
+
+``` vim
+NeoBundle 'neoclide/coc.nvim', 'release', { 'build': { 'others': 'git checkout release' } }
+```
+
 ## Using vim8's native package manager
 
 Unzip source code from release branch:
