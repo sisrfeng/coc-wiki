@@ -146,22 +146,15 @@ if [ ! -x "$(command -v yarn)" ]; then
 fi
 
 # Use package feature to install coc.nvim
-git clone https://github.com/neoclide/coc.nvim.git --depth=1
-# If you want to use plugin manager, change DIR to plugin directory used by that manager.
-DIR_NEOVIM=~/.local/share/nvim/site/pack/coc/start
-# For vim user, the directory is different
-DIR_VIM=~/.vim/pack/coc/start
-DIRS=($DIR_NEOVIM $DIR_VIM)
-for DIR in "${DIRS[@]}"
-do
-    mkdir -p $DIR
-    cp -rf coc.nvim $DIR
-done
-rm -rf coc.nvim
-for DIR in "${DIRS[@]}"
-do
-    cd $DIR/coc.nvim && ./install.sh nightly
-done
+
+# for vim8
+mkdir -p ~/.vim/pack/coc/start
+cd ~/.vim/pack/coc/start
+curl --fail -L https://github.com/neoclide/coc.nvim/archive/release.tar.gz|tar xzfv -
+# for neovim
+# mkdir -p ~/.local/share/nvim/site/pack/coc/start
+# cd ~/.local/share/nvim/site/pack/coc/start
+# curl --fail -L https://github.com/neoclide/coc.nvim/archive/release.tar.gz|tar xzfv -
 
 # Install extensions
 mkdir -p ~/.config/coc/extensions
