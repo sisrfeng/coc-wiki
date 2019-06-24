@@ -48,7 +48,7 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
 Run command `:PlugInstall` in your (neo)vim.
 
-## Using [dein.vim](https://github.com/Shougo/dein.vim)
+### Using [dein.vim](https://github.com/Shougo/dein.vim)
 
 Use release branch (recommended):
 
@@ -74,7 +74,7 @@ git clean -xfd
 yarn install --frozen-lockfile
 ```
 
-## Using [NeoBundle](https://github.com/Shougo/neobundle.vim)
+### Using [NeoBundle](https://github.com/Shougo/neobundle.vim)
 
 Due to [this bug](https://github.com/Shougo/neobundle.vim/issues/530), using the standard `'rev': 'release'` won't work.
 
@@ -84,7 +84,7 @@ Use this work-around to check out the recommended `release` branch:
 NeoBundle 'neoclide/coc.nvim', 'release', { 'build': { 'others': 'git checkout release' } }
 ```
 
-## Using vim8's native package manager
+### Using vim8's native package manager
 
 Unzip source code from release branch:
 
