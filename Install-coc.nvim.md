@@ -1,4 +1,4 @@
-Coc is written in Typescript and runs on nodejs, you can download a precompiled bundle or build from source.
+Coc.nvim is written in Typescript and runs on nodejs, you can use release branch which contains compiled javascript or build from master branch.
 
 ## Install [neovim](https://github.com/neovim/neovim/releases/) or [vim](https://github.com/vim/vim) 
 
@@ -8,12 +8,13 @@ Coc is written in Typescript and runs on nodejs, you can download a precompiled 
 
 **Note:** it will not load at all if (neo)vim is too old.
 
-## Install [nodejs](https://nodejs.org/) >= 8.10.0 and [yarn](https://yarnpkg.com/) on Mac OS X
+## Install [nodejs](https://nodejs.org/) >= 8.10.0 on MacOS:
+
 ```bash
-brew install yarn node
+brew install node
 ```
 
-## Install latest stable [nodejs](https://nodejs.org/), may not work on windows.
+## Install the latest stable [nodejs](https://nodejs.org/), may not work on windows.
 
 ```
 curl -sL install-node.now.sh | sh
@@ -29,7 +30,7 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 **Note** yarn is not required if you want to use vim's plugin manager to manage coc extensions.
 
-## Install plugin coc.nvim
+## Add coc.nvim to your vim's runtimepath.
 
 ### Using [vim-plug](https://github.com/junegunn/vim-plug)
 
@@ -38,11 +39,6 @@ Use release branch (recommended):
 ``` vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 ```
-to upgrade with new release only:
-
-``` vim
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install({'tag':1})}}
-```
 
 Build from source code:
 
@@ -50,11 +46,11 @@ Build from source code:
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 ```
 
-run the command `:PlugInstall` in your (neo)vim.
+Run command `:PlugInstall` in your (neo)vim.
 
 ## Using [dein.vim](https://github.com/Shougo/dein.vim)
 
-Install with compiled nightly build (recommended):
+Use release branch (recommended):
 
 ``` vim
 call dein#add('neoclide/coc.nvim', {'merge':0, 'rev': 'release'})
