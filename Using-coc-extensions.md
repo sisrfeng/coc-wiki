@@ -75,6 +75,12 @@ Extensions will be loaded and activated after the install succeeds.
 
 **Note** you can add extension names to the `g:coc_global_extensions` variable, and coc will install the missing extensions for you on server start.
 
+To install extensions with shell script, use command like:
+``` sh
+# install coc-json & coc-html and exit
+vim -c 'CocInstall -sync coc-json coc-html|q'
+```
+
 ### Use vim's plugin manager for coc extension
 
 Starting from recent master of coc.nvim, you can manage coc extension by using a plugin manager for vim, like [vim-plug](https://github.com/junegunn/vim-plug), coc will try to load coc extensions from your `&rtp`
@@ -93,7 +99,13 @@ You **don't** need to update coc extensions manually, coc detects acceptable new
 
 To disable automatic updates, change the setting: `coc.preferences.extensionUpdateCheck` to `"never"`.
 
-Use the command `:CocUpdate` or `:CocUpdateSync` to update all extensions to the latest version, the upgrade won't work if you're not using latest release version of coc.nvim to avoid possible breaking changes.
+Use the command `:CocUpdate` or `:CocUpdateSync` to update all extensions to the latest version.
+
+To upgrade extensitions with shell script, use command like:
+
+``` sh
+vim -c 'CocUpdateSync|q'
+```
 
 ## Uninstall coc extension
 
