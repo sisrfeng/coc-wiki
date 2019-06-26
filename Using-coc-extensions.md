@@ -4,7 +4,7 @@ The main reason is that some language servers provided by the community behave b
 
 Compared to configured language servers, extensions have more features.
 
-* Extensions can contribute properties to the schema `coc-settings.json`, like in VSCode you can write the configuration with completion and validation support yourself when you have `coc-json` installed.
+* Extensions can contribute properties to the schema `coc-settings.json`, like in VSCode you can write the configuration with completion and validation support when you have `coc-json` installed.
   <img width="561" alt="Screen Shot 2019-06-26 at 3 22 05 PM" src="https://user-images.githubusercontent.com/251450/60159618-32cd3800-9826-11e9-886e-b51fe07bf988.png">
 
 * Extensions can contribute commands (like VSCode), you can use the coc commands in different ways:
