@@ -106,13 +106,13 @@ To upgrade extensions with shell script, use command like:
 vim -c 'CocUpdateSync|q'
 ```
 
-## Uninstall coc extension
+### Uninstall coc extension
 
 ```
 :CocUninstall coc-css
 ```
 
-## Manage extensions using CocList
+### Manage extensions with CocList
 
 Run command:
 ```
