@@ -5,8 +5,7 @@ The main reason is that some language servers provided by the community behave b
 Compared to configured language servers, extensions have more features.
 
 * Extensions can contribute properties to the schema `coc-settings.json`, like in VSCode you can write the configuration with completion and validation support yourself when you have `coc-json` installed.
-    
-  <img width="466" alt="screen shot 2018-09-07 at 5 03 24 pm" src="https://user-images.githubusercontent.com/251450/45209588-f5f87a80-b2bf-11e8-80c0-fe5ff689f947.png">
+  <img width="561" alt="Screen Shot 2019-06-26 at 3 22 05 PM" src="https://user-images.githubusercontent.com/251450/60159618-32cd3800-9826-11e9-886e-b51fe07bf988.png">
 
 * Extensions can contribute commands (like VSCode), you can use the coc commands in different ways:
     * Use the command `:CocList commands` to open the command list and choose one you need.
@@ -143,7 +142,7 @@ If an extension throws uncaught errors, you can get the error message by: `:mess
 
 For extensions using a language server, you can use the output channel. Check out https://github.com/neoclide/coc.nvim/wiki/Debug-language-server#using-output-channel.
 
-If the extension is using stdio to write messages, you can get the output from the log file of coc, the log file can be found by runnung the command: `node -e 'console.log(path.join(os.tmpdir(), "coc-nvim.log"))'`.
+If the extension is using stdio to write messages, you can get the output from the log file of coc, the log file can be found by command: `:CocOpenLog` in your vim. Use `$NVIM_COC_LOG_FILE` environment variable to use fixed filename for the log file.
 
 The default log level is info. To get the debug information, set the `NVIM_COC_LOG_LEVEL` environment variable by the command: `export NVIM_COC_LOG_LEVEL=debug`.
 
