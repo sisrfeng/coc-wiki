@@ -20,15 +20,11 @@ Install the latest stable [nodejs](https://nodejs.org/), may not work on windows
 curl -sL install-node.now.sh | sh
 ```
 
-Install [yarn](https://yarnpkg.com/)
-
-Yarn is required for build coc.nvim from source code and manage extensions.
+Install [yarn](https://yarnpkg.com/) if you want to build coc.nvim from source code.
 
 ```
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 ```
-
-**Note** yarn is not required if you want to use vim's plugin manager to manage coc extensions.
 
 ## Add coc.nvim to your vim's runtimepath.
 
@@ -66,7 +62,7 @@ call dein#add('neoclide/coc.nvim', {'merge':0, 'build': 'yarn install --frozen-l
 
 **Note:** depends on your network and CPU, it might take a long time for your first build. 
 
-If your have trouble with compiling the source code when using dein, try command:
+If you have trouble with compiling the source code when using dein, try command:
 
 ``` sh
 cd ~/.cache/dein/repos/github.com/neoclide/coc.nvim
@@ -119,7 +115,7 @@ Watchman works great even when you have multiple neovim instance started in the 
 
 ## Automation script
 
-To setup coc and extensions faster on different machines, you can use a shell script, for example:
+To set up coc.nvim and extensions faster on different machines, you can use a shell script, for example:
 
 ``` sh
 #!/usr/bin/env bash
@@ -133,12 +129,6 @@ if [ ! -x "$(command -v node)" ]; then
     export PATH="/usr/local/bin/:$PATH"
     # Or use apt-get
     # sudo apt-get install nodejs
-fi
-
-# Install yarn
-if [ ! -x "$(command -v yarn)" ]; then
-    curl --fail -o- -LSs https://yarnpkg.com/install.sh | sh
-    export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 fi
 
 # Use package feature to install coc.nvim
@@ -159,6 +149,6 @@ if [ ! -f package.json ]
 then
   echo '{"dependencies":{}}'> package.json
 fi
-# Change arguments to the extensions you need
-yarn add coc-snippets coc-highlight
+# Change extension names to the extensions you need
+npm install coc-snippets --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 ```
