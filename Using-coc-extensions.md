@@ -101,7 +101,7 @@ To disable automatic updates, change the setting: `coc.preferences.extensionUpda
 
 Use the command `:CocUpdate` or `:CocUpdateSync` to update all extensions to the latest version.
 
-To upgrade extensitions with shell script, use command like:
+To upgrade extensions with shell script, use command like:
 
 ``` sh
 vim -c 'CocUpdateSync|q'
