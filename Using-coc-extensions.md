@@ -135,6 +135,7 @@ Supported actions (hit tab to activate action menu):
 * `disable`: disable selected extension(s).
 * `reload`: reload selected extension(s).
 * `uninstall`: remove selected extension(s).
+* `lock`: toggle lock of extension, locked extension won't be updated by `:CocUpdate`
 
 ## Debug coc extension
 
