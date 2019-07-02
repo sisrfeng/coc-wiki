@@ -747,3 +747,17 @@ Checkout [JuliaEditorSupport/LanguageServer.jl](https://github.com/JuliaEditorSu
 ### R
 
 Use [coc-r-lsp](https://github.com/neoclide/coc-r-lsp) extension.
+
+### Groovy
+
+Using [`Language server for Groovy`](https://github.com/prominic/groovy-language-server). Checkout sources, build it and place `groovy-language-server-all.jar` to any folder
+
+``` jsonc
+  "languageserver": {
+    "groovy": {
+      "command": "java",
+      "args" : ["-jar", "/path/to/groovy-language-server-all.jar"],
+      "filetypes": ["groovy"]
+     }
+  }
+```
