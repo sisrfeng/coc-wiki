@@ -113,7 +113,15 @@ For Python `:CocInstall coc-python`
 
 For PHP `:CocInstall coc-phpls`
 
+and so on...
+
 For more information check out [Using coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions)
+
+## Add some configuration
+
+Run `:CocConfig`, which will open main config file `~/.config/nvim/coc-settings.json` (empty for new installation)
+
+For more information check out [Using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file)
 
 ## Optional install watchman for file watching
 
