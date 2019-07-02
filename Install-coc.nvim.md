@@ -105,6 +105,16 @@ Use `g:coc_node_path` variable to specify node executable that start service of 
 
 Another useful command is `:CocInfo`, after service started, you can use it get some useful information about the service.
 
+## Install extension for programming languages you use daily
+
+For example, for generic web-development consider `:CocInstall coc-tsserver coc-json coc-html coc-css`
+
+For Python `:CocInstall coc-python`
+
+For PHP `:CocInstall coc-phpls`
+
+For more information check out [Using coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions)
+
 ## Optional install watchman for file watching
 
 For feature [workspace_didChangeWatchedFiles](https://microsoft.github.io/language-server-protocol/specification#workspace_didChangeWatchedFiles) to work, you will need to install [watchman](https://facebook.github.io/watchman) by following https://facebook.github.io/watchman/docs/install.html.
