@@ -119,7 +119,7 @@ For more information check out [Using coc extensions](https://github.com/neoclid
 
 ## Add some configuration
 
-Run `:CocConfig`, which will open main config file `~/.config/nvim/coc-settings.json` (empty for new installation)
+Run `:CocConfig`, which will open main config file `~/.config/nvim/coc-settings.json` (empty for new installation). Add empty JSON object (like `{}`) and place here list of [language servers configuration](https://github.com/neoclide/coc.nvim/wiki/Language-servers) that not is not covered by installed extensions (for example, if you already installed `coc-python` you don't need to place configuration for `pyls` server).
 
 For more information check out [Using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file)
 
