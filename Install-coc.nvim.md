@@ -131,7 +131,7 @@ Watchman works great even when you have multiple neovim instance started in the 
 
 **Warning** don't create `.watchmanconfig` file in your home directory.
 
-**Note** watchman can take lots of memories, use command `watchman watch-del-all` to free the watchers.
+**Note** watchman can take lots of memories, use command `watchman watch-del-all` in your terminal to free the watchers.
 
 ## Automation script
 
