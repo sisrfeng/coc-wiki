@@ -7,6 +7,8 @@ COC has 3 different trigger modes:
 * `always`, the default mode, which triggers completion on a word letter inserted and `triggerCharacters` defined by the current activated sources.
 * `trigger`, only trigger completion when you type `triggerCharacters` defined by the completion sources.
 * `none`, disable auto trigger completion, you will have to trigger the completion manually.
+Example
+    "suggest.autoTrigger": "always""
 
 You can change the trigger mode by [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file)
 
