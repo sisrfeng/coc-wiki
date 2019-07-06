@@ -1,41 +1,48 @@
-Coc has full featured support for completion with LSP and doesn't bother with vim's `completeopt`.
+Coc.nvim has full support for LSP completion, including snippet and additional text edits support.
+
+By default, coc.nvim use its own `completeopt` option during completion to provide the best auto completion experience.
+
+There's no function can be used as `omnifunc` option provided from coc.nvim since it's not possible to support all LSP completion features when using `omnifunc` option.
 
 ## Trigger mode of the completion
 
-COC has 3 different trigger modes:
+There're 3 different trigger modes:
 
-* `always`, the default mode, which triggers completion on a word letter inserted and `triggerCharacters` defined by the current activated sources.
-* `trigger`, only trigger completion when you type `triggerCharacters` defined by the completion sources.
+* `always`, the default mode, which triggers completion on a word letter inserted and `triggerCharacters` (or trigger pattern match) defined by the current activated sources.
+* `trigger`, only trigger completion when you type `triggerCharacters` (or trigger pattern match) defined by the completion sources.
 * `none`, disable auto trigger completion, you will have to trigger the completion manually.
 
-You can change the trigger mode by [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file) and change this value like:
+Some completion behavior can be changed by [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file).
+
+To change the trigger mode, add:
 
     "suggest.autoTrigger": "trigger"
 
-To support completion trigger on inserting enter, add
+To support completion trigger on insert enter, add
   
     "suggest.triggerAfterInsertEnter": true
 
-to your `coc-settings.json`.
 To change the completion timeout, use:
  
     "suggest.timeout": 500,
 
-To make the automatically select the first completed item, use: 
+To make the completion automatically select the first completed item, use: 
 
-	"suggest.noselect": false,
+    "suggest.noselect": false,
 
 To make the completion trigger with two input characters, use: 
 
-	"suggest.minTriggerInputLength": 2
+    "suggest.minTriggerInputLength": 2
 
 To enable the commit characters feature, use: 
 
-	"suggest.acceptSuggestionOnCommitCharacter": true
+    "suggest.acceptSuggestionOnCommitCharacter": true
 
 To change the indicator of snippet items, use:
 
-	"suggest.snippetIndicator": "►"
+    "suggest.snippetIndicator": "►"
+
+To get the full list checkout the help by `:h coc-configuration` in your vim.
 
 ## Use `<Tab>` or custom key for trigger completion
 
