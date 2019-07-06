@@ -8,9 +8,9 @@ COC has 3 different trigger modes:
 * `trigger`, only trigger completion when you type `triggerCharacters` defined by the completion sources.
 * `none`, disable auto trigger completion, you will have to trigger the completion manually.
 
-You can change the trigger mode by [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file) and setting this value
+You can change the trigger mode by [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file) and change this value like:
 
-    "suggest.autoTrigger": "always""
+    "suggest.autoTrigger": "trigger"
 
 To support completion trigger on inserting enter, add
   
