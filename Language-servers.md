@@ -641,9 +641,8 @@ Using [Texlab](https://texlab.netlify.com/):
   }
 ```
 
-* Make sure `java` in your $PAHT.
 * May need to add `let g:tex_flavor = "latex"` to correct buffer filetype, check it by `:echo &filetype`.
-* Adjsut the path to textlab.jar accordingly.
+* Adjust the path to textlab accordingly, or simply use as command name, from `PATH`.
 * For bibTeX integration, you should use package `biblatex`, check the gif on https://texlab.netlify.com/
 
 ### Elm
