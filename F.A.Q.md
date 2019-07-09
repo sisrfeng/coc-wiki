@@ -2,7 +2,7 @@ Here's some common problems that you may need to understand when working with co
 
 ## Can't get keywords completion items from other buffer.
 
-The buffer source only provide words from buffers meet these conditions:
+The buffer source only provide keywords from buffers meet these conditions:
 
 * Should be loaded by vim, use `:ls` to get buffer list and make sure there's `h` for hidden buffers, you can also use `bufloaded` function to check if a buffer is loaded.
 * The `buftype` option should be empty, check it by `:echo &buftype` in your buffer.
