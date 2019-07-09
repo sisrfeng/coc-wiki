@@ -1,5 +1,13 @@
 Here's some common problems that you may need to understand when working with coc.nvim.
 
+## Can't get keywords completion items from other buffer.
+
+The buffer source only provide words from buffers meet these conditions:
+
+* Should be loaded by vim, use `:ls` to get buffer list and make sure there's `h` for hidden buffers, you can also use `bufloaded` function to check if a buffer is loaded.
+* The `buftype` option should be empty, check it by `:echo &buftype` in your buffer.
+* The file associated with buffer should not be git ignored, add `"coc.source.buffer.ignoreGitignore": false` to your config file if you want keywords from git ignored files.
+
 ## Environment node doesn't meet the requirement.
 
 Use `let g:coc_node_path = '/path/to/node'` to make coc.nvim use custom node executable.
