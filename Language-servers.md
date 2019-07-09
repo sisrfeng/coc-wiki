@@ -628,7 +628,7 @@ Make sure the digestif executable is available on your $PATH or use absolute pat
   }
 ```
 
-Using [Texlab](https://texlab.netlify.com/):
+For [Texlab](https://texlab.netlify.com/), use [coc-texlab](https://github.com/fannheyward/coc-texlab) or:
 
 ``` jsonc
   "languageserver": {
