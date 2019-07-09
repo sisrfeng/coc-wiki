@@ -633,8 +633,7 @@ Using [Texlab](https://texlab.netlify.com/):
 ``` jsonc
   "languageserver": {
     "latex": {
-      "command": "java",
-      "args": ["-jar", "/PATH/TO/texlab.jar"],
+      "command": "/PATH/TO/texlab",
       // not start server at home directory, since it won't work.
       "ignoredRootPaths": ["~"],
       "filetypes": ["tex", "bib", "plaintex", "context"]
