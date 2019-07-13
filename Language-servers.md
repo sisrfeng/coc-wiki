@@ -166,6 +166,7 @@ Using [clangd](http://llvm.org/viewvc/llvm-project/clang-tools-extra/trunk/clang
   "languageserver": {
     "clangd": {
       "command": "clangd",
+      "args": ["--background-index"],
       "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"],
       "filetypes": ["c", "cpp", "objc", "objcpp"]
     }
