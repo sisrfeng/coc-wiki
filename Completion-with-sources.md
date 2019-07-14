@@ -114,7 +114,12 @@ You can configure completion sources by using coc-settings.json
 
 ### More sources
 
-* [coc-sources](https://github.com/neoclide/coc-sources)
-* [coc-neco](https://github.com/neoclide/coc-neco)
-* [coc-snippets](https://github.com/neoclide/coc-snippets)
-* [coc-neoinclude](https://github.com/jsfaint/coc-neoinclude)
+- [coc-sources](https://github.com/neoclide/coc-sources): includes some common
+  completion source extensions.
+- [coc-neco](https://github.com/neoclide/coc-neco): viml completion support.
+- [coc-snippets](https://github.com/neoclide/coc-snippets): snippets solution for coc.nvim
+- [coc-vimtex](https://github.com/neoclide/coc-vimtex): vimtex integration.
+- [coc-neoinclude](https://github.com/jsfaint/coc-neoinclude): neoinclude
+  integration.
+- [coc-lbdbq](https://github.com/zidhuss/coc-lbdbq): email address completion.
+- [coc-browser](https://github.com/voldikss/coc-browser): web browser words completion.
