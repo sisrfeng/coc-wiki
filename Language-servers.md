@@ -366,7 +366,8 @@ Using [reason-language-server](https://github.com/jaredly/reason-language-server
   "languageserver": {
      "reason": {
       "command": "/absolute/path/to/reason-language-server.exe",
-      "filetypes": ["reason"]
+      "filetypes": ["reason"],
+      "settings": {"reason_language_server" : {"format_width": 120}}
      }
   }
 ```
