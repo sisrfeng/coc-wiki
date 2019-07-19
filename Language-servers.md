@@ -500,7 +500,7 @@ Using [elixir-ls](https://github.com/JakeBecker/elixir-ls)
 
 ### Python
 
-Use [coc-python](https://github.com/neoclide/coc-python) extension is recommended.
+Use [coc-python](https://github.com/neoclide/coc-python) extension is recommended.  If using coc-python you *should not* configure the language server as shown here.
 
 Make sure you've installed the [python-language-server](https://github.com/palantir/python-language-server)
 
