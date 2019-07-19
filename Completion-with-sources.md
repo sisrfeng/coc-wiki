@@ -81,13 +81,19 @@ inoremap <silent><expr> <c-space> coc#refresh()
     ``` vim
     inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
     ```
+  **Note:** you have to remap `<cr>` to make sure it confirm completion when pum is visible.
+
   **Note:** `\<C-g>u` is used to break undo level.
    
   To make `<cr>` select the first completion item and confirm the completion when no item has been selected:
     ``` vim
     inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
     ```
+  To make coc.nvim format your code on `<cr>`, use keymap:
 
+    ``` vim
+    inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+    ```
 
 * Close the preview window when completion is done.
     ``` vim
