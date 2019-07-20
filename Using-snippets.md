@@ -83,4 +83,4 @@ Open a file with a snippet related filetype, like `foo.js` as `javascript` and t
 
 <img width="724" alt="screen shot 2018-09-27 at 2 25 41 pm" src="https://user-images.githubusercontent.com/251450/46127038-edadb280-c261-11e8-8e94-957b6d62c9a9.png">
 
-**Tip** VSCode snippets extension can also installed by use [vim-plug](https://github.com/junegunn/vim-plug)
+**Tip** VSCode snippets extension can also be installed by use [vim-plug](https://github.com/junegunn/vim-plug)
