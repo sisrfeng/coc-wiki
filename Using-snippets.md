@@ -76,7 +76,7 @@ To load VSCode snippets, you need install [coc-snippets](https://github.com/neoc
 Then install a VSCode snippet extension from GitHub with a command like:
 
 ```
-:CocInstall https://github.com/andys8/vscode-jest-snippets.git#master
+:CocInstall https://github.com/andys8/vscode-jest-snippets
 ```
 
 Open a file with a snippet related filetype, like `foo.js` as `javascript` and type part of the prefix characters.
