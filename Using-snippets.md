@@ -37,6 +37,8 @@ A snippet session would cancel under the following conditions:
 
 You can nest snippets in an active snippet session, just like VSCode.
 
+If you don't want to expand snippet on completion, just use `<C-n>` to insert the extracted text without confirm completion, or checkout options of your language server to disable snippet complete items.
+
 ## Configure snippets workflow
 
 To navigate forward/backward of a snippet placeholder, use `<C-j>` and `<C-k>`.
