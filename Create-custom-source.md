@@ -10,25 +10,21 @@ A custom vim completion source can be created with a few simple steps.
 
 ## Start with a simple example
 
-Assume `foo` is the source name.
+Assume `email` is the source name.
 
 * Create folder `autoload/coc/source` in any of your vim `runtimepath`, the default runtimepath of neovim is `$XDG_CONFIG_HOME/nvim` and `~/.vim` on vim.
 
-* Create a file named `foo.vim` in folder `autoload/coc/source`
+* Create a file named `email.vim` in folder `autoload/coc/source`
 
 * Add content:
     ``` vim
-       " vim source for emails
+    " vim source for emails
     function! coc#source#email#init() abort
       return {
             \ 'priority': 9,
             \ 'shortcut': 'Email',
             \ 'triggerCharacters': ['@']
             \}
-    endfunction
-
-    function! coc#source#email#should_complete(opt) abort
-      return 1
     endfunction
 
     function! coc#source#email#complete(opt, cb) abort
