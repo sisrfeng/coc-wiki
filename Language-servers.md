@@ -383,9 +383,8 @@ Using [reason-language-server](https://github.com/jaredly/reason-language-server
 ``` jsonc
   "languageserver": {
      "reason": {
-      "command": "/absolute/path/to/reason-language-server.exe",
-      "filetypes": ["reason"],
-      "settings": {"reason_language_server" : {"format_width": 120}}
+      "command": "reason-language-server",
+      "filetypes": ["reason"]
      }
   }
 ```
