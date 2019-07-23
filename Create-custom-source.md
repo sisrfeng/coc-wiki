@@ -40,8 +40,9 @@ The options are returned by `coc#source#{name}#init` function, available options
 
 * `shortcut`: used by menu, uses source name if omitted.
 * `priority`: a number for adjusting the sort results completion items. It should be number between 0-99. The  default is `1`.
-* `filetypes`: array of filetype names this source should be triggered by. Available for all filetypes if ommited.
-* `firstMatch`: if not falsy, only the completion item that has the first letter matching the user input will be shown.
+* `filetypes`: array of filetype names this source should be triggered by. Available for all filetypes when ommited.
+* `firstMatch`: if not falsy, only the completion item that has the first letter matching the user input will be shown
+* `triggerCharacters`: trigger characters for this source.
 
 All options are optional.
 
