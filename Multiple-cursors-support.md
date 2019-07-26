@@ -56,13 +56,13 @@ When cursors session is activated, you can change one placeholder to reflect cha
 * Use `"cursors.nextKey"` to jump to next position of cursors range, default to `<C-n>`.
 * Use `"cursors.previousKey"` to jump to previous position of cursors range, default to `<C-p>`.
 
-The key-mappings would be created when cursors session activated, and remove on session cancelled.
+The key-mappings would be created when cursors session activated, and removed when session cancelled.
 
 ## Cancel cursors session
 
 Use `"cursors.cancelKey"` to cancel cursors session, default to `<Esc>`.
 
-The session would also be canceled when buffer change can't be applied for ranges or the cursor jump to other window.
+The session would also be canceled when buffer change can't be applied for ranges or the cursor jump to another window.
 
 ## Use refactor action
 
@@ -75,15 +75,15 @@ When the window get opened, related ranges would be added to a new cursors sessi
 * Change the placeholder for rename.
 * Save the buffer for synchronize changes to related buffers.
 * Add or remove lines.
+* Press `<CR>` to open line under cursor in right split window.
 * Change content of related buffers, the changes would be synchronized to refactor buffer.
-* Press `<CR>` to open related buffer line on right split window.
-* Fold the ranges by command like `zi`.
+* Fold the ranges by commands like `zi`.
 
 <img width="632" alt="Screen Shot 2019-07-26 at 7 11 52 PM" src="https://user-images.githubusercontent.com/251450/61948104-8b385680-afd9-11e9-9858-cc980985ce3c.png">
 
 ## Use CocSearch command
 
-For rename variable across files in current cwd, you can use `:CocSearch` command which requires [ripgrep](https://github.com/BurntSushi/ripgrep) to work.
+For rename variable across files in current cwd, use `:CocSearch` command which requires [ripgrep](https://github.com/BurntSushi/ripgrep) to work.
 
 Each range of lines would be added to refactor window asynchronously and matched ranges would be added to cursors session for rename.
 
