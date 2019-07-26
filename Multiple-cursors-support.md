@@ -88,6 +88,12 @@ When the window get opened, related ranges would be added to a new cursors sessi
 
 <img width="632" alt="Screen Shot 2019-07-26 at 7 11 52 PM" src="https://user-images.githubusercontent.com/251450/61948104-8b385680-afd9-11e9-9858-cc980985ce3c.png">
 
+Available configurations for refactor:
+
+* `refactor.openCommand`: Open command for refactor window, default to `vsplit`.
+* `refactor.beforeContext`: Print num lines of leading context before each match, default to `3`.
+* `refactor.afterContext`: Print num lines of trailing context after each match., default to `3`.
+
 ## Use CocSearch command
 
 For rename variable across files in current cwd, use `:CocSearch` command which requires [ripgrep](https://github.com/BurntSushi/ripgrep) to work.
