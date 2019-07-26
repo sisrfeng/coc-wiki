@@ -1,6 +1,13 @@
 By use multiple cursors feature, you can change many places of current document at one time.
 
-Multiple cursors is actually multiple text ranges, which are highlighted by `CocCursorRange` highlight group (linked to `Search` by default).
+Multiple cursors are actually multiple text ranges.
+
+The ranges are highlighted by `CocCursorRange` highlight group (linked to `Search` by default). To override the highlight, use command like:
+
+``` vim
+hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
+```
+in your `.vimrc`
 
 ## Start multiple cursors session
 
