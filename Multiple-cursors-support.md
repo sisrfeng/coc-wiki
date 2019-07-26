@@ -87,7 +87,9 @@ For rename variable across files in current cwd, you can use `:CocSearch` comman
 
 Each range of lines would be added to refactor window asynchronously and matched ranges would be added to cursors session for rename.
 
-Tipe:
+<img width="620" alt="Screen Shot 2019-07-26 at 7 25 53 PM" src="https://user-images.githubusercontent.com/251450/61948853-8aa0bf80-afdb-11e9-8e81-107eaed53c4b.png">
+
+Tips:
 
 * Use `<tab>` to get available options after type `:CocSearch` command.
 * Use `:CocSearch -w [word]` for word match.
