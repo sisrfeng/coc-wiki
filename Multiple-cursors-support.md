@@ -45,9 +45,7 @@ One common task is rename the variable name under cursor.
 
 Use command `:CocCommand document.renameCurrentWord` to start cursors session with ranges contain current word.
 
-**Note:** the word are extracted by `iskeyword` option of current buffer.
-
-**Note:** it's simply strict match of words, instead of use rename feature of language server,
+**Note:** the word ranges are extracted language server when possible, when language server not available, strict match of words in current buffer is used.
 
 ## Make changes for cursors
 
