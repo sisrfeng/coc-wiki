@@ -18,6 +18,8 @@ There're some key-mappings for start multiple cursors:
 * `<Plug>(coc-cursors-range)` add current visual selected range to cursors.
 * `<Plug>(coc-cursors-operator)` use operator for add range to cursors.
 
+You can cancel the range under cursor by trigger one of those key-mappings.
+
 Example usage:
 
 ``` viml
