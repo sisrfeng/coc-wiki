@@ -102,5 +102,6 @@ Each range of lines would be added to refactor window asynchronously and matched
 
 Tips:
 
+* **Don't** change the buffer when search is not finished.
 * Use `<tab>` to get available options after type `:CocSearch` command.
 * Use `:CocSearch -w [word]` for word match.
