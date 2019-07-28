@@ -1,4 +1,4 @@
-By use multiple cursors feature, you can change many places of current document at one time.
+With the multiple cursors feature, you can change many places of current document at one time.
 
 Multiple cursors are actually multiple text ranges.
 
