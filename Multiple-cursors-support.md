@@ -30,6 +30,13 @@ xmap <silent> <C-d> <Plug>(coc-cursors-range)
 nmap <leader>x  <Plug>(coc-cursors-operator)
 ```
 
+or use the following to add current to selection and go to next:
+
+```viml
+nmap <silent> <C-d> <Plug>(coc-cursors-word)*
+xmap <silent> <C-d> y/\V<C-r>=escape(@",'/\')<CR><CR>gN<Plug>(coc-cursors-range)gn
+```
+
 Or use internal command API to add ranges, like:
 ``` typescript
 import {commands} from 'coc.nvim'
