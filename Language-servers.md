@@ -207,30 +207,17 @@ You may simply install the [coc-rls](https://github.com/neoclide/coc-rls/) exten
   }
 ```
 
-It's necessary to `rustup component add rust-src` and build `rust-analyzer` from sources (just `cargo install-lsp`).
+It's necessary to `rustup component add rust-src` and build `rust-analyzer` from sources (just `cargo install-ra --server`).
 
 ### Go
 
-Using [gopls](https://github.com/saibing/tools)
+Using [gopls](https://github.com/golang/go/wiki/gopls)
 
 ```jsonc
   "languageserver": {
     "golang": {
       "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
-    }
-  }
-```
-
-Using [saibing/bingo](https://github.com/saibing/bingo)
-
-``` jsonc
-  "languageserver": {
-    "golang": {
-      "command": "bingo",
-      "args": ["--diagnostics-style=instant"],
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "rootPatterns": ["go.mod"],
       "filetypes": ["go"]
     }
   }
