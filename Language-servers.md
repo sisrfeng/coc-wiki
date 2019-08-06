@@ -778,3 +778,17 @@ Using [`Language server for Groovy`](https://github.com/prominic/groovy-language
      }
   }
 ```
+
+### Terraform
+
+Using [`Terraform-LSP`](https://github.com/juliosueiras/terraform-lsp). Build it and place it into any folder.
+
+```jsonc
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform"],
+      "initializationOptions": {}
+    }
+  }
+```
