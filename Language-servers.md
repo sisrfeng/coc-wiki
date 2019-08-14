@@ -223,6 +223,8 @@ Using [gopls](https://github.com/golang/go/wiki/gopls)
   }
 ```
 
+If want more debug，add` "args": ["serve", "-debug", "0.0.0.0:8484", "-rpc.trace"],` below `command`.
+
 Using [sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
 
 ``` jsonc
