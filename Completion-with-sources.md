@@ -1,14 +1,14 @@
-Coc.nvim has full support for LSP completion, including snippet and additional text edits support.
+Coc.nvim has full support for [Language Server Protocol completion](https://langserver.org/), including snippet and additional text edits support.
 
 By default, coc.nvim use its own `completeopt` option during completion to provide the best auto completion experience.
 
-There's no function can be used as `omnifunc` option provided from coc.nvim since it's not possible to support all LSP completion features when using `omnifunc` option.
+There's no function of coc.nvim that can be used as `omnifunc` because it's not possible to support all LSP completion features when using `omnifunc`.
 
-## Trigger mode of the completion
+## Trigger mode of completion
 
-There're 3 different trigger modes:
+There are 3 different trigger modes:
 
-* `always`, the default mode, which triggers completion on a word letter inserted and `triggerCharacters` (or trigger pattern match) defined by the current activated sources.
+* `always`, the default mode, which triggers completion on a letter inserted or `triggerCharacters` (or trigger pattern match) defined by the current activated sources.
 * `trigger`, only trigger completion when you type `triggerCharacters` (or trigger pattern match) defined by the completion sources.
 * `none`, disable auto trigger completion, you will have to trigger the completion manually.
 
@@ -106,7 +106,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 Name         |Shortcut| Description                                             
 ------------ |--------| -------------                                           
 `around`     |[A]     |Words of the current buffer.                                
-`buffer`     |[B]     |Words of none current buffer.                           
+`buffer`     |[B]     |Words of other open buffers.                           
 `file`       |[F]     |Filename completion, auto detected.  
 
 ### Configuring sources
