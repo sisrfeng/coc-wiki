@@ -178,7 +178,7 @@ Using [cquery](https://github.com/cquery-project/cquery)
   }
 ```
 
-Using [clangd](http://llvm.org/viewvc/llvm-project/clang-tools-extra/trunk/clangd/)
+Using [clangd](https://clang.llvm.org/extra/clangd/Installation.html)
 
 ``` jsonc
   "languageserver": {
