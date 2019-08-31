@@ -195,9 +195,9 @@ Like many tools, clangd relies on the presence of a [JSON compilation database](
 
 ### Rust
 
-1. install [coc-rls](https://github.com/neoclide/coc-rls/) which uses `rls`
-1. install [coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer) which uses `rust-analyzer`
-1. or try [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer) without an extension:
+* install [coc-rls](https://github.com/neoclide/coc-rls/) which uses `rls`
+* or install [coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer) which uses `rust-analyzer`
+* or try [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer) without an extension:
 
 ``` jsonc
   "languageserver": {
