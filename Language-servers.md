@@ -665,21 +665,24 @@ Using [elm-tooling/elm-language-server](https://github.com/elm-tooling/elm-langu
   "languageserver": {
     "elmLS": {
       "command": "elm-language-server",
-      "args": ["--stdio"],
       "filetypes": ["elm"],
       "rootPatterns": ["elm.json"],
       "initializationOptions": {
-        "runtime": "node",
-        "elmPath": "elm",
-        "elmFormatPath": "elm-format",
-        "elmTestPath": "elm-test"
+        "elmPath": "elm", // optional
+        "elmFormatPath": "elm-format", // optional
+        "elmTestPath": "elm-test", // optional
+        "elmAnalyseTrigger": "change" // optional
       }
     }
   }
 ```
 
-* Make sure `elm-language-server`, `elm`, `elm-format` and `elm-test` are in your $PATH.
-* Checkout [github page](https://github.com/elm-tooling/elm-language-server#cocnvim) for more information.
+`elm-language-server` needs [`elm`](https://guide.elm-lang.org/install.html), [`elm-format`](https://github.com/avh4/elm-format) and [`elm-test`](https://github.com/elm-explorations/test)
+* If a path like `elmPath` is defined, it'll be used.
+* If a path is missing, `elm-language-server` will try to load it from a local npm installation folder. Otherwise a global installation provided via `PATH` is used.
+* `elmAnalyseTrigger`: `elm-analyse` (linting) is executed on 'change', 'save' or 'never' (default: 'change')
+
+Checkout [github page](https://github.com/elm-tooling/elm-language-server#cocnvim) for more information.
 
 ### Fortran
 
