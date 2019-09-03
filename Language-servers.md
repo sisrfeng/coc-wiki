@@ -448,6 +448,7 @@ Using [Haskell IDE Engine](https://github.com/haskell/haskell-ide-engine)
     ],
     "initializationOptions": {
       "languageServerHaskell": {
+        "hlintOn": true
       }
     },
   }
