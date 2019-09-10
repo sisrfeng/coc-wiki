@@ -30,6 +30,10 @@
 * [Result of complete](https://github.com/neoclide/coc.nvim/wiki/Create-custom-source#result-of-complete)
 * [Optional functions](https://github.com/neoclide/coc.nvim/wiki/Create-custom-source#optional-functions)
 
+## [Environment variables](https://github.com/neoclide/coc.nvim/wiki/Environment-variables)
+
+* [Logger](https://github.com/neoclide/coc.nvim/wiki/Environment-variables#logger)
+
 ## [F.A.Q](https://github.com/neoclide/coc.nvim/wiki/F.A.Q)
 
 * [Why does the `omni` source require user configuration to work?](https://github.com/neoclide/coc.nvim/wiki/F.A.Q#why-omni-source-requires-user-configuration-to-work)
