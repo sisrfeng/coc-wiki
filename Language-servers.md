@@ -791,3 +791,21 @@ Using [`Terraform-LSP`](https://github.com/juliosueiras/terraform-lsp). Build it
     }
   }
 ```
+
+### Dhall
+
+Using [`dhall-lsp-server`](https://github.com/dhall-lang/dhall-haskell/tree/master/dhall-lsp-server). Follow the instructions to install it.
+
+```jsonc
+{
+  "languageserver": {
+    "dhall": {
+      "command": "dhall-lsp-server",
+      "filetypes": [
+        "dhall"
+      ]
+    }
+  }
+}
+```
+
