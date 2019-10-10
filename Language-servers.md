@@ -401,7 +401,7 @@ Using [flow-language-server](https://github.com/flowtype/flow-language-server), 
 
 ``` jsonc
   // disable tsserver for javascript
-  "tsserver.enableJavascript": true,
+  "tsserver.enableJavascript": false,
   "languageserver": {
     "flow": {
       "command": "flow-language-server",
