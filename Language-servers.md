@@ -437,7 +437,7 @@ Using [Haskell IDE Engine](https://github.com/haskell/haskell-ide-engine)
   "haskell": {
     "command": "hie-wrapper",
     "rootPatterns": [
-      ".stack.yaml",
+      "stack.yaml",
       "cabal.config",
       "package.yaml"
     ],
@@ -450,7 +450,7 @@ Using [Haskell IDE Engine](https://github.com/haskell/haskell-ide-engine)
       "languageServerHaskell": {
         "hlintOn": true
       }
-    },
+    }
   }
 }
 ```
