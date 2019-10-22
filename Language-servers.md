@@ -86,7 +86,27 @@ Add `languageserver` section in your `coc-settings.json` for registering custom 
 
 ### Dart
 
-Using [natebosch/dart_language_server](https://github.com/natebosch/dart_language_server):
+Use [coc-flutter](https://github.com/iamcco/coc-flutter), that leverages analysis_server from dark-sdk.
+
+Use analysis_server from [dart-sdk](https://github.com/dart-lang/sdk).
+
+``` jsonc
+  "languageserver": {
+    "dart": {
+      "command": "dart",
+      "args": [
+        " change this to the path of analysis_server
+        "/usr/local/opt/dart/libexec/bin/snapshots/analysis_server.dart.snapshot",
+        "--lsp"
+      ],
+      "filetypes": ["dart"],
+      "disableDynamicRegister": true,
+      "trace.server": "verbose"
+    },
+  }
+```
+
+Or use [natebosch/dart_language_server](https://github.com/natebosch/dart_language_server):
 
 ``` jsonc
   "languageserver": {
@@ -102,24 +122,6 @@ Using [natebosch/dart_language_server](https://github.com/natebosch/dart_languag
         }
       }
     }
-  }
-```
-
-Or use analysis_server from [dart-sdk](https://github.com/dart-lang/sdk).
-
-``` jsonc
-  "languageserver": {
-    "dart": {
-      "command": "dart",
-      "args": [
-        " change this to the path of analysis_server
-        "/usr/local/opt/dart/libexec/bin/snapshots/analysis_server.dart.snapshot",
-        "--lsp"
-      ],
-      "filetypes": ["dart"],
-      "disableDynamicRegister": true,
-      "trace.server": "verbose"
-    },
   }
 ```
 
