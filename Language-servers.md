@@ -86,9 +86,9 @@ Add `languageserver` section in your `coc-settings.json` for registering custom 
 
 ### Dart
 
-Use [coc-flutter](https://github.com/iamcco/coc-flutter), that leverages analysis_server from dark-sdk.
+Use [coc-flutter](https://github.com/iamcco/coc-flutter), that leverages [analysis_server](https://github.com/dart-lang/sdk/blob/master/pkg/analysis_server/tool/lsp_spec/README.md) from [dart-sdk](https://github.com/dart-lang/sdk).
 
-Use analysis_server from [dart-sdk](https://github.com/dart-lang/sdk).
+Use analysis_server from [dart-sdk](https://github.com/dart-lang/sdk):
 
 ``` jsonc
   "languageserver": {
