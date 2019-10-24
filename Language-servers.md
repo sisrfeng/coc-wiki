@@ -215,7 +215,7 @@ It's necessary to `rustup component add rust-src` and build `rust-analyzer` from
 
 ### Go
 
-Using [gopls](https://github.com/golang/go/wiki/gopls)
+Using [gopls](https://github.com/golang/tools/tree/master/gopls)
 
 ```jsonc
   "languageserver": {
