@@ -604,7 +604,7 @@ Make sure solargraph is in your $PATH (sudo gem install solargraph) or use `sola
   "languageserver": {
     "sorbet": {
       "command": "srb",
-      "args": ["tc", "--lsp", "--enable-all-experimental-lsp-features"],
+      "args": ["tc", "--typed", "true", "--enable-all-experimental-lsp-features", "--lsp", "--disable-watchman", "--dir", "."],
       "filetypes": ["ruby"],
       "rootPatterns": ["sorbet/config"],
       "initializationOptions": {},
