@@ -13,7 +13,6 @@
 * [Improve completion experience](https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources#improve-completion-experience)
 * [Completion sources](https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources#completion-sources)
 
-
 ## [Using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file)
 
 * [Configuration file resolve](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file#configuration-file-resolve)
@@ -21,6 +20,13 @@
 * [Configuration for sources](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file#configuration-for-sources)
 * [Extension configuration](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file#extension-configuration)
 
+## [Using coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions)
+
+* [Why are coc extensions needed?](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#why-are-coc-extensions-needed)
+* [Manage coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#manage-coc-extensions)
+  * [Install extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#install-extensions)
+  * [Use vim's plugin manager for coc extension](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#use-vims-plugin-manager-for-coc-extension)
+* [Debug coc extension](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#debug-coc-extension)
 
 ## [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
 
