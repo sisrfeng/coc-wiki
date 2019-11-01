@@ -1,5 +1,11 @@
 # Contents
 
+## [Install coc.nvim](https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim)
+
+* [Requirements](https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim#requirements)
+* [Add coc.nvim to your vim's runtimepath](https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim#add-cocnvim-to-your-vims-runtimepath)
+* [Automation script](https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim#automation-script)
+
 ## [Completion with sources](https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources)
 
 * [Trigger mode of completion](https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources#trigger-mode-of-completion)
