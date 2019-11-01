@@ -1,6 +1,6 @@
 Coc.nvim is written in Typescript and runs on nodejs, you can use release branch which contains compiled javascript or build from master branch.
 
-## Install [neovim](https://github.com/neovim/neovim/releases/) or [vim](https://github.com/vim/vim)
+## Requirements
 
 * `neovim` >= `0.3.1` is required.
 * `vim` >= `8.0.1453` is required.
