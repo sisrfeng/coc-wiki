@@ -1,6 +1,6 @@
 Coc.nvim is written in Typescript and runs on nodejs, you can use release branch which contains compiled javascript or build from master branch.
 
-## Install [neovim](https://github.com/neovim/neovim/releases/) or [vim](https://github.com/vim/vim) 
+## Install [neovim](https://github.com/neovim/neovim/releases/) or [vim](https://github.com/vim/vim)
 
 * `neovim` >= `0.3.1` is required.
 * `vim` >= `8.0.1453` is required.
@@ -16,17 +16,24 @@ brew install node
 
 Install the latest stable [nodejs](https://nodejs.org/), may not work on windows.
 
-```
+```sh
 curl -sL install-node.now.sh | sh
 ```
 
 Install [yarn](https://yarnpkg.com/) if you want to build coc.nvim from source code.
 
-```
+```sh
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 ```
 
-## Add coc.nvim to your vim's runtimepath.
+**Note**: NixOS users must follow these steps:
+
+1. Install [nodejs](https://nodejs.org/en/download/) and [yarn](https://yarnpkg.com/en/docs/install) via `nix-env` or put them in `/etc/nixos/configuration.nix`
+2. `sudo nixos-rebuild switch`
+3. `Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}`
+4. Don't forget to put: `set shell=/bin/sh` in your `init.vim`.
+
+## Add coc.nvim to your vim's runtimepath
 
 ### Using [vim-plug](https://github.com/junegunn/vim-plug)
 
@@ -58,9 +65,9 @@ Build from source code:
 call dein#add('neoclide/coc.nvim', {'merge':0, 'build': 'yarn install --frozen-lockfile'})
 ```
 
-**Note:** when `'merge':0` not present, coc.nvim will be unable to start. 
+**Note:** when `'merge':0` not present, coc.nvim will be unable to start.
 
-**Note:** depends on your network and CPU, it might take a long time for your first build. 
+**Note:** depends on your network and CPU, it might take a long time for your first build.
 
 If you have trouble with compiling the source code when using dein, try command:
 
@@ -95,7 +102,7 @@ cd ~/.local/share/nvim/site/pack/coc/start
 curl --fail -L https://github.com/neoclide/coc.nvim/archive/release.tar.gz|tar xzfv -
 ```
 
-## Checkout service state.
+## Checkout service state
 
 To check to see if the coc service is running, use command `:checkhealth` in neovim (not supported by vim), the output looks like:
 
@@ -125,7 +132,7 @@ For more information check out [Using the configuration file](https://github.com
 
 ## Optional install watchman for file watching
 
-For feature [workspace_didChangeWatchedFiles](https://microsoft.github.io/language-server-protocol/specification#workspace_didChangeWatchedFiles) to work, you will need to install [watchman](https://facebook.github.io/watchman) by following https://facebook.github.io/watchman/docs/install.html.
+For feature [workspace_didChangeWatchedFiles](https://microsoft.github.io/language-server-protocol/specification#workspace_didChangeWatchedFiles) to work, you will need to install [watchman](https://facebook.github.io/watchman) by following <https://facebook.github.io/watchman/docs/install.html>.
 
 Watchman works great even when you have multiple neovim instance started in the same directory.
 
