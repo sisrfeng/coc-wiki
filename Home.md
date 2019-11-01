@@ -26,6 +26,7 @@
 * [Manage coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#manage-coc-extensions)
   * [Install extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#install-extensions)
   * [Use vim's plugin manager for coc extension](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#use-vims-plugin-manager-for-coc-extension)
+* [Implemented coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions)
 * [Debug coc extension](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#debug-coc-extension)
 
 ## [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
