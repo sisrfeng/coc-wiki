@@ -794,20 +794,11 @@ julia> Pkg.add("StaticLint")
 Registering the server:
 
 ``` jsonc
-  "languageserver": {
+    "languageserver": {
     "julia": {
       "command": "/usr/bin/julia",
       "args" : ["--startup-file=no", "--history-file=no", "-e",
-      "using LanguageServer;\
-       using Pkg;\
-       import StaticLint;\
-       import SymbolServer;\
-       env_path = dirname(Pkg.Types.Context().env.project_file);\
-       debug = false;\
-       server = LanguageServer.LanguageServerInstance(stdin, stdout, debug, env_path, \"\", Dict());\
-       server.runlinter = true;\
-       run(server);"
-       ],
+      "using LanguageServer;\n       using Pkg;\n       import StaticLint;\n       import SymbolServer;\n       env_path = dirname(Pkg.Types.Context().env.project_file);\n       debug = false;\n       server = LanguageServer.LanguageServerInstance(stdin, stdout, debug, env_path, \"\", Dict());\n       server.runlinter = true;\n       run(server);" ],
       "filetypes": ["julia"]
      }
   }
