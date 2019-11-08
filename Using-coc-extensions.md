@@ -196,7 +196,9 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-reason](https://github.com/jaredly/reason-language-server/tree/master/editor-extensions/coc.nvim)** for [`reasonml`](https://reasonml.github.io/)
 * **[coc-svelte](https://github.com/coc-extensions/coc-svelte)** for [`svelte`](https://github.com/sveltejs/svelte)
 * **[coc-flutter](https://github.com/iamcco/coc-flutter)** for [`flutter`](https://github.com/flutter/flutter)
-
+* **[coc-pyright](https://github.com/fannheyward/coc-pyright)** [Pyright](https://github.com/microsoft/pyright) extension
+* **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown lintting
+* **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
 
 
 **Tips:** use `:CocConfig` to edit the configuration file. Completion & validation are supported after `coc-json` is installed.
