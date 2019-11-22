@@ -56,16 +56,16 @@ Run command `:PlugInstall` in your (neo)vim.
 Use release branch (recommended):
 
 ``` vim
-call dein#add('neoclide/coc.nvim', {'merge':0, 'rev': 'release'})
+call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
 ```
 
 Build from source code:
 
 ``` vim
-call dein#add('neoclide/coc.nvim', {'merge':0, 'build': 'yarn install --frozen-lockfile'})
+call dein#add('neoclide/coc.nvim', {'merged':0, 'build': 'yarn install --frozen-lockfile'})
 ```
 
-**Note:** when `'merge':0` not present, coc.nvim will be unable to start.
+**Note:** when `'merged':0` not present, coc.nvim will be unable to start.
 
 **Note:** depends on your network and CPU, it might take a long time for your first build.
 
