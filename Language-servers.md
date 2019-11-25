@@ -504,7 +504,10 @@ coc-settings.json
 
 Using [elixir-ls](https://github.com/JakeBecker/elixir-ls)
 
+If you want to use @spec suggestions you have to enable codelens:
+
 ``` jsonc
+  "codeLens.enable": true,
   "languageserver": {
      "elixirLS": {
       "command": "/absolute/path/to/elixir-ls/release/language_server.sh",
