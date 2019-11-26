@@ -32,7 +32,7 @@ Compared to configured language servers, extensions have more features.
   * `activationEvents` in package.json.
   * Configuration support: `contributes.configuration` in package.json.
   * Commands support: `contributes.commands`.
-  * Json shemas assosication: `contributes.jsonValidation`.
+  * Json schemas assosication: `contributes.jsonValidation`.
   * Snippets support.
 
 ## Manage coc extensions
