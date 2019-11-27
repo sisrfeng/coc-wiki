@@ -32,7 +32,7 @@ Compared to configured language servers, extensions have more features.
   * `activationEvents` in package.json.
   * Configuration support: `contributes.configuration` in package.json.
   * Commands support: `contributes.commands`.
-  * Json schemas assosication: `contributes.jsonValidation`.
+  * JSON validation support via JSON Schema: `contributes.jsonValidation`.
   * Snippets support.
 
 ## Manage coc extensions
@@ -197,7 +197,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-svelte](https://github.com/coc-extensions/coc-svelte)** for [`svelte`](https://github.com/sveltejs/svelte)
 * **[coc-flutter](https://github.com/iamcco/coc-flutter)** for [`flutter`](https://github.com/flutter/flutter)
 * **[coc-pyright](https://github.com/fannheyward/coc-pyright)** [Pyright](https://github.com/microsoft/pyright) extension
-* **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown lintting
+* **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown linting
 * **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
 
 
