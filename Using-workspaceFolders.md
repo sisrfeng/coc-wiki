@@ -1,4 +1,4 @@
-Unlike VSCode，vim doesn't have workspace support. The solution is resolve workspace folder from opened files.
+Unlike VSCode vim doesn't have workspace support. The solution is resolve workspace folders from opened files.
 
 ## Resolve workspace folder
 
@@ -36,4 +36,4 @@ You can add `"disableWorkspaceFolders": true` to the configuration section of th
 
 ## Persist workspace folders
 
-Variable `g:WorkspaceFolders` is used for store current workspace folders, use `set sessionoptions+=globals` in your vimrc if want to restore workspace folders from session.
+The variable `g:WorkspaceFolders` is used to store the current workspace folders. Use `set sessionoptions+=globals` in your vimrc if you want to restore workspace folders in future sessions.
