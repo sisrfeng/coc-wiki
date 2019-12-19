@@ -621,7 +621,9 @@ Make sure solargraph is in your $PATH (sudo gem install solargraph) or use `sola
 
 Using [scalameta/metals](https://github.com/scalameta/metals):
 
-Make sure the generated metals-vim binary is available on your $PATH. Installation instructions can be found on the [Scalameta Metals website](https://scalameta.org/metals/docs/editors/vim.html).
+Install [coc-metals](https://github.com/ckipp01/coc-metals), which will automate the Metals installation and also provide extra helpers.
+
+If you'd like to use Metals without the coc-metals extension, make sure the generated metals-vim binary is available on your $PATH and follow the instructions on the [Metals Website](http://scalameta.org/metals/docs/editors/vim.html).
 
 ``` jsonc
   "languageserver": {
