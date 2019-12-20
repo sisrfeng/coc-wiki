@@ -199,7 +199,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-pyright](https://github.com/fannheyward/coc-pyright)** [Pyright](https://github.com/microsoft/pyright) extension
 * **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown linting
 * **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
-* **[coc-metals](https://github.com/ckipp01/coc-metals)** for Scala using Metals
+* **[coc-metals](https://github.com/ckipp01/coc-metals)** for Scala using [Metals](http://scalameta.org/metals/)
 
 
 **Tips:** use `:CocConfig` to edit the configuration file. Completion & validation are supported after `coc-json` is installed.
