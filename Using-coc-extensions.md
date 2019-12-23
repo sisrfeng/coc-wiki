@@ -200,7 +200,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown linting
 * **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
 * **[coc-metals](https://github.com/ckipp01/coc-metals)** for Scala using [Metals](http://scalameta.org/metals/)
-* **[coc-explorer](https://github.com/weirongxu/coc-explorer)** for file explorer extension
-* **[coc-calc](https://github.com/weirongxu/coc-calc)** for expression calculation extension
+* **[coc-explorer](https://github.com/weirongxu/coc-explorer)** file explorer extension
+* **[coc-calc](https://github.com/weirongxu/coc-calc)** expression calculation extension
 
 **Tips:** use `:CocConfig` to edit the configuration file. Completion & validation are supported after `coc-json` is installed.
