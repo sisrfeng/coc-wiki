@@ -153,7 +153,7 @@ If the extension is using stdio to write messages, you can get the output from t
 
 The default log level is info. To get the debug information, set the `NVIM_COC_LOG_LEVEL` environment variable by the command: `export NVIM_COC_LOG_LEVEL=debug`.
 
-You can also use chrome to debug extensions, checkout <https://github.com/neoclide/coc.nvim/wiki/Debug-coc.nvim>.
+You can also use Chrome to debug extensions, checkout <https://github.com/neoclide/coc.nvim/wiki/Debug-coc.nvim>.
 
 ## Implemented coc extensions
 
@@ -200,6 +200,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown linting
 * **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
 * **[coc-metals](https://github.com/ckipp01/coc-metals)** for Scala using [Metals](http://scalameta.org/metals/)
-
+* **[coc-explorer](https://github.com/weirongxu/coc-explorer)** for file explorer extension
+* **[coc-calc](https://github.com/weirongxu/coc-calc)** for expression calculation extension
 
 **Tips:** use `:CocConfig` to edit the configuration file. Completion & validation are supported after `coc-json` is installed.
