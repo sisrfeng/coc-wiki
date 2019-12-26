@@ -359,7 +359,7 @@ Make sure your Java environment variables are rights and change the path in the 
 
 ### OCaml and ReasonML
 
-Using [ocaml-language-server](https://github.com/freebroccolo/ocaml-language-server)
+Using [ocaml-language-server](https://github.com/ocaml-lsp/ocaml-language-server)
 
 ``` jsonc
   "languageserver": {
