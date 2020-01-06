@@ -438,6 +438,7 @@ Using [Haskell IDE Engine](https://github.com/haskell/haskell-ide-engine)
 "languageserver": {
   "haskell": {
     "command": "hie-wrapper",
+    "args": ["--lsp"],
     "rootPatterns": [
       "stack.yaml",
       "cabal.config",
