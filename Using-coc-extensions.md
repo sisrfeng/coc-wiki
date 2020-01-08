@@ -202,5 +202,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-metals](https://github.com/ckipp01/coc-metals)** for Scala using [Metals](http://scalameta.org/metals/)
 * **[coc-explorer](https://github.com/weirongxu/coc-explorer)** file explorer extension
 * **[coc-calc](https://github.com/weirongxu/coc-calc)** expression calculation extension
+* **[coc-spell-checker](https://github.com/iamcco/coc-spell-checker)** A basic spell checker that works well with camelCase code
+* **[coc-actions](https://github.com/iamcco/coc-actions)** Actions menu for Neovim
 
 **Tips:** use `:CocConfig` to edit the configuration file. Completion & validation are supported after `coc-json` is installed.
