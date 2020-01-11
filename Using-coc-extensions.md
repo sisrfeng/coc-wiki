@@ -199,7 +199,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-pyright](https://github.com/fannheyward/coc-pyright)** [Pyright](https://github.com/microsoft/pyright) extension
 * **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown linting
 * **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
-* **[coc-metals](https://github.com/ckipp01/coc-metals)** for Scala using [Metals](http://scalameta.org/metals/)
+* **[coc-metals](https://github.com/scalameta/coc-metals)** for Scala using [`Metals`](http://scalameta.org/metals/)
 * **[coc-explorer](https://github.com/weirongxu/coc-explorer)** file explorer extension
 * **[coc-calc](https://github.com/weirongxu/coc-calc)** expression calculation extension
 * **[coc-spell-checker](https://github.com/iamcco/coc-spell-checker)** A basic spell checker that works well with camelCase code
