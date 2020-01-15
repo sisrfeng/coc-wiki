@@ -117,6 +117,13 @@ You can configure completion sources by using coc-settings.json
 * `"coc.source.{name}.shortcut"`: shortcut used in completion menu.
 * `"coc.source.{name}.priority"`: priority of the source, lower priority sources will be sorted after high priority sources when they have same score.
 * `"coc.source.{name}.disableSyntaxes"`: syntax names used to disable source from completion, eg: `["comment", "string"]`        
+* `"coc.source.around.firstMatch"`: Filter complete items by first letter strict match, default `true`.
+* `"coc.source.buffer.firstMatch"`: Filter complete items by first letter strict match, default `true`.
+* `"coc.source.buffer.ignoreGitignore"`: Ignore git ignored files for buffer words, default `true`.
+* `"coc.source.file.trimSameExts"`: Filename extensions to trim extension names on file completion, default `[".ts", ".js"]`
+* `"coc.source.file.ignoreHidden"`: Ignore completion for hidden files, default `true`.
+* `coc.source.file.ignorePatterns`: Ignore patterns of matcher module, default `[]`.
+
 
 ### More sources
 
