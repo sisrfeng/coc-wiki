@@ -371,6 +371,30 @@ Using [ocaml-language-server](https://github.com/ocaml-lsp/ocaml-language-server
   }
 ```
 
+If you installed merlin with opam
+
+``` jsonc
+  "languageserver": {
+      "ocaml": {
+          "command": "opam",
+          "args": ["config", "exec", "--", "ocaml-language-server", "--stdio"],
+          "filetypes": ["ocaml", "reason"]
+      }
+  }
+```
+
+Using [ocaml-lsp](https://github.com/ocaml/ocaml-lsp)
+
+``` jsonc
+"languageserver": {
+    "ocaml-lsp": {
+        "command": "opam",
+        "args": ["config", "exec", "--", "ocamllsp"],
+        "filetypes": ["ocaml", "reason"]
+    }
+}
+```
+
 Using [reason-language-server](https://github.com/jaredly/reason-language-server#what-about-the-ocaml-language-server)
 
 ``` jsonc
