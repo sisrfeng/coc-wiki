@@ -6,7 +6,7 @@ A list of file/folder names is used for resolve workspace folder, the patterns c
 
 * `b:coc_root_patterns` variable of current buffer.
 * `rootPatterns` specified for language server used for current buffer.
-* `"coc.preferences.rootPatterns"` settings, which default to `[".vim", ".git", ".hg", ".projections.json"]`.
+* `"coc.preferences.rootPatterns"` settings, which default to `[".git", ".hg", ".projections.json"]`.
 
 The later one have lower priority, which means it's only used when previous patterns failed to match workspace folder.
 
