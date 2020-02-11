@@ -84,6 +84,20 @@ An example of socket language server:
 
 Add `languageserver` section in your `coc-settings.json` for registering custom language servers.
 
+### Ada/SPARK
+
+Using [Ada Language Server](https://github.com/AdaCore/ada_language_server)
+See installation instructions on the Github homepage of this LSP.
+
+``` jsonc
+  "languageserver": {
+     "Ada": {
+       "command": "path/to/ada_language_server",
+       "filetypes": ["ada"]
+     }
+  }
+```
+
 ### Dart
 
 On option is use [coc-flutter](https://github.com/iamcco/coc-flutter), that leverages [analysis_server](https://github.com/dart-lang/sdk/blob/master/pkg/analysis_server/tool/lsp_spec/README.md) from [dart-sdk](https://github.com/dart-lang/sdk).
