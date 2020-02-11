@@ -86,7 +86,7 @@ Add `languageserver` section in your `coc-settings.json` for registering custom 
 
 ### Ada/SPARK
 
-Using [Ada Language Server](https://github.com/AdaCore/ada_language_server)
+Using [Ada Language Server](https://github.com/AdaCore/ada_language_server).  
 See installation instructions on the Github homepage of this LSP.
 
 ``` jsonc
