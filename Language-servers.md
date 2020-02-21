@@ -194,7 +194,7 @@ Using [cquery](https://github.com/cquery-project/cquery)
   }
 ```
 
-Using [clangd](https://clang.llvm.org/extra/clangd/Installation.html)
+Using [clangd](https://clang.llvm.org/extra/clangd/Installation.html) with [coc-clangd](https://github.com/clangd/coc-clangd) or:
 
 ``` jsonc
   "languageserver": {
