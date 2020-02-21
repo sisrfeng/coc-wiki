@@ -205,5 +205,6 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-spell-checker](https://github.com/iamcco/coc-spell-checker)** A basic spell checker that works well with camelCase code
 * **[coc-actions](https://github.com/iamcco/coc-actions)** Actions menu for Neovim
 * **[coc-sourcekit](https://github.com/klaaspieter/coc-sourcekit)** for [`Swift`](https://swift.org/)
+* **[coc-clangd](https://github.com/clangd/coc-clangd)** for C/C++/Objective-C, use [clangd](https://clangd.github.io)
 
 **Tips:** use `:CocConfig` to edit the configuration file. Completion & validation are supported after `coc-json` is installed.
