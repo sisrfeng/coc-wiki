@@ -37,6 +37,16 @@ If you want to manual trigger completion add `"suggest.autoTrigger": "trigger",`
 * For signature help, use `"signature.target": "echo"` in settings.json.
 * For documentation on doHover, use `"coc.preferences.hoverTarget": "echo"` in settings.json.
 
+## Highlight of background seems wrong with floating window.
+
+It's caused by some highlight group using `Normal` for it's background color,
+you can overwrite the highlight group to use transparent background color in your vimrc, like:
+
+``` vim
+hi Quote ctermbg=109 guifg=#83a598
+```
+make sure add the lines after `:colorscheme` command.
+
 ## How to use coc.nvim from master branch?
 
 * Make sure you don't have `{"tag": "*"}` in `Plug` command if you're using vim-plug as plugin manager.
