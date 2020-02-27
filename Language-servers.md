@@ -236,6 +236,7 @@ Using [gopls](https://github.com/golang/tools/tree/master/gopls)
     "golang": {
       "command": "gopls",
       "rootPatterns": ["go.mod"],
+      "disableWorkspaceFolders": true,
       "filetypes": ["go"]
     }
   }
