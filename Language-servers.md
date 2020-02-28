@@ -218,7 +218,7 @@ Like many tools, clangd relies on the presence of a [JSON compilation database](
 ``` jsonc
   "languageserver": {
     "rust": {
-      "command": "ra_lsp_server",
+      "command": "rust-analyzer",
       "filetypes": ["rust"],
       "rootPatterns": ["Cargo.toml"]
     }
