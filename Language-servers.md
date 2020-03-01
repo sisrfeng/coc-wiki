@@ -200,8 +200,7 @@ Using [clangd](https://clang.llvm.org/extra/clangd/Installation.html) with [coc-
   "languageserver": {
     "clangd": {
       "command": "clangd",
-      "args": ["--background-index"],
-      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".git/", ".hg/"],
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
       "filetypes": ["c", "cpp", "objc", "objcpp"]
     }
   }
