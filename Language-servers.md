@@ -211,6 +211,8 @@ Like many tools, clangd relies on the presence of a [JSON compilation database](
 
 ### CMake
 
+Try [coc-cmake](https://github.com/voldikss/coc-cmake) or 
+
 Using [cmake-language-server](https://github.com/regen100/cmake-language-server)
 
 ```vim
