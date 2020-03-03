@@ -215,7 +215,7 @@ Try [coc-cmake](https://github.com/voldikss/coc-cmake)(not implemented with LSP)
 
 Using [cmake-language-server](https://github.com/regen100/cmake-language-server)
 
-```vim
+```jsonc
  "languageserver": {
     "cmake": {
       "command": "cmake-language-server",
