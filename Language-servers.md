@@ -208,6 +208,26 @@ Using [clangd](https://clang.llvm.org/extra/clangd/Installation.html) with [coc-
 
 Like many tools, clangd relies on the presence of a [JSON compilation database](https://clang.llvm.org/docs/JSONCompilationDatabase.html)
 
+
+### CMake
+
+Using [cmake-language-server](https://github.com/regen100/cmake-language-server)
+
+```vim
+ "languageserver": {
+    "cmake": {
+      "command": "cmake-language-server",
+      "filetypes": ["cmake"],
+      "rootPatterns": [
+        "build/"
+      ],
+      "initializationOptions": {
+        "buildDirectory": "build"
+      }
+    }
+  }
+```
+
 ### Rust
 
 * install [coc-rls](https://github.com/neoclide/coc-rls/) which uses `rls`
