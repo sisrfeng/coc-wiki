@@ -248,6 +248,7 @@ Using [cmake-language-server](https://github.com/regen100/cmake-language-server)
 
 It's necessary to `rustup component add rust-src` and build `rust-analyzer` from sources (just `cargo install-ra --server`).
 
+For coc-rls do not add above configuration in `coc-settings.json` file just use ( `rustup component add rls rust-analysis rust-src`)
 ### Go
 
 Using [gopls](https://github.com/golang/tools/tree/master/gopls)
