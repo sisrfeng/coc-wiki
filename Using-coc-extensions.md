@@ -159,61 +159,61 @@ You can also use Chrome to debug extensions, checkout <https://github.com/neocli
 
 You can find available coc extensions by searching [coc.nvim on npm](https://www.npmjs.com/search?q=keywords%3Acoc.nvim), or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which can search and install extensions in coc.nvim directly.
 
-* **[coc-json](https://github.com/neoclide/coc-json)** for `json`.
-* **[coc-tsserver](https://github.com/neoclide/coc-tsserver)** for `javascript` and `typescript`.
-* **[coc-html](https://github.com/neoclide/coc-html)** for `html`, `handlebars` and `razor`.
+* **[coc-actions](https://github.com/iamcco/coc-actions)** Actions menu for Neovim
+* **[coc-angular](https://github.com/iamcco/coc-angular)** for `angular`.
+* **[coc-bookmark](https://github.com/voldikss/coc-bookmark)** bookmark extension
+* **[coc-browser](https://github.com/voldikss/coc-browser)** for browser words completion
+* **[coc-calc](https://github.com/weirongxu/coc-calc)** expression calculation extension
+* **[coc-clangd](https://github.com/clangd/coc-clangd)** for C/C++/Objective-C, use [clangd](https://clangd.github.io)
+* **[coc-cmake](https://github.com/voldikss/coc-cmake)** for cmake code completion
 * **[coc-css](https://github.com/neoclide/coc-css)** for `css`, `scss` and `less`.
+* **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
+* **[coc-elixir](https://github.com/amiralies/coc-elixir)** for `elixir`, based on [elixir-ls](https://github.com/JakeBecker/elixir-ls/).
 * **[coc-ember](https://github.com/NullVoxPopuli/coc-ember)** for ember projects.
-* **[coc-vetur](https://github.com/neoclide/coc-vetur)** for `vue`, use [vetur](https://github.com/vuejs/vetur).
-* **[coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`, use [intelephense-docs](https://github.com/bmewburn/intelephense-docs).
+* **[coc-emmet](https://github.com/neoclide/coc-emmet)** provides emmet suggestions in completion list.
+* **[coc-erlang_ls](https://github.com/hyhugh/coc-erlang_ls)** for `erlang`, based on [erlang_ls](https://github.com/erlang-ls/erlang_ls)
+* **[coc-explorer](https://github.com/weirongxu/coc-explorer)** file explorer extension
+* **[coc-floaterm](https://github.com/voldikss/coc-floaterm)** for [vim-floaterm](https://github.com/voldikss/vim-floaterm) integration
+* **[coc-flow](https://github.com/amiralies/coc-flow)** for [`flow`](https://flow.org)
+* **[coc-flutter](https://github.com/iamcco/coc-flutter)** for [`flutter`](https://github.com/flutter/flutter)
+* **[coc-fsharp](https://github.com/yatli/coc-fsharp)** for `fsharp`.
+* **[coc-git](https://github.com/neoclide/coc-git)** provides git integration.
+* **[coc-highlight](https://github.com/neoclide/coc-highlight)** provides default document symbol highlighting and color support.
+* **[coc-html](https://github.com/neoclide/coc-html)** for `html`, `handlebars` and `razor`.
 * **[coc-java](https://github.com/neoclide/coc-java)** for `java`, use [eclipse.jdt.ls](https://github.com/eclipse/eclipse.jdt.ls).
-* **[coc-solargraph](https://github.com/neoclide/coc-solargraph)** for `ruby`, use [solargraph](http://solargraph.org/).
+* **[coc-json](https://github.com/neoclide/coc-json)** for `json`.
+* **[coc-lists](https://github.com/neoclide/coc-lists)** provides some basic lists like fzf.vim.
+* **[coc-lsp-wl](https://github.com/voldikss/coc-lsp-wl)** for `wolfram mathematica`, fork of [vscode-lsp-wl](https://github.com/kenkangxgwe/vscode-lsp-wl).
+* **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown linting
+* **[coc-metals](https://github.com/scalameta/coc-metals)** for Scala using [`Metals`](http://scalameta.org/metals/)
+* **[coc-omnisharp](https://github.com/yatli/coc-omnisharp)** for `csharp` and `visualbasic`.
+* **[coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`, use [intelephense-docs](https://github.com/bmewburn/intelephense-docs).
+* **[coc-powershell](https://github.com/yatli/coc-powershell)** for PowerShellEditorService integration.
+* **[coc-pyright](https://github.com/fannheyward/coc-pyright)** [Pyright](https://github.com/microsoft/pyright) extension
+* **[coc-python](https://github.com/neoclide/coc-python)** for `python`, extension forked from [vscode-python](https://github.com/Microsoft/vscode-python).
+* **[coc-r-lsp](https://github.com/neoclide/coc-r-lsp)** for `r`, use [R languageserver](https://github.com/REditorSupport/languageserver).
+* **[coc-reason](https://github.com/jaredly/reason-language-server/tree/master/editor-extensions/coc.nvim)** for [`reasonml`](https://reasonml.github.io/)
 * **[coc-rls](https://github.com/neoclide/coc-rls)** for `rust`, use [Rust Language Server](https://github.com/rust-lang/rls)
 * **[coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer)** for `rust`, use [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer)
-* **[coc-r-lsp](https://github.com/neoclide/coc-r-lsp)** for `r`, use [R languageserver](https://github.com/REditorSupport/languageserver).
-* **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
-* **[coc-python](https://github.com/neoclide/coc-python)** for `python`, extension forked from [vscode-python](https://github.com/Microsoft/vscode-python).
-* **[coc-highlight](https://github.com/neoclide/coc-highlight)** provides default document symbol highlighting and color support.
-* **[coc-emmet](https://github.com/neoclide/coc-emmet)** provides emmet suggestions in completion list.
 * **[coc-snippets](https://github.com/neoclide/coc-snippets)** provides snippets solution.
-* **[coc-lists](https://github.com/neoclide/coc-lists)** provides some basic lists like fzf.vim.
-* **[coc-git](https://github.com/neoclide/coc-git)** provides git integration.
-* **[coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights & history.
-* **[coc-fsharp](https://github.com/yatli/coc-fsharp)** for `fsharp`.
+* **[coc-solargraph](https://github.com/neoclide/coc-solargraph)** for `ruby`, use [solargraph](http://solargraph.org/).
+* **[coc-sourcekit](https://github.com/klaaspieter/coc-sourcekit)** for [`Swift`](https://swift.org/)
+* **[coc-spell-checker](https://github.com/iamcco/coc-spell-checker)** A basic spell checker that works well with camelCase code
+* **[coc-svelte](https://github.com/coc-extensions/coc-svelte)** for [`svelte`](https://github.com/sveltejs/svelte)
 * **[coc-svg](https://github.com/iamcco/coc-svg)** for `svg`.
+* **[coc-tabnine](https://github.com/neoclide/coc-tabnine)** for [tabnine](https://tabnine.com/).
 * **[coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss)** for `tailwindcss`.
-* **[coc-angular](https://github.com/iamcco/coc-angular)** for `angular`.
+* **[coc-tasks](https://github.com/voldikss/coc-tasks)** for [asynctasks.vim](https://github.com/skywind3000/asynctasks.vim) integration
+* **[coc-template](https://github.com/voldikss/coc-template)** templates extension for file types
+* **[coc-texlab](https://github.com/fannheyward/coc-texlab)** for `LaTex` using [TexLab](https://texlab.netlify.com/).
+* **[coc-todolist](https://github.com/voldikss/coc-todolist)** for handy todolist/task management
+* **[coc-translator](https://github.com/voldikss/coc-translator)** language transaction extension
+* **[coc-tsserver](https://github.com/neoclide/coc-tsserver)** for `javascript` and `typescript`.
+* **[coc-vetur](https://github.com/neoclide/coc-vetur)** for `vue`, use [vetur](https://github.com/vuejs/vetur).
 * **[coc-vimlsp](https://github.com/iamcco/coc-vimlsp)** for `viml`.
 * **[coc-xml](https://github.com/fannheyward/coc-xml)** for `xml`, use [lsp4xml](https://github.com/angelozerr/lsp4xml).
-* **[coc-elixir](https://github.com/amiralies/coc-elixir)** for `elixir`, based on [elixir-ls](https://github.com/JakeBecker/elixir-ls/).
-* **[coc-erlang_ls](https://github.com/hyhugh/coc-erlang_ls)** for `erlang`, based on [erlang_ls](https://github.com/erlang-ls/erlang_ls)
-* **[coc-tabnine](https://github.com/neoclide/coc-tabnine)** for [tabnine](https://tabnine.com/).
-* **[coc-powershell](https://github.com/yatli/coc-powershell)** for PowerShellEditorService integration.
-* **[coc-omnisharp](https://github.com/yatli/coc-omnisharp)** for `csharp` and `visualbasic`.
-* **[coc-texlab](https://github.com/fannheyward/coc-texlab)** for `LaTex` using [TexLab](https://texlab.netlify.com/).
-* **[coc-lsp-wl](https://github.com/voldikss/coc-lsp-wl)** for `wolfram mathematica`, fork of [vscode-lsp-wl](https://github.com/kenkangxgwe/vscode-lsp-wl).
-* **[coc-flow](https://github.com/amiralies/coc-flow)** for [`flow`](https://flow.org)
-* **[coc-reason](https://github.com/jaredly/reason-language-server/tree/master/editor-extensions/coc.nvim)** for [`reasonml`](https://reasonml.github.io/)
-* **[coc-svelte](https://github.com/coc-extensions/coc-svelte)** for [`svelte`](https://github.com/sveltejs/svelte)
-* **[coc-flutter](https://github.com/iamcco/coc-flutter)** for [`flutter`](https://github.com/flutter/flutter)
-* **[coc-pyright](https://github.com/fannheyward/coc-pyright)** [Pyright](https://github.com/microsoft/pyright) extension
-* **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown linting
-* **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
-* **[coc-metals](https://github.com/scalameta/coc-metals)** for Scala using [`Metals`](http://scalameta.org/metals/)
-* **[coc-explorer](https://github.com/weirongxu/coc-explorer)** file explorer extension
-* **[coc-calc](https://github.com/weirongxu/coc-calc)** expression calculation extension
-* **[coc-spell-checker](https://github.com/iamcco/coc-spell-checker)** A basic spell checker that works well with camelCase code
-* **[coc-actions](https://github.com/iamcco/coc-actions)** Actions menu for Neovim
-* **[coc-sourcekit](https://github.com/klaaspieter/coc-sourcekit)** for [`Swift`](https://swift.org/)
-* **[coc-clangd](https://github.com/clangd/coc-clangd)** for C/C++/Objective-C, use [clangd](https://clangd.github.io)
-* **[coc-browser](https://github.com/voldikss/coc-browser)** for browser words completion
-* **[coc-translator](https://github.com/voldikss/coc-translator)** language transaction extension
-* **[coc-template](https://github.com/voldikss/coc-template)** templates extension for file types
-* **[coc-todolist](https://github.com/voldikss/coc-todolist)** for handy todolist/task management
-* **[coc-bookmark](https://github.com/voldikss/coc-bookmark)** bookmark extension
-* **[coc-floaterm](https://github.com/voldikss/coc-floaterm)** for [vim-floaterm](https://github.com/voldikss/vim-floaterm) integration
-* **[coc-tasks](https://github.com/voldikss/coc-tasks)** for [asynctasks.vim](https://github.com/skywind3000/asynctasks.vim) integration
-* **[coc-cmake](https://github.com/voldikss/coc-cmake)** for cmake code completion
+* **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
+* **[coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights & history.
 
 
 **Tips:** use `:CocConfig` to edit the configuration file. Completion & validation are supported after `coc-json` is installed.
