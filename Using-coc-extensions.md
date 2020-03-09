@@ -206,5 +206,14 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-actions](https://github.com/iamcco/coc-actions)** Actions menu for Neovim
 * **[coc-sourcekit](https://github.com/klaaspieter/coc-sourcekit)** for [`Swift`](https://swift.org/)
 * **[coc-clangd](https://github.com/clangd/coc-clangd)** for C/C++/Objective-C, use [clangd](https://clangd.github.io)
+* **[coc-browser](https://github.com/voldikss/coc-browser)** for browser words completion
+* **[coc-translator](https://github.com/voldikss/coc-translator)** language transaction extension
+* **[coc-template](https://github.com/voldikss/coc-template)** templates extension for file types
+* **[coc-todolist](https://github.com/voldikss/coc-todolist)** for handy todolist/task management
+* **[coc-bookmark](https://github.com/voldikss/coc-bookmark)** bookmark extension
+* **[coc-floaterm](https://github.com/voldikss/coc-floaterm)** for [vim-floaterm](https://github.com/voldikss/vim-floaterm) integration
+* **[coc-tasks](https://github.com/voldikss/coc-tasks)** for [asynctasks.vim](https://github.com/skywind3000/asynctasks.vim) integration
+* **[coc-cmake](https://github.com/voldikss/coc-cmake)** for cmake code completion
+
 
 **Tips:** use `:CocConfig` to edit the configuration file. Completion & validation are supported after `coc-json` is installed.
