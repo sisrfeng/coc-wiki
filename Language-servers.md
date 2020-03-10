@@ -141,6 +141,21 @@ Or use [natebosch/dart_language_server](https://github.com/natebosch/dart_langua
 
 ### C/C++/Objective-C
 
+Using [clangd](https://clang.llvm.org/extra/clangd/Installation.html) with [coc-clangd](https://github.com/clangd/coc-clangd) or:
+
+``` jsonc
+  "languageserver": {
+    "clangd": {
+      "command": "clangd",
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+      "filetypes": ["c", "cpp", "objc", "objcpp"]
+    }
+  }
+```
+
+Like many tools, clangd relies on the presence of a [JSON compilation database](https://clang.llvm.org/docs/JSONCompilationDatabase.html)
+
+
 Using [ccls](https://github.com/MaskRay/ccls)
 
 ``` jsonc
@@ -157,8 +172,8 @@ Using [ccls](https://github.com/MaskRay/ccls)
     }
   }
 ```
-To make header completion work with clang < 8 on Mac OS X, use `"initializationOptions"` like:
 
+To make header completion work with clang < 8 on Mac OS X, use `"initializationOptions"` like:
 ``` jsonc
       "initializationOptions": {
         "cache": {
@@ -193,20 +208,6 @@ Using [cquery](https://github.com/cquery-project/cquery)
     }
   }
 ```
-
-Using [clangd](https://clang.llvm.org/extra/clangd/Installation.html) with [coc-clangd](https://github.com/clangd/coc-clangd) or:
-
-``` jsonc
-  "languageserver": {
-    "clangd": {
-      "command": "clangd",
-      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-      "filetypes": ["c", "cpp", "objc", "objcpp"]
-    }
-  }
-```
-
-Like many tools, clangd relies on the presence of a [JSON compilation database](https://clang.llvm.org/docs/JSONCompilationDatabase.html)
 
 
 ### CMake
