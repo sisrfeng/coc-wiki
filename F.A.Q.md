@@ -24,7 +24,7 @@ It's limitation of (neo)vim, it should either adjust floating window postion acc
 
 You can't, there's no such function provided for omnifunc option, because vim's omnifunc always block and LSP features like triggerCharacters and incomplete response can't work.
 
-If you want to manual trigger completion add `"suggest.autoTrigger": "trigger",` to coc-settings.json and bind a trigger key like:
+If you want to manual trigger completion add `"suggest.autoTrigger": "none",` to coc-settings.json and bind a trigger key like:
 
 ``` vim
   inoremap <silent><expr> <c-space> coc#refresh()
