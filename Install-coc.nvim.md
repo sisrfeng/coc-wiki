@@ -1,10 +1,11 @@
-Coc.nvim is written in Typescript and runs on nodejs, you can use release branch which contains compiled javascript or build from master branch.
+Coc.nvim is mostly written in typescript and runs on nodejs.
+
+You can use release branch which contains compiled javascript (build/index.js) or build from master branch.
 
 ## Requirements
 
-* `neovim` >= `0.3.1` is required.
-* `vim` >= `8.0.1453` is required.
-* Use command `:version` to checkout your vim version.
+* `neovim` >= `0.3.1` or `vim` >= `8.0.1453` (use command `:version` to checkout your vim version.)
+* `node` >= `8.10.0`
 
 **Note:** it will not load at all if (neo)vim is too old.
 
@@ -20,7 +21,10 @@ Install the latest stable [nodejs](https://nodejs.org/), may not work on windows
 curl -sL install-node.now.sh | sh
 ```
 
-Install [yarn](https://yarnpkg.com/) if you want to build coc.nvim from source code.
+**Note:** coc.nvim find `node` by function `executable('node')` in your vim, checkout
+`:h g:coc_node_path` for customize node path.  
+
+Install [yarn](https://yarnpkg.com/) needed when you want to build from source code.
 
 ```sh
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
@@ -28,10 +32,8 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 **Note**: NixOS users must follow these steps:
 
-1. Install [nodejs](https://nodejs.org/en/download/) and [yarn](https://yarnpkg.com/en/docs/install) via `nix-env` or put them in `/etc/nixos/configuration.nix`
+1. Install [nodejs](https://nodejs.org/en/download/) via `nix-env` or put them in `/etc/nixos/configuration.nix`
 2. `sudo nixos-rebuild switch`
-3. `Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}`
-4. Don't forget to put: `set shell=/bin/sh` in your `init.vim`.
 
 ## Add coc.nvim to your vim's runtimepath
 
@@ -134,11 +136,11 @@ For more information check out [Using the configuration file](https://github.com
 
 For feature [workspace_didChangeWatchedFiles](https://microsoft.github.io/language-server-protocol/specification#workspace_didChangeWatchedFiles) to work, you will need to install [watchman](https://facebook.github.io/watchman) by following <https://facebook.github.io/watchman/docs/install.html>.
 
-Watchman works great even when you have multiple neovim instance started in the same directory.
+Watchman works great even when you have multiple (neo)vim instance started in the same directory.
 
 **Warning** don't create `.watchmanconfig` file in your home directory.
 
-**Note** watchman can take lots of memories, use command `watchman watch-del-all` in your terminal to free the watchers.
+**Note** watchman can take lots of memories, use command `watchman watch-del-all` in your terminal to free your memory.
 
 ## Automation script
 
