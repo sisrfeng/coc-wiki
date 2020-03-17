@@ -319,6 +319,19 @@ Using [felixfbecker/php-language-server](https://github.com/felixfbecker/php-lan
 ```
 note: make sure you can start the server by use command and args.
 
+Using [vimeo/psalm](https://github.com/vimeo/psalm) (psalm-language-server)
+
+```jsonc
+  "languageserver": {
+    "psalmls": {
+      "command": "vendor/bin/psalm-language-server",
+      "filetypes": ["php"],
+      "rootPatterns": ["psalm.xml"],
+      "requireRootPattern": true
+    }
+  }
+```
+
 ### Dockerfile
 
 Using [rcjsuen/dockerfile-language-server-nodejs](https://github.com/rcjsuen/dockerfile-language-server-nodejs)
