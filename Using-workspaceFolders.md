@@ -36,4 +36,6 @@ You can add `"disableWorkspaceFolders": true` to the configuration section of th
 
 ## Persist workspace folders
 
-The variable `g:WorkspaceFolders` is used to store the current workspace folders. Use `set sessionoptions+=globals` in your vimrc if you want to restore workspace folders in future sessions.
+You can make use of vim's session for persist workspace folders.
+
+As global variable `g:WorkspaceFolders` is used to store workspace folders, you need add `set sessionoptions+=globals` to your vimrc if you want to restore workspace folders when session loaded.
