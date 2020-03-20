@@ -95,7 +95,11 @@ Example for coc-tsserver:
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 ```
 
-After adding this to your vimrc run `PlugInstall`. This has the limitation that you can't uninstall the extension by using `:CocUninstall` and that automatic update support is not available.
+After adding this to your vimrc run `PlugInstall`. 
+
+**Note:** you have to build the extensions when you install them by git, most of time you should install [yarn](https://yarnpkg.com) and use `yarn install --frozen-lockfile` in extension root.
+
+This has the limitation that you can't uninstall the extension by using `:CocUninstall` and that automatic update support is not available.
 
 ### Update extensions
 
