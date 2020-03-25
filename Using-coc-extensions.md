@@ -171,7 +171,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-clangd](https://github.com/clangd/coc-clangd)** for C/C++/Objective-C, use [clangd](https://clangd.github.io)
 * **[coc-cmake](https://github.com/voldikss/coc-cmake)** for cmake code completion
 * **[coc-css](https://github.com/neoclide/coc-css)** for `css`, `scss` and `less`.
-* **[coc-cssmodules](https://github.com/antonk52/coc-cssmodules) css modules intellisense.
+* **[coc-cssmodules](https://github.com/antonk52/coc-cssmodules)** css modules intellisense.
 * **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
 * **[coc-elixir](https://github.com/amiralies/coc-elixir)** for `elixir`, based on [elixir-ls](https://github.com/JakeBecker/elixir-ls/).
 * **[coc-ember](https://github.com/NullVoxPopuli/coc-ember)** for ember projects.
