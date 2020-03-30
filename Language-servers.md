@@ -252,6 +252,8 @@ It's necessary to `rustup component add rust-src` and build `rust-analyzer` from
 For coc-rls do not add above configuration in `coc-settings.json` file just use ( `rustup component add rls rust-analysis rust-src`)
 ### Go
 
+Try [coc-go](https://github.com/josa42/coc-go) or
+
 Using [gopls](https://github.com/golang/tools/tree/master/gopls)
 
 ```jsonc
