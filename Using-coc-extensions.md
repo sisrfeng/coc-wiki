@@ -172,6 +172,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-cmake](https://github.com/voldikss/coc-cmake)** for cmake code completion
 * **[coc-css](https://github.com/neoclide/coc-css)** for `css`, `scss` and `less`.
 * **[coc-cssmodules](https://github.com/antonk52/coc-cssmodules)** css modules intellisense.
+* **[coc-discord](https://github.com/amiralies/coc-discord)** discord rich presence for coc.nvim
 * **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
 * **[coc-elixir](https://github.com/amiralies/coc-elixir)** for `elixir`, based on [elixir-ls](https://github.com/JakeBecker/elixir-ls/).
 * **[coc-ember](https://github.com/NullVoxPopuli/coc-ember)** for ember projects.
@@ -221,6 +222,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-xml](https://github.com/fannheyward/coc-xml)** for `xml`, use [lsp4xml](https://github.com/angelozerr/lsp4xml).
 * **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
 * **[coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights & history.
+
 
 
 **Tips:** use `:CocConfig` to edit the configuration file. Completion & validation are supported after `coc-json` is installed.
