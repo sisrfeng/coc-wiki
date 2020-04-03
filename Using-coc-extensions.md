@@ -72,7 +72,7 @@ Using `:CocInstall`:
 
 One or more extension names can be provided.
 
-The extension name can also be the url of a git repository, like: `https://github.com/andys8/vscode-jest-snippets` which could be accepted by `yarn install` and `npm install`. There is no guarantee which will be used since coc.nvim attempts to find `npm`, and then `yarn`. So ensure that both work if you'd like your extension to be installed this way.
+The extension name can also be the url of a git repository, like: `https://github.com/andys8/vscode-jest-snippets` which could be accepted by `yarn install`.
 
 Extensions will be loaded and activated after the install succeeds.
 
