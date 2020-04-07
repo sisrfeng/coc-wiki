@@ -938,3 +938,15 @@ Using [`dhall-lsp-server`](https://github.com/dhall-lang/dhall-haskell/tree/mast
 }
 ```
 
+### Nim
+
+Using [`nimlsp`](https://github.com/PMunch/nimlsp). Follow the instructions in the README of the repository. (Make sure that your Nimble bin directory is in your path)
+
+```jsonc
+  "languageserver": {
+    "nim": {
+      "command": "nimlsp",
+      "filetypes": ["nim"]
+    }
+  }
+```
