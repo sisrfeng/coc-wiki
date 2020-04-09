@@ -137,4 +137,4 @@ You can configure completion sources by using coc-settings.json
 - [coc-lbdbq](https://github.com/zidhuss/coc-lbdbq): email address completion.
 - [coc-browser](https://github.com/voldikss/coc-browser): web browser words completion.
 - [coc-github-users](https://github.com/cb372/coc-github-users): GitHub username completion.
-[coc-db](https://github.com/kristijanhusak/coc-db): Database completion. 
+- [coc-db](https://github.com/kristijanhusak/coc-db): Database completion. 
