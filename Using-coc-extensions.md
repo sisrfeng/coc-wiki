@@ -126,7 +126,7 @@ vim -c 'CocUpdateSync|q'
 Run command:
 
 ```vim
-CocList extensions
+:CocList extensions
 ```
 
 to open CocList buffer, which looks like:
