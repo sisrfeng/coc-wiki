@@ -150,6 +150,14 @@ Some plugins like [Ultisnips](https://github.com/SirVer/ultisnips) and [vim-clos
 * Make issue happen.
 * Exit vim, and open the newly generated profile.log file in your current directory.
 
+## How could I profile coc.vim.
+
+To get the communication between vim and coc.nvim
+
+* Add `let g:node_client_debug = 1` in your vimrc.
+* Restart vim and make issue happen.
+* Use command `:call coc#client#open_log()` to open log file, or use `:echo $NODE_CLIENT_LOG_FILE` to get file path of log.
+
 ## How to change highlight of diagnostic signs?
 
 The sign highlight groups are `CocErrorSign` `CocWarningSign` `CocInfoSign` `CocHintSign`
