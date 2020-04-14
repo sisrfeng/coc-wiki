@@ -150,7 +150,7 @@ Some plugins like [Ultisnips](https://github.com/SirVer/ultisnips) and [vim-clos
 * Make issue happen.
 * Exit vim, and open the newly generated profile.log file in your current directory.
 
-## How could I profile coc.vim.
+## How could I profile coc.nvim.
 
 To get the communication between vim and coc.nvim
 
