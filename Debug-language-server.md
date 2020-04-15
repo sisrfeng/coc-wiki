@@ -1,7 +1,16 @@
 # Contents
 
+* [Checkout server stats](https://github.com/neoclide/coc.nvim/wiki/Debug-language-server#checkout-server-stats)
 * [Using output channel](https://github.com/neoclide/coc.nvim/wiki/Debug-language-server#using-output-channel)
 * [Using Chrome developer tools](https://github.com/neoclide/coc.nvim/wiki/Debug-language-server#using-chrome-developer-tools)
+
+## Checkout server stats
+
+Use command `:CocList services` to open services list, you will have `id` `state` and `filetypes` for each service.
+
+<img width="893" alt="Screen Shot 2020-04-15 at 4 45 00 PM" src="https://user-images.githubusercontent.com/251450/79318320-6609c080-7f39-11ea-9cfe-9921584a96d9.png">
+
+If service id starts with `languageserver`, it comes from `languageserver` configuration in coc-settings.json, if not, it's from extension of coc.nvim.
 
 ## Using output channel
 
