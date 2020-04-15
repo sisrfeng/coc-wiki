@@ -580,7 +580,7 @@ coc-settings.json
 
 ### Elixir
 
-Using [elixir-ls](https://github.com/JakeBecker/elixir-ls)
+Using [elixir-ls](https://github.com/elixir-lsp/elixir-ls)
 
 If you want to use @spec suggestions you have to enable codelens:
 
