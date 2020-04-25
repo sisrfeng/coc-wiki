@@ -950,3 +950,7 @@ Using [`nimlsp`](https://github.com/PMunch/nimlsp). Follow the instructions in t
     }
   }
 ```
+
+### Godot
+
+Using [`coc-godot`](https://github.com/j3d42/coc-godot).
