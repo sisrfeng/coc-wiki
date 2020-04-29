@@ -58,7 +58,7 @@ make sure add the lines after `:colorscheme` command.
 
 ## How to make preview window shown aside with pum?
 
-For vim, make sure `echo has('textprop') && has('patch-8.1.1522')` echo `1`.
+For vim, make sure `echo has('textprop') && has('patch-8.1.1610')` echo `1`.
 
 Higlight on vim doesn't always work yet, because can't highlight by using a seperated vim process.
 
