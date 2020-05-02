@@ -34,9 +34,9 @@ command! -nargs=0 Tsc :call CocAction('runCommand', 'tsserver.watchBuild')
 ```
 With statusline integration, you can have realtime feedback of the compilation.
 
-## Get result form console
+## Get result from console
 
-**Warning:** your can't use stdout by `console.log` or `stdout.write`, since coc has to use stdio for communication between neovim.
+**Warning:** you can't use stdout by `console.log` or `stdout.write`, since coc has to use stdio for communication between neovim.
 
 You can use `console.error` to write a string message, like:
 ``` js
@@ -44,9 +44,31 @@ console.error('my error')
 ```
 the message will be echoed in vim. However, this method is quite limited.
 
-## Using logger module.
+## Using logger module (recommended)
 
-The default log level is `info`, so you won't get `error` or `trace` messages.
+Use command `:CocOpenLog` to open the log file.
+
+You can import the logger module for debug purpose, like:
+``` js
+const logger = require('./util/logger')('workspace')
+```
+You can use the logger to debug any variable, like:
+``` js
+logger.debug('variable:', variable)
+```
+
+For coc extension, you can access a `logger` object (`log4js.Logger`) through a property of `ExtensionContext`. For example:
+
+```js
+exports.activate = async (context) => {
+  let { logger } = context;
+  logger.info(`Extension from ${context.extensionPath}`)
+}
+```
+
+## Changing Log Level
+
+The default log level is `info`, so you won't get `error` or `trace` messages shown in `:CocOpenLog`.
 To change the log level, run:
 
 ```
@@ -60,17 +82,7 @@ let $NVIM_COC_LOG_LEVEL = 'debug'
 ```
 at the start of your `.vimrc` file.
 
-Most files import logger module for debug purpose, like:
-``` js
-const logger = require('./util/logger')('workspace')
-```
-You can use the logger to debug any variable, like:
-``` js
-logger.debug('variable:', variable)
-```
-Use command `:CocOpenLog` to open the log file.
 
-For extension, logger exists as `logger` property of `ExtensionContext`.
 
 ## Use chrome developer tools
 
