@@ -955,3 +955,16 @@ Using [`nimlsp`](https://github.com/PMunch/nimlsp). Follow the instructions in t
 ### Godot
 
 Using [`coc-godot`](https://github.com/j3d42/coc-godot).
+
+### Vala
+
+Using [`vala-language-server`](https://github.com/benwaffle/vala-language-server).
+
+```jsonc
+  "languageserver": {
+    "vala": {
+      "command": "vala-language-server",
+      "filetypes": ["vala"],
+    }
+  }
+```
