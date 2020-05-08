@@ -968,3 +968,19 @@ Using [`vala-language-server`](https://github.com/benwaffle/vala-language-server
     }
   }
 ```
+
+### SQL
+
+Using [`sql-language-server`](https://github.com/joe-re/sql-language-server)
+
+```jsonc
+{
+  "languageserver": {
+    "sql": {
+      "command": "sql-language-server",
+      "args" : ["up", "--method", "stdio"],
+      "filetypes": ["sql", "mysql"]
+     }
+  }
+}
+```
