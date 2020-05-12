@@ -148,7 +148,7 @@ Using [clangd](https://clang.llvm.org/extra/clangd/Installation.html) with [coc-
     "clangd": {
       "command": "clangd",
       "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-      "filetypes": ["c", "cpp", "objc", "objcpp"]
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
     }
   }
 ```
@@ -162,7 +162,7 @@ Using [ccls](https://github.com/MaskRay/ccls)
   "languageserver": {
     "ccls": {
       "command": "ccls",
-      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
       "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
       "initializationOptions": {
          "cache": {
@@ -200,7 +200,7 @@ Using [cquery](https://github.com/cquery-project/cquery)
     "cquery": {
       "command": "cquery",
       "args": ["--log-file=/tmp/cq.log"],
-      "filetypes": ["c", "cpp"],
+      "filetypes": ["c", "cc", "cpp", "c++"],
       "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".git/", ".hg/"],
       "initializationOptions": {
         "cacheDirectory": "/tmp/cquery"
