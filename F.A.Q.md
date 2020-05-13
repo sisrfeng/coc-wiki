@@ -66,9 +66,7 @@ For vim, make sure `echo has('textprop') && has('patch-8.1.1610')` echo `1`.
 
 Higlight on vim doesn't always work yet, because can't highlight by using a seperated vim process.
 
-For neovim, build neovim from master code or [use nightly build](https://github.com/neovim/neovim/releases/tag/nightly).
-
-Make sure `:echo exists('##CompleteChanged') && exists('*nvim_open_win')` echo `1`.
+For neovim, make sure `:echo exists('##CompleteChanged') && exists('*nvim_open_win')` echo `1`.
 
 To preview expanded snippet body, you can use [coc-snippets](https://github.com/neoclide/coc-snippets).
 
