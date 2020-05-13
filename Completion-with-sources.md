@@ -104,6 +104,18 @@ inoremap <silent><expr> <NUL> coc#refresh()
     ``` vim
     autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
     ```
+
+* Setup coc behaviour for specified filetype(s)
+    ``` vim
+    augroup mygroup
+        autocmd!
+        " Setup formatexpr specified filetype(s).    
+        autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+        " Update signature help on jump placeholder.     
+        autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')  
+    augroup end
+    ```
+Those lines are present at the suggested .vimrc config file. If you won't use, remove them to avoid unexpected behaviour!!!!
 ## Completion sources
 
 ### Bundled sources.
