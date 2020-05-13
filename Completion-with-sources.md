@@ -67,6 +67,11 @@ inoremap <silent><expr> <Tab>
 " use <c-space>for trigger completion
 inoremap <silent><expr> <c-space> coc#refresh()
 ```
+Some terminals may send \<NUL> when you press \<c-space>, so you could instead:
+``` vim
+" use <c-space>for trigger completion
+inoremap <silent><expr> <NUL> coc#refresh()
+```
 
 ## Improve the completion experience
 
