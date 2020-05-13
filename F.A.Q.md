@@ -29,7 +29,11 @@ If you want to manual trigger completion add `"suggest.autoTrigger": "none",` to
 ``` vim
   inoremap <silent><expr> <c-space> coc#refresh()
 ```
+Note that some terminals send <NUL> when you press <c-space>, so you could use:
 
+``` vim
+  inoremap <silent><expr> <NUL> coc#refresh()
+```
 ## How could I disable floating window?
 
 * For documentation of completion, use `"suggest.floatEnable": false` in settings.json.
