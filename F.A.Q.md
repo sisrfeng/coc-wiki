@@ -29,7 +29,7 @@ If you want to manual trigger completion add `"suggest.autoTrigger": "none",` to
 ``` vim
   inoremap <silent><expr> <c-space> coc#refresh()
 ```
-Note that some terminals send <NUL> when you press <c-space>, so you could use instead:
+Note that some terminals send \<NUL> when you press <c-space>, so you could use instead:
 
 ``` vim
   inoremap <silent><expr> <NUL> coc#refresh()
