@@ -231,6 +231,19 @@ Using [cmake-language-server](https://github.com/regen100/cmake-language-server)
   }
 ```
 
+### Nix
+
+Using [rnix-lsp](https://github.com/nix-community/rnix-lsp):
+
+```jsonc
+ "languageserver": {
+    "nix": {
+      "command": "rnix-lsp",
+      "filetypes": ["nix"]
+    }
+  }
+```
+
 ### Rust
 
 * install [coc-rls](https://github.com/neoclide/coc-rls/) which uses `rls`
