@@ -168,6 +168,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-bookmark](https://github.com/voldikss/coc-bookmark)** bookmark extension
 * **[coc-browser](https://github.com/voldikss/coc-browser)** for browser words completion
 * **[coc-calc](https://github.com/weirongxu/coc-calc)** expression calculation extension
+* **[coc-cfn-lint](https://github.com/joenye/coc-cfn-lint)** for CloudFormation Linter, [cfn-python-lint](https://github.com/aws-cloudformation/cfn-python-lint)
 * **[coc-clangd](https://github.com/clangd/coc-clangd)** for C/C++/Objective-C, use [clangd](https://clangd.github.io)
 * **[coc-cmake](https://github.com/voldikss/coc-cmake)** for cmake code completion
 * **[coc-css](https://github.com/neoclide/coc-css)** for `css`, `scss` and `less`.
