@@ -12,9 +12,14 @@ The buffer source only provide keywords from buffers meet these conditions:
 
 Use `let g:coc_node_path = '/path/to/node'` to make coc.nvim use custom node executable.
 
-## Highlight of floating window doesn't looks right.
+## Bad background highlight of floating window
 
-Some colorscheme use high contrast background colors for `Pmenu` which is linked with `CocFloating` used for floating window highlight, you can overwrite `CocFloating` with a low contrast background color or use colorscheme that works fine by default, for example: https://github.com/morhetz/gruvbox
+The background used for floating window is `CocFloating` which linked to `NormalFloat` on neovim or `Pmenu` on vim8.
+Reset the highlight in your vimrc if it's not suitable, or use colorscheme that works fine by default, for example: https://github.com/morhetz/gruvbox
+
+## Syntax highlight of markdown doesn't looks right.
+
+On neovim, coc.nivm uses background neovim instance which load syntax plugins only for generate highlights, it may not what you would expect.
 
 ## Floating window position is wrong after scroll the screen.
 
