@@ -114,7 +114,6 @@ Another option is configure analysis_server yourself. Use analysis_server from [
         "--lsp"
       ],
       "filetypes": ["dart"],
-      "disableDynamicRegister": true,
       "trace.server": "verbose"
     },
   }
