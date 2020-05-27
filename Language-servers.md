@@ -1,7 +1,7 @@
 # Contents
 
 * [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
-* [Example language server configuration]()
+* [Example language server configuration](https://github.com/neoclide/coc.nvim/wiki/Language-servers#example-language-server-configuration)
 * [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
 
 ## Supported features
