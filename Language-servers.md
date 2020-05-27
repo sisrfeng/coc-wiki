@@ -1,6 +1,7 @@
 # Contents
 
 * [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
+* [Example language server configuration]()
 * [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
 
 ## Supported features
@@ -80,7 +81,7 @@ An example of socket language server:
 * `rootPatterns` is used to resolve the root path which should contain one of the patterns as a child directory or file, it will use `"coc.preferences.rootPatterns"` (default to `[".git", ".hg", ".projections.json"]`)  when not specified,  
 * `requireRootPattern` when this is true, the language server will only start when any matched rootPatterns found.
 
-## Example configuration for custom language servers
+## Example language server configuration
 
 Add `languageserver` section in your `coc-settings.json` for registering custom language servers.
 
