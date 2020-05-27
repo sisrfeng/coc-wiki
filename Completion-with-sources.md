@@ -1,4 +1,12 @@
-Coc.nvim has full support for [Language Server Protocol completion](https://langserver.org/), including snippet and additional text edits support.
+## Highlights of coc.nvim's completion
+
+* **Full LSP completion support**, especially snippet and `additionalTextEdit` feature, you'll understand why it's awesome when you experience it with a coc extension like `coc-tsserver`.
+* **Completion resolving on completion item change**, it does async completion resolve on completion item change and the detail and documentaion would be shown in float window (when possible).
+* **Asynchronous and parallel completion request**, unless using vim sources, your vim will never be blocked.
+* **Incomplete request and cancel request support**, only incomplete completion requests would be triggered on filtering completion items and cancellation requests are sent to servers only when necessary.
+* **Start completion without timer**. The completion will start after you type the first letter of a word by default and is filtered with new input after the completion has finished. Other completion engines use a timer to trigger completion so you always have to wait after the typed character.
+* **Realtime buffer keywords**. Coc will generate buffer keywords on buffer change in the background (with debounce), while some completion engines use a cache which isn't always correct.  Plus, [Locality bonus feature](https://code.visualstudio.com/docs/editor/intellisense#_locality-bonus) from VSCode is enabled by default.
+* **Filter completion items when possible.** When you do a fuzzy filter with completion items, some completion engines will trigger a new completion, but coc.nvim will filter the items when possible which makes it much faster. Filtering completion items on backspace is also supported.
 
 By default, coc.nvim use its own `completeopt` option during completion to provide the best auto completion experience.
 
