@@ -8,6 +8,8 @@
 * **Realtime buffer keywords**. Coc will generate buffer keywords on buffer change in the background (with debounce), while some completion engines use a cache which isn't always correct.  Plus, [Locality bonus feature](https://code.visualstudio.com/docs/editor/intellisense#_locality-bonus) from VSCode is enabled by default.
 * **Filter completion items when possible.** When you do a fuzzy filter with completion items, some completion engines will trigger a new completion, but coc.nvim will filter the items when possible which makes it much faster. Filtering completion items on backspace is also supported.
 
+## Limitation of coc.nvim's completion
+
 By default, coc.nvim use its own `completeopt` option during completion to provide the best auto completion experience.
 
 There's no function of coc.nvim that can be used as `omnifunc` because it's not possible to support all LSP completion features when using `omnifunc`.
@@ -20,37 +22,7 @@ There are 3 different trigger modes:
 * `trigger`, only trigger completion when you type `triggerCharacters` (or trigger pattern match) defined by the completion sources.
 * `none`, disable auto trigger completion, you will have to trigger the completion manually.
 
-Some completion behavior can be changed by [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file).
-
-To change the trigger mode, add:
-
-    "suggest.autoTrigger": "trigger"
-
-To support completion trigger on insert enter, add
-  
-    "suggest.triggerAfterInsertEnter": true
-
-To change the completion timeout, use:
- 
-    "suggest.timeout": 500,
-
-To make the completion automatically select the first completed item, use: 
-
-    "suggest.noselect": false,
-
-To make the completion trigger with two input characters, use: 
-
-    "suggest.minTriggerInputLength": 2
-
-To enable the commit characters feature, use: 
-
-    "suggest.acceptSuggestionOnCommitCharacter": true
-
-To change the indicator of snippet items, use:
-
-    "suggest.snippetIndicator": "►"
-
-To get the full list checkout the help by `:h coc-configuration` in your vim.
+Lots of completion behavior can be changed by [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file), check out `:h coc-config-suggest` for details.
 
 ## Use `<Tab>` or custom key for trigger completion
 
@@ -112,7 +84,10 @@ inoremap <silent><expr> <NUL> coc#refresh()
     ``` vim
     autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
     ```
+
 ## Completion sources
+
+Use command `:CocList sources` to get current completion source list.
 
 ### Bundled sources.
 
