@@ -112,7 +112,11 @@ Another option is configure analysis_server yourself. Use analysis_server from [
       "args": [
         " change this to the path of analysis_server
         "/usr/local/opt/dart/libexec/bin/snapshots/analysis_server.dart.snapshot",
-        "--lsp"
+        "--lsp",
+        "--client-id",
+        "vim",
+        "--client-version",
+        "coc.nvim",
       ],
       "filetypes": ["dart"],
       "trace.server": "verbose"
