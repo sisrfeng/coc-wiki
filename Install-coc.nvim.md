@@ -5,7 +5,7 @@ You can use release branch which contains compiled javascript (build/index.js) o
 ## Requirements
 
 * `neovim` >= `0.3.1` or `vim` >= `8.0.1453` (use command `:version` to checkout your vim version.)
-* `node` >= `8.10.0`
+* `node` >= `10.12`
 
 **Note:** it will not load at all if (neo)vim is too old.
 
