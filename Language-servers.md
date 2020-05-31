@@ -1001,3 +1001,18 @@ Using [`sql-language-server`](https://github.com/joe-re/sql-language-server)
   }
 }
 ```
+
+### Zig
+
+Using [`zls`](https://github.com/zigtools/zls#installation)
+Make sure `zls` is on your `PATH` variable, otherwise specify the full path to the `zls` executable
+
+```jsonc
+"zig": {
+  "command": "zls",
+  "filetypes": [
+    "zig"
+  ]
+},
+
+```
