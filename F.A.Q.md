@@ -190,3 +190,7 @@ Open log file by command:
 ```
 :CocOpenLog
 ```
+
+## CocList is broken when holding `up` or `down` on vim
+
+Should be bug of vim, avoid hold `up` or `down`, use `j` `k` on normal mode and `<C-j>` `<C-k>` in insert mode instead.
