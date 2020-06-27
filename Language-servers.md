@@ -453,13 +453,24 @@ If you installed merlin with opam
   }
 ```
 
-Using [ocaml-lsp](https://github.com/ocaml/ocaml-lsp)
+Using [ocaml-lsp](https://github.com/ocaml/ocaml-lsp) and opam
 
 ``` jsonc
 "languageserver": {
     "ocaml-lsp": {
         "command": "opam",
         "args": ["config", "exec", "--", "ocamllsp"],
+        "filetypes": ["ocaml", "reason"]
+    }
+}
+```
+Using [ocaml-lsp](https://github.com/ocaml/ocaml-lsp) and esy
+
+``` jsonc
+"languageserver": {
+    "ocaml-lsp": {
+        "command": "esy",
+        "args": ["sh", "-c", "ocamllsp"],
         "filetypes": ["ocaml", "reason"]
     }
 }
