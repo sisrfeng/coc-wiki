@@ -537,6 +537,42 @@ Using [flow lsp](https://github.com/facebook/flow)
 
 ### Haskell
 
+Using [Haskell Language Server](https://github.com/haskell/haskell-language-server)
+
+```jsonc
+"languageserver": {
+  "haskell": {
+    "command": "haskell-language-server-wrapper",
+    "args": ["--lsp"],
+    "rootPatterns": [
+      "*.cabal",
+      "stack.yaml",
+      "cabal.project",
+      "package.yaml"
+    ],
+    "filetypes": [
+      "haskell",
+      "lhaskell"
+    ],
+    "initializationOptions": {
+      "languageServerHaskell": {
+      }
+    }
+  }
+}
+```
+
+* You may opt to [download binaries from bubba's fork for now](https://github.com/bubba/haskell-language-server/releases). Extract them in your `PATH`
+and rename accordingly (stripping OS name if present).
+* You may also opt to use `ghcup` to easily install latest `ghc` and `cabal` binaries to your `PATH`.
+
+With this you can avoid building anything from scratch and can start coding
+Haskell files right away. See
+[this](https://github.com/haskell/haskell-language-server/issues/158#issuecomment-651101673)
+and
+[this](https://github.com/haskell/haskell-ide-engine/issues/1647#issuecomment-650831486)
+for more details.
+
 Using [Haskell IDE Engine](https://github.com/haskell/haskell-ide-engine)
 
 ```jsonc
@@ -550,9 +586,8 @@ Using [Haskell IDE Engine](https://github.com/haskell/haskell-ide-engine)
       "package.yaml"
     ],
     "filetypes": [
-      "hs",
-      "lhs",
-      "haskell"
+      "haskell",
+      "lhaskell"
     ],
     "initializationOptions": {
       "languageServerHaskell": {
