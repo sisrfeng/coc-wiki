@@ -562,7 +562,7 @@ Using [Haskell Language Server](https://github.com/haskell/haskell-language-serv
 }
 ```
 
-* You may opt to [download binaries from bubba's fork for now](https://github.com/bubba/haskell-language-server/releases). Extract them in your `PATH`
+* You may opt to [download binaries from bubba's fork for now](https://github.com/bubba/haskell-language-server/releases/latest). Extract them in your `PATH`
 and rename accordingly (stripping OS name if present).
 * You may also opt to use `ghcup` to easily install latest `ghc` and `cabal` binaries to your `PATH`.
 
