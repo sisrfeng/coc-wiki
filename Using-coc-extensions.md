@@ -201,6 +201,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-phpactor](https://github.com/phpactor/coc-phpactor)** for `php`, using [phpactor](https://github.com/phpactor/phpactor)
 * **[coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`, use [intelephense-docs](https://github.com/bmewburn/intelephense-docs).
 * **[coc-powershell](https://github.com/yatli/coc-powershell)** for PowerShellEditorService integration.
+* **[coc-prisma](https://github.com/pantharshit00/coc-prisma)** for Prisma schema integration.
 * **[coc-pyright](https://github.com/fannheyward/coc-pyright)** [Pyright](https://github.com/microsoft/pyright) extension
 * **[coc-python](https://github.com/neoclide/coc-python)** for `python`, extension forked from [vscode-python](https://github.com/Microsoft/vscode-python).
 * **[coc-r-lsp](https://github.com/neoclide/coc-r-lsp)** for `r`, use [R languageserver](https://github.com/REditorSupport/languageserver).
