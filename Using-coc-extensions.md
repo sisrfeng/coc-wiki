@@ -208,6 +208,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-reason](https://github.com/jaredly/reason-language-server/tree/master/editor-extensions/coc.nvim)** for [`reasonml`](https://reasonml.github.io/)
 * **[coc-rls](https://github.com/neoclide/coc-rls)** for `rust`, use [Rust Language Server](https://github.com/rust-lang/rls)
 * **[coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer)** for `rust`, use [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer)
+* **[coc-sh](https://github.com/josa42/coc-sh)** for `bash` using [bash-language-server](https://github.com/bash-lsp/bash-language-server).
 * **[coc-stylelintplus](https://github.com/bmatcuk/coc-stylelintplus)** for linting CSS and CSS preprocessed formats
 * **[coc-stylelint](https://github.com/neoclide/coc-stylelint)** for linting CSS and CSS preprocessed formats
 * **[coc-snippets](https://github.com/neoclide/coc-snippets)** provides snippets solution.
