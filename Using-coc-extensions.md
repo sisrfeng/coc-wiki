@@ -186,6 +186,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-flow](https://github.com/amiralies/coc-flow)** for [`flow`](https://flow.org)
 * **[coc-flutter](https://github.com/iamcco/coc-flutter)** for [`flutter`](https://github.com/flutter/flutter)
 * **[coc-fsharp](https://github.com/yatli/coc-fsharp)** for `fsharp`.
+* **[coc-fzf-preview](https://github.com/yuki-ycino/fzf-preview.vim/)** provide powerful [fzf](https://github.com/junegunn/fzf) integration.
 * **[coc-git](https://github.com/neoclide/coc-git)** provides git integration.
 * **[coc-go](https://github.com/josa42/coc-go)** for `go`, use [gopls](https://github.com/golang/tools/tree/master/gopls).
 * **[coc-highlight](https://github.com/neoclide/coc-highlight)** provides default document symbol highlighting and color support.
