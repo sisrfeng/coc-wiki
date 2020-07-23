@@ -200,5 +200,5 @@ Should be bug of vim, avoid hold `up` or `down`, use `j` `k` on normal mode and 
 This is done by the `doHover` action. Configure a mapping like, e.g.:
 
 ```vim
-nnoremap <silent> <leader>ch :call CocActionAsync('doHover')<cr>
+nnoremap <silent> <leader>h :call CocActionAsync('doHover')<cr>
 ```
