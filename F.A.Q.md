@@ -194,3 +194,11 @@ Open log file by command:
 ## CocList is broken when holding `up` or `down` on vim
 
 Should be bug of vim, avoid hold `up` or `down`, use `j` `k` on normal mode and `<C-j>` `<C-k>` on insert mode instead.
+
+## How to show documentation of symbol under cursor, also known as cursor hover?
+
+This is done by the `doHover` action. Configure a mapping like, e.g.:
+
+```vim
+nnoremap <silent> <leader>ch :call CocActionAsync('doHover')<cr>
+```
