@@ -366,7 +366,7 @@ Using [rcjsuen/dockerfile-language-server-nodejs](https://github.com/rcjsuen/doc
 ```
 
 ### Bash
-
+Try [coc-sh](https://github.com/josa42/coc-sh) or 
 Using [mads-hartmann/bash-language-server](https://github.com/mads-hartmann/bash-language-server)
 
 ``` jsonc
