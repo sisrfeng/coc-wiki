@@ -565,6 +565,7 @@ Using [Haskell Language Server](https://github.com/haskell/haskell-language-serv
 * You may opt to [download binaries](https://github.com/haskell/haskell-language-server/releases/latest). Extract them in your `PATH`
 and rename accordingly (stripping OS name if present).
 * You may also opt to use `ghcup` to easily install latest `ghc` and `cabal` binaries to your `PATH`.
+* Check [HLS README](https://github.com/haskell/haskell-language-server#features) about global cabal configuration to enable documentation on hover.
 
 With this you can avoid building anything from scratch and can start coding
 Haskell files right away.
