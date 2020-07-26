@@ -176,7 +176,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-cssmodules](https://github.com/antonk52/coc-cssmodules)** css modules intellisense.
 * **[coc-discord](https://github.com/amiralies/coc-discord)** discord rich presence for coc.nvim
 * **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
-* **[coc-elixir](https://github.com/amiralies/coc-elixir)** for `elixir`, based on [elixir-ls](https://github.com/JakeBecker/elixir-ls/).
+* **[coc-elixir](https://github.com/elixir-lsp/coc-elixir)** for `elixir`, based on [elixir-ls](https://github.com/JakeBecker/elixir-ls/).
 * **[coc-ember](https://github.com/NullVoxPopuli/coc-ember)** for ember projects.
 * **[coc-emmet](https://github.com/neoclide/coc-emmet)** provides emmet suggestions in completion list.
 * **[coc-erlang_ls](https://github.com/hyhugh/coc-erlang_ls)** for `erlang`, based on [erlang_ls](https://github.com/erlang-ls/erlang_ls)
