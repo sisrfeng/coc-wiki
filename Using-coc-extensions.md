@@ -189,6 +189,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-fzf-preview](https://github.com/yuki-ycino/fzf-preview.vim/)** provide powerful [fzf](https://github.com/junegunn/fzf) integration.
 * **[coc-git](https://github.com/neoclide/coc-git)** provides git integration.
 * **[coc-go](https://github.com/josa42/coc-go)** for `go`, use [gopls](https://github.com/golang/tools/tree/master/gopls).
+* **[coc-graphql](https://github.com/felippepuhle/coc-graphql)** for `graphql`.
 * **[coc-highlight](https://github.com/neoclide/coc-highlight)** provides default document symbol highlighting and color support.
 * **[coc-html](https://github.com/neoclide/coc-html)** for `html`, `handlebars` and `razor`.
 * **[coc-java](https://github.com/neoclide/coc-java)** for `java`, use [eclipse.jdt.ls](https://github.com/eclipse/eclipse.jdt.ls).
