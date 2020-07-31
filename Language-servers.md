@@ -885,6 +885,21 @@ Using [elm-tooling/elm-language-server](https://github.com/elm-tooling/elm-langu
 
 Checkout [github page](https://github.com/elm-tooling/elm-language-server#cocnvim) for more information.
 
+### GraphQL
+
+Using [graphql-language-service-cli](https://www.npmjs.com/package/graphql-language-service-cli)
+
+``` jsonc
+ "languageserver": {
+    "graphql": {
+      "command": "graphql-lsp",
+      "args": ["server", "-m", "stream"],
+      // customize filetypes to your needs
+      "filetypes": ["typescript", "typescriptreact", "graphql"]
+    }
+  }
+```
+
 ### Fortran
 
 Using [fortran-language-server](https://github.com/hansec/fortran-language-server):
