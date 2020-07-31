@@ -969,6 +969,22 @@ Checkout [JuliaEditorSupport/LanguageServer.jl](https://github.com/JuliaEditorSu
 
 Use [coc-r-lsp](https://github.com/neoclide/coc-r-lsp) extension.
 
+### Kotlin
+
+Using [kotlin-language-server](https://github.com/fwcd/kotlin-language-server):
+
+1. Download server.zip from the [releases page](https://github.com/fwcd/kotlin-language-server/releases).
+2. Unzip the file in a convenient directory, for example inside `~/lsp/kotlin/`.
+
+``` jsonc
+  "languageserver": {
+    "kotlin": {
+      "command": "~/lsp/kotlin/server/bin/kotlin-language-server",
+      "filetypes": ["kotlin"]
+    }
+  }
+```
+
 ### Groovy
 
 Using [`Language server for Groovy`](https://github.com/prominic/groovy-language-server). Checkout sources, build it and place `groovy-language-server-all.jar` to any folder
