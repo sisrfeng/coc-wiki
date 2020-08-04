@@ -544,20 +544,8 @@ Using [Haskell Language Server](https://github.com/haskell/haskell-language-serv
   "haskell": {
     "command": "haskell-language-server-wrapper",
     "args": ["--lsp"],
-    "rootPatterns": [
-      "*.cabal",
-      "stack.yaml",
-      "cabal.project",
-      "package.yaml"
-    ],
-    "filetypes": [
-      "haskell",
-      "lhaskell"
-    ],
-    "initializationOptions": {
-      "languageServerHaskell": {
-      }
-    }
+    "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml"],
+    "filetypes": ["haskell", "lhaskell"]
   }
 }
 ```
