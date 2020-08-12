@@ -1082,7 +1082,8 @@ Make sure `zls` is findable in your `PATH` variable, otherwise specify the full 
 
 ### Rome
 
-Using [`rome`](https://github.com/romefrontend/rome)
+- install [`coc-rome`](https://github.com/fannheyward/coc-rome) which uses rome
+- or try [`rome`](https://github.com/romefrontend/rome) without an extension:
 
 ```jsonc
 {
