@@ -1079,3 +1079,27 @@ Make sure `zls` is findable in your `PATH` variable, otherwise specify the full 
 },
 
 ```
+
+### Rome
+
+Using [`rome`](https://github.com/romefrontend/rome)
+
+```jsonc
+{
+  "languageserver": {
+    "rome-lsp": {
+      "command": "rome",
+      "args": ["lsp"],
+      "filetypes": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "json"
+      ],
+      "rootPatterns": [".config"],
+      "requireRootPattern": true
+    }
+  }
+}
+```
