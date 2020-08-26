@@ -264,7 +264,7 @@ Using [rnix-lsp](https://github.com/nix-community/rnix-lsp):
   }
 ```
 
-It's necessary to `rustup component add rust-src` and build `rust-analyzer` from sources (just `cargo install-ra --server`).
+It's necessary to `rustup component add rust-src` and build `rust-analyzer` from sources, follow rust-analyzer [User Manual](https://rust-analyzer.github.io/manual.html#building-from-source).
 
 For coc-rls do not add above configuration in `coc-settings.json` file just use ( `rustup component add rls rust-analysis rust-src`)
 ### Go
