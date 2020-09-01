@@ -498,11 +498,6 @@ Using [purescript-language-server](https://github.com/nwolverson/purescript-lang
        "args": ["--stdio"],
        "filetypes": ["purescript"],
        "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"]
-        "settings": {
-          "purescript": {
-            "addSpagoSources": true
-          }
-        }
      }
   }
 ```
