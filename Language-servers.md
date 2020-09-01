@@ -489,18 +489,24 @@ Using [reason-language-server](https://github.com/jaredly/reason-language-server
 
 ### PureScript
 
-Using [purescript-language-server](https://github.com/nwolverson/purescript-language-server). Note that the language server seems to require the `--config {}` argument for now - this may change in the future, so check their docs.
+Using [purescript-language-server](https://github.com/nwolverson/purescript-language-server).
 
 ``` jsonc
   "languageserver": {
      "purescript": {
        "command": "purescript-language-server",
-       "args": ["--stdio", "--config {}"],
+       "args": ["--stdio"],
        "filetypes": ["purescript"],
        "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"]
+        "settings": {
+          "purescript": {
+            "addSpagoSources": true
+          }
+        }
      }
   }
 ```
+
 
 ### Flow
 
