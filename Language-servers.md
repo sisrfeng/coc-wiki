@@ -489,7 +489,7 @@ Using [reason-language-server](https://github.com/jaredly/reason-language-server
 
 ### PureScript
 
-Using [purescript-language-server](https://github.com/nwolverson/purescript-language-server) ([Configuration])(https://github.com/nwolverson/purescript-language-server#config)
+Using [purescript-language-server](https://github.com/nwolverson/purescript-language-server) ([Configuration](https://github.com/nwolverson/purescript-language-server#config))
 
 ``` jsonc
   "languageserver": {
