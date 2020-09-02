@@ -564,8 +564,8 @@ Using [ghcide](https://github.com/haskell/ghcide) with `stack exec`
 
 1. Build `ghcide` with the `copy-compiler-tool` flag i.e. Instead of using
    `stack install ghcide` do `$ stack build --copy-compiler-tool ghcide`.
-   [Read why `copy-compiler-tool` is preferred over the previous
-   `install`](https://lexi-lambda.github.io/blog/2018/02/10/an-opinionated-guide-to-haskell-in-2018/)
+   ([Read why `copy-compiler-tool` is preferred over 
+   `install`](https://lexi-lambda.github.io/blog/2018/02/10/an-opinionated-guide-to-haskell-in-2018/))
 
 2. This step is a necessary workaround for `coc-settings.json`. Create a script with name
    `ghcide-lsp-via-stack-exec` with this single line as content: `stack exec
