@@ -559,6 +559,40 @@ and rename accordingly (stripping OS name if present).
 With this you can avoid building anything from scratch and can start coding
 Haskell files right away.
 
+
+Using [ghcide](https://github.com/haskell/ghcide) with `stack exec`
+
+1. Build `ghcide` with the `copy-compiler-tool` flag i.e. Instead of using
+   `stack install ghcide` do `$ stack build --copy-compiler-tool ghcide`.
+   [Read why `copy-compiler-tool` is preferred over the previous
+   `install`](https://lexi-lambda.github.io/blog/2018/02/10/an-opinionated-guide-to-haskell-in-2018/)
+
+2. This step is a necessary workaround for `coc-settings.json`. Create a script with name
+   `ghcide-lsp-via-stack-exec` with this single line as content: `stack exec
+   ghcide -- --lsp`. Make that script an executable with `$ chmod u+x
+   ghcide-lsp-via-stack-exec`. Place that executable script somewhere in your
+   path. You'd know this step went well if you don't see a `command not found` error when running the
+   script from your prompt like so `$ ghcide-lsp-via-stack-exec`.
+
+3. Update your `coc-settings.json` 
+
+```jsonc
+    "languageserver": {
+        "haskell": {
+            "command": "ghcide-via-stack-exec",
+            "args": [ "" ],
+            "rootPatterns": [ "*.cabal", "cabal.config", "cabal.project", "package.yaml", "stack.yaml" ],
+            "filetypes": [ "hs", "lhs", "haskell" ],
+            "initializationOptions": { "languageServerHaskell": { "hlintOn": true }
+            }
+        },
+        ...
+    }
+```
+
+
+
+
 Using [Haskell IDE Engine](https://github.com/haskell/haskell-ide-engine)
 
 ```jsonc
