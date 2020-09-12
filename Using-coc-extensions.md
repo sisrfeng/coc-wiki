@@ -202,6 +202,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown linting
 * **[coc-metals](https://github.com/scalameta/coc-metals)** for Scala using [`Metals`](http://scalameta.org/metals/)
 * **[coc-omnisharp](https://github.com/yatli/coc-omnisharp)** for `csharp` and `visualbasic`.
+* **[coc-perl](https://github.com/ryuta69/coc-perl)** for `perl`.
 * **[coc-phpactor](https://github.com/phpactor/coc-phpactor)** for `php`, using [phpactor](https://github.com/phpactor/phpactor)
 * **[coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`, use [intelephense-docs](https://github.com/bmewburn/intelephense-docs).
 * **[coc-powershell](https://github.com/yatli/coc-powershell)** for PowerShellEditorService integration.
