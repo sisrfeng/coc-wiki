@@ -567,12 +567,12 @@ Using [ghcide](https://github.com/haskell/ghcide) with `stack exec`
    ([Read why `copy-compiler-tool` is preferred over 
    `install`](https://lexi-lambda.github.io/blog/2018/02/10/an-opinionated-guide-to-haskell-in-2018/))
 
-2. This step is a necessary workaround for `coc-settings.json`. Create a script with name
+2. This step is a necessary workaround for `coc-settings.json`. Create a script file with name
    `ghcide-lsp-via-stack-exec` with this single line as content: `stack exec
-   ghcide -- --lsp`. Make that script an executable with `$ chmod u+x
-   ghcide-lsp-via-stack-exec`. Place that executable script somewhere in your
-   path. You'd know this step went well if you don't see a `command not found` error when running the
-   script from your prompt like so `$ ghcide-lsp-via-stack-exec`.
+   ghcide -- --lsp`. Make that script file an executable with `$ chmod u+x
+   ghcide-lsp-via-stack-exec`. Place that executable script file somewhere in your
+   path. You'd know this step went well if you don't see a `command not found` error when running that
+   script file from a prompt like so `$ ghcide-lsp-via-stack-exec`.
 
 3. Update your `coc-settings.json` 
 
@@ -586,7 +586,7 @@ Using [ghcide](https://github.com/haskell/ghcide) with `stack exec`
             "initializationOptions": { "languageServerHaskell": { "hlintOn": true }
             }
         },
-        ...
+        //...
     }
 ```
 
