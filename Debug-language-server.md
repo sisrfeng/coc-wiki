@@ -12,6 +12,8 @@ Use command `:CocList services` to open services list, you will have `id` `state
 
 If service id starts with `languageserver`, it comes from `languageserver` configuration in coc-settings.json, if not, it's from extension of coc.nvim.
 
+The service could not start when buffer's filetype not match, use `:CocCommand document.echoFileType` to get filetype of current buffer used by coc.nvim.
+
 ## Using output channel
 
 The same as VSCode, each language server has it's own output channel, the output channel can be opened by
