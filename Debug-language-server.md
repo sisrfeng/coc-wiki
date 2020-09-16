@@ -59,6 +59,8 @@ First, add `execArgv` to the language server settings like:
  "css.execArgv": ["--nolazy", "--inspect-brk=6045"]
 ```
 
-After the `css` service starts, open Chrome with the url `chrome://inspect`
+After the `css` service starts, open Chrome with the url `chrome://inspect`.
 
 Make sure the `Discover network targets` option is checked and you have the address added to `Target discovery settings`, and then you will have the debugging target.
+
+**Note** it's recommended to install [coc-json](https://github.com/neoclide/coc-json) for automatic json completion.
