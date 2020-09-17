@@ -89,7 +89,7 @@ vim -c 'CocInstall -sync coc-json coc-html|q'
 
 ### Use vim's plugin manager for coc extension
 
-Starting from recent master of coc.nvim, you can manage coc extension by using a plugin manager for vim, like [vim-plug](https://github.com/junegunn/vim-plug), coc will try to load coc extensions from your `&rtp`
+You can manage coc extension by using a plugin manager for vim, like [vim-plug](https://github.com/junegunn/vim-plug), coc will try to load coc extensions from your `&rtp`
 
 Example for coc-tsserver:
 
@@ -105,11 +105,9 @@ This has the limitation that you can't uninstall the extension by using `:CocUni
 
 ### Update extensions
 
-You **don't** need to update coc extensions manually, coc detects acceptable new version of installed extension everyday (by default) the first time it starts. When it finds a new version of an extension, it will update it for you automatically.
-
-To disable automatic updates, change the setting: `coc.preferences.extensionUpdateCheck` to `"never"`.
-
 Use the command `:CocUpdate` or `:CocUpdateSync` to update all extensions to the latest version.
+
+You can enable automatic update by configuration `coc.preferences.extensionUpdateCheck` to `"daily"`, which defaults to `"never"`.
 
 To upgrade extensions with shell script, use command like:
 
@@ -140,7 +138,7 @@ to open CocList buffer, which looks like:
 * `+` means extension is loaded
 * `-` means extension is disabled
 
-Supported actions (hit tab to activate action menu):
+Supported actions (hit `<Tab>` to activate action menu):
 
 * `toggle` default action. activate/deactivate selected extension(s).
 * `enable`: enable selected extension(s).
@@ -155,9 +153,7 @@ If an extension throws uncaught errors, you can get the error message by: `:mess
 
 For extensions using a language server, you can use the output channel. Check out <https://github.com/neoclide/coc.nvim/wiki/Debug-language-server#using-output-channel>.
 
-If the extension is using stdio to write messages, you can get the output from the log file of coc, the log file can be found by command: `:CocOpenLog` in your vim. Use `$NVIM_COC_LOG_FILE` environment variable to use fixed filename for the log file.
-
-The default log level is info. To get the debug information, set the `NVIM_COC_LOG_LEVEL` environment variable by the command: `export NVIM_COC_LOG_LEVEL=debug`.
+Use `console` for log messages to log file of coc.nvim, supported methods including `debug` `log` `error` `info` `warn`, checkout `:h :CocOpenLog`. 
 
 You can also use Chrome to debug extensions, checkout <https://github.com/neoclide/coc.nvim/wiki/Debug-coc.nvim>.
 
@@ -239,7 +235,5 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-xml](https://github.com/fannheyward/coc-xml)** for `xml`, use [lsp4xml](https://github.com/angelozerr/lsp4xml).
 * **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
 * **[coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights & history.
-
-
 
 **Tips:** use `:CocConfig` to edit the configuration file. Completion & validation are supported after `coc-json` is installed.
