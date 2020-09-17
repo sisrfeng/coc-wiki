@@ -2,7 +2,7 @@
 
 The main reason is that some language servers provided by the community behave badly compared to the extensions of VSCode. Coc extensions can be forked from VSCode extensions providing a better user experience.
 
-Compared to configured language servers, extensions have more features.
+Compare to configured language servers, extensions have more features.
 
 * Extensions can contribute properties to the schema `coc-settings.json`, like in VSCode you can write the configuration with completion and validation support when you have `coc-json` installed.
 
