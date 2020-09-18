@@ -30,18 +30,20 @@ For features like `textEdit` and `additionalTextEdits`(mostly used by automatic 
 
 ## Use `<cr>` for confirm completion
 
+You have to remap `<cr>` to make sure it confirms completion when popup menu is visible since default behavior of `<CR>` could be different regard to current completion state and `completeopt` option.
+
 ``` vim
-    ap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 ```
-**Note:** you have to remap `<cr>` to make sure it confirm completion when pum is visible.
 
 **Note:** `\<C-g>u` is used to break undo level.
    
 To make `<cr>` select the first completion item and confirm the completion when no item has been selected:
+
 ``` vim
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 ```
-to make coc.nvim format your code on `<cr>`, use keymap:
+to make coc.nvim format your code on `<cr>`:
 
 ``` vim
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
