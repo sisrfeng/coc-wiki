@@ -8,11 +8,6 @@
 * **Realtime buffer keywords**. Coc will generate buffer keywords on buffer change in the background (with debounce), while some completion engines use a cache which isn't always correct.  Plus, [Locality bonus feature](https://code.visualstudio.com/docs/editor/intellisense#_locality-bonus) from VSCode is enabled by default.
 * **Filter completion items when possible.** When you do a fuzzy filter with completion items, some completion engines will trigger a new completion, but coc.nvim will filter the items when possible which makes it much faster. Filtering completion items on backspace is also supported.
 
-## Limitation of coc.nvim's completion
-
-By default, coc.nvim use its own `completeopt` option during completion to provide the best auto completion experience.
-
-There's no function of coc.nvim that can be used as `omnifunc` because it's not possible to support all LSP completion features when using `omnifunc`.
 
 ## Trigger mode of completion
 
@@ -23,6 +18,34 @@ There are 3 different trigger modes:
 * `none`, disable auto trigger completion, you will have to trigger the completion manually.
 
 Lots of completion behavior can be changed by [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file), check out `:h coc-config-suggest` for details.
+
+
+## Limitation of coc.nvim's completion
+
+By default, coc.nvim use its own `completeopt` option during completion to provide the best auto completion experience.
+
+There's no function of coc.nvim that can be used as `omnifunc` because it's not possible to support all LSP completion features when using `omnifunc`.
+
+For features like `textEdit` and `additionalTextEdits`(mostly used by automatic import feature) of LSP to work, you **have to** confirm completion, which is `<C-y>` by default of vim. Read next section for key-mappings example.
+
+## Use `<cr>` for confirm completion
+
+``` vim
+    ap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+```
+**Note:** you have to remap `<cr>` to make sure it confirm completion when pum is visible.
+
+**Note:** `\<C-g>u` is used to break undo level.
+   
+To make `<cr>` select the first completion item and confirm the completion when no item has been selected:
+``` vim
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+```
+to make coc.nvim format your code on `<cr>`, use keymap:
+
+``` vim
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+```
 
 ## Use `<Tab>` or custom key for trigger completion
 
@@ -53,37 +76,12 @@ Some terminals may send \<NUL> when you press \<c-space>, so you could instead:
 inoremap <silent><expr> <NUL> coc#refresh()
 ```
 
-## Improve the completion experience
+## Use `<Tab>` and `<S-Tab>` to navigate the completion list:
 
-* Use `<Tab>` and `<S-Tab>` to navigate the completion list:
-
-   ``` vim
-   inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-   inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-   ```
-
-* Use `<cr>` to confirm completion
-    ``` vim
-    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-    ```
-  **Note:** you have to remap `<cr>` to make sure it confirm completion when pum is visible.
-
-  **Note:** `\<C-g>u` is used to break undo level.
-   
-  To make `<cr>` select the first completion item and confirm the completion when no item has been selected:
-    ``` vim
-    inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
-    ```
-  To make coc.nvim format your code on `<cr>`, use keymap:
-
-    ``` vim
-    inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-    ```
-
-* Close the preview window when completion is done.
-    ``` vim
-    autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-    ```
+``` vim
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+```
 
 ## Completion sources
 
