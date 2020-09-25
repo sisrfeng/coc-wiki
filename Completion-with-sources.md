@@ -1,7 +1,7 @@
 ## Highlights of coc.nvim's completion
 
 * **Full LSP completion support**, especially snippet and `additionalTextEdit` feature, you'll understand why it's awesome when you experience it with a coc extension like `coc-tsserver`.
-* **Completion resolving on completion item change**, it does async completion resolve on completion item change and the detail and documentaion would be shown in float window (when possible).
+* **Completion resolving on completion item change**, it does async completion resolve on completion item change and the detail and documentation would be shown in float window (when possible).
 * **Asynchronous and parallel completion request**, unless using vim sources, your vim will never be blocked.
 * **Incomplete request and cancel request support**, only incomplete completion requests would be triggered on filtering completion items and cancellation requests are sent to servers only when necessary.
 * **Start completion without timer**. The completion will start after you type the first letter of a word by default and is filtered with new input after the completion has finished. Other completion engines use a timer to trigger completion so you always have to wait after the typed character.
