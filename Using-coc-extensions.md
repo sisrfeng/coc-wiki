@@ -23,7 +23,7 @@ Compare to configured language servers, extensions have more features.
 * Extensions can contribute snippets that can be loaded by [coc-snippets](https://github.com/neoclide/coc-snippets) extension.
 * Extensions can specify more client options, like `fileEvents` to watch files (requires [watchman](https://facebook.github.io/watchman/) installed), and `middleware` which can be used to fix results that return from the language server.
 
-For a deeper dive into the purpose and implementation of coc extensions, please see [How to write a coc.nvim extension](https://samroeca.com/coc-plugin.html).
+For a deeper dive into the purpose and implementation of coc extensions, please see [How to write a coc.nvim extension](https://samroeca.com/coc-plugin.html#writing-an-extension).
 
 ## Differences between coc extensions and VSCode extensions
 
