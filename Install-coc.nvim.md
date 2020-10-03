@@ -1,30 +1,30 @@
-Coc.nvim is mostly written in typescript and runs on nodejs.
+Coc.nvim is mostly written in TypeScript and runs on Node.js.
 
-You can use release branch which contains compiled javascript (build/index.js) or build from master branch.
+You can use the release branch which contains compiled JavaScript (build/index.js) or build from master.
 
 ## Requirements
 
-* `neovim` >= `0.4.3` or `vim` >= `8.0.1453` (use command `:version` to checkout your vim version.)
+* `neovim` >= `0.4.3` or `vim` >= `8.0.1453` (run `:version` to checkout your vim version)
 * `node` >= `10.12`
 
 **Note:** it will not load at all if (neo)vim is too old.
 
-Install [nodejs](https://nodejs.org/) >= 10 on MacOS:
+Install [Node.js](https://nodejs.org/) >= 10 on MacOS:
 
 ```bash
 brew install node
 ```
 
-Install the latest stable [nodejs](https://nodejs.org/), may not work on windows.
+Install the latest stable [Node.js](https://nodejs.org/); may not work on Windows.
 
 ```sh
 curl -sL install-node.now.sh | sh
 ```
 
-**Note:** coc.nvim find `node` by function `executable('node')` in your vim, checkout
-`:h g:coc_node_path` for customize node path.  
+**Note:** coc.nvim finds `node` by calling `executable('node')` from within vim. Check out
+`:h g:coc_node_path` to customize node path.
 
-Install [yarn](https://yarnpkg.com/) needed when you want to build from source code.
+Install [Yarn](https://yarnpkg.com/) — required when building from source.
 
 ```sh
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
@@ -32,23 +32,23 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 **Note**: NixOS users must follow these steps:
 
-1. Install [nodejs](https://nodejs.org/en/download/) via `nix-env` or put them in `/etc/nixos/configuration.nix`
+1. Install [Node.js](https://nodejs.org/en/download/) via `nix-env` or put it in `/etc/nixos/configuration.nix`
 2. `sudo nixos-rebuild switch`
 
-## Add coc.nvim to your vim's runtimepath
+## Add coc.nvim to vim's runtimepath
 
 ### Using [vim-plug](https://github.com/junegunn/vim-plug)
 
 Use release branch (recommended):
 
 ``` vim
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 ```
 
-Build from source code:
+Build from source:
 
 ``` vim
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', { 'do': 'yarn install --frozen-lockfile' }
 ```
 
 Run command `:PlugInstall` in your (neo)vim.
@@ -58,22 +58,22 @@ Run command `:PlugInstall` in your (neo)vim.
 Use release branch (recommended):
 
 ``` vim
-call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
+call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 ```
 
-Build from source code:
+Build from source:
 
 ``` vim
-call dein#add('neoclide/coc.nvim', {'merged':0, 'build': 'yarn install --frozen-lockfile'})
+call dein#add('neoclide/coc.nvim', { 'merged': 0, 'build': 'yarn install --frozen-lockfile' })
 ```
 
-**Note:** when `'merged':0` not present, coc.nvim will be unable to start.
+**Note:** When `'merged': 0` not present, coc.nvim will be unable to start.
 
-**Note:** depends on your network and CPU, it might take a long time for your first build.
+**Note:** Depends on your network and CPU, first build might take a while.
 
-If you have trouble with compiling the source code when using dein, try command:
+If you have trouble compiling from source when using dein, try in your shell:
 
-``` sh
+```sh
 cd ~/.cache/dein/repos/github.com/neoclide/coc.nvim
 git clean -xfd
 yarn install --frozen-lockfile
@@ -104,17 +104,17 @@ cd ~/.local/share/nvim/site/pack/coc/start
 curl --fail -L https://github.com/neoclide/coc.nvim/archive/release.tar.gz|tar xzfv -
 ```
 
-## Checkout service state
+## Check service state
 
-To check to see if the coc service is running, use command `:checkhealth` in neovim (not supported by vim), the output looks like:
+To check and see if the coc service is running, use command `:checkhealth` in neovim (not supported by vim); the output looks like:
 
 <img width="344" alt="screen shot 2018-07-08 at 11 02 23 pm" src="https://user-images.githubusercontent.com/251450/42421117-001a81ee-8303-11e8-929a-91da4ac9feea.png">
 
-Use `g:coc_node_path` variable to specify node executable that start service of coc.nvim.
+Set `g:coc_node_path` variable to specify which `node` executable to start coc.nvim service from.
 
-Another useful command is `:CocInfo`, after service started, you can use it get some useful information about the service.
+Another useful command is `:CocInfo` — use it after the service has started to get some useful information on it.
 
-## Install extension for programming languages you use daily
+## Install extensions for programming languages you use daily
 
 For example, for generic web-development consider `:CocInstall coc-tsserver coc-json coc-html coc-css`
 
@@ -128,19 +128,19 @@ For more information check out [Using coc extensions](https://github.com/neoclid
 
 ## Add some configuration
 
-Run `:CocConfig`, which will open main config file `~/.config/nvim/coc-settings.json` (empty for new installation). Add empty JSON object (like `{}`) and place here list of [language servers configuration](https://github.com/neoclide/coc.nvim/wiki/Language-servers) that not is not covered by installed extensions (for example, if you already installed `coc-python` you don't need to place configuration for `pyls` server).
+Run `:CocConfig`, which will open main config file `~/.config/nvim/coc-settings.json` (empty for new installation). Add empty JSON object (like `{}`) and add a list of [language servers configurations](https://github.com/neoclide/coc.nvim/wiki/Language-servers) not already covered by existing extensions (e.g. if you already installed `coc-python`, you don't need to add configuration for the `pyls` server).
 
 For more information check out [Using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file)
 
-## Optional install watchman for file watching
+## (Optional) Install watchman for file watching
 
 For feature [workspace_didChangeWatchedFiles](https://microsoft.github.io/language-server-protocol/specification#workspace_didChangeWatchedFiles) to work, you will need to install [watchman](https://facebook.github.io/watchman) by following <https://facebook.github.io/watchman/docs/install>.
 
-Watchman works great even when you have multiple (neo)vim instance started in the same directory.
+Watchman works great even when you have multiple (neo)vim instances started in the same directory.
 
-**Warning** don't create `.watchmanconfig` file in your home directory.
+**Warning:** Don't create `.watchmanconfig` file in your home directory.
 
-**Note** watchman can take lots of memories, use command `watchman watch-del-all` in your terminal to free your memory.
+**Note:** watchman can use a lot of memory! Run `watchman watch-del-all` in your shell to free some.
 
 ## Automation script
 
