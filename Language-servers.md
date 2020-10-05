@@ -14,7 +14,7 @@ Check out the official specification at https://microsoft.github.io/language-ser
 
 User defined language servers are configured in the `languageserver` field of the [configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file).
 
-There're three types of language servers: `module`,`executable` and `socket`.
+There are three types of language servers: `module`, `executable` and `socket`.
 
 * `module` type language servers are run by nodejs and using node IPC for connection.
 * `executable` type language servers are spawned with an executable command while using stdio for connection.
@@ -24,47 +24,49 @@ Different language server types have different configuration schema.
 
 An example of `module` language server:
 
-``` jsonc
-  "languageserver": {
-    "foo": {
-      "module": "/usr/local/lib/node_modules/foo/index.js",
-      "args": ["--node-ipc"],
-      "filetypes": ["foo"],
-      "trace.server": "verbose",
-      "rootPatterns": ["root.yml"],
-      // Used for debugging
-      "execArgv": ["--nolazy", "--inspect-brk=6045"],
-      "initializationOptions": {
-      },
-      "settings": {
-        "validate": true
-      }
+```jsonc
+"languageserver": {
+  "foo": {
+    "module": "/usr/local/lib/node_modules/foo/index.js",
+    "args": ["--node-ipc"],
+    "filetypes": ["foo"],
+    "trace.server": "verbose",
+    "rootPatterns": ["root.yml"],
+    // Used for debugging
+    "execArgv": ["--nolazy", "--inspect-brk=6045"],
+    "initializationOptions": {
+    },
+    "settings": {
+      "validate": true
     }
   }
+}
 ```
+
 `module` and `filetypes` are required for module language server.
 
 An example of `executable` language server:
 
-``` jsonc
-  "languageserver": {
-    "bar": {
-      "command": "bar",
-      "args": ["--stdio"],
-      "filetypes": ["bar"],
-      "cwd": "./src",
-      "initializationOptions": {
-      },
-      "settings": {
-      }
+```jsonc
+"languageserver": {
+  "bar": {
+    "command": "bar",
+    "args": ["--stdio"],
+    "filetypes": ["bar"],
+    "cwd": "./src",
+    "initializationOptions": {
+    },
+    "settings": {
     }
   }
+}
 ```
+
 `command` and `filetypes` are required for executable language server.
 
 An example of socket language server:
 
-``` jsonc
+```jsonc
 "languageserver": {
     "socketserver": {
       "host": "127.0.0.1",
@@ -78,7 +80,7 @@ An example of socket language server:
 * `initializationOptions` is the json object that passed to [language server on initialize](https://microsoft.github.io/language-server-protocol/specification#initialize).
 * `settings` contains specific configuration of the language server.
 * `trace.server` controls trace level of communication between server and client. The default is `"off"`. Change to `"verbose"` if you want to checkout all communication.
-* `rootPatterns` is used to resolve the root path which should contain one of the patterns as a child directory or file, it will use `"coc.preferences.rootPatterns"` (default to `[".git", ".hg", ".projections.json"]`)  when not specified,  
+* `rootPatterns` is used to resolve the root path which should contain one of the patterns as a child directory or file, it will use `"coc.preferences.rootPatterns"` (default to `[".git", ".hg", ".projections.json"]`) when not specified.
 * `requireRootPattern` when this is true, the language server will only start when any matched rootPatterns found.
 
 ## Example language server configuration
@@ -87,16 +89,16 @@ Add `languageserver` section in your `coc-settings.json` for registering custom 
 
 ### Ada/SPARK
 
-Using [Ada Language Server](https://github.com/AdaCore/ada_language_server).  
+Using [Ada Language Server](https://github.com/AdaCore/ada_language_server).
 See installation instructions on the Github homepage of this LSP.
 
-``` jsonc
-  "languageserver": {
-     "Ada": {
-       "command": "path/to/ada_language_server",
-       "filetypes": ["ada"]
-     }
+```jsonc
+"languageserver": {
+  "Ada": {
+    "command": "path/to/ada_language_server",
+    "filetypes": ["ada"]
   }
+}
 ```
 
 ### Dart
@@ -105,147 +107,145 @@ On option is use [coc-flutter](https://github.com/iamcco/coc-flutter), that leve
 
 Another option is configure analysis_server yourself. Use analysis_server from [dart-sdk](https://github.com/dart-lang/sdk):
 
-``` jsonc
-  "languageserver": {
-    "dart": {
-      "command": "dart",
-      "args": [
-        " change this to the path of analysis_server
-        "/usr/local/opt/dart/libexec/bin/snapshots/analysis_server.dart.snapshot",
-        "--lsp",
-        "--client-id",
-        "vim",
-        "--client-version",
-        "coc.nvim",
-      ],
-      "filetypes": ["dart"],
-      "trace.server": "verbose"
-    },
-  }
+```jsonc
+"languageserver": {
+  "dart": {
+    "command": "dart",
+    "args": [
+      " change this to the path of analysis_server
+      "/usr/local/opt/dart/libexec/bin/snapshots/analysis_server.dart.snapshot",
+      "--lsp",
+      "--client-id",
+      "vim",
+      "--client-version",
+      "coc.nvim",
+    ],
+    "filetypes": ["dart"],
+    "trace.server": "verbose"
+  },
+}
 ```
 
-Or use [natebosch/dart_language_server](https://github.com/natebosch/dart_language_server):
+Or use [natebosch/dart_language_server](https://github.com/natebosch/dart_language_server)
 
-``` jsonc
-  "languageserver": {
-    "dart": {
-      "command": "dart_language_server", // in windows is dart_language_server.bat
-      "args": [],
-      "filetypes": ["dart"],
-      "initializationOptions": {},
-      "settings": {
-        "dart": {
-          "validation": {},
-          "completion": {}
-        }
+```jsonc
+"languageserver": {
+  "dart": {
+    "command": "dart_language_server", // in windows is dart_language_server.bat
+    "args": [],
+    "filetypes": ["dart"],
+    "initializationOptions": {},
+    "settings": {
+      "dart": {
+        "validation": {},
+        "completion": {}
       }
     }
   }
+}
 ```
 
 ### C/C++/Objective-C
 
 Using [clangd](https://clang.llvm.org/extra/clangd/Installation.html) with [coc-clangd](https://github.com/clangd/coc-clangd) or:
 
-``` jsonc
-  "languageserver": {
-    "clangd": {
-      "command": "clangd",
-      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
-    }
+```jsonc
+"languageserver": {
+  "clangd": {
+    "command": "clangd",
+    "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+    "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
   }
+}
 ```
 
 Like many tools, clangd relies on the presence of a [JSON compilation database](https://clang.llvm.org/docs/JSONCompilationDatabase.html)
 
-
 Using [ccls](https://github.com/MaskRay/ccls)
 
-``` jsonc
-  "languageserver": {
-    "ccls": {
-      "command": "ccls",
-      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
-      "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
-      "initializationOptions": {
-         "cache": {
-           "directory": "/tmp/ccls"
-         }
-       }
-    }
+```jsonc
+"languageserver": {
+  "ccls": {
+    "command": "ccls",
+    "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+    "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+    "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
   }
+}
 ```
 
 To make header completion work with clang < 8 on Mac OS X, use `"initializationOptions"` like:
-``` jsonc
-      "initializationOptions": {
-        "cache": {
-          "directory": "/tmp/ccls"
-        },
-        "clang": {
-           // make sure you have installed commandLineTools
-          "resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0",
-          "extraArgs": [
-            "-isystem",
-            "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
-            "-I",
-            "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/"        
-          ]
-        }
-      },
-```
 
+```jsonc
+"initializationOptions": {
+  "cache": {
+    "directory": "/tmp/ccls"
+  },
+  "clang": {
+      // make sure you have installed commandLineTools
+    "resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0",
+    "extraArgs": [
+      "-isystem",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/"
+    ]
+  }
+},
+```
 
 Using [cquery](https://github.com/cquery-project/cquery)
 
-``` jsonc
-  "languageserver": {
-    "cquery": {
-      "command": "cquery",
-      "args": ["--log-file=/tmp/cq.log"],
-      "filetypes": ["c", "cc", "cpp", "c++"],
-      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".git/", ".hg/"],
-      "initializationOptions": {
-        "cacheDirectory": "/tmp/cquery"
-      }
+```jsonc
+"languageserver": {
+  "cquery": {
+    "command": "cquery",
+    "args": ["--log-file=/tmp/cq.log"],
+    "filetypes": ["c", "cc", "cpp", "c++"],
+    "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".git/", ".hg/"],
+    "initializationOptions": {
+      "cacheDirectory": "/tmp/cquery"
     }
   }
+}
 ```
-
 
 ### CMake
 
-Try [coc-cmake](https://github.com/voldikss/coc-cmake)(not implemented with LSP) or 
+Try [coc-cmake](https://github.com/voldikss/coc-cmake) (not implemented with LSP) or
 
 Using [cmake-language-server](https://github.com/regen100/cmake-language-server)
 
 ```jsonc
- "languageserver": {
-    "cmake": {
-      "command": "cmake-language-server",
-      "filetypes": ["cmake"],
-      "rootPatterns": [
-        "build/"
-      ],
-      "initializationOptions": {
-        "buildDirectory": "build"
-      }
+"languageserver": {
+  "cmake": {
+    "command": "cmake-language-server",
+    "filetypes": ["cmake"],
+    "rootPatterns": [
+      "build/"
+    ],
+    "initializationOptions": {
+      "buildDirectory": "build"
     }
   }
+}
 ```
 
 ### Nix
 
-Using [rnix-lsp](https://github.com/nix-community/rnix-lsp):
+Using [rnix-lsp](https://github.com/nix-community/rnix-lsp)
 
 ```jsonc
- "languageserver": {
-    "nix": {
-      "command": "rnix-lsp",
-      "filetypes": ["nix"]
-    }
+"languageserver": {
+  "nix": {
+    "command": "rnix-lsp",
+    "filetypes": ["nix"]
   }
+}
 ```
 
 ### Rust
@@ -254,52 +254,53 @@ Using [rnix-lsp](https://github.com/nix-community/rnix-lsp):
 * or install [coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer) which uses `rust-analyzer`
 * or try [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer) without an extension:
 
-``` jsonc
-  "languageserver": {
-    "rust": {
-      "command": "rust-analyzer",
-      "filetypes": ["rust"],
-      "rootPatterns": ["Cargo.toml"]
-    }
+```jsonc
+"languageserver": {
+  "rust": {
+    "command": "rust-analyzer",
+    "filetypes": ["rust"],
+    "rootPatterns": ["Cargo.toml"]
   }
+}
 ```
 
 It's necessary to `rustup component add rust-src` and build `rust-analyzer` from sources, follow rust-analyzer [User Manual](https://rust-analyzer.github.io/manual.html#building-from-source).
 
 For coc-rls do not add above configuration in `coc-settings.json` file just use ( `rustup component add rls rust-analysis rust-src`)
+
 ### Go
 
-Try [coc-go](https://github.com/josa42/coc-go) or
+Via [coc-go](https://github.com/josa42/coc-go) or
 
 Using [gopls](https://github.com/golang/tools/tree/master/gopls)
 
 ```jsonc
-  "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod"],
-      "disableWorkspaceFolders": true,
-      "filetypes": ["go"]
-    }
+"languageserver": {
+  "golang": {
+    "command": "gopls",
+    "rootPatterns": ["go.mod"],
+    "disableWorkspaceFolders": true,
+    "filetypes": ["go"]
   }
+}
 ```
 
 If want more debug，add` "args": ["serve", "-debug", "0.0.0.0:8484", "-rpc.trace"],` below `command`.
 
 Using [sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
 
-``` jsonc
-  "languageserver": {
-    "golang": {
-      "command": "go-langserver",
-      "filetypes": ["go"],
-      "initializationOptions": {
-        "gocodeCompletionEnabled": true,
-        "diagnosticsEnabled": true,
-        "lintTool": "golint"
-      }
+```jsonc
+"languageserver": {
+  "golang": {
+    "command": "go-langserver",
+    "filetypes": ["go"],
+    "initializationOptions": {
+      "gocodeCompletionEnabled": true,
+      "diagnosticsEnabled": true,
+      "lintTool": "golint"
     }
   }
+}
 ```
 
 ### PHP
@@ -310,92 +311,91 @@ Using [bmewburn/intelephense-docs](https://github.com/bmewburn/intelephense-docs
 
 **Recommended** (way faster than php-language-server)
 
-``` jsonc
-{
-    "languageserver": {
-        "intelephense": {
-            "command": "intelephense",
-            "args": ["--stdio"],
-            "filetypes": ["php"],
-            "initializationOptions": {
-                "storagePath": "/tmp/intelephense"
-            }
-        }
-    },
+```jsonc
+"languageserver": {
+  "intelephense": {
+    "command": "intelephense",
+    "args": ["--stdio"],
+    "filetypes": ["php"],
+    "initializationOptions": {
+      "storagePath": "/tmp/intelephense"
+    }
+  }
 }
 ```
 
 Using [felixfbecker/php-language-server](https://github.com/felixfbecker/php-language-server)
 
-``` jsonc
-  "languageserver": {
-    "phplang": {
-      "command": "php",
-      "args": ["/path/to/vendor/felixfbecker/language-server/bin/php-language-server.php"],
-      "filetypes": ["php"]
-    }
+```jsonc
+"languageserver": {
+  "phplang": {
+    "command": "php",
+    "args": ["/path/to/vendor/felixfbecker/language-server/bin/php-language-server.php"],
+    "filetypes": ["php"]
   }
+}
 ```
-note: make sure you can start the server by use command and args.
+
+Note: make sure you can start the server by use command and args.
 
 Using [vimeo/psalm](https://github.com/vimeo/psalm) (psalm-language-server)
 
 ```jsonc
-  "languageserver": {
-    "psalmls": {
-      "command": "vendor/bin/psalm-language-server",
-      "filetypes": ["php"],
-      "rootPatterns": ["psalm.xml", "psalm.xml.dist"],
-      "requireRootPattern": true
-    }
+"languageserver": {
+  "psalmls": {
+    "command": "vendor/bin/psalm-language-server",
+    "filetypes": ["php"],
+    "rootPatterns": ["psalm.xml", "psalm.xml.dist"],
+    "requireRootPattern": true
   }
+}
 ```
 
 ### Dockerfile
 
 Using [rcjsuen/dockerfile-language-server-nodejs](https://github.com/rcjsuen/dockerfile-language-server-nodejs)
 
-``` jsonc
-  "languageserver": {
-    "dockerfile": {
-      "command": "docker-langserver",
-      "filetypes": ["dockerfile"],
-      "args": ["--stdio"]
-    }
+```jsonc
+"languageserver": {
+  "dockerfile": {
+    "command": "docker-langserver",
+    "filetypes": ["dockerfile"],
+    "args": ["--stdio"]
   }
+}
 ```
 
 ### Bash
-Try [coc-sh](https://github.com/josa42/coc-sh) or 
+
+Via [coc-sh](https://github.com/josa42/coc-sh) or
+
 Using [mads-hartmann/bash-language-server](https://github.com/mads-hartmann/bash-language-server)
 
-``` jsonc
-  "languageserver": {
-    "bash": {
-      "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"],
-      "ignoredRootPaths": ["~"]
-    }
+```jsonc
+"languageserver": {
+  "bash": {
+    "command": "bash-language-server",
+    "args": ["start"],
+    "filetypes": ["sh"],
+    "ignoredRootPaths": ["~"]
   }
+}
 ```
 
 ### Lua
 
 Using [Alloyed/lua-lsp](https://github.com/Alloyed/lua-lsp)
 
-``` jsonc
-  "languageserver": {
-    "lua": {
-      "command": "lua-lsp",
-      "filetypes": ["lua"]
-    }
+```jsonc
+"languageserver": {
+  "lua": {
+    "command": "lua-lsp",
+    "filetypes": ["lua"]
   }
+}
 ```
 
-Using [sumneko/lua-language-server](https://github.com/sumneko/lua-language-server) on Windows, which can downloaded by the extension manager of VSCode.
-
-
+Using [sumneko/lua-language-server](https://github.com/sumneko/lua-language-server) on Windows, which can be downloaded by the extension manager of VSCode.
 
 ```viml
 let lua_lsp = glob('~/.vscode/extensions/sumneko.lua*', 0, 1)
@@ -412,128 +412,127 @@ if len(lua_lsp)
 endif
 ```
 
-Using [EmmyLua-LanguageServer](https://github.com/EmmyLua/EmmyLua-LanguageServer):
+Using [EmmyLua-LanguageServer](https://github.com/EmmyLua/EmmyLua-LanguageServer)
 
 Make sure your Java environment variables are rights and change the path in the args field according to your installation.
 
-``` jsonc
-  "languageserver": {
-    "lua": {
-      "command": "java",
-      "args": ["-cp", "/your/path/to/EmmyLua-LanguageServer/EmmyLua-LS/build/libs/EmmyLua-LS-all.jar", "com.tang.vscode.MainKt"],
-      "filetypes": ["lua"],
-      "rootPatterns": [".git/"]
-    }
+```jsonc
+"languageserver": {
+  "lua": {
+    "command": "java",
+    "args": ["-cp", "/your/path/to/EmmyLua-LanguageServer/EmmyLua-LS/build/libs/EmmyLua-LS-all.jar", "com.tang.vscode.MainKt"],
+    "filetypes": ["lua"],
+    "rootPatterns": [".git/"]
   }
+}
 ```
 
 ### OCaml and ReasonML
 
 Using [ocaml-language-server](https://github.com/ocaml-lsp/ocaml-language-server)
 
-``` jsonc
-  "languageserver": {
-     "ocaml": {
-       "command": "ocaml-language-server",
-       "args": ["--stdio"],
-       "filetypes": ["ocaml", "reason"]
-     }
-  }
+```jsonc
+"languageserver": {
+    "ocaml": {
+      "command": "ocaml-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["ocaml", "reason"]
+    }
+}
 ```
 
 If you installed merlin with opam
 
-``` jsonc
-  "languageserver": {
-      "ocaml": {
-          "command": "opam",
-          "args": ["config", "exec", "--", "ocaml-language-server", "--stdio"],
-          "filetypes": ["ocaml", "reason"]
-      }
+```jsonc
+"languageserver": {
+  "ocaml": {
+    "command": "opam",
+    "args": ["config", "exec", "--", "ocaml-language-server", "--stdio"],
+    "filetypes": ["ocaml", "reason"]
   }
+}
 ```
 
 Using [ocaml-lsp](https://github.com/ocaml/ocaml-lsp) and opam
 
-``` jsonc
+```jsonc
 "languageserver": {
-    "ocaml-lsp": {
-        "command": "opam",
-        "args": ["config", "exec", "--", "ocamllsp"],
-        "filetypes": ["ocaml", "reason"]
-    }
+  "ocaml-lsp": {
+    "command": "opam",
+    "args": ["config", "exec", "--", "ocamllsp"],
+    "filetypes": ["ocaml", "reason"]
+  }
 }
 ```
 Using [ocaml-lsp](https://github.com/ocaml/ocaml-lsp) and esy
 
-``` jsonc
+```jsonc
 "languageserver": {
-    "ocaml-lsp": {
-        "command": "esy",
-        "args": ["sh", "-c", "ocamllsp"],
-        "filetypes": ["ocaml", "reason"]
-    }
+  "ocaml-lsp": {
+    "command": "esy",
+    "args": ["sh", "-c", "ocamllsp"],
+    "filetypes": ["ocaml", "reason"]
+  }
 }
 ```
 
 Using [reason-language-server](https://github.com/jaredly/reason-language-server#what-about-the-ocaml-language-server)
 
-``` jsonc
-  "languageserver": {
-     "reason": {
-      "command": "reason-language-server",
-      "filetypes": ["reason"]
-     }
+```jsonc
+"languageserver": {
+  "reason": {
+    "command": "reason-language-server",
+    "filetypes": ["reason"]
   }
+}
 ```
 
 ### PureScript
 
 Using [purescript-language-server](https://github.com/nwolverson/purescript-language-server) ([Configuration](https://github.com/nwolverson/purescript-language-server#config))
 
-``` jsonc
-  "languageserver": {
-     "purescript": {
-       "command": "purescript-language-server",
-       "args": ["--stdio"],
-       "filetypes": ["purescript"],
-       "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"]
-     }
+```jsonc
+"languageserver": {
+  "purescript": {
+    "command": "purescript-language-server",
+    "args": ["--stdio"],
+    "filetypes": ["purescript"],
+    "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"]
   }
+}
 ```
-
 
 ### Flow
 
-Using [flow-language-server](https://github.com/flowtype/flow-language-server), note: flow-language-server is no longer maintained
+Using [flow-language-server](https://github.com/flowtype/flow-language-server) (Note: project no longer maintained)
 
-``` jsonc
-  // disable tsserver for javascript
-  "tsserver.enableJavascript": false,
-  "languageserver": {
-    "flow": {
-      "command": "flow-language-server",
-      "args": ["--stdio"],
-      "filetypes": ["javascript", "javascriptreact"],
-      "rootPatterns": [".flowconfig"]
-    },
-  }
+```jsonc
+// disable tsserver for javascript
+"tsserver.enableJavascript": false,
+"languageserver": {
+  "flow": {
+    "command": "flow-language-server",
+    "args": ["--stdio"],
+    "filetypes": ["javascript", "javascriptreact"],
+    "rootPatterns": [".flowconfig"]
+  },
+}
 ```
 
 Using [flow lsp](https://github.com/facebook/flow)
 
 ```jsonc
-  "languageserver": {
-    "flow": {
-      "command": "flow",
-      "args": ["lsp"],
-      "filetypes": ["javascript", "javascriptreact"],
-      "initializationOptions": {},
-      "requireRootPattern": true,
-      "settings": {},
-      "rootPatterns": [".flowconfig"]
-    }
-  },
+"languageserver": {
+  "flow": {
+    "command": "flow",
+    "args": ["lsp"],
+    "filetypes": ["javascript", "javascriptreact"],
+    "initializationOptions": {},
+    "requireRootPattern": true,
+    "settings": {},
+    "rootPatterns": [".flowconfig"]
+  }
+},
 ```
 
 ### Haskell
@@ -556,15 +555,13 @@ and rename accordingly (stripping OS name if present).
 * You may also opt to use `ghcup` to easily install latest `ghc` and `cabal` binaries to your `PATH`.
 * Check [HLS README](https://github.com/haskell/haskell-language-server#features) about global cabal configuration to enable documentation on hover.
 
-With this you can avoid building anything from scratch and can start coding
-Haskell files right away.
-
+With this you can avoid building anything from scratch and can start coding Haskell files right away.
 
 Using [ghcide](https://github.com/haskell/ghcide) with `stack exec`
 
 1. Build `ghcide` with the `copy-compiler-tool` flag i.e. Instead of using
    `stack install ghcide` do `$ stack build --copy-compiler-tool ghcide`.
-   ([Read why `copy-compiler-tool` is preferred over 
+   ([Read why `copy-compiler-tool` is preferred over
    `install`](https://lexi-lambda.github.io/blog/2018/02/10/an-opinionated-guide-to-haskell-in-2018/))
 
 2. This step is a necessary workaround for `coc-settings.json`. Create a script file with name
@@ -574,24 +571,21 @@ Using [ghcide](https://github.com/haskell/ghcide) with `stack exec`
    path. You'd know this step went well if you don't see a `command not found` error when running that
    script file from a prompt like so `$ ghcide-lsp-via-stack-exec`.
 
-3. Update your `coc-settings.json` 
+3. Update your `coc-settings.json`:
 
-```jsonc
-    "languageserver": {
-        "haskell": {
-            "command": "ghcide-via-stack-exec",
-            "args": [ "" ],
-            "rootPatterns": [ "*.cabal", "cabal.config", "cabal.project", "package.yaml", "stack.yaml" ],
-            "filetypes": [ "hs", "lhs", "haskell" ],
-            "initializationOptions": { "languageServerHaskell": { "hlintOn": true }
-            }
-        },
-        //...
-    }
-```
-
-
-
+   ```jsonc
+   "languageserver": {
+     "haskell": {
+       "command": "ghcide-via-stack-exec",
+       "args": [ "" ],
+       "rootPatterns": [ "*.cabal", "cabal.config", "cabal.project", "package.yaml", "stack.yaml" ],
+       "filetypes": [ "hs", "lhs", "haskell" ],
+       "initializationOptions": { "languageServerHaskell": { "hlintOn": true }
+       }
+     },
+     //...
+   }
+   ```
 
 Using [Haskell IDE Engine](https://github.com/haskell/haskell-ide-engine)
 
@@ -648,43 +642,45 @@ languages:
       - '%f: %l: %m'
 ```
 
-coc-settings.json
+coc-settings.json:
+
 ```jsonc
-  "languageserver": {
-    "efm": {
-      "command": "efm-langserver",
-      "args": [],
-      // custom config path
-      // "args": ["-c", "/path/to/your/config.yaml"],
-      "filetypes": ["vim", "eruby", "markdown"]
-    }
+"languageserver": {
+  "efm": {
+    "command": "efm-langserver",
+    "args": [],
+    // custom config path
+    // "args": ["-c", "/path/to/your/config.yaml"],
+    "filetypes": ["vim", "eruby", "markdown"]
   }
+}
 ```
 
 ### Elixir
 
 Using [elixir-ls](https://github.com/elixir-lsp/elixir-ls)
 
-If you want to use @spec suggestions you have to enable codelens:
+If you want to use @spec suggestions you have to enable codelens.
 
-``` jsonc
-  "codeLens.enable": true,
-  "languageserver": {
-     "elixirLS": {
-      "command": "/absolute/path/to/elixir-ls/release/language_server.sh",
-      "filetypes": ["elixir", "eelixir"]
-     }
+```jsonc
+"codeLens.enable": true,
+"languageserver": {
+  "elixirLS": {
+    "command": "/absolute/path/to/elixir-ls/release/language_server.sh",
+    "filetypes": ["elixir", "eelixir"]
   }
+}
 ```
 
 ### Python
 
-Use [coc-python](https://github.com/neoclide/coc-python) extension is recommended.  If using coc-python you *should not* configure the language server as shown here.
+Use [coc-python](https://github.com/neoclide/coc-python) extension is recommended. If using coc-python you *should not* configure the language server as shown here.
 
-Make sure you've installed the [python-language-server](https://github.com/palantir/python-language-server)
+Make sure you've installed the [python-language-server](https://github.com/palantir/python-language-server).
 
-Example with python-language-server (be careful not to condense the hierarchy as it breaks pyls)
-```
+Example with python-language-server (be careful not to condense the hierarchy as it breaks pyls):
+
+```jsonc
 "languageserver": {
   "python": {
     "command": "python",
@@ -758,22 +754,21 @@ Example with python-language-server (be careful not to condense the hierarchy as
 
 ### Ruby
 
-Use [coc-solargraph](https://github.com/neoclide/coc-solargraph) extension is recommended.
+Using [coc-solargraph](https://github.com/neoclide/coc-solargraph)
 
 Make sure solargraph is in your $PATH (sudo gem install solargraph) or use `solargraph.commandPath` to configure executable path of solargraph.
 
-#### Using [Sorbet](https://sorbet.org)
+#### Using [Sorbet](https://sorbet.org):
 
 ```json
-  "languageserver": {
-    "sorbet": {
-      "command": "srb",
-      "args": ["tc", "--typed", "true", "--enable-all-experimental-lsp-features", "--lsp", "--disable-watchman", "--dir", "."],
-      "filetypes": ["ruby"],
-      "rootPatterns": ["sorbet/config"],
-      "initializationOptions": {},
-      "settings": {}
-    }
+"languageserver": {
+  "sorbet": {
+    "command": "srb",
+    "args": ["tc", "--typed", "true", "--enable-all-experimental-lsp-features", "--lsp", "--disable-watchman", "--dir", "."],
+    "filetypes": ["ruby"],
+    "rootPatterns": ["sorbet/config"],
+    "initializationOptions": {},
+    "settings": {}
   }
 }
 ```
@@ -786,95 +781,95 @@ Install [coc-metals](https://github.com/ckipp01/coc-metals), which will automate
 
 If you'd like to use Metals without the coc-metals extension, make sure the generated metals-vim binary is available on your $PATH and follow the instructions on the [Metals Website](http://scalameta.org/metals/docs/editors/vim.html).
 
-``` jsonc
-  "languageserver": {
-    "metals": {
-      "command": "metals-vim",
-      "rootPatterns": ["build.sbt"],
-      "filetypes": ["scala", "sbt"]
-    }
+```jsonc
+"languageserver": {
+  "metals": {
+    "command": "metals-vim",
+    "rootPatterns": ["build.sbt"],
+    "filetypes": ["scala", "sbt"]
   }
+}
 ```
 
 ##### Scala with Dotty
 
 1. Install [coursier](https://get-coursier.io/docs/cli-overview)
 2. Remove `metals` settings from `coc-settings.json`
-3. Add the `run-dotty-lsp` script to your path and make it executable
-```bash
-#!/bin/sh
-# launches the dotty language server
-launch_server () {
-  # reads the dotty languageserver version from the file produced with `sbt configureIDE`
-  LANGUAGE_SERVER="$(cat .dotty-ide-artifact)"
-  # downloads the dotty languageserver and runs it with coursier
-  coursier launch "$LANGUAGE_SERVER" -M dotty.tools.languageserver.Main -- -stdio
-}
+3. Add the `run-dotty-lsp` script to your path and make it executable:
 
-# both dotty-ide and artifact file must exists
-if [ ! -f ".dotty-ide.json" ] || [ ! -f ".dotty-ide-artifact" ]
-then
-  # if files do not exists we create them with `sbt configureIDE`
-  out="$(sbt configureIDE)" 
-  if [ $? -eq 0 ]
-  then
-    # launch server if `sbt configureIDE` was successful
-    launch_server
-  else
-    # exit and print failure of `sbt configureIDE`, check if you program compiles
-    echo "$out"
-    exit 1
-  fi
-else
-  launch_server
-fi
-```
-4. Add this to your `coc-settings.json`
-```
-{
-    "languageserver": {
-        "dotty": {
-          "command": "run-dotty-lsp",
-            "rootPatterns": ["build.sbt"],
-            "filetypes": ["scala", "sbt"]
-        }
-    }
-}
-```
-6. Make sure your project compiles before first opening it with Vim
+   ```bash
+   #!/bin/sh
+   # launches the dotty language server
+   launch_server () {
+     # reads the dotty languageserver version from the file produced with `sbt configureIDE`
+     LANGUAGE_SERVER="$(cat .dotty-ide-artifact)"
+     # downloads the dotty languageserver and runs it with coursier
+     coursier launch "$LANGUAGE_SERVER" -M dotty.tools.languageserver.Main -- -stdio
+   }
+
+   # both dotty-ide and artifact file must exists
+   if [ ! -f ".dotty-ide.json" ] || [ ! -f ".dotty-ide-artifact" ]
+   then
+     # if files do not exists we create them with `sbt configureIDE`
+     out="$(sbt configureIDE)"
+     if [ $? -eq 0 ]
+     then
+       # launch server if `sbt configureIDE` was successful
+       launch_server
+     else
+       # exit and print failure of `sbt configureIDE`, check if you program compiles
+       echo "$out"
+       exit 1
+     fi
+   else
+     launch_server
+   fi
+   ```
+
+4. Add this to your `coc-settings.json`:
+
+   ```
+   {
+       "languageserver": {
+           "dotty": {
+             "command": "run-dotty-lsp",
+               "rootPatterns": ["build.sbt"],
+               "filetypes": ["scala", "sbt"]
+           }
+       }
+   }
+   ```
+
+5. Make sure your project compiles before first opening it with Vim
 
 For more detailed instructions check [this](https://www.dev-log.me/Coc_Vim_with_Dotty/) blog post.
 
-
-
-
-
 ### LaTeX
 
-Using [astoff/digestif](https://github.com/astoff/digestif):
+Using [astoff/digestif](https://github.com/astoff/digestif)
 
 Make sure the digestif executable is available on your $PATH or use absolute path as command. Installation instructions can be found [here](https://github.com/astoff/digestif#installation-and-set-up).
 
-``` jsonc
-  "languageserver": {
-    "digestif": {
-      "command": "digestif",
-      "filetypes": ["tex", "plaintex", "context"]
-    }
+```jsonc
+"languageserver": {
+  "digestif": {
+    "command": "digestif",
+    "filetypes": ["tex", "plaintex", "context"]
   }
+}
 ```
 
 For [Texlab](https://texlab.netlify.com/), use [coc-texlab](https://github.com/fannheyward/coc-texlab) or:
 
-``` jsonc
-  "languageserver": {
-    "latex": {
-      "command": "/PATH/TO/texlab",
-      // not start server at home directory, since it won't work.
-      "ignoredRootPaths": ["~"],
-      "filetypes": ["tex", "bib", "plaintex", "context"]
-    }
+```jsonc
+"languageserver": {
+  "latex": {
+    "command": "/PATH/TO/texlab",
+    // not start server at home directory, since it won't work.
+    "ignoredRootPaths": ["~"],
+    "filetypes": ["tex", "bib", "plaintex", "context"]
   }
+}
 ```
 
 * May need to add `let g:tex_flavor = "latex"` to correct buffer filetype, check it by `:echo &filetype`.
@@ -883,90 +878,92 @@ For [Texlab](https://texlab.netlify.com/), use [coc-texlab](https://github.com/f
 
 ### Elm
 
-Using [elm-tooling/elm-language-server](https://github.com/elm-tooling/elm-language-server):
+Using [elm-tooling/elm-language-server](https://github.com/elm-tooling/elm-language-server)
 
-``` jsonc
-  "languageserver": {
-    "elmLS": {
-      "command": "elm-language-server",
-      "filetypes": ["elm"],
-      "rootPatterns": ["elm.json"],
-      "initializationOptions": {
-        "elmPath": "elm", // optional
-        "elmFormatPath": "elm-format", // optional
-        "elmTestPath": "elm-test", // optional
-        "elmAnalyseTrigger": "change" // optional
-      }
+```jsonc
+"languageserver": {
+  "elmLS": {
+    "command": "elm-language-server",
+    "filetypes": ["elm"],
+    "rootPatterns": ["elm.json"],
+    "initializationOptions": {
+      "elmPath": "elm", // optional
+      "elmFormatPath": "elm-format", // optional
+      "elmTestPath": "elm-test", // optional
+      "elmAnalyseTrigger": "change" // optional
     }
   }
+}
 ```
 
 `elm-language-server` needs [`elm`](https://guide.elm-lang.org/install.html), [`elm-format`](https://github.com/avh4/elm-format) and [`elm-test`](https://github.com/elm-explorations/test)
+
 * If a path like `elmPath` is defined, it'll be used.
 * If a path is missing, `elm-language-server` will try to load it from a local npm installation folder. Otherwise a global installation provided via `PATH` is used.
 * `elmAnalyseTrigger`: `elm-analyse` (linting) is executed on 'change', 'save' or 'never' (default: 'change')
 
-Checkout [github page](https://github.com/elm-tooling/elm-language-server#cocnvim) for more information.
+Check out [github page](https://github.com/elm-tooling/elm-language-server#cocnvim) for more information.
 
 ### GraphQL
 
 Using [graphql-language-service-cli](https://www.npmjs.com/package/graphql-language-service-cli)
 
-``` jsonc
- "languageserver": {
-    "graphql": {
-      "command": "graphql-lsp",
-      "args": ["server", "-m", "stream"],
-      // customize filetypes to your needs
-      "filetypes": ["typescript", "typescriptreact", "graphql"]
-    }
+```jsonc
+"languageserver": {
+  "graphql": {
+    "command": "graphql-lsp",
+    "args": ["server", "-m", "stream"],
+    // customize filetypes to your needs
+    "filetypes": ["typescript", "typescriptreact", "graphql"]
   }
+}
 ```
 
 ### Fortran
 
-Using [fortran-language-server](https://github.com/hansec/fortran-language-server):
+Using [fortran-language-server](https://github.com/hansec/fortran-language-server)
 
 Make sure the fortls executable is available on your $PATH.
 
-``` jsonc
-  "languageserver": {
-     "fortran": {
-       "command": "fortls",
-       "filetypes": ["fortran"],
-       "rootPatterns": [".fortls", ".git/"]
-     }
+```jsonc
+"languageserver": {
+  "fortran": {
+    "command": "fortls",
+    "filetypes": ["fortran"],
+    "rootPatterns": [".fortls", ".git/"]
   }
+}
 ```
+
 ### Clojure
 
-Using [clojure-lsp](https://github.com/snoe/clojure-lsp):
+Using [clojure-lsp](https://github.com/snoe/clojure-lsp)
 
-``` jsonc
-  "languageserver": {
-    "clojure-lsp": {
-      "command": "bash",
-      "args": ["-c", "clojure-lsp"],
-      "filetypes": ["clojure"],
-      "rootPatterns": ["project.clj"],
-      "additionalSchemes": ["jar", "zipfile"],
-      "trace.server": "verbose",
-      "initializationOptions": {
-      }
+```jsonc
+"languageserver": {
+  "clojure-lsp": {
+    "command": "bash",
+    "args": ["-c", "clojure-lsp"],
+    "filetypes": ["clojure"],
+    "rootPatterns": ["project.clj"],
+    "additionalSchemes": ["jar", "zipfile"],
+    "trace.server": "verbose",
+    "initializationOptions": {
     }
   }
+}
 ```
 
 * Make sure `clojure-lsp` is in your $PATH.
-* Checkout [github page](https://github.com/snoe/clojure-lsp#vim) for more information.
+* Check out [github page](https://github.com/snoe/clojure-lsp#vim) for more information.
 
 ### Julia
 
-Using [`LanguageServer.jl`](https://github.com/JuliaEditorSupport/LanguageServer.jl).
+Using [`LanguageServer.jl`](https://github.com/JuliaEditorSupport/LanguageServer.jl)
 
 The `LanguageServer`, `SymbolServer` and `StaticLint` packages must be installed in Julia (1.x), i.e.
 
-``` julia
+```julia
 julia> using Pkg
 julia> Pkg.add("LanguageServer")
 julia> Pkg.add("SymbolServer")
@@ -975,18 +972,18 @@ julia> Pkg.add("StaticLint")
 
 Install [coc-julia](https://github.com/fannheyward/coc-julia), or register the server in `coc-settings.json`:
 
-``` jsonc
-    "languageserver": {
-    "julia": {
-      "command": "/usr/bin/julia",
-      "args" : ["--startup-file=no", "--history-file=no", "-e",
-      "using LanguageServer;\n       using Pkg;\n       import StaticLint;\n       import SymbolServer;\n       env_path = dirname(Pkg.Types.Context().env.project_file);\n       debug = false;\n       server = LanguageServer.LanguageServerInstance(stdin, stdout, debug, env_path, \"\");\n       server.runlinter = true;\n       run(server);" ],
-      "filetypes": ["julia"]
-     }
+```jsonc
+"languageserver": {
+  "julia": {
+    "command": "/usr/bin/julia",
+    "args" : ["--startup-file=no", "--history-file=no", "-e",
+    "using LanguageServer;\n       using Pkg;\n       import StaticLint;\n       import SymbolServer;\n       env_path = dirname(Pkg.Types.Context().env.project_file);\n       debug = false;\n       server = LanguageServer.LanguageServerInstance(stdin, stdout, debug, env_path, \"\");\n       server.runlinter = true;\n       run(server);" ],
+    "filetypes": ["julia"]
   }
+}
 ```
 
-Checkout [JuliaEditorSupport/LanguageServer.jl](https://github.com/JuliaEditorSupport/LanguageServer.jl/wiki/Vim-and-Neovim) for more information.
+Check out [JuliaEditorSupport/LanguageServer.jl](https://github.com/JuliaEditorSupport/LanguageServer.jl/wiki/Vim-and-Neovim) for more information.
 
 ### R
 
@@ -994,32 +991,32 @@ Use [coc-r-lsp](https://github.com/neoclide/coc-r-lsp) extension.
 
 ### Kotlin
 
-Using [kotlin-language-server](https://github.com/fwcd/kotlin-language-server):
+Using [kotlin-language-server](https://github.com/fwcd/kotlin-language-server)
 
 1. Download server.zip from the [releases page](https://github.com/fwcd/kotlin-language-server/releases).
 2. Unzip the file in a convenient directory, for example inside `~/lsp/kotlin/`.
 
-``` jsonc
-  "languageserver": {
-    "kotlin": {
-      "command": "~/lsp/kotlin/server/bin/kotlin-language-server",
-      "filetypes": ["kotlin"]
-    }
+```jsonc
+"languageserver": {
+  "kotlin": {
+    "command": "~/lsp/kotlin/server/bin/kotlin-language-server",
+    "filetypes": ["kotlin"]
   }
+}
 ```
 
 ### Groovy
 
-Using [`Language server for Groovy`](https://github.com/prominic/groovy-language-server). Checkout sources, build it and place `groovy-language-server-all.jar` to any folder
+Using [`Language server for Groovy`](https://github.com/prominic/groovy-language-server). Check out sources, build it and place `groovy-language-server-all.jar` to any folder.
 
-``` jsonc
-  "languageserver": {
-    "groovy": {
-      "command": "java",
-      "args" : ["-jar", "/path/to/groovy-language-server-all.jar"],
-      "filetypes": ["groovy"]
-     }
+```jsonc
+"languageserver": {
+  "groovy": {
+    "command": "java",
+    "args" : ["-jar", "/path/to/groovy-language-server-all.jar"],
+    "filetypes": ["groovy"]
   }
+}
 ```
 
 ### Terraform
@@ -1027,13 +1024,13 @@ Using [`Language server for Groovy`](https://github.com/prominic/groovy-language
 Using [`Terraform-LSP`](https://github.com/juliosueiras/terraform-lsp). Build it and place it into any folder.
 
 ```jsonc
-  "languageserver": {
-    "terraform": {
-      "command": "terraform-lsp",
-      "filetypes": ["terraform"],
-      "initializationOptions": {}
-    }
+"languageserver": {
+  "terraform": {
+    "command": "terraform-lsp",
+    "filetypes": ["terraform"],
+    "initializationOptions": {}
   }
+}
 ```
 
 ### Dhall
@@ -1041,14 +1038,12 @@ Using [`Terraform-LSP`](https://github.com/juliosueiras/terraform-lsp). Build it
 Using [`dhall-lsp-server`](https://github.com/dhall-lang/dhall-haskell/tree/master/dhall-lsp-server). Follow the instructions to install it.
 
 ```jsonc
-{
-  "languageserver": {
-    "dhall": {
-      "command": "dhall-lsp-server",
-      "filetypes": [
-        "dhall"
-      ]
-    }
+"languageserver": {
+  "dhall": {
+    "command": "dhall-lsp-server",
+    "filetypes": [
+      "dhall"
+    ]
   }
 }
 ```
@@ -1058,12 +1053,12 @@ Using [`dhall-lsp-server`](https://github.com/dhall-lang/dhall-haskell/tree/mast
 Using [`nimlsp`](https://github.com/PMunch/nimlsp). Follow the instructions in the README of the repository. (Make sure that your Nimble bin directory is in your path)
 
 ```jsonc
-  "languageserver": {
-    "nim": {
-      "command": "nimlsp",
-      "filetypes": ["nim"]
-    }
+"languageserver": {
+  "nim": {
+    "command": "nimlsp",
+    "filetypes": ["nim"]
   }
+}
 ```
 
 ### Godot
@@ -1072,15 +1067,15 @@ Using [`coc-godot`](https://github.com/j3d42/coc-godot).
 
 ### Vala
 
-Using [`vala-language-server`](https://github.com/benwaffle/vala-language-server).
+Using [`vala-language-server`](https://github.com/benwaffle/vala-language-server)
 
 ```jsonc
-  "languageserver": {
-    "vala": {
-      "command": "vala-language-server",
-      "filetypes": ["vala"],
-    }
+"languageserver": {
+  "vala": {
+    "command": "vala-language-server",
+    "filetypes": ["vala"],
   }
+}
 ```
 
 ### SQL
@@ -1088,14 +1083,12 @@ Using [`vala-language-server`](https://github.com/benwaffle/vala-language-server
 Using [`sql-language-server`](https://github.com/joe-re/sql-language-server)
 
 ```jsonc
-{
-  "languageserver": {
-    "sql": {
-      "command": "sql-language-server",
-      "args" : ["up", "--method", "stdio"],
-      "filetypes": ["sql", "mysql"]
-     }
-  }
+"languageserver": {
+  "sql": {
+    "command": "sql-language-server",
+    "args" : ["up", "--method", "stdio"],
+    "filetypes": ["sql", "mysql"]
+    }
 }
 ```
 
@@ -1121,21 +1114,19 @@ Make sure `zls` is findable in your `PATH` variable, otherwise specify the full 
 - or try [`rome`](https://github.com/romefrontend/rome) without an extension:
 
 ```jsonc
-{
-  "languageserver": {
-    "rome-lsp": {
-      "command": "rome",
-      "args": ["lsp"],
-      "filetypes": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "json"
-      ],
-      "rootPatterns": [".config"],
-      "requireRootPattern": true
-    }
+"languageserver": {
+  "rome-lsp": {
+    "command": "rome",
+    "args": ["lsp"],
+    "filetypes": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "json"
+    ],
+    "rootPatterns": [".config"],
+    "requireRootPattern": true
   }
 }
 ```
