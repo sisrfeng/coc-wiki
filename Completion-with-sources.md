@@ -1,9 +1,9 @@
 ## Highlights of coc.nvim's completion
 
-* **Full LSP completion support**, especially snippet and `additionalTextEdit` feature, you'll understand why it's awesome when you experience it with a coc extension like `coc-tsserver`.
-* **Completion resolving on completion item change**, it does async completion resolve on completion item change and the detail and documentation would be shown in float window (when possible).
-* **Asynchronous and parallel completion request**, unless using vim sources, your vim will never be blocked.
-* **Incomplete request and cancel request support**, only incomplete completion requests would be triggered on filtering completion items and cancellation requests are sent to servers only when necessary.
+* **Full LSP completion support**, especially snippet and `additionalTextEdit` feature. You'll understand why it's awesome when you experience it with a coc extension like `coc-tsserver`.
+* **Completion resolving on completion item change**, it does async completion resolve on completion item change and the detail and documentation will be shown in a float window when possible.
+* **Asynchronous and parallel completion request**. Unless using vim sources, your vim will never be blocked.
+* **Incomplete request and cancel request support**, only incomplete completion requests will be triggered on filtering completion items and cancellation requests are sent to servers only when necessary.
 * **Start completion without timer**. The completion will start after you type the first letter of a word by default and is filtered with new input after the completion has finished. Other completion engines use a timer to trigger completion so you always have to wait after the typed character.
 * **Realtime buffer keywords**. Coc will generate buffer keywords on buffer change in the background (with debounce), while some completion engines use a cache which isn't always correct.  Plus, [Locality bonus feature](https://code.visualstudio.com/docs/editor/intellisense#_locality-bonus) from VSCode is enabled by default.
 * **Filter completion items when possible.** When you do a fuzzy filter with completion items, some completion engines will trigger a new completion, but coc.nvim will filter the items when possible which makes it much faster. Filtering completion items on backspace is also supported.
@@ -26,9 +26,9 @@ By default, coc.nvim use its own `completeopt` option during completion to provi
 
 There's no function of coc.nvim that can be used as `omnifunc` because it's not possible to support all LSP completion features when using `omnifunc`.
 
-For features like `textEdit` and `additionalTextEdits`(mostly used by automatic import feature) of LSP to work, you **have to** confirm completion, which is `<C-y>` by default of vim. Read next section for key-mappings example.
+For features like `textEdit` and `additionalTextEdits`(mostly used by automatic import feature) of LSP to work, you **have to** confirm completion, which is `<C-y>` by default in vim. Read the next section for example key-mappings.
 
-## Use `<cr>` for confirm completion
+## Use `<cr>` to confirm completion
 
 You have to remap `<cr>` to make sure it confirms completion when popup menu is visible since default behavior of `<CR>` could be different regard to current completion state and `completeopt` option.
 
