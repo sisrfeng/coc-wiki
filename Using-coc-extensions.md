@@ -74,7 +74,7 @@ Using `:CocInstall`:
 
 One or more extension names can be provided.
 
-The extension name can also be url of github repo, like: `https://github.com/andys8/vscode-jest-snippets` which must be a javascript repo that ready for use (coc.nvim just untar the files from github).
+**Note:** VSCode extensions can't be used by coc.nvim for now. 
 
 Extensions will be loaded and activated after the install succeeds.
 
