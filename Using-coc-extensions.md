@@ -79,6 +79,10 @@ The extension name can also be url of github repo, like: `https://github.com/and
 Extensions will be loaded and activated after the install succeeds.
 
 **Note** you can add extension names to the `g:coc_global_extensions` variable, and coc will install the missing extensions after coc.nvim service started.
+For example:
+```vim
+let g:coc_global_extensions = ['coc-json', 'coc-git']
+```
 
 To install extensions with shell script, use command like:
 
