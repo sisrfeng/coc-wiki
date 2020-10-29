@@ -125,6 +125,11 @@ An example of socket language server:
 - `trace.server` controls trace level of communication between server and client. The default is `"off"`. Change to `"verbose"` if you want to checkout all communication.
 - `rootPatterns` is used to resolve the root path which should contain one of the patterns as a child directory or file, it will use `"coc.preferences.rootPatterns"` (default to `[".git", ".hg", ".projections.json"]`) when not specified.
 - `requireRootPattern` when this is true, the language server will only start when any matched rootPatterns found.
+- `env` environment variables object used by the language server.
+- `stdioEncoding` Encoding used for stdio of child process.
+- `ignoredRootPaths` Absolute root paths that language server should not use as rootPath, higher priority than rootPatterns.
+
+Install [coc-json](https://github.com/neoclide/coc-json) for completion and validation support.
 
 ## Example language server configuration
 
