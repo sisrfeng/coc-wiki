@@ -591,7 +591,7 @@ Using [Haskell IDE Engine](https://github.com/haskell/haskell-ide-engine)
 
 ### Html
 
-Use [https://github.com/neoclide/coc-html] is recommended.
+Use [coc-html](https://github.com/neoclide/coc-html) is recommended.
 
 ### Javascript/Typescript
 
