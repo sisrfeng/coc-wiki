@@ -1,13 +1,9 @@
 Coc.nvim is mostly written in TypeScript and runs on Node.js.
 
-You can use the release branch which contains compiled JavaScript (build/index.js) or build from master.
-
 ## Requirements
 
-* `neovim` >= `0.4.3` or `vim` >= `8.0.1453` (run `:version` to checkout your vim version)
+* `neovim` >= `0.3.2` or `vim` >= `8.0.1453` (run `:version` to checkout your vim version)
 * `node` >= `10.12`
-
-**Note:** it will not load at all if (neo)vim is too old.
 
 Install [Node.js](https://nodejs.org/) >= 10 on MacOS:
 
@@ -39,16 +35,16 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 ### Using [vim-plug](https://github.com/junegunn/vim-plug)
 
-Use release branch (recommended):
+Use default release branch (recommended):
 
 ``` vim
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'neoclide/coc.nvim'
 ```
 
 Build from source:
 
 ``` vim
-Plug 'neoclide/coc.nvim', { 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
 ```
 
 Run command `:PlugInstall` in your (neo)vim.
@@ -58,13 +54,13 @@ Run command `:PlugInstall` in your (neo)vim.
 Use release branch (recommended):
 
 ``` vim
-call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
+call dein#add('neoclide/coc.nvim', { 'merged': 0 })
 ```
 
 Build from source:
 
 ``` vim
-call dein#add('neoclide/coc.nvim', { 'merged': 0, 'build': 'yarn install --frozen-lockfile' })
+call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'master', 'build': 'yarn install --frozen-lockfile' })
 ```
 
 **Note:** When `'merged': 0` not present, coc.nvim will be unable to start.
@@ -81,12 +77,10 @@ yarn install --frozen-lockfile
 
 ### Using [NeoBundle](https://github.com/Shougo/neobundle.vim)
 
-Due to [this bug](https://github.com/Shougo/neobundle.vim/issues/530), using the standard `'rev': 'release'` won't work.
-
 Use this work-around to check out the recommended `release` branch:
 
 ``` vim
-NeoBundle 'neoclide/coc.nvim', 'release', { 'build': { 'others': 'git checkout release' } }
+NeoBundle 'neoclide/coc.nvim'
 ```
 
 ### Using vim8's native package manager
