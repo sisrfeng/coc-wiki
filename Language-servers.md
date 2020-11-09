@@ -49,7 +49,7 @@
 
 ## Supported features
 
-Check out the official specification at https://microsoft.github.io/language-server-protocol/specifications/specification-3-14/.
+Check out the official specification at https://microsoft.github.io/language-server-protocol/specifications/specification-3-15/.
 
 **Note:** different servers can have different capabilities.
 
