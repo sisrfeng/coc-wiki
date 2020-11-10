@@ -174,6 +174,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-clangd](https://github.com/clangd/coc-clangd)** for C/C++/Objective-C, use [clangd](https://clangd.github.io)
 * **[coc-cmake](https://github.com/voldikss/coc-cmake)** for cmake code completion
 * **[coc-cord](https://github.com/dakyskye/coc-cord)** discord rich presence integration.
+* **[coc-discord-rpc](https://github.com/LeonardSSH/coc-discord-rpc)** fully customizable discord rich presence integration with support for over 130+ of the most popular languages
 * **[coc-css](https://github.com/neoclide/coc-css)** for `css`, `scss` and `less`.
 * **[coc-cssmodules](https://github.com/antonk52/coc-cssmodules)** css modules intellisense.
 * **[coc-discord](https://github.com/amiralies/coc-discord)** discord rich presence for coc.nvim
