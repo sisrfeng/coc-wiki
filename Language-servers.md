@@ -966,7 +966,10 @@ Use [coc-r-lsp](https://github.com/neoclide/coc-r-lsp) extension.
 "languageserver": {
     "robotframework_ls": {
         "command": "robotframework_ls",
-        "filetypes": ["robot"]
+        "filetypes": ["robot"],
+        "settings": {
+         // here the ls configuration
+         }
     }
 }
 ```
