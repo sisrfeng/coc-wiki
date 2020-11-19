@@ -35,6 +35,7 @@
   - [PureScript](#purescript)
   - [Python](#python)
   - [R](#r)
+  - [Robot Framework](#robot-framework)
   - [Rome](#rome)
   - [Ruby](#ruby)
   - [Rust](#rust)
@@ -955,6 +956,20 @@ Example with python-language-server (be careful not to condense the hierarchy as
 ### R
 
 Use [coc-r-lsp](https://github.com/neoclide/coc-r-lsp) extension.
+
+### Robot Framework
+
+- install [robotframework-lsp](https://pypi.org/project/robotframework-lsp/)
+- Configure robot filetype detection in neovim configuration file `autocmd BufNewFile,BufRead *.robot setlocal filetype=robot`
+
+```jsonc
+"languageserver": {
+    "robotframework_ls": {
+        "command": "robotframework_ls",
+        "filetypes": ["robot"]
+    }
+}
+```
 
 ### Rome
 
