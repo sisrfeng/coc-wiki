@@ -1122,6 +1122,19 @@ Using [`Terraform-LSP`](https://github.com/juliosueiras/terraform-lsp). Build it
 }
 ```
 
+Using [`terraform-ls`](https://github.com/hashicorp/terraform-ls).
+
+```jsonc
+"languageserver": {
+  "terraform": {
+    "command": "terraform-ls",
+    "args": ["serve"],
+    "filetypes": ["terraform", "tf"],
+    "initializationOptions": {}
+  }
+}
+```
+
 ### Vala
 
 Using [`vala-language-server`](https://github.com/benwaffle/vala-language-server)
