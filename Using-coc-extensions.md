@@ -91,6 +91,14 @@ To install extensions with shell script, use command like:
 vim -c 'CocInstall -sync coc-json coc-html|q'
 ```
 
+#### Installing specific versions (for rollback/revert/etc)
+If you need to rollback/revert to a specific extension version, or you just want to install a specific version regardless, you can add `@version` to your install command.
+
+Using `coc-prettier` as an example, in order to install the `1.1.17` version, you type:
+```vim
+:CocInstall coc-prettier@1.1.17
+```
+
 ### Use vim's plugin manager for coc extension
 
 You can manage coc extension by using a plugin manager for vim, like [vim-plug](https://github.com/junegunn/vim-plug), coc will try to load coc extensions from your `&rtp`
