@@ -875,13 +875,18 @@ Using [purescript-language-server](https://github.com/nwolverson/purescript-lang
 
 ### Python
 
-Use [coc-python](https://github.com/neoclide/coc-python) extension is recommended. If using coc-python you _should not_ configure the language server as shown here.
+Use one of them below:
 
-Make sure you've installed the [python-language-server](https://github.com/palantir/python-language-server).
+If you're using python3, consider use [coc-pyright](https://github.com/fannheyward/coc-pyright).
 
-Example with python-language-server (be careful not to condense the hierarchy as it breaks pyls):
+If you're using jedi, consider use [coc-jedi](https://github.com/pappasam/coc-jedi).
+
+[coc-python](https://github.com/neoclide/coc-python) can be used as well, but the code is not activaly maintained.
+
+Or configure [[python-language-server](https://github.com/palantir/python-language-server)] like:
 
 ```jsonc
+// be careful not to condense the hierarchy as it breaks pyls
 "languageserver": {
   "python": {
     "command": "python",
