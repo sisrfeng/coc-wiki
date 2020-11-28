@@ -38,7 +38,7 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 Use default release branch (recommended):
 
 ``` vim
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 ```
 
 Build from source:
