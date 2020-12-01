@@ -238,7 +238,6 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-tabnine](https://github.com/neoclide/coc-tabnine)** for [tabnine](https://tabnine.com/).
 * **[coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss)** for `tailwindcss`.
 * **[coc-tasks](https://github.com/voldikss/coc-tasks)** for [asynctasks.vim](https://github.com/skywind3000/asynctasks.vim) integration
-* **[coc-template](https://github.com/voldikss/coc-template)** templates extension for file types
 * **[coc-texlab](https://github.com/fannheyward/coc-texlab)** for `LaTex` using [TexLab](https://texlab.netlify.com/).
 * **[coc-todolist](https://github.com/voldikss/coc-todolist)** for handy todolist/task management
 * **[coc-translator](https://github.com/voldikss/coc-translator)** language transaction extension
