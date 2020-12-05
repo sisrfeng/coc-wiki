@@ -35,6 +35,7 @@
   - [PureScript](#purescript)
   - [Python](#python)
   - [R](#r)
+  - [Racket](#racket)
   - [Robot Framework](#robot-framework)
   - [Rome](#rome)
   - [Ruby](#ruby)
@@ -976,6 +977,27 @@ Use [coc-r-lsp](https://github.com/neoclide/coc-r-lsp) extension.
          }
     }
 }
+```
+### Racket
+
+Using the [racket-langserver](https://github.com/jeapostrophe/racket-langserver)
+
+- Install racket-langserver `raco pkg install racket-langserver`
+- Add the below snippet to your coc config
+
+```jsonc
+  "languageserver": {
+    "racket": {
+      "command": "racket",
+      "args": [
+        "--lib",
+        "racket-langserver"
+      ],
+      "filetypes": [
+        "scheme"
+      ]
+    }
+  }
 ```
 
 ### Rome
