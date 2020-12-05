@@ -1060,58 +1060,7 @@ If you'd like to use Metals without the coc-metals extension, make sure the gene
 }
 ```
 
-#### Scala with Dotty
-
-1. Install [coursier](https://get-coursier.io/docs/cli-overview)
-2. Remove `metals` settings from `coc-settings.json`
-3. Add the `run-dotty-lsp` script to your path and make it executable:
-
-   ```bash
-   #!/bin/sh
-   # launches the dotty language server
-   launch_server () {
-     # reads the dotty languageserver version from the file produced with `sbt configureIDE`
-     LANGUAGE_SERVER="$(cat .dotty-ide-artifact)"
-     # downloads the dotty languageserver and runs it with coursier
-     coursier launch "$LANGUAGE_SERVER" -M dotty.tools.languageserver.Main -- -stdio
-   }
-
-   # both dotty-ide and artifact file must exists
-   if [ ! -f ".dotty-ide.json" ] || [ ! -f ".dotty-ide-artifact" ]
-   then
-     # if files do not exists we create them with `sbt configureIDE`
-     out="$(sbt configureIDE)"
-     if [ $? -eq 0 ]
-     then
-       # launch server if `sbt configureIDE` was successful
-       launch_server
-     else
-       # exit and print failure of `sbt configureIDE`, check if you program compiles
-       echo "$out"
-       exit 1
-     fi
-   else
-     launch_server
-   fi
-   ```
-
-4. Add this to your `coc-settings.json`:
-
-   ```
-   {
-       "languageserver": {
-           "dotty": {
-             "command": "run-dotty-lsp",
-               "rootPatterns": ["build.sbt"],
-               "filetypes": ["scala", "sbt"]
-           }
-       }
-   }
-   ```
-
-5. Make sure your project compiles before first opening it with Vim
-
-For more detailed instructions check [this](https://www.dev-log.me/Coc_Vim_with_Dotty/) blog post.
+Note that the Dotty Language server is no longer recommended. Intead, it is recommened to use Metals for Dotty/Scala 3.
 
 ### Terraform
 
