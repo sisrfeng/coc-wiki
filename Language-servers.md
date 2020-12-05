@@ -41,7 +41,6 @@
   - [Rust](#rust)
   - [SQL](#sql)
   - [Scala](#scala)
-    - [Scala with Dotty](#scala-with-dotty)
   - [Terraform](#terraform)
   - [Vala](#vala)
   - [Zig](#zig)
