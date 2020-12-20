@@ -233,6 +233,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-sql](https://github.com/fannheyward/coc-sql)** for `sql`.
 * **[coc-svelte](https://github.com/coc-extensions/coc-svelte)** for [`svelte`](https://github.com/sveltejs/svelte).
 * **[coc-svg](https://github.com/iamcco/coc-svg)** for `svg`.
+* **[coc-swagger](https://github.com/haishanh/coc-swagger)** for improved Swagger/OpenAPI spec authoring experience.
 * **[coc-tabnine](https://github.com/neoclide/coc-tabnine)** for [tabnine](https://tabnine.com/).
 * **[coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss)** for `tailwindcss`.
 * **[coc-tasks](https://github.com/voldikss/coc-tasks)** for [asynctasks.vim](https://github.com/skywind3000/asynctasks.vim) integration
