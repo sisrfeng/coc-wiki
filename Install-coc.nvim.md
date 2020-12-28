@@ -150,7 +150,7 @@ set -o errexit    # exit when command fails
 if [ ! -x "$(command -v node)" ]; then
     curl --fail -LSs https://install-node.now.sh/latest | sh
     export PATH="/usr/local/bin/:$PATH"
-    # Or use apt-get
+    # Or use package manager, e.g.
     # sudo apt-get install nodejs
 fi
 
