@@ -44,6 +44,7 @@
   - [Scala](#scala)
   - [Terraform](#terraform)
   - [Vala](#vala)
+  - [Vue](#vue)
   - [Zig](#zig)
   - [vim/erb/markdown](#vimerbmarkdown)
     - [Using Sorbet:](#using-sorbet)
@@ -1122,6 +1123,12 @@ Using [`vala-language-server`](https://github.com/benwaffle/vala-language-server
   }
 }
 ```
+
+### Vue
+
+Using [coc-vetur](https://github.com/neoclide/coc-vetur)
+
+    :CocInstall coc-vetur
 
 ### Zig
 
