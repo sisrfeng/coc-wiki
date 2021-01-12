@@ -204,7 +204,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-highlight](https://github.com/neoclide/coc-highlight)** provides default document symbol highlighting and color support.
 * **[coc-html](https://github.com/neoclide/coc-html)** for `html`, `handlebars` and `razor`.
 * **[coc-java](https://github.com/neoclide/coc-java)** for `java`, use [eclipse.jdt.ls](https://github.com/eclipse/eclipse.jdt.ls).
-* **[coc-jedi](https://github.com/pappasam/coc-jedi)** (DEPRECATED) for `python`, use [jedi-language-server](https://github.com/pappasam/jedi-language-server).
+* **[coc-jedi](https://github.com/pappasam/coc-jedi)** for `python`, use [jedi-language-server](https://github.com/pappasam/jedi-language-server).
 * **[coc-json](https://github.com/neoclide/coc-json)** for `json`.
 * **[coc-julia](https://github.com/fannheyward/coc-julia)** for [`julia`](https://julialang.org/).
 * **[coc-lists](https://github.com/neoclide/coc-lists)** provides some basic lists like fzf.vim.
