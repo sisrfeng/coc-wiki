@@ -174,7 +174,6 @@ You can also use Chrome to debug extensions, checkout <https://github.com/neocli
 You can find available coc extensions by searching [coc.nvim on npm](https://www.npmjs.com/search?q=keywords%3Acoc.nvim), or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which can search and install extensions in coc.nvim directly.
 
 * **[coc-angular](https://github.com/iamcco/coc-angular)** for `angular`.
-* **[coc-bookmark](https://github.com/voldikss/coc-bookmark)** bookmark extension
 * **[coc-browser](https://github.com/voldikss/coc-browser)** for browser words completion
 * **[coc-calc](https://github.com/weirongxu/coc-calc)** expression calculation extension
 * **[coc-cfn-lint](https://github.com/joenye/coc-cfn-lint)** for CloudFormation Linter, [cfn-python-lint](https://github.com/aws-cloudformation/cfn-python-lint)
