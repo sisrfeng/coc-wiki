@@ -1,6 +1,5 @@
-Coc.nvim is mostly written in typescript, which compiles to javascript. 
-
-If you know javascript or how nodejs works, it will be easier to debug the source code.
+This article contains tips for debug coc.nvim, if you have issues with a specific language server,
+checkout https://github.com/neoclide/coc.nvim/wiki/Debug-language-server first.
 
 ## Build source code
 
@@ -56,7 +55,7 @@ console.error('my error')
 ```
 The message will be echoed in vim. However, this method is quite limited.
 
-## Using logger module
+## Use logger module
 
 Use command `:CocOpenLog` to open the log file.
 
@@ -71,7 +70,7 @@ You can use the logger to debug any variable, like:
 logger.debug('variable:', variable)
 ```
 
-For coc.nvim extension, you can access a `logger` object (`log4js.Logger`) through a property of `ExtensionContext`. For example:
+For extension of coc.nvim, you can access a `logger` object (`log4js.Logger`) through a property of `ExtensionContext`. For example:
 
 ```js
 exports.activate = async (context) => {
@@ -79,25 +78,25 @@ exports.activate = async (context) => {
   logger.info(`Extension from ${context.extensionPath}`)
 }
 ```
+
 If you're using `console.log` in extension, the output will append to log of coc.nvim as well.
 
-## Change Log Level
+The default log level is `info`, so you won't get `debug` or `trace` messages shown in `:CocOpenLog`.
+To change the log level, you need to configure environment variable `NVIM_COC_LOG_LEVEL`, check out
+`:h :CocOpenLog` for details.
 
-The default log level is `info`, so you won't get `error` or `trace` messages shown in `:CocOpenLog`.
-To change the log level, run:
+## Inspect communication between vim and coc.nvim
 
-```
-export NVIM_COC_LOG_LEVEL=debug
-``` 
-in your shell.
-
-Or add:
+Enable the client log by:
 ``` vim
-let $NVIM_COC_LOG_LEVEL = 'debug'
+let g:node_client_debug = 1
+let $NODE_CLIENT_LOG_FILE = '/path/to/logfile'
 ```
-at the start of your `.vimrc` file.
+In your vimrc, then open the `$NODE_CLIENT_LOG_FILE` in another terminal or use `:call coc#client#open_log()`
+to open the log use current vim session.
 
-## Use chrome developer tools
+
+## Use Chrome developer tools
 
 Add:
 ```
