@@ -1,63 +1,57 @@
-Coc.nvim is mostly written in typescript, which compiles to javascript. If you know javascript or how nodejs works, it will be easier to debug the source code.
+Coc.nvim is mostly written in typescript, which compiles to javascript. 
 
-## Commands to build source code
+If you know javascript or how nodejs works, it will be easier to debug the source code.
 
-After cloning the repo, you need build the source code first, this can be done by running:
+## Build source code
+
+First, install [yarn](https://yarnpkg.com/) to your global `$PATH`
+
+After cloning the repo, make sure you're using master branch of coc.nvim, then install dependencies
+and build source code by:
 
 ```
 yarn install
 ```
 
-it can be slow the first time, since some dependencies need to be downloaded. This command will also invoke `yarn clean` and `yarn build` commands.  `yarn clean` will remove the build directory which contains the binary release. `yarn build` will build your source code.
+The javascript bundle will exists in `lib` folder.
 
-To build source code after making changes, run:
+To build source code after changes made, run:
 
 ```
-yarn build
+node esbuild.js
 ``` 
+in project root, which will use esbuild to compile source code to single javascript bundle.
 
-which uses tsserver to compile typescript to javascript.
+After each compile, restart coc.nvim service by `:CocRestart` to make use of new code.
 
-However, running `yarn build` takes some time. To get faster incremental builds, you need to run:
-
-```
-yarn watch
-```
-which enables the watch option for tsserver. It will be much faster for rebuilding the source code.
-
-After each compile, restart coc service by `:CocRestart` to make new server take control.
-
-**TIP** you can use watch build feature provided by `coc-tsserver` like:
-
-``` vim
-command! -nargs=0 Tsc :call CocAction('runCommand', 'tsserver.watchBuild')
-```
-With statusline integration, you can have realtime feedback of the compilation.
 
 ## Get result from console
 
-**Warning:** you can't use stdout by `console.log` or `stdout.write`, since coc has to use stdio for communication between neovim.
+**Warning:** you can't use stdout by `console.log` or `stdout.write`, since coc.nvim has to use stdio for communication between (neo)vim.
 
 You can use `console.error` to write a string message, like:
+
 ``` js
 console.error('my error')
 ```
-the message will be echoed in vim. However, this method is quite limited.
+The message will be echoed in vim. However, this method is quite limited.
 
 ## Using logger module (recommended)
 
 Use command `:CocOpenLog` to open the log file.
 
 You can import the logger module for debug purpose, like:
+
 ``` js
 const logger = require('./util/logger')('workspace')
 ```
 You can use the logger to debug any variable, like:
+
 ``` js
 logger.debug('variable:', variable)
 ```
 
-For coc extension, you can access a `logger` object (`log4js.Logger`) through a property of `ExtensionContext`. For example:
+For coc.nvim extension, you can access a `logger` object (`log4js.Logger`) through a property of `ExtensionContext`. For example:
 
 ```js
 exports.activate = async (context) => {
@@ -65,8 +59,9 @@ exports.activate = async (context) => {
   logger.info(`Extension from ${context.extensionPath}`)
 }
 ```
+If you're using `console.log` in extension, the output will append to log of coc.nvim as well.
 
-## Changing Log Level
+## Change Log Level
 
 The default log level is `info`, so you won't get `error` or `trace` messages shown in `:CocOpenLog`.
 To change the log level, run:
@@ -81,8 +76,6 @@ Or add:
 let $NVIM_COC_LOG_LEVEL = 'debug'
 ```
 at the start of your `.vimrc` file.
-
-
 
 ## Use chrome developer tools
 
