@@ -24,6 +24,26 @@ in project root, which will use esbuild to compile source code to single javascr
 
 After each compile, restart coc.nvim service by `:CocRestart` to make use of new code.
 
+## Enable source map support
+
+To create source map by esbuild, use:
+
+```
+NODE_ENV=production node esbuild.js
+```
+
+To compile source code.
+
+To enable source map for error stack, install [source-map-support](https://github.com/evanw/node-source-map-support) by:
+
+```
+yarn global add source-map-support
+```
+Then use configuration like:
+``` vim
+let g:coc_node_args = ['-r', expand('~/.config/yarn/global/node_modules/source-map-support/register')]
+```
+in your vimrc, it will make trace error much easier.
 
 ## Get result from console
 
