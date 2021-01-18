@@ -56,7 +56,7 @@ console.error('my error')
 ```
 The message will be echoed in vim. However, this method is quite limited.
 
-## Using logger module (recommended)
+## Using logger module
 
 Use command `:CocOpenLog` to open the log file.
 
