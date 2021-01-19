@@ -8,6 +8,7 @@
   - [C/C++/Objective-C](#ccobjective-c)
   - [CMake](#cmake)
   - [Clojure](#clojure)
+  - [Crystal](#crystal)
   - [Css/Less/Sass](#csslesssass)
   - [Dart](#dart)
   - [Dhall](#dhall)
@@ -279,6 +280,25 @@ Using [clojure-lsp](https://github.com/snoe/clojure-lsp)
 
 - Make sure `clojure-lsp` is in your \$PATH.
 - Check out [github page](https://github.com/snoe/clojure-lsp#vim) for more information.
+
+### Crystal
+
+Using [`crystalline`](https://github.com/elbywan/crystalline). Follow the instructions to install it. 
+
+```jsonc
+  "languageserver": {
+    "crystal": {
+      "command": "crystalline",
+      "args": [
+        "--stdio"
+      ],
+      "filetypes": [
+        "crystal"
+      ]
+    }
+  }
+```
+Make sure you have `crystalline` available in your PATH
 
 ### Css/Less/Sass
 
