@@ -181,6 +181,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-cmake](https://github.com/voldikss/coc-cmake)** for cmake code completion
 * **[coc-css](https://github.com/neoclide/coc-css)** for `css`, `scss` and `less`.
 * **[coc-cssmodules](https://github.com/antonk52/coc-cssmodules)** css modules intellisense.
+* **[coc-diagnostic](https://github.com/iamcco/coc-diagnostic)** for All filetypes, use [diagnostic-languageserver](https://github.com/iamcco/diagnostic-languageserver).
 * **[coc-discord](https://github.com/amiralies/coc-discord)** discord rich presence for coc.nvim
 * **[coc-discord-rpc](https://github.com/LeonardSSH/coc-discord-rpc)** fully customizable discord rpc integration with support for over 130+ of the most popular languages
 * **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
