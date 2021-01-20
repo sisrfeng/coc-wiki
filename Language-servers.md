@@ -866,6 +866,8 @@ Using [felixfbecker/php-language-server](https://github.com/felixfbecker/php-lan
 
 Note: make sure you can start the server by use command and args.
 
+Via [coc-psalm](https://github.com/yaegassy/coc-psalm) or
+
 Using [vimeo/psalm](https://github.com/vimeo/psalm) (psalm-language-server)
 
 ```jsonc
