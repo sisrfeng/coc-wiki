@@ -206,7 +206,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-jedi](https://github.com/pappasam/coc-jedi)** for `python`, use [jedi-language-server](https://github.com/pappasam/jedi-language-server).
 * **[coc-json](https://github.com/neoclide/coc-json)** for `json`.
 * **[coc-julia](https://github.com/fannheyward/coc-julia)** for [`julia`](https://julialang.org/).
-* **[coc-just-complete](https://github.com/voldikss/coc-just-complete)** one kind of buffer words completion for (neo)vim.
+* **[coc-just-complete](https://github.com/voldikss/coc-just-complete)** another buffer words completion extension.
 * **[coc-lists](https://github.com/neoclide/coc-lists)** provides some basic lists like fzf.vim.
 * **[coc-lsp-wl](https://github.com/voldikss/coc-lsp-wl)** for `wolfram mathematica`, fork of [vscode-lsp-wl](https://github.com/kenkangxgwe/vscode-lsp-wl).
 * **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown linting
