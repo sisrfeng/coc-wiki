@@ -112,7 +112,7 @@ Another useful command is `:CocInfo` — use it after the service has started to
 
 For example, for generic web-development consider `:CocInstall coc-tsserver coc-json coc-html coc-css`
 
-For Python `:CocInstall coc-python`
+For Python3 `:CocInstall coc-pyright`
 
 For PHP `:CocInstall coc-phpls`
 
