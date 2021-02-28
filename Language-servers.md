@@ -1054,8 +1054,8 @@ Make sure solargraph is in your \$PATH (sudo gem install solargraph) or use `sol
 
 ### Rust
 
-- install [coc-rls](https://github.com/neoclide/coc-rls/) which uses `rls`
-- or install [coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer) which uses `rust-analyzer`
+- install [coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer) which uses `rust-analyzer`
+- or install [coc-rls](https://github.com/neoclide/coc-rls/) which uses `rls`
 - or try [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer) without an extension:
 
 ```jsonc
