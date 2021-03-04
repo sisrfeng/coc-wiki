@@ -11,6 +11,7 @@
   - [Crystal](#crystal)
   - [Css/Less/Sass](#csslesssass)
   - [Dart](#dart)
+  - [Deno](#deno)
   - [Dhall](#dhall)
   - [Dockerfile](#dockerfile)
   - [Elixir](#elixir)
@@ -346,6 +347,14 @@ Or use [natebosch/dart_language_server](https://github.com/natebosch/dart_langua
     }
   }
 }
+```
+
+### Deno
+
+Use [`coc-deno`](https://github.com/fannheyward/coc-deno)
+
+```
+:CocInstall coc-deno
 ```
 
 ### Dhall
