@@ -8,9 +8,10 @@ A list of file/folder names is used for resolve workspace folder, the patterns c
 * `rootPatterns` specified for language server used for current buffer.
 * `"coc.preferences.rootPatterns"` settings, which default to `[".git", ".hg", ".projections.json"]`.
 
-When current cwd contains any of the patterns, it's used as workspace folder of the file, to disable this behavior, use configuration `workspace.workspaceFolderCheckCwd`.
 
 The later one have lower priority, which means it's only used when previous patterns failed to match workspace folder.
+
+When current cwd contains any of the patterns, it's used as workspace folder of the file, to disable this behavior, use configuration `workspace.workspaceFolderCheckCwd`.
 
 Workspace folders are resolved from top to bottom, to change this behavior, use configuration `workspace.bottomUpFiletypes`.
 
