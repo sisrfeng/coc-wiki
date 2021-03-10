@@ -23,8 +23,6 @@ To configure `rootPatterns` for specified filetype, use autocmd like:
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 ``` 
 
-**Note** workspace folder is resolved from up to down, cwd is checked first when the file is inside cwd,. 
-
 **Note** for performance reason, user's home directory would never considered as workspace folder.
 
 **Note** since it works by resolve from files, to enable multiple workspace folders, you **have to** open at least one file of each folders.
