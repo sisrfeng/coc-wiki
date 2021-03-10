@@ -35,10 +35,6 @@ Use command `:CocList folders` to open list of workspace folders, `delete` and `
 
 Use command `:echo coc#util#root_patterns()` to get patterns used for resolve workspace folder of current buffer.
 
-## Disable workspace folders support
-
-You can add `"disableWorkspaceFolders": true` to the configuration section of the language server when you don't want the language server make use of workspaceFolders feature.
-
 ## Persist workspace folders
 
 You can make use of vim's session for persist workspace folders.
