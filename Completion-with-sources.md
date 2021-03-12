@@ -49,6 +49,14 @@ to make coc.nvim format your code on `<cr>`:
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 ```
 
+Use `complete_info()` if you need confirm completion only when there's selected complete item:
+
+```vim
+if exists('*complete_info')
+  inoremap <silent><expr> <cr> complete_info(['selected'])['selected'] != -1 ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
+```
+
 ## Use `<Tab>` or custom key for trigger completion
 
 You can make use of `coc#refresh()` for trigger completion like this:
