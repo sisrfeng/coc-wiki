@@ -207,6 +207,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-html](https://github.com/neoclide/coc-html)** for `html`, `handlebars` and `razor`.
 * **[coc-htmlhint](https://github.com/yaegassy/coc-htmlhint)** for `html`, Integrates the HTMLHint static analysis tool.
 * **[coc-html-css-support](https://github.com/yaegassy/coc-html-css-support)** for HTML id and class attribute completion.
+* **[coc-intelephense](https://github.com/yaegassy/coc-intelephense)** for php, fork of [vscode-intelephense](https://github.com/bmewburn/vscode-intelephense). (scoped packages: `@yaegassy/coc-intelephense`)
 * **[coc-java](https://github.com/neoclide/coc-java)** for `java`, use [eclipse.jdt.ls](https://github.com/eclipse/eclipse.jdt.ls).
 * **[coc-jedi](https://github.com/pappasam/coc-jedi)** for `python`, use [jedi-language-server](https://github.com/pappasam/jedi-language-server).
 * **[coc-json](https://github.com/neoclide/coc-json)** for `json`.
