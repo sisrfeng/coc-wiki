@@ -39,7 +39,7 @@ call SetupCommandAbbrs('C', 'CocConfig')
 
 There're two types of user configuration files.
 
-* The user configuration is named as `coc-settings.json` and placed inside the folder `$XDG_CONFIG_HOME/nvim` or `$HOME/.config/nvim` by default（or `$HOME/.vim` for vim). Run the command `:CocConfig` to open your user configuration file. 
+* The user configuration is named as `coc-settings.json` and placed inside the folder `$XDG_CONFIG_HOME/nvim` or `$HOME/.config/nvim` by default (or `$HOME/.vim` for vim). Run the command `:CocConfig` to open your user configuration file. 
 
 * The workspace configuration should be named `coc-settings.json` and be in the directory `.vim`. 
 After a file is opened in vim, this directory is resolved from the parent directories of that file. Run the command `:CocLocalConfig` to open your workspace configuration file. 
