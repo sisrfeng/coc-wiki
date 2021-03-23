@@ -28,7 +28,7 @@ After each compile, restart coc.nvim service by `:CocRestart` to make use of new
 To create source map by esbuild, use:
 
 ```
-NODE_ENV=production node esbuild.js
+NODE_ENV=development node esbuild.js
 ```
 
 To compile source code.
