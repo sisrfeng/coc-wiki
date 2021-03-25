@@ -188,6 +188,8 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-diagnostic](https://github.com/iamcco/coc-diagnostic)** for All filetypes, use [diagnostic-languageserver](https://github.com/iamcco/diagnostic-languageserver).
 * **[coc-discord](https://github.com/amiralies/coc-discord)** discord rich presence for coc.nvim
 * **[coc-discord-rpc](https://github.com/LeonardSSH/coc-discord-rpc)** fully customizable discord rpc integration with support for over 130+ of the most popular languages
+* **[coc-dash-complete](https://github.com/voldikss/coc-dash-complete)** Press `-` to trigger buffer source completion.
+* **[coc-dot-complete](https://github.com/voldikss/coc-dot-complete)** Press `.` to trigger buffer source completion.
 * **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
 * **[coc-elixir](https://github.com/elixir-lsp/coc-elixir)** for `elixir`, based on [elixir-ls](https://github.com/elixir-lsp/elixir-ls/).
 * **[coc-ember](https://github.com/NullVoxPopuli/coc-ember)** for ember projects.
@@ -213,7 +215,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-jedi](https://github.com/pappasam/coc-jedi)** for `python`, use [jedi-language-server](https://github.com/pappasam/jedi-language-server).
 * **[coc-json](https://github.com/neoclide/coc-json)** for `json`.
 * **[coc-julia](https://github.com/fannheyward/coc-julia)** for [`julia`](https://julialang.org/).
-* **[coc-just-complete](https://github.com/voldikss/coc-just-complete)** another buffer words completion extension.
+* **[coc-just-complete](https://github.com/voldikss/coc-just-complete)** Press `_` to trigger buffer source completion.
 * **[coc-lists](https://github.com/neoclide/coc-lists)** provides some basic lists like fzf.vim.
 * **[coc-lsp-wl](https://github.com/voldikss/coc-lsp-wl)** for `wolfram mathematica`, fork of [vscode-lsp-wl](https://github.com/kenkangxgwe/vscode-lsp-wl).
 * **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown linting
