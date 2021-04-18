@@ -30,6 +30,7 @@
   - [Kotlin](#kotlin)
   - [LaTeX](#latex)
   - [Lua](#lua)
+  - [Markdown](#markdown)
   - [Nim](#nim)
   - [Nix](#nix)
   - [OCaml and ReasonML](#ocaml-and-reasonml)
@@ -752,6 +753,12 @@ Make sure your Java environment variables are rights and change the path in the 
   }
 }
 ```
+
+### Markdown
+
+Using [coc-markdownlint](https://github.com/fannheyward/coc-markdownlint) or [vim/erb/markdown](#vimerbmarkdown)
+
+    :CocInstall coc-markdownlint
 
 ### Nim
 
