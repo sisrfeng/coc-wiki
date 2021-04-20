@@ -756,7 +756,7 @@ Make sure your Java environment variables are rights and change the path in the 
 
 ### Markdown
 
-Using [coc-markdownlint](https://github.com/fannheyward/coc-markdownlint) or [vim/erb/markdown](#vimerbmarkdown)
+Using [coc-markdownlint](https://github.com/fannheyward/coc-markdownlint), which has a codeAction support to autofix errs.
 
     :CocInstall coc-markdownlint
 
@@ -1211,6 +1211,8 @@ languages:
     lint-command: 'markdownlint -s'
     lint-stdin: true
     lint-formats:
+      - '%f:%l %m'
+      - '%f:%l:%c %m'
       - '%f: %l: %m'
 ```
 
