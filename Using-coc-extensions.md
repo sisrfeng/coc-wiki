@@ -195,6 +195,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-ember](https://github.com/NullVoxPopuli/coc-ember)** for ember projects.
 * **[coc-emmet](https://github.com/neoclide/coc-emmet)** provides emmet suggestions in completion list.
 * **[coc-erlang_ls](https://github.com/hyhugh/coc-erlang_ls)** for `erlang`, based on [erlang_ls](https://github.com/erlang-ls/erlang_ls)
+* **[coc-esbonio](https://github.com/yaegassy/coc-esbonio)** for `rst` (reStructuredText), [esbonio](https://pypi.org/project/esbonio/) ([Sphinx] Python Documentation Generator) language server extension.
 * **[coc-eslint](https://github.com/neoclide/coc-eslint)** Eslint extension for coc.nvim
 * **[coc-explorer](https://github.com/weirongxu/coc-explorer)** file explorer extension
 * **[coc-floaterm](https://github.com/voldikss/coc-floaterm)** for [vim-floaterm](https://github.com/voldikss/vim-floaterm) integration
