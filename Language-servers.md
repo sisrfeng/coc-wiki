@@ -1120,7 +1120,32 @@ If you'd like to use Metals without the coc-metals extension, make sure the gene
 }
 ```
 
-Note that the Dotty Language server is no longer recommended. Intead, it is recommened to use Metals for Dotty/Scala 3.
+Note that the Dotty Language server is no longer recommended. Instead, it is recommended to use Metals for Dotty/Scala 3.
+
+### SystemVerilog
+
+Using [svlangserver](https://github.com/imc-trading/svlangserver).
+
+For installation, please check [this section in the readme](https://github.com/imc-trading/svlangserver#installation)
+
+Example settings file
+```jsonc
+{
+    "languageserver": {
+        "svlangserver": {
+            "module": "/INSTALLATION/PATH/lib/svlangserver.js",
+            "filetypes": ["systemverilog"],
+            "settings": {
+                "systemverilog.includeIndexing": ["**/*.{sv,svh}"],
+                "systemverilog.excludeIndexing": ["test/**/*.sv*"],
+                "systemverilog.defines" : [],
+                "systemverilog.launchConfiguration": "/TOOL/PATH/verilator -sv -Wall --lint-only",
+                "systemverilog.formatCommand": "/TOOL/PATH/verible-verilog-format"
+            }
+        }
+    }
+}
+```
 
 ### Terraform
 
