@@ -45,6 +45,7 @@
   - [Rust](#rust)
   - [SQL](#sql)
   - [Scala](#scala)
+  - [SystemVerilog](#systemverilog)
   - [Terraform](#terraform)
   - [Vala](#vala)
   - [Vue](#vue)
