@@ -264,5 +264,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-xml](https://github.com/fannheyward/coc-xml)** for `xml`, use [lsp4xml](https://github.com/angelozerr/lsp4xml).
 * **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
 * **[coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights & history.
+* **[coc-thrift-syntax-support](https://github.com/cposture/coc-thrift-syntax-support)** for `thrift`.
+
 
 **Tips:** use `:CocConfig` to edit the configuration file. Completion & validation are supported after `coc-json` is installed.
