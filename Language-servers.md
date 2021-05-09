@@ -662,6 +662,15 @@ Install [coc-julia](https://github.com/fannheyward/coc-julia), or register the s
 
 Check out [JuliaEditorSupport/LanguageServer.jl](https://github.com/JuliaEditorSupport/LanguageServer.jl/wiki/Vim-and-Neovim) for more information.
 
+In case you hit [issue #836](https://github.com/julia-vscode/LanguageServer.jl/issues/836), the language server needs to be installed from master to avoid the problem:
+
+```julia
+julia> using Pkg
+julia> Pkg.add(url="https://github.com/julia-vscode/LanguageServer.jl")
+julia> Pkg.add("SymbolServer")
+julia> Pkg.add("StaticLint")
+```
+
 ### Kotlin
 
 Using [kotlin-language-server](https://github.com/fwcd/kotlin-language-server)
