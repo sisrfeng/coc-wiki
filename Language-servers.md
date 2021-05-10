@@ -1009,7 +1009,32 @@ Or configure [[python-language-server](https://github.com/palantir/python-langua
 
 ### R
 
+First install language server from `R`:
+
+```r
+install.packages("languageserver")
+```
+
 Use [coc-r-lsp](https://github.com/neoclide/coc-r-lsp) extension.
+
+If [coc-r-lsp](https://github.com/neoclide/coc-r-lsp) does not work properly, according to instructions from [REditorSupport/languageserver](https://github.com/REditorSupport/languageserver), add below languageserver object to configuration file:
+
+```jsonc
+"languageserver": {
+    "R": {
+        "enable": true,
+        "command": "/usr/bin/R",
+        "args": [
+            "--slave",
+            "-e",
+            "languageserver::run()"
+        ],
+        "filetypes": [
+            "r"
+        ]
+    }
+}
+```
 
 ### Robot Framework
 
