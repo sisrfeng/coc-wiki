@@ -4,6 +4,7 @@
 - [Register custom language servers](#register-custom-language-servers)
 - [Example language server configuration](#example-language-server-configuration)
   - [Ada/SPARK](#adaspark)
+  - [Arduino](#Arduino)
   - [Bash](#bash)
   - [C/C++/Objective-C](#ccobjective-c)
   - [CMake](#cmake)
@@ -154,6 +155,25 @@ See installation instructions on the Github homepage of this LSP.
   }
 }
 ```
+
+### Arduino
+Using [Arduino Language Server](https://github.com/arduino/arduino-language-server). 
+See the installation instructions in the README file of this LSP.
+
+```jsonc
+"languageserver":{
+  "arduino":{ 
+    "command":"/path/to/arduino-language-server",
+    "rootPatterns":["*.ino"],
+    "filetypes":["arduino"],
+    "args":["-cli", "/path/to/arduino-cli", "-clangd", "/path/to/clangd", "-cli-config", "/path/to/arduino-cli.yaml"]
+  }
+}
+```
+
+Tips: 
+  - This LSP requires `clangd` and `arduino-cli` to work properly. Modify the values according to the locations of the binaries on your machine.
+  - To determine (or generate if there isn't one) the location of `arduino-cli.yaml`, refer to [this page](https://arduino.github.io/arduino-cli/latest/configuration/).
 
 ### Bash
 
