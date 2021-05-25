@@ -186,8 +186,7 @@ Using [mads-hartmann/bash-language-server](https://github.com/mads-hartmann/bash
   "bash": {
     "command": "bash-language-server",
     "args": ["start"],
-    "filetypes": ["sh"],
-    "ignoredRootPaths": ["~"]
+    "filetypes": ["sh"]
   }
 }
 ```
@@ -728,8 +727,6 @@ For [Texlab](https://texlab.netlify.com/), use [coc-texlab](https://github.com/f
 "languageserver": {
   "latex": {
     "command": "/PATH/TO/texlab",
-    // not start server at home directory, since it won't work.
-    "ignoredRootPaths": ["~"],
     "filetypes": ["tex", "bib", "plaintex", "context"]
   }
 }
