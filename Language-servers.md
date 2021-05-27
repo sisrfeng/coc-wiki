@@ -372,6 +372,8 @@ Or use [natebosch/dart_language_server](https://github.com/natebosch/dart_langua
 ```
 
 ### D
+
+Use [`coc-dlang`](https://github.com/vushu/coc-dlang)
 ```
 :CocInstall coc-dlang
 ```
