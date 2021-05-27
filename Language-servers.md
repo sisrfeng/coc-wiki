@@ -11,7 +11,7 @@
   - [Clojure](#clojure)
   - [Crystal](#crystal)
   - [Css/Less/Sass](#csslesssass)
-  - [Dart](#dart)
+  - [Dart](#d)
   - [D](#dlang)
   - [Deno](#deno)
   - [Dhall](#dhall)
