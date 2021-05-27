@@ -12,6 +12,7 @@
   - [Crystal](#crystal)
   - [Css/Less/Sass](#csslesssass)
   - [Dart](#dart)
+  - [D](#dlang)
   - [Deno](#deno)
   - [Dhall](#dhall)
   - [Dockerfile](#dockerfile)
@@ -368,6 +369,11 @@ Or use [natebosch/dart_language_server](https://github.com/natebosch/dart_langua
     }
   }
 }
+```
+
+### D
+```
+:CocInstall coc-dlang
 ```
 
 ### Deno
