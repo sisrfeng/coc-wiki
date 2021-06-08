@@ -49,6 +49,22 @@ Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-loc
 
 Run command `:PlugInstall` in your (neo)vim.
 
+### Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
+
+Use default release branch (recommended):
+
+``` vim
+use {'neoclide/coc.nvim', branch = 'release'}
+```
+
+Build from source:
+
+``` vim
+use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
+```
+
+Run command `:PackerInstall` in your (neo)vim.
+
 ### Using [dein.vim](https://github.com/Shougo/dein.vim)
 
 Use release branch (recommended):
