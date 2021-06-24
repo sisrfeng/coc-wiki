@@ -234,7 +234,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-prettier](https://github.com/neoclide/coc-prettier)** a fork of [prettier-vscode](https://github.com/prettier/prettier-vscode).
 * **[coc-prisma](https://github.com/pantharshit00/coc-prisma)** for Prisma schema integration.
 * **[coc-pyright](https://github.com/fannheyward/coc-pyright)** [Pyright](https://github.com/microsoft/pyright) extension
-* **[coc-python](https://github.com/neoclide/coc-python)** for `python`, extension forked from [vscode-python](https://github.com/Microsoft/vscode-python).
+* **[coc-python](https://github.com/neoclide/coc-python)** for `python`, extension forked from [vscode-python](https://github.com/Microsoft/vscode-python). *(Not maintained anymore)*
 * **[coc-pydocstring](https://github.com/yaegassy/coc-pydocstring)** for `python`, using [doq](https://pypi.org/project/doq/) (python docstring generator) extension.
 * **[coc-r-lsp](https://github.com/neoclide/coc-r-lsp)** for `r`, use [R languageserver](https://github.com/REditorSupport/languageserver).
 * **[coc-reason](https://github.com/jaredly/reason-language-server/tree/master/editor-extensions/coc.nvim)** for [`reasonml`](https://reasonml.github.io/)
