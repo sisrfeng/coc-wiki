@@ -44,7 +44,7 @@ Note that some terminals send \<NUL> when you press \<c-space>, so you could use
 * For documentation of completion, use `"suggest.floatEnable": false` in settings.json.
 * For diagnostic messages, use `"diagnostic.messageTarget": "echo"` in settings.json.
 * For signature help, use `"signature.target": "echo"` in settings.json.
-* For documentation on doHover, use `"coc.preferences.hoverTarget": "echo"` in settings.json.
+* For documentation on hover, use `"hover.target": "echo"` in settings.json.
 
 ## Highlight of background seems wrong with floating window.
 
