@@ -250,6 +250,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-spell-checker](https://github.com/iamcco/coc-spell-checker)** A basic spell checker that works well with camelCase code
 * **[coc-sql](https://github.com/fannheyward/coc-sql)** for `sql`.
 * **[coc-sqlfluff](https://github.com/yaegassy/coc-sqlfluff)** for `sql`, [SQLFluff](https://pypi.org/project/sqlfluff/) (A SQL linter and auto-formatter for Humans) extension
+* **[coc-sumneko-lua](https://github.com/xiyaowong/coc-sumneko-lua)** Lua extension using sumneko lua-language-server
 * **[coc-svelte](https://github.com/coc-extensions/coc-svelte)** for [`svelte`](https://github.com/sveltejs/svelte).
 * **[coc-svg](https://github.com/iamcco/coc-svg)** for `svg`.
 * **[coc-swagger](https://github.com/haishanh/coc-swagger)** for improved Swagger/OpenAPI spec authoring experience.
