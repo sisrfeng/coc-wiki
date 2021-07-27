@@ -93,25 +93,31 @@ yarn install --frozen-lockfile
 
 ### Using [NeoBundle](https://github.com/Shougo/neobundle.vim)
 
-Use this work-around to check out the recommended `release` branch:
+Use `release` branch:
 
 ``` vim
-NeoBundle 'neoclide/coc.nvim'
+NeoBundle 'neoclide/coc.nvim', 'release'
 ```
 
 ### Using vim8's native package manager
 
 Unzip source code from release branch:
 
+vim8:
+
 ```sh
-# for vim8
 mkdir -p ~/.vim/pack/coc/start
 cd ~/.vim/pack/coc/start
-git clone https://github.com/neoclide/coc.nvim.git
-# for neovim
+git clone https://github.com/neoclide/coc.nvim.git --depth=1
+git checkout release
+
+neovim:
+
+```sh
 mkdir -p ~/.local/share/nvim/site/pack/coc/start
 cd ~/.local/share/nvim/site/pack/coc/start
-git clone https://github.com/neoclide/coc.nvim.git
+git clone https://github.com/neoclide/coc.nvim.git  --depth=1
+git checkout release
 ```
 
 ## Check service state
