@@ -35,7 +35,7 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 ### Using [vim-plug](https://github.com/junegunn/vim-plug)
 
-Use default release branch (recommended):
+Use release branch (recommended):
 
 ``` vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -70,7 +70,7 @@ Run command `:PackerInstall` in your (neo)vim.
 Use release branch (recommended):
 
 ``` vim
-call dein#add('neoclide/coc.nvim', { 'merged': 0 })
+call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 ```
 
 Build from source:
@@ -79,11 +79,11 @@ Build from source:
 call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'master', 'build': 'yarn install --frozen-lockfile' })
 ```
 
-**Note:** When `'merged': 0` not present, coc.nvim will be unable to start.
+**Note:** When `'merged': 0` not present, coc.nvim not able to start.
 
 **Note:** Depends on your network and CPU, first build might take a while.
 
-If you have trouble compiling from source when using dein, try in your shell:
+If you have trouble compiling from source when using dein, try these shell commands:
 
 ```sh
 cd ~/.cache/dein/repos/github.com/neoclide/coc.nvim
@@ -116,7 +116,7 @@ git clone https://github.com/neoclide/coc.nvim.git
 
 ## Check service state
 
-To check and see if the coc service is running, use command `:checkhealth` in neovim (not supported by vim); the output looks like:
+To check and see if the coc.nvim service is running, use command `:checkhealth` in neovim (not supported by vim); the output looks like:
 
 <img width="344" alt="screen shot 2018-07-08 at 11 02 23 pm" src="https://user-images.githubusercontent.com/251450/42421117-001a81ee-8303-11e8-929a-91da4ac9feea.png">
 
