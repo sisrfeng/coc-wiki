@@ -2,7 +2,7 @@ Coc.nvim is mostly written in TypeScript and runs on Node.js.
 
 ## Requirements
 
-* `neovim` >= `0.3.2` or `vim` >= `8.0.1453` (run `:version` or `vim --version` to checkout your vim version)
+* `neovim` >= `0.4.0` or `vim` >= `8.0.1453` (run `:version` or `vim --version` to checkout your vim version)
 * `node` >= `12.12`
 
 Install [Node.js](https://nodejs.org/) >= 12 on MacOS:
