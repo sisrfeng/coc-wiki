@@ -110,6 +110,7 @@ mkdir -p ~/.vim/pack/coc/start
 cd ~/.vim/pack/coc/start
 git clone https://github.com/neoclide/coc.nvim.git --depth=1
 git checkout release
+```
 
 neovim:
 
