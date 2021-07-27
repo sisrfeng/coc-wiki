@@ -148,7 +148,7 @@ Run `:CocConfig`, which will open main config file `~/.config/nvim/coc-settings.
 
 For more information check out [Using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file)
 
-## (Optional) Install watchman for file watching
+## Install watchman for file watching
 
 For features like [workspace_didChangeWatchedFiles](https://microsoft.github.io/language-server-protocol/specification#workspace_didChangeWatchedFiles) to work, you will need to install [watchman](https://facebook.github.io/watchman) by following <https://facebook.github.io/watchman/docs/install>.
 
