@@ -144,13 +144,13 @@ For more information check out [Using coc extensions](https://github.com/neoclid
 
 ## Add some configuration
 
-Run `:CocConfig`, which will open main config file `~/.config/nvim/coc-settings.json` (empty for new installation). Add empty JSON object (like `{}`) and add a list of [language servers configurations](https://github.com/neoclide/coc.nvim/wiki/Language-servers) not already covered by existing extensions (e.g. if you already installed `coc-python`, you don't need to add configuration for the `pyls` server).
+Run `:CocConfig`, which will open main config file `~/.config/nvim/coc-settings.json` (empty for new installation). Add empty JSON object (like `{}`) and add a list of [language servers configurations](https://github.com/neoclide/coc.nvim/wiki/Language-servers) not already covered by existing extensions (e.g. if you already installed `coc-pyright`, you don't need to add configuration for the `pyls` server).
 
 For more information check out [Using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file)
 
 ## (Optional) Install watchman for file watching
 
-For feature [workspace_didChangeWatchedFiles](https://microsoft.github.io/language-server-protocol/specification#workspace_didChangeWatchedFiles) to work, you will need to install [watchman](https://facebook.github.io/watchman) by following <https://facebook.github.io/watchman/docs/install>.
+For features like [workspace_didChangeWatchedFiles](https://microsoft.github.io/language-server-protocol/specification#workspace_didChangeWatchedFiles) to work, you will need to install [watchman](https://facebook.github.io/watchman) by following <https://facebook.github.io/watchman/docs/install>.
 
 Watchman works great even when you have multiple (neo)vim instances started in the same directory.
 
