@@ -262,6 +262,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-translator](https://github.com/voldikss/coc-translator)** language transaction extension
 * **[coc-tsserver](https://github.com/neoclide/coc-tsserver)** for `javascript` and `typescript`.
 * **[coc-vetur](https://github.com/neoclide/coc-vetur)** for `vue`, use [vetur](https://github.com/vuejs/vetur).
+* **[coc-volar](https://github.com/yaegassy/coc-volar)** for `vue`, use [volar](https://github.com/johnsoncodehk/volar). (scoped packages: `@yaegassy/coc-volar`).
 * **[coc-vimlsp](https://github.com/iamcco/coc-vimlsp)** for `viml`.
 * **[coc-xml](https://github.com/fannheyward/coc-xml)** for `xml`, use [lsp4xml](https://github.com/angelozerr/lsp4xml).
 * **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
