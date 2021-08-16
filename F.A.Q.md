@@ -17,10 +17,6 @@ Use `let g:coc_node_path = '/path/to/node'` to make coc.nvim use custom node exe
 The background used for floating window is `CocFloating` which linked to `NormalFloat` on neovim or `Pmenu` on vim8.
 Reset the highlight in your vimrc if it's not suitable, or use colorscheme that works fine by default, for example: https://github.com/morhetz/gruvbox
 
-## Syntax highlight of markdown doesn't looks right.
-
-On neovim, coc.nivm uses background neovim instance which load syntax plugins only for generate highlights, it may not what you would expect.
-
 ## Floating window position is wrong after scroll the screen.
 
 It's limitation of (neo)vim, it should either adjust floating window postion according to relative option or provide scroll autocmd so plugin can adjust the window position.
