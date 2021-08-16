@@ -1246,6 +1246,12 @@ Using [coc-vetur](https://github.com/neoclide/coc-vetur)
 
 ### Zig
 
+Using [coc-zig](https://github.com/UltiRequiem/coc-zig)
+
+    :CocInstall coc-zig
+
+
+
 Using [`zls`](https://github.com/zigtools/zls#installation)
 
 Make sure `zls` is findable in your `PATH` variable, otherwise specify the full path to the `zls` executable
