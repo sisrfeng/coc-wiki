@@ -155,6 +155,7 @@ Some plugins like [Ultisnips](https://github.com/SirVer/ultisnips) and [vim-clos
   :profile file *
   ```
 * Make issue happen.
+* Run command `:profile stop`.
 * Exit vim, and open the newly generated profile.log file in your current directory.
 
 ## How could I profile coc.nvim.
