@@ -268,6 +268,9 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
 * **[coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights & history.
 * **[coc-thrift-syntax-support](https://github.com/cposture/coc-thrift-syntax-support)** for `thrift`.
+* **[coc-zig](https://github.com/UltiRequiem/coc-zig)** for `zig` files.
+
+
 
 
 **Tips:** use `:CocConfig` to edit the configuration file. Completion & validation are supported after `coc-json` is installed.
