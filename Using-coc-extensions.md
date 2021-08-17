@@ -258,6 +258,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss)** for `tailwindcss`.
 * **[coc-tasks](https://github.com/voldikss/coc-tasks)** for [asynctasks.vim](https://github.com/skywind3000/asynctasks.vim) integration
 * **[coc-texlab](https://github.com/fannheyward/coc-texlab)** for `LaTeX` using [TexLab](https://texlab.netlify.com/).
+* **[coc-thrift-syntax-support](https://github.com/cposture/coc-thrift-syntax-support)** for `thrift`.
 * **[coc-toml](https://github.com/kkiyama117/coc-toml)** for [`toml`](https://github.com/toml-lang/toml) using [taplo](https://github.com/tamasfe/taplo).
 * **[coc-translator](https://github.com/voldikss/coc-translator)** language transaction extension
 * **[coc-tsserver](https://github.com/neoclide/coc-tsserver)** for `javascript` and `typescript`.
@@ -267,7 +268,6 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-xml](https://github.com/fannheyward/coc-xml)** for `xml`, use [lsp4xml](https://github.com/angelozerr/lsp4xml).
 * **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
 * **[coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights & history.
-* **[coc-thrift-syntax-support](https://github.com/cposture/coc-thrift-syntax-support)** for `thrift`.
 * **[coc-zig](https://github.com/UltiRequiem/coc-zig)** for `zig` files.
 
 
