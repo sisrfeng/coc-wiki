@@ -9,6 +9,7 @@
   - [C/C++/Objective-C](#ccobjective-c)
   - [CMake](#cmake)
   - [Clojure](#clojure)
+  - [Common Lisp](#Common-Lisp)
   - [Crystal](#crystal)
   - [Css/Less/Sass](#csslesssass)
   - [Dart](#dart)
@@ -272,6 +273,12 @@ Using [cmake-language-server](https://github.com/regen100/cmake-language-server)
     }
   }
 }
+```
+### Common Lisp
+
+Use [`coc-cl`](https://github.com/UltiRequiem/coc-cl)
+```
+:CocInstall coc-cl
 ```
 
 ### Clojure
