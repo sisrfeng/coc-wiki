@@ -14,7 +14,7 @@ brew install node
 Install the latest stable [Node.js](https://nodejs.org/); may not work on Windows.
 
 ```sh
-curl -sL install-node.now.sh | sh
+curl -sL install-node.now.sh | bash
 ```
 
 **Note:** coc.nvim finds `node` by calling `executable('node')` from within vim. Check out
