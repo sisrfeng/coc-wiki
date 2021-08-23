@@ -108,8 +108,7 @@ vim8:
 ```sh
 mkdir -p ~/.vim/pack/coc/start
 cd ~/.vim/pack/coc/start
-git clone https://github.com/neoclide/coc.nvim.git --depth=1
-git checkout release
+git clone --branch release https://github.com/neoclide/coc.nvim.git --depth=1
 ```
 
 neovim:
@@ -117,8 +116,7 @@ neovim:
 ```sh
 mkdir -p ~/.local/share/nvim/site/pack/coc/start
 cd ~/.local/share/nvim/site/pack/coc/start
-git clone https://github.com/neoclide/coc.nvim.git  --depth=1
-git checkout release
+git clone --branch release https://github.com/neoclide/coc.nvim.git --depth=1
 ```
 
 ## Check service state
