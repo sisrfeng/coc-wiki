@@ -198,7 +198,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-erlang_ls](https://github.com/hyhugh/coc-erlang_ls)** for `erlang`, based on [erlang_ls](https://github.com/erlang-ls/erlang_ls)
 * **[coc-esbonio](https://github.com/yaegassy/coc-esbonio)** for `rst` (reStructuredText), [esbonio](https://pypi.org/project/esbonio/) ([Sphinx] Python Documentation Generator) language server extension.
 * **[coc-eslint](https://github.com/neoclide/coc-eslint)** Eslint extension for coc.nvim
-* **[coc-explorer](https://github.com/weirongxu/coc-explorer)** file explorer extension
+* **[coc-explorer](https://github.com/weirongxu/coc-explorer)** File Explorer extension
 * **[coc-floaterm](https://github.com/voldikss/coc-floaterm)** for [vim-floaterm](https://github.com/voldikss/vim-floaterm) integration
 * **[coc-flow](https://github.com/amiralies/coc-flow)** for [`flow`](https://flow.org)
 * **[coc-flutter](https://github.com/iamcco/coc-flutter)** for [`flutter`](https://github.com/flutter/flutter)
@@ -223,6 +223,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-lists](https://github.com/neoclide/coc-lists)** provides some basic lists like fzf.vim.
 * **[coc-lsp-wl](https://github.com/voldikss/coc-lsp-wl)** for `wolfram mathematica`, fork of [vscode-lsp-wl](https://github.com/kenkangxgwe/vscode-lsp-wl).
 * **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown linting
+* **[coc-markdown-preview-enhanced](https://github.com/weirongxu/coc-markdown-preview-enhanced)** [Markdown Preview Enhanced](https://shd101wyy.github.io/markdown-preview-enhanced/) for coc.nvim
 * **[coc-metals](https://github.com/scalameta/coc-metals)** for Scala using [`Metals`](http://scalameta.org/metals/)
 * **[coc-omnisharp](https://github.com/yatli/coc-omnisharp)** for `csharp` and `visualbasic`.
 * **[coc-perl](https://github.com/ryuta69/coc-perl)** for `perl`.
@@ -265,6 +266,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-vetur](https://github.com/neoclide/coc-vetur)** for `vue`, use [vetur](https://github.com/vuejs/vetur).
 * **[coc-volar](https://github.com/yaegassy/coc-volar)** for `vue`, use [volar](https://github.com/johnsoncodehk/volar). (scoped packages: `@yaegassy/coc-volar`).
 * **[coc-vimlsp](https://github.com/iamcco/coc-vimlsp)** for `viml`.
+* **[coc-webview](https://github.com/weirongxu/coc-webview)** Using an external browser to support the webview.
 * **[coc-xml](https://github.com/fannheyward/coc-xml)** for `xml`, use [lsp4xml](https://github.com/angelozerr/lsp4xml).
 * **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
 * **[coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights & history.
