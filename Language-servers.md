@@ -755,21 +755,24 @@ Using [Alloyed/lua-lsp](https://github.com/Alloyed/lua-lsp)
 }
 ```
 
-Using [sumneko/lua-language-server](https://github.com/sumneko/lua-language-server) on Windows, which can be downloaded by the extension manager of VSCode.
+Using [sumneko/lua-language-server](https://github.com/sumneko/lua-language-server). It's a little difficult to use `sumneko/lua-language-server` in coc.nvim directly, it's recommend to use [coc-sumneko-lua](https://github.com/xiyaowong/coc-sumneko-lua) that can download and setup for Lua. If you want to setup `sumneko/lua-language-server` in coc-settings.json, follow the steps: (tests on macOS, change the path if you're using Windows)
 
-```viml
-let lua_lsp = glob('~/.vscode/extensions/sumneko.lua*', 0, 1)
-if len(lua_lsp)
-    let lua_lsp = lua_lsp[-1] . '\server'
-    call coc#config('languageserver', {
-        \ 'lua-language-server': {
-        \     'cwd': lua_lsp,
-        \     'command': lua_lsp . '\bin\lua-language-server.exe',
-        \     'args': ['-E', '-e', 'LANG="zh-cn"', lua_lsp . '\main.lua'],
-        \     'filetypes': ['lua'],
-        \ }
-    \ })
-endif
+1. install `sumneko.lua` in VSCode
+2. `cd ~/.vscode/extensions/sumneko.lua-2.3.7`
+3. `chmod +x ./server/bin/macOS/lua-language-server`, have no idea why this is needed, because in my VSCode extension, the server is not executable.
+4. setup in your coc-settings.json:
+
+```json
+{
+  "languageserver": {
+    "lua": {
+      "command": "~/.vscode/extensions/sumneko.lua-2.3.7/server/bin/macOS/lua-language-server",
+      "args": ["-E", "~/.vscode/extensions/sumneko.lua-2.3.7/server/main.lua"],
+      "rootPatterns": [".git"],
+      "filetypes": ["lua"]
+    }
+  }
+}
 ```
 
 Using [EmmyLua-LanguageServer](https://github.com/EmmyLua/EmmyLua-LanguageServer)
