@@ -225,6 +225,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown linting
 * **[coc-markdown-preview-enhanced](https://github.com/weirongxu/coc-markdown-preview-enhanced)** [Markdown Preview Enhanced](https://shd101wyy.github.io/markdown-preview-enhanced/) for coc.nvim
 * **[coc-metals](https://github.com/scalameta/coc-metals)** for Scala using [`Metals`](http://scalameta.org/metals/)
+* **[coc-nginx](https://github.com/yaegassy/coc-nginx)** for `nginx`, use [nginx-language-server](https://github.com/pappasam/nginx-language-server) and [nginxfmt](https://pypi.org/project/nginxfmt/) (scoped packages: `@yaegassy/coc-nginx`)
 * **[coc-omnisharp](https://github.com/yatli/coc-omnisharp)** for `csharp` and `visualbasic`.
 * **[coc-perl](https://github.com/ryuta69/coc-perl)** for `perl`.
 * **[coc-php-cs-fixer](https://github.com/yaegassy/coc-php-cs-fixer)** for `php`, Integrates the [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) (PHP Coding Standards Fixer).
