@@ -209,7 +209,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-graphql](https://github.com/felippepuhle/coc-graphql)** for `graphql`.
 * **[coc-highlight](https://github.com/neoclide/coc-highlight)** provides default document symbol highlighting and color support.
 * **[coc-html](https://github.com/neoclide/coc-html)** for `html`, `handlebars` and `razor`.
-* **[coc-htmldjango](https://github.com/yaegassy/coc-htmldjango)** for `htmldjango`, django templates (htmldjango) extension. Provides "formatter", "snippets completion" and more...
+* **[coc-htmldjango](https://github.com/yaegassy/coc-htmldjango)** for `htmldjango`, django templates (htmldjango) extension. Provides "formatter", "linter" and more...
 * **[coc-htmlhint](https://github.com/yaegassy/coc-htmlhint)** for `html`, Integrates the HTMLHint static analysis tool.
 * **[coc-html-css-support](https://github.com/yaegassy/coc-html-css-support)** for HTML id and class attribute completion.
 * **[coc-intelephense](https://github.com/yaegassy/coc-intelephense)** for php, fork of [vscode-intelephense](https://github.com/bmewburn/vscode-intelephense). (scoped packages: `@yaegassy/coc-intelephense`)
