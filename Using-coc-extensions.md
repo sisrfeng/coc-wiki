@@ -174,6 +174,7 @@ You can also use Chrome to debug extensions, checkout <https://github.com/neocli
 You can find available coc extensions by searching [coc.nvim on npm](https://www.npmjs.com/search?q=keywords%3Acoc.nvim), or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which can search and install extensions in coc.nvim directly.
 
 * **[coc-angular](https://github.com/iamcco/coc-angular)** for `angular`.
+* **[coc-ansible](https://github.com/yaegassy/coc-ansible)** for `yaml.ansible`, use [ansible-language-server](https://github.com/ansible/ansible-language-server) (scoped packages: `@yaegassy/coc-ansible`)
 * **[coc-blade-formatter](https://github.com/yaegassy/coc-blade-formatter)** for `blade`, Integrates the [blade-formatter](https://github.com/shufo/blade-formatter) (Laravel Blade formatter).
 * **[coc-browser](https://github.com/voldikss/coc-browser)** for browser words completion
 * **[coc-calc](https://github.com/weirongxu/coc-calc)** expression calculation extension
