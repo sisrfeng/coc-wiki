@@ -175,7 +175,6 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 
 * **[coc-angular](https://github.com/iamcco/coc-angular)** for `angular`.
 * **[coc-blade-formatter](https://github.com/yaegassy/coc-blade-formatter)** for `blade`, Integrates the [blade-formatter](https://github.com/shufo/blade-formatter) (Laravel Blade formatter).
-* **[coc-blade-linter](https://github.com/yaegassy/coc-blade-linter)** for `blade`, Integrates the [Laravel Blade Linter](https://github.com/bdelespierre/laravel-blade-linter).
 * **[coc-browser](https://github.com/voldikss/coc-browser)** for browser words completion
 * **[coc-calc](https://github.com/weirongxu/coc-calc)** expression calculation extension
 * **[coc-cfn-lint](https://github.com/joenye/coc-cfn-lint)** for CloudFormation Linter, [cfn-python-lint](https://github.com/aws-cloudformation/cfn-python-lint)
