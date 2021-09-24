@@ -227,9 +227,9 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-nginx](https://github.com/yaegassy/coc-nginx)** for `nginx`, use [nginx-language-server](https://github.com/pappasam/nginx-language-server) and [nginxfmt](https://pypi.org/project/nginxfmt/) (scoped packages: `@yaegassy/coc-nginx`)
 * **[coc-omnisharp](https://github.com/yatli/coc-omnisharp)** for `csharp` and `visualbasic`.
 * **[coc-perl](https://github.com/ryuta69/coc-perl)** for `perl`.
-* **[coc-php-cs-fixer](https://github.com/yaegassy/coc-php-cs-fixer)** for `php`, Integrates the [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) (PHP Coding Standards Fixer).
 * **[coc-phpactor](https://github.com/phpactor/coc-phpactor)** for `php`, using [phpactor](https://github.com/phpactor/phpactor)
 * **[coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`, use [intelephense-docs](https://github.com/bmewburn/intelephense-docs).
+* **[coc-php-cs-fixer](https://github.com/yaegassy/coc-php-cs-fixer)** for `php`, Integrates the [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) (PHP Coding Standards Fixer).
 * **[coc-psalm](https://github.com/yaegassy/coc-psalm)** for `php`, use [psalm](https://psalm.dev/).
 * **[coc-powershell](https://github.com/yatli/coc-powershell)** for PowerShellEditorService integration.
 * **[coc-prettier](https://github.com/neoclide/coc-prettier)** a fork of [prettier-vscode](https://github.com/prettier/prettier-vscode).
