@@ -231,6 +231,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-perl](https://github.com/ryuta69/coc-perl)** for `perl`.
 * **[coc-phpactor](https://github.com/phpactor/coc-phpactor)** for `php`, using [phpactor](https://github.com/phpactor/phpactor)
 * **[coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`, use [intelephense-docs](https://github.com/bmewburn/intelephense-docs).
+* **[coc-phpstan](https://github.com/yaegassy/coc-phpstan)** for `php`, use [phpstan](https://github.com/phpstan/phpstan) (scoped packages: `@yaegassy/coc-phpstan`)
 * **[coc-php-cs-fixer](https://github.com/yaegassy/coc-php-cs-fixer)** for `php`, Integrates the [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) (PHP Coding Standards Fixer).
 * **[coc-psalm](https://github.com/yaegassy/coc-psalm)** for `php`, use [psalm](https://psalm.dev/).
 * **[coc-powershell](https://github.com/yatli/coc-powershell)** for PowerShellEditorService integration.
