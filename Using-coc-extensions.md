@@ -277,6 +277,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
 * **[coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights & history.
 * **[coc-zig](https://github.com/UltiRequiem/coc-zig)** for `zig` files.
+* **[coc-zls](https://github.com/xiyaowong/coc-zls)** zls extension, for `zig`
 
 
 
