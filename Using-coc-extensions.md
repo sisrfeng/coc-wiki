@@ -233,7 +233,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`, use [intelephense-docs](https://github.com/bmewburn/intelephense-docs).
 * **[coc-phpstan](https://github.com/yaegassy/coc-phpstan)** for `php`, use [phpstan](https://github.com/phpstan/phpstan) (scoped packages: `@yaegassy/coc-phpstan`)
 * **[coc-php-cs-fixer](https://github.com/yaegassy/coc-php-cs-fixer)** for `php`, Integrates the [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) (PHP Coding Standards Fixer).
-* **[coc-psalm](https://github.com/yaegassy/coc-psalm)** for `php`, use [psalm](https://psalm.dev/).
+* **[coc-psalm](https://github.com/yaegassy/coc-psalm)** for `php`, use [psalm](https://psalm.dev/) language server.
 * **[coc-powershell](https://github.com/yatli/coc-powershell)** for PowerShellEditorService integration.
 * **[coc-prettier](https://github.com/neoclide/coc-prettier)** a fork of [prettier-vscode](https://github.com/prettier/prettier-vscode).
 * **[coc-prisma](https://github.com/pantharshit00/coc-prisma)** for Prisma schema integration.
