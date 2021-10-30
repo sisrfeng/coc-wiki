@@ -611,7 +611,7 @@ Using [ghcide](https://github.com/haskell/ghcide) with `stack exec`
    ```jsonc
    "languageserver": {
      "haskell": {
-       "command": "ghcide-via-stack-exec",
+       "command": "ghcide-lsp-via-stack-exec",
        "args": [ "" ],
        "rootPatterns": [ "*.cabal", "cabal.config", "cabal.project", "package.yaml", "stack.yaml" ],
        "filetypes": [ "hs", "lhs", "haskell" ],
