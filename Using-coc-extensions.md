@@ -223,7 +223,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-lists](https://github.com/neoclide/coc-lists)** provides some basic lists like fzf.vim.
 * **[coc-lightbulb](https://github.com/xiyaowong/coc-lightbulb-)** VSCode 💡 for coc.nvim
 * **[coc-lsp-wl](https://github.com/voldikss/coc-lsp-wl)** for `wolfram mathematica`, fork of [vscode-lsp-wl](https://github.com/kenkangxgwe/vscode-lsp-wl).
-* **[coc-ltex](https://codeberg.org/oblitum/coc-ltex)** grammar/spell checker, fork of [vscode-ltex](https://github.com/valentjn/vscode-ltex)
+* **[coc-ltex](https://valentjn.github.io/ltex/vscode-ltex/installation-usage-coc-ltex.html)** grammar/spell checker
 * **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown linting
 * **[coc-markdown-preview-enhanced](https://github.com/weirongxu/coc-markdown-preview-enhanced)** [Markdown Preview Enhanced](https://shd101wyy.github.io/markdown-preview-enhanced/) for coc.nvim
 * **[coc-metals](https://github.com/scalameta/coc-metals)** for Scala using [`Metals`](http://scalameta.org/metals/)
