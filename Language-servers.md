@@ -21,6 +21,7 @@
   - [Elm](#elm)
   - [Flow](#flow)
   - [Fortran](#fortran)
+  - [FSharp](#fsharp)
   - [Go](#go)
   - [Godot](#godot)
   - [GraphQL](#graphql)
@@ -503,6 +504,48 @@ Make sure the fortls executable is available on your \$PATH.
     "command": "fortls",
     "filetypes": ["fortran"],
     "rootPatterns": [".fortls", ".git/"]
+  }
+}
+```
+
+### FSharp
+
+Install [FsAutoComplete](https://github.com/fsharp/FsAutoComplete)
+
+`dotnet tool install --global fsautocomplete`
+
+Associate F# file extensions with fsharp
+
+`autocmd BufNewFile,BufRead *.fs,*.fsx,*.fsi set filetype=fsharp`
+
+```jsonc
+"languageserver": {
+  "fsharp": {
+    "command": "fsautocomplete",
+    "args": ["--background-service-enabled"],
+    "filetypes": ["fsharp"],
+    "trace.server": "verbose",
+    "initalizationOptions": {
+      "AutomaticWorkspaceInit": true
+    },
+    "settings": {
+      "FSharp.keywordsAutocomplete": true,
+      "FSharp.ExternalAutocomplete": false,
+      "FSharp.Linter": true,
+      "FSharp.UnionCaseStubGeneration": true,
+      "FSharp.UnionCaseStubGenerationBody": "failwith \"Not Implemented\"",
+      "FSharp.RecordStubGeneration": true,
+      "FSharp.RecordStubGenerationBody": "failwith \"Not Implemented\"",
+      "FSharp.InterfaceStubGeneration": true,
+      "FSharp.InterfaceStubGenerationObjectIdentifier": "this",
+      "FSharp.InterfaceStubGenerationMethodBody": "failwith \"Not Implemented\"",
+      "FSharp.UnusedOpensAnalyzer": true,
+      "FSharp.UnusedDeclarationsAnalyzer": true,
+      "FSharp.UseSdkScripts": true,
+      "FSharp.SimplifyNameAnalyzer": false,
+      "FSharp.ResolveNamespaces": true,
+      "FSharp.EnableReferenceCodeLens": true
+    }
   }
 }
 ```
