@@ -397,6 +397,8 @@ Using [`dhall-lsp-server`](https://github.com/dhall-lang/dhall-haskell/tree/mast
       "dhall"
     ]
   }
+}
+```
 
 ### Dockerfile
 
