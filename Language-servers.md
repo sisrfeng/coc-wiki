@@ -1384,3 +1384,15 @@ coc-settings.json:
   }
 }
 ```
+
+#### Using [Steep](https://github.com/soutaro/steep):
+
+```json
+"languageserver": {
+  "steep": {
+    "command": "steep",
+    "args" : ["langserver"],
+    "filetypes": ["ruby"]
+  }
+}
+```
