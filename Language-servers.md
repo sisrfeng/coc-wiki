@@ -38,6 +38,7 @@
   - [Nim](#nim)
   - [Nix](#nix)
   - [OCaml and ReasonML](#ocaml-and-reasonml)
+  - [Perl](#perl)
   - [PHP](#php)
   - [PureScript](#purescript)
   - [Python](#python)
@@ -925,6 +926,10 @@ Using [reason-language-server](https://github.com/jaredly/reason-language-server
   }
 }
 ```
+
+### Perl
+
+Use [coc-perl](https://github.com/bmeneg/coc-perl) is recommended.
 
 ### PHP
 
