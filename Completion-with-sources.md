@@ -6,8 +6,7 @@
 * **Incomplete request and cancel request support**, only incomplete completion requests will be triggered on filtering completion items and cancellation requests are sent to servers only when necessary.
 * **Start completion without timer**. The completion will start after you type the first letter of a word by default and is filtered with new input after the completion has finished. Other completion engines use a timer to trigger completion so you always have to wait after the typed character.
 * **Realtime buffer keywords**. Coc will generate buffer keywords on buffer change in the background (with debounce), while some completion engines use a cache which isn't always correct.  Plus, [Locality bonus feature](https://code.visualstudio.com/docs/editor/intellisense#_locality-bonus) from VSCode is enabled by default.
-* **Filter completion items when possible.** When you do a fuzzy filter with completion items, some completion engines will trigger a new completion, but coc.nvim will filter the items when possible which makes it much faster. Filtering completion items on backspace is also supported.
-
+* **Filter completion items when possible.** When you do a fuzzy filter with completion items, some completion engines will trigger a new completion, but coc.nvim will filter the items when possible which makes it much faster.
 
 ## Trigger mode of completion
 
