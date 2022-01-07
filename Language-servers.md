@@ -47,7 +47,7 @@
   - [Robot Framework](#robot-framework)
   - [Rome](#rome)
   - [Ruby](#ruby)
-  - [Ruby Sorbet]#sorbet
+  - [Ruby Sorbet]#using-sorbet
   - [Rust](#rust)
   - [SQL](#sql)
   - [Scala](#scala)
