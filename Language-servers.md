@@ -47,7 +47,7 @@
   - [Robot Framework](#robot-framework)
   - [Rome](#rome)
   - [Ruby](#ruby)
-  - [Ruby Sorbet]#using-sorbet
+  - [Ruby Sorbet](#using-sorbet)
   - [Rust](#rust)
   - [SQL](#sql)
   - [Scala](#scala)
@@ -57,7 +57,6 @@
   - [Vue](#vue)
   - [Zig](#zig)
   - [vim/erb/markdown](#vimerbmarkdown)
-    - [Using Sorbet:](#using-sorbet)
 
 ## Supported features
 
