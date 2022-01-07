@@ -48,6 +48,7 @@
   - [Rome](#rome)
   - [Ruby](#ruby)
   - [Ruby Sorbet](#using-sorbet)
+  - [Ruby Steep](#using-steep)
   - [Rust](#rust)
   - [SQL](#sql)
   - [Scala](#scala)
