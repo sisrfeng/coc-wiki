@@ -47,6 +47,7 @@
   - [Robot Framework](#robot-framework)
   - [Rome](#rome)
   - [Ruby](#ruby)
+  - [Ruby Sorbet]#sorbet
   - [Rust](#rust)
   - [SQL](#sql)
   - [Scala](#scala)
@@ -1177,6 +1178,21 @@ Using [coc-solargraph](https://github.com/neoclide/coc-solargraph)
 
 Make sure solargraph is in your \$PATH (sudo gem install solargraph) or use `solargraph.commandPath` to configure executable path of solargraph.
 
+#### Using [Sorbet](https://sorbet.org):
+
+```json
+"languageserver": {
+  "sorbet": {
+    "command": "srb",
+    "args": ["tc", "--typed", "true", "--enable-all-experimental-lsp-features", "--lsp", "--disable-watchman", "--dir", "."],
+    "filetypes": ["ruby"],
+    "rootPatterns": ["sorbet/config"],
+    "initializationOptions": {},
+    "settings": {}
+  }
+}
+```
+
 ### Rust
 
 - install [coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer) which uses `rust-analyzer`
@@ -1366,21 +1382,6 @@ coc-settings.json:
     // custom config path
     // "args": ["-c", "/path/to/your/config.yaml"],
     "filetypes": ["vim", "eruby", "markdown"]
-  }
-}
-```
-
-#### Using [Sorbet](https://sorbet.org):
-
-```json
-"languageserver": {
-  "sorbet": {
-    "command": "srb",
-    "args": ["tc", "--typed", "true", "--enable-all-experimental-lsp-features", "--lsp", "--disable-watchman", "--dir", "."],
-    "filetypes": ["ruby"],
-    "rootPatterns": ["sorbet/config"],
-    "initializationOptions": {},
-    "settings": {}
   }
 }
 ```
