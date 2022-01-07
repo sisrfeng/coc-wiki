@@ -1193,6 +1193,18 @@ Make sure solargraph is in your \$PATH (sudo gem install solargraph) or use `sol
 }
 ```
 
+#### Using [Steep](https://github.com/soutaro/steep):
+
+```json
+"languageserver": {
+  "steep": {
+    "command": "steep",
+    "args" : ["langserver"],
+    "filetypes": ["ruby"]
+  }
+}
+```
+
 ### Rust
 
 - install [coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer) which uses `rust-analyzer`
@@ -1382,18 +1394,6 @@ coc-settings.json:
     // custom config path
     // "args": ["-c", "/path/to/your/config.yaml"],
     "filetypes": ["vim", "eruby", "markdown"]
-  }
-}
-```
-
-#### Using [Steep](https://github.com/soutaro/steep):
-
-```json
-"languageserver": {
-  "steep": {
-    "command": "steep",
-    "args" : ["langserver"],
-    "filetypes": ["ruby"]
   }
 }
 ```
