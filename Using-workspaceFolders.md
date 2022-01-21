@@ -15,7 +15,7 @@ When current cwd contains any of the patterns, it's used as workspace folder of 
 
 Workspace folders are resolved from top to bottom, to change this behavior, use configuration `workspace.bottomUpFiletypes`.
 
-When resolve of workspace folder failed, cwd is used for workspaceFolder.
+When resolve of workspace folder failed, cwd is used for workspaceFolder, use `"workspace.workspaceFolderFallbackCwd": false` to avoid this behavior.
 
 To configure `rootPatterns` for specified filetype, use autocmd like:
 
