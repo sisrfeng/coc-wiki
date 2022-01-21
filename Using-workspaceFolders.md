@@ -17,6 +17,8 @@ Workspace folders are resolved from top to bottom, to change this behavior, use 
 
 When resolve of workspace folder failed, cwd is used for workspaceFolder, use `"workspace.workspaceFolderFallbackCwd": false` to avoid this behavior.
 
+To avoid folders resolved as workspace folder, use `"workspace.ignoredFolders"` configuration, which support expand environment variables and [minimatch](https://github.com/isaacs/minimatch) pattern.
+
 To configure `rootPatterns` for specified filetype, use autocmd like:
 
 ``` vim
