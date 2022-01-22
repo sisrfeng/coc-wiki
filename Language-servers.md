@@ -88,8 +88,8 @@ An example of `module` language server:
     "filetypes": ["foo"],
     "trace.server": "verbose",
     "rootPatterns": ["root.yml"],
-    // Used for debugging
-    "execArgv": ["--nolazy", "--inspect-brk=6045"],
+    // Used for debugging NodeJS
+    // "execArgv": ["--nolazy", "--inspect-brk=6045"],
     "initializationOptions": {
     },
     "settings": {
