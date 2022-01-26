@@ -1,4 +1,4 @@
-## [Install coc.nvim](https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim)
+## [Install coc.nvim](https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
 
 * [Requirements](https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim#requirements)
 * [Add coc.nvim to your vim's runtimepath](https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim#add-cocnvim-to-your-vims-runtimepath)
