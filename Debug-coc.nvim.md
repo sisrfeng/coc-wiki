@@ -12,7 +12,7 @@ and build source code by:
 yarn install
 ```
 
-The javascript bundle will exists in `lib` folder.
+The javascript bundle will exists in `build` folder.
 
 To build source code after changes made, run:
 
@@ -21,7 +21,7 @@ node esbuild.js --watch
 ``` 
 in project root, which will use esbuild to compile source code to single javascript bundle.
 
-After each compile, restart coc.nvim service by `:CocRestart` to make use of new code.
+After each compile, restart coc.nvim service by `:CocRestart` to use new javascript code.
 
 Restart your vim is needed after you've made changes to vim code of coc.nvim.
 
