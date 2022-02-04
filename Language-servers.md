@@ -18,6 +18,7 @@
   - [Dhall](#dhall)
   - [Dockerfile](#dockerfile)
   - [Elixir](#elixir)
+  - [Erlang](#erlang)
   - [Elm](#elm)
   - [Flow](#flow)
   - [Fortran](#fortran)
@@ -429,6 +430,21 @@ If you want to use @spec suggestions you have to enable codelens.
   "elixirLS": {
     "command": "/absolute/path/to/elixir-ls/release/language_server.sh",
     "filetypes": ["elixir", "eelixir"]
+  }
+}
+```
+
+### Erlang
+
+Using [erlang_ls](https://github.com/erlang-ls/erlang_ls)
+
+Assuming that `erlang_ls` is in the execution path
+
+```jsonc
+"languageserver": {
+  "erlang": {
+    "command": "erlang_ls",
+    "filetypes": ["erlang"]
   }
 }
 ```
