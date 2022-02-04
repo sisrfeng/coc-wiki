@@ -56,7 +56,6 @@ make sure add the lines after `:colorscheme` command.
 
 * Make sure you don't have `{"tag": "*"}` in `Plug` command if you're using vim-plug as plugin manager.
 * Use `Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}` in your vimrc if you're using vim-plug.
-* Add `let g:coc_force_debug = 1` to your vimrc to make sure coc uses compiled code.
 * Update coc.nvim with `:PlugUpdate` command if you're using vim-plug, for other plugin managers run `:call coc#util#install()` after plugin update.
 * Run `:echo coc#util#job_command()` to get command used for start coc.nvim service.
 * Run `:checkhealth` when you have an issue with neovim.
@@ -64,18 +63,9 @@ make sure add the lines after `:colorscheme` command.
 ## How to make preview window shown aside with pum?
 
 For vim, make sure `echo has('textprop') && has('patch-8.1.1719')` echo `1`.
-
-Higlight on vim doesn't always work yet, because can't highlight by using a seperated vim process.
-
 For neovim, make sure `:echo exists('##CompleteChanged') && exists('*nvim_open_win')` echo `1`.
 
 To preview expanded snippet body, you can use [coc-snippets](https://github.com/neoclide/coc-snippets).
-
-If you have errors including:
-
-> Wrong number of arguments: expecting 5 but got 3.
-
-It means you're using an old version of neovim. Upgrade to master to avoid this issue.
 
 ## My pum flickers when typing.
 
@@ -96,7 +86,7 @@ It's bug of neovim.  Checkout https://github.com/neovim/neovim/issues/9542 for a
 
 Some language servers don't work when the buffer not saved to disk. This is because they only tested on VSCode which always create file before create buffer.
 
-Save to buffer to disk and restart coc by `:CocRestart` to make the language server work.
+Save to buffer to disk and restart coc.nvim server by `:CocRestart` to make the language server work.
 
 ## Function parameter/auto import not work on complete done.
 
@@ -187,10 +177,6 @@ Open log file by command:
 ```
 :CocOpenLog
 ```
-
-## CocList is broken when holding `up` or `down` on vim
-
-Should be bug of vim, avoid hold `up` or `down`, use `j` `k` on normal mode and `<C-j>` `<C-k>` on insert mode instead.
 
 ## How to show documentation of symbol under cursor, also known as cursor hover?
 
