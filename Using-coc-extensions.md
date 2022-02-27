@@ -254,6 +254,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-stylelint](https://github.com/neoclide/coc-stylelint)** for linting CSS and CSS preprocessed formats
 * **[coc-snippets](https://github.com/neoclide/coc-snippets)** provides snippets solution.
 * **[coc-solargraph](https://github.com/neoclide/coc-solargraph)** for `ruby`, use [solargraph](http://solargraph.org/).
+* **[coc-solidity](https://github.com/qiuxiang/coc-solidity)** for `solidity`
 * **[coc-sourcekit](https://github.com/klaaspieter/coc-sourcekit)** for [`Swift`](https://swift.org/)
 * **[coc-spell-checker](https://github.com/iamcco/coc-spell-checker)** A basic spell checker that works well with camelCase code
 * **[coc-sql](https://github.com/fannheyward/coc-sql)** for `sql`.
