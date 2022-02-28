@@ -288,25 +288,11 @@ Use [`coc-cl`](https://github.com/UltiRequiem/coc-cl)
 
 ### Clojure
 
-Using [clojure-lsp](https://github.com/snoe/clojure-lsp)
+Use [`coc-clojure`](https://github.com/NoahTheDuke/coc-clojure)
 
-```jsonc
-"languageserver": {
-  "clojure-lsp": {
-    "command": "bash",
-    "args": ["-c", "clojure-lsp"],
-    "filetypes": ["clojure"],
-    "rootPatterns": ["project.clj"],
-    "additionalSchemes": ["jar", "zipfile"],
-    "trace.server": "verbose",
-    "initializationOptions": {
-    }
-  }
-}
 ```
-
-- Make sure `clojure-lsp` is in your \$PATH.
-- Check out [github page](https://github.com/snoe/clojure-lsp#vim) for more information.
+:CocInstall coc-clojure
+```
 
 ### Crystal
 
