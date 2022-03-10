@@ -73,7 +73,7 @@ to your `coc-settings.json`.
 
 Others configurations:
 
-- `coc.preferences.snippetStatusText`: Text shown in 'statusline' to indicate snippet session is activate.
+- `coc.preferences.snippetStatusText`: Text shown in 'statusline' to indicate snippet session is activated.
 - `coc.preferences.snippetHighlight`: When true, use highlight group 'CocSnippetVisual' to highlight placeholders with same index of current one.
 
 ## Using VSCode snippet from extensions
