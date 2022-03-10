@@ -2,7 +2,7 @@ Coc has snippets support in different ways:
 
 * Snippet completion items from different vim snippet plugins, by using extension like: [coc-ultisnips](https://www.npmjs.com/package/coc-ultisnips) and [coc-neosnippet](https://www.npmjs.com/package/coc-neosnippet).
 * Snippet kind of completion item from language servers, which are snipmate format.
-* Snippet completion items from coc extensions that contribute VSCode snippets.
+* Snippets from coc.nvim extensions that contribute VSCode snippets (requires [coc-snippets](https://github.com/neoclide/coc-snippets)).
 
 ## Snippet completion
 
@@ -70,6 +70,11 @@ And add:
   "suggest.noselect": false
 ```
 to your `coc-settings.json`.
+
+Others configurations:
+
+- `coc.preferences.snippetStatusText`: Text shown in 'statusline' to indicate snippet session is activate.
+- `coc.preferences.snippetHighlight`: When true, use highlight group 'CocSnippetVisual' to highlight placeholders with same index of current one.
 
 ## Using VSCode snippet from extensions
 
