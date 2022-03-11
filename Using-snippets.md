@@ -18,7 +18,7 @@ A complete item of snippet kind would be shown with `~` appended in label by def
 
 The snippet is designed to expand only when the completion is confirmed (`<C-y>` by default), so that the user could decide to expand the snippet or not. 
 
-To make `<cr>` to confirm completion, add
+To make `<cr>` used for confirm completion, add
 
 ``` vim
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
