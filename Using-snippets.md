@@ -16,7 +16,7 @@ A complete item of snippet kind would be shown with `~` appended in label by def
 
 **Note:** when snippet format of complete item is set on completion resolve, you won't see `~`, it's limitation of vim.
 
-The snippet is designed to expand only when the `completionDone` is triggered by using `<C-y> `for confirm, so that user could decide expand the snippet or not. 
+The snippet is designed to expand only when the completion is confirmed (`<C-y>` by default), so that the user could decide to expand the snippet or not. 
 
 To make `<cr>` to confirm completion, add
 
