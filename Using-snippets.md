@@ -1,12 +1,16 @@
-Coc has snippets support in different ways:
+## Support of snippet
 
-* Snippet completion items from different vim snippet plugins, by using extension like: [coc-ultisnips](https://www.npmjs.com/package/coc-ultisnips) and [coc-neosnippet](https://www.npmjs.com/package/coc-neosnippet).
-* Snippet kind of completion item from language servers, which are snipmate format.
-* Snippets from coc.nvim extensions that contribute VSCode snippets (requires [coc-snippets](https://github.com/neoclide/coc-snippets)).
+The `snippets` module of coc.nvim could parse [VSCode snippet](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax) and [UltiSnips snippet](https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt).
+
+Most snippets features of UltiSnips should work except for `ltiSnips-snippet-actions` and some regex pattern are not supported by JavaScript (including `(?x)` `(?s)` `\Z` `(?(id/name)yes-pattern|no-pattern)` which are rarely used.)
+
+**Note** that coc.nvim itself doesn't come with any snippets or load snippets, the language servers could provide complete items with snippet format and if you want to load snippets and expands snippets by coc.nvim, it's recommended to install [coc-snippets](https://github.com/neoclide/coc-snippets).
+
+There're also extensions like [coc-ultisnips](https://www.npmjs.com/package/coc-ultisnips) and [coc-neosnippet](https://www.npmjs.com/package/coc-neosnippet) which provide basic completion support for snippets only.
 
 ## Snippet completion
 
-Complete item of snippet kind would be shown with `~` appended in label by default:
+A complete item of snippet kind would be shown with `~` appended in label by default:
 
 ![](https://user-images.githubusercontent.com/251450/42562999-b4eb9634-852f-11e8-9f61-bab2bc19db3f.png)
 
@@ -14,28 +18,28 @@ Complete item of snippet kind would be shown with `~` appended in label by defau
 
 The snippet is designed to expand only when the `completionDone` is triggered by using `<C-y> `for confirm, so that user could decide expand the snippet or not. 
 
-To make `<cr>` for confirm completion, add
+To make `<cr>` to confirm completion, add
 
 ``` vim
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
                                            \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 ```
-to your vimrc.
+To your vimrc.
 
-* `coc#_select_confirm()` helps select first completion item when necessary and send `<C-y>` to vim for confirm completion.
+* `coc#_select_confirm()` helps select first completion item when necessary and send `<C-y>` to vim to confirm completion.
 * `\<C-g>u` used for break undo chain at current position.
-* `coc#on_enter()` notify coc that you have pressed `<enter>`, so it can format your code on `<enter>`.
+* `coc#on_enter()` notify coc.nvim that you have pressed `<enter>`, so it can format your code on `<enter>`.
 
-**Note:** some plugins are known to overwrite your `<CR>` mappings, so your custom keymap won't work, checkout your `<CR>` mapping by `:verbose imap <CR>`. 
+**Note:** some plugins are known to overwrite your `<CR>` mappings, so your custom key-mapping won't work, checkout your `<CR>` mapping by `:verbose imap <CR>`. 
 
 A snippet session would cancel under the following conditions:
 
 * `InsertEnter` triggered outside snippet.
 * Content change at final placeholder.
-* Content added after snippet.
+* Content change detected after snippet.
 * Content changed in a snippet but not happens to a placeholder.
 
-You can nest snippets in an active snippet session, just like VSCode.
+You can nest snippets in an active snippet session, just like VSCode and UltiSnips, UltiSnips snippet could be nested with VSCode snippet and vice versa.
 
 If you don't want to expand snippet on completion, just use `<C-n>` to insert the extracted text without confirm completion, or checkout options of your language server to disable snippet complete items.
 
@@ -78,7 +82,7 @@ Others configurations:
 
 ## Using VSCode snippet from extensions
 
-To load VSCode snippets, you need install [coc-snippets](https://github.com/neoclide/coc-snippets) extension.
+To load VSCode snippets, you need to install [coc-snippets](https://github.com/neoclide/coc-snippets) extension.
 
 Then install a VSCode snippet extension from GitHub with a command like:
 
