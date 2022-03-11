@@ -77,6 +77,7 @@ to your `coc-settings.json`.
 Related configurations:
 
 - `suggest.snippetIndicator`: indicator text for snippets shown in completion menu, default to `~`.
+- `suggest.preferCompleteThanJumpPlaceholder`: Should be enabled when you want to use same key for confirm completion and jump placeholder, default `false`.
 - `coc.preferences.snippetStatusText`: Text shown in 'statusline' to indicate snippet session is activated.
 - `coc.preferences.snippetHighlight`: When true, use highlight group 'CocSnippetVisual' to highlight placeholders with same index of current one.
 
