@@ -45,10 +45,9 @@ If you don't want to expand snippet on completion, just use `<C-n>` to insert th
 
 ## Configure snippets workflow
 
-To navigate forward/backward of a snippet placeholder, use `<C-j>` and `<C-k>`.
-Vim global variable `g:coc_snippet_next` and `g:coc_snippet_prev` can be used to change the key-mapping.
+To navigate forward or backward of snippet placeholder, default key mappings are `<C-j>` and `<C-k>`. (Added to buffer key-mappings when snippet session activated).
 
-If you don't like `~` as snippet indicator of complete item in completion menu, you can change that by using `suggest.snippetIndicator` in your `coc-settings.json`.
+Vim global variable `g:coc_snippet_next` and `g:coc_snippet_prev` can be used to change the key-mapping.
 
 To make snippet completion work just like VSCode, you need to install [coc-snippets](https://github.com/neoclide/coc-snippets) then configure your `<tab>` in vim like:
 
@@ -75,8 +74,9 @@ And add:
 ```
 to your `coc-settings.json`.
 
-Others configurations:
+Related configurations:
 
+- `suggest.snippetIndicator`: indicator text for snippets shown in completion menu, default to `~`.
 - `coc.preferences.snippetStatusText`: Text shown in 'statusline' to indicate snippet session is activated.
 - `coc.preferences.snippetHighlight`: When true, use highlight group 'CocSnippetVisual' to highlight placeholders with same index of current one.
 
