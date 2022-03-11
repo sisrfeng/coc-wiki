@@ -4,7 +4,7 @@ The `snippets` module of coc.nvim could parse [VSCode snippet](https://code.visu
 
 Most snippets features of UltiSnips should work except for `ltiSnips-snippet-actions` and some regex pattern are not supported by JavaScript (including `(?x)` `(?s)` `\Z` `(?(id/name)yes-pattern|no-pattern)` which are rarely used.)
 
-**Note** that coc.nvim itself doesn't come with any snippets or load snippets, the language servers could provide complete items with snippet format and if you want to load snippets and expands snippets by coc.nvim, it's recommended to install [coc-snippets](https://github.com/neoclide/coc-snippets).
+**Note** that coc.nvim itself doesn't come with any snippets or load snippets, the language servers could provide complete items with snippet format and if you want to load snippets and expands snippets by coc.nvim, it's recommended to use [coc-snippets](https://github.com/neoclide/coc-snippets).
 
 There're also extensions like [coc-ultisnips](https://www.npmjs.com/package/coc-ultisnips) and [coc-neosnippet](https://www.npmjs.com/package/coc-neosnippet) which provide basic completion support for snippets only.
 
