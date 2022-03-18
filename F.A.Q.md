@@ -1,12 +1,11 @@
-Here's some common problems that you may need to understand when working with coc.nvim.
+Here are some common problems that you may need to understand when working with coc.nvim.
 
 ## Can't get keywords completion items from other buffer.
 
 The buffer source only provide keywords from buffers meet these conditions:
 
-* Should be loaded by vim, use `:ls` to get buffer list and make sure there's `h` for hidden buffers, you can also use `bufloaded` function to check if a buffer is loaded.
-* The `buftype` option should be empty, check it by `:echo &buftype` in your buffer.
-* The file associated with buffer should not be git ignored, add `"coc.source.buffer.ignoreGitignore": false` to your config file if you want keywords from git ignored files.
+* Use `bufloaded()` function to check if a buffer is loaded.
+* The `buftype` option should be empty, check it by `:echo getbufvar(bufnr, "&buftype")`.
 
 ## Environment node doesn't meet the requirement.
 
@@ -19,22 +18,23 @@ Reset the highlight in your vimrc if it's not suitable, or use colorscheme that 
 
 ## Floating window position is wrong after scroll the screen.
 
-It's limitation of (neo)vim, it should either adjust floating window postion according to relative option or provide scroll autocmd so plugin can adjust the window position.
+It's expected since the float windows/popups are absolutely positioned.
 
 ## How could I use omnifunc option to trigger completion of coc.nvim?
 
-You can't, there's no such function provided for omnifunc option, because vim's omnifunc always block and LSP features like triggerCharacters and incomplete response can't work.
+You can't, there's no such function provided for `omnifunc` option, because vim's omnifunc always block and LSP features like triggerCharacters and incomplete response can't work.
 
-If you want to manual trigger completion add `"suggest.autoTrigger": "none",` to coc-settings.json and bind a trigger key like:
+If you want to manually trigger completion add `"suggest.autoTrigger": "none",` to coc-settings.json and bind a trigger key like:
 
 ``` vim
   inoremap <silent><expr> <c-space> coc#refresh()
 ```
-Note that some terminals send \<NUL> when you press \<c-space>, so you could use instead:
+Note that some terminals send `<NUL>` when you press `<c-space>`, so you could use instead:
 
 ``` vim
   inoremap <silent><expr> <NUL> coc#refresh()
 ```
+
 ## How could I disable floating window?
 
 * For documentation of completion, use `"suggest.floatEnable": false` in settings.json.
@@ -44,21 +44,11 @@ Note that some terminals send \<NUL> when you press \<c-space>, so you could use
 
 ## Highlight of background seems wrong with floating window.
 
-It's caused by some highlight group using `Normal` for it's background color,
-you can overwrite the highlight group to use transparent background color in your vimrc, like:
+The default highlight group linked by `CocFloating` could have `reverse` attribute, you will have colored background for some texts on that case, define your own `CocFloating` highlight group on that case.
 
 ``` vim
-hi Quote ctermbg=109 guifg=#83a598
+hi link CocFloating Normal
 ```
-make sure add the lines after `:colorscheme` command.
-
-## How to use coc.nvim from master branch?
-
-* Make sure you don't have `{"tag": "*"}` in `Plug` command if you're using vim-plug as plugin manager.
-* Use `Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}` in your vimrc if you're using vim-plug.
-* Update coc.nvim with `:PlugUpdate` command if you're using vim-plug, for other plugin managers run `:call coc#util#install()` after plugin update.
-* Run `:echo coc#util#job_command()` to get command used for start coc.nvim service.
-* Run `:checkhealth` when you have an issue with neovim.
 
 ## How to make preview window shown aside with pum?
 
@@ -73,39 +63,24 @@ Use latest neovim/vim which support `equal` field of completion item, checkout `
 
 ## My vim is blocked sometimes.
 
-* Make sure your have `set hidden` in your `.vimrc`.
+* Make sure you have `set hidden` in your `.vimrc`.
 * Use `CocActionAsync` instead of `CocAction` in your autocmd, except for `BufWritePre`.
 * Use `CocRequestAsync` instead of `CocRequest` when possible.
-* Don't make request to coc before the service initialized. Use `autocmd User CocNvimInit` to send request when you want to send request at startup.
 
-## Neovim crashes when `rightleft` is on.
-
-It's bug of neovim.  Checkout https://github.com/neovim/neovim/issues/9542 for a patch of neovim.
-
-## Language server doesn't work unsaved buffer.
+## Language server doesn't work with unsaved buffer.
 
 Some language servers don't work when the buffer not saved to disk. This is because they only tested on VSCode which always create file before create buffer.
 
-Save to buffer to disk and restart coc.nvim server by `:CocRestart` to make the language server work.
+Save the buffer to disk and restart coc.nvim server by `:CocRestart` to make the language server work.
 
 ## Function parameter/auto import not work on complete done.
 
 * Make sure the language server your're using have support for function snippet/auto import.
-* You must use confirm completion to make coc does extra edit after complete done, which is `<C-y>` by default.
-* Some language servers are known to have issues with responsed textEdit on completion.
+* You must use confirm completion to make coc.nvim does extra edit after complete done, which is `<C-y>` by default.
+* Some language servers are known to have issues with responded textEdit on completion.
 * Some language servers doesn't have support for textEdit on completion but coc extension does, so it's better to use extension when it exists.
 
 ## Linting is slow.
-
-If the messages get shown after several seconds, add `set updatetime=300` to your `init.vim` or `.vimrc` and restart vim.
-
-Some language servers are known to have performance issues, including:
-
-https://github.com/palantir/python-language-server
-
-https://github.com/sourcegraph/go-langserver.
-
-Please don't report an issue here when you find those language servers are slow.
 
 By default, coc doesn't show diagnostics in UI when you're in insert mode, 
 add `"diagnostic.refreshOnInsertMode": true` in settings file to enable refresh on insert mode.
@@ -116,21 +91,17 @@ If there are other signs that have higher offset, sign of coc.nvim can't be show
 
 ## Not working after upgrade node.
 
-Run command `:CocRebuild` to rebuild coc extensions. Some of them could be using C++ addons, which require a  rebuild after upgrade.
+Run command `:CocRebuild` to rebuild coc extensions. Some of them could be using C++ add-ons, which require a  rebuild after upgrade.
 
 If it's still not working, you can force coc to start with a specified node executable. In your .vimrc add a line like `let g:coc_node_path = '/usr/local/opt/node@10/bin/node'`
 
-## Why vim's location list not work sometimes?
-
-Some plugins like [ale](https://github.com/w0rp/ale) will clear location lists that are created by other plugins. Check out https://github.com/w0rp/ale/issues/1945, it's recommended to use `CocList diagnostics` to get all location lists of diagnostics instead of using location list.
-
 ## No completion triggered after type trigger character sometimes.
 
-Some language servers can be slow for receiving document change before trigger completion. You can change the wait time for language server to finish the document change process before completion by changing `coc.preferences.triggerCompletionWait` in your `coc-settings.json`, it's default to `60` in milliseconds.
+Some language servers can be slow for receiving document change before trigger completion. You can change the wait time for language server to finish the document change process before completion by changing `suggest.triggerCompletionWait` in your `coc-settings.json`, it's default to `50` in milliseconds.
 
 ## My custom key-mapping is not working.
 
-Some plugins like [Ultisnips](https://github.com/SirVer/ultisnips) and [vim-closer](https://github.com/rstacruz/vim-closer) would remap your `<tab>` or `<cr>` without configuration. You can checkout your keymap by command like `:verbose imap <tab>`.
+Some plugins like [Ultisnips](https://github.com/SirVer/ultisnips) and [vim-closer](https://github.com/rstacruz/vim-closer) would remap your `<tab>` or `<cr>` without configuration. You can check out your key-mapping by command like `:verbose imap <tab>`.
 
 ## How could I profile vim.
 
@@ -141,7 +112,7 @@ Some plugins like [Ultisnips](https://github.com/SirVer/ultisnips) and [vim-clos
   :profile file *
   ```
 * Make issue happen.
-* Run command `:profile stop`.
+* Run command `:profile stop` (neovim only).
 * Exit vim, and open the newly generated profile.log file in your current directory.
 
 ## How could I profile coc.nvim.
@@ -161,7 +132,7 @@ You can customize the highlight by adding something like:
 ``` vim
 highlight link CocErrorSign GruvboxRed
 ```
-in your `.vimrc`.
+In your `.vimrc`.
 
 See `:h coc-highlights` for all highlight groups.
 
