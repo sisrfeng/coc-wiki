@@ -156,3 +156,7 @@ This is done by the `doHover` action. Configure a mapping like, e.g.:
 ```vim
 nnoremap <silent> <leader>h :call CocActionAsync('doHover')<cr>
 ```
+
+## Cursor disappeared after exit CocList
+
+Possible bug with `guicursor` option with your terminal, you can disable transparent cursor by `let g:coc_disable_transparent_cursor = 1` in your .vimrc.
