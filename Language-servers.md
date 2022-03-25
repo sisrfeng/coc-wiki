@@ -53,6 +53,7 @@
   - [Rust](#rust)
   - [SQL](#sql)
   - [Scala](#scala)
+  - [Solidity](#solidity)
   - [SystemVerilog](#systemverilog)
   - [Terraform](#terraform)
   - [Vala](#vala)
@@ -1261,6 +1262,12 @@ If you'd like to use Metals without the coc-metals extension, make sure the gene
 ```
 
 Note that the Dotty Language server is no longer recommended. Instead, it is recommended to use Metals for Dotty/Scala 3.
+
+### Solidity
+
+Using [coc-solidity](https://github.com/qiuxiang/coc-solidity)
+
+    :CocInstall coc-solidity
 
 ### SystemVerilog
 
