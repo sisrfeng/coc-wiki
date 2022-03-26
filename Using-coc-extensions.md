@@ -124,9 +124,11 @@ This has the limitation that you can't uninstall the extension by using `:CocUni
 
 ### Update extensions
 
-Use the command `:CocUpdate` or `:CocUpdateSync` to update all extensions to the latest version.
+Use the command `:CocUpdate` or `:CocUpdateSync` to update extensions installed by `:CocInstall` to the latest version.
 
-You can enable automatic update by configuration `coc.preferences.extensionUpdateCheck` to `"daily"`, which defaults to `"never"`.
+For extensions loaded from vim's `rtp`, you will need update them by your plugin manager.
+
+To enable automatic update, change configuration `coc.preferences.extensionUpdateCheck` to `"daily"` or `"weekly"`, which defaults to `"never"`.
 
 To upgrade extensions with shell script, use command like:
 
@@ -135,6 +137,8 @@ vim -c 'CocUpdateSync|q'
 ```
 
 ### Uninstall coc extension
+
+Use vim command `CocUninstall` for extensions installed by `:CocInstall`, for example:
 
 ```vim
 :CocUninstall coc-css
