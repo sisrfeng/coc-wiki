@@ -1,6 +1,6 @@
 ### Why are coc extensions needed?
 
-The main reason is that some language servers provided by the community behave badly compared to the extensions of VSCode. Coc extensions can be forked from VSCode extensions providing a better user experience.
+The main reason is that some language servers provided by the community not well behaved compared to the extensions of VSCode. Coc extensions can be forked from VSCode extensions providing a better user experience.
 
 Compared to configured language servers, extensions have more features.
 
@@ -19,7 +19,7 @@ Compared to configured language servers, extensions have more features.
     command! -nargs=0 Tsc    :CocCommand tsserver.watchBuild
     ```
 
-* Extensions can contribute json schemas (same as VSCode)
+* Extensions can contribute json schemas (loaded by [coc-json](https://github.com/neoclide/coc-json))
 * Extensions can contribute snippets that can be loaded by [coc-snippets](https://github.com/neoclide/coc-snippets) extension.
 * Extensions can specify more client options, like `fileEvents` to watch files (requires [watchman](https://facebook.github.io/watchman/) installed), and `middleware` which can be used to fix results that return from the language server.
 
@@ -89,6 +89,13 @@ To install extensions with shell script, use command like:
 ``` sh
 # install coc-json & coc-html and exit
 vim -c 'CocInstall -sync coc-json coc-html|q'
+```
+
+#### Using custom registry
+
+You can customize npm registry for coc.nvim by add `coc.nvim:registry` in the file `~/.npmrc`:
+``` dosini
+coc.nvim:registry=https://registry.npmjs.org/
 ```
 
 #### Installing specific versions (for rollback/revert/etc)
