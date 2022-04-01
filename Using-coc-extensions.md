@@ -221,6 +221,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-go](https://github.com/josa42/coc-go)** for `go`, use [gopls](https://github.com/golang/tools/tree/master/gopls).
 * **[coc-golines](https://github.com/xiyaowong/coc-golines)** golines(go formatter) extension
 * **[coc-graphql](https://github.com/felippepuhle/coc-graphql)** for `graphql`.
+* **[coc-haxe](https://github.com/vantreeseba/coc-haxe)** for `haXe`
 * **[coc-highlight](https://github.com/neoclide/coc-highlight)** provides default document symbol highlighting and color support.
 * **[coc-html](https://github.com/neoclide/coc-html)** for `html`, `handlebars` and `razor`.
 * **[coc-htmldjango](https://github.com/yaegassy/coc-htmldjango)** for `htmldjango`, django templates (htmldjango) extension. Provides "formatter", "linter" and more...
