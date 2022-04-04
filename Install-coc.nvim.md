@@ -109,7 +109,7 @@ vim8:
 mkdir -p ~/.vim/pack/coc/start
 cd ~/.vim/pack/coc/start
 git clone --branch release https://github.com/neoclide/coc.nvim.git --depth=1
-vim --cmd "helptags coc.nvim/doc/ | q"
+vim -c "helptags coc.nvim/doc/ | q"
 ```
 
 neovim:
@@ -118,6 +118,7 @@ neovim:
 mkdir -p ~/.local/share/nvim/site/pack/coc/start
 cd ~/.local/share/nvim/site/pack/coc/start
 git clone --branch release https://github.com/neoclide/coc.nvim.git --depth=1
+nvim -c "helptags coc.nvim/doc/ | q"
 ```
 
 ## Check service state
@@ -156,7 +157,7 @@ Watchman works great even when you have multiple (neo)vim instances started in t
 
 **Warning:** Don't create `.watchmanconfig` file in your home directory.
 
-**Note:** watchman can use a lot of memory! Run `watchman watch-del-all` in your shell to free some.
+**Note:** watchman can use a lot of memory! Run `watchman watch-del-all` in your shell to free some memory.
 
 ## Automation script
 
