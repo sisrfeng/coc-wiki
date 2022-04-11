@@ -701,7 +701,7 @@ Using [Haskell IDE Engine](https://github.com/haskell/haskell-ide-engine)
 
 Install the [coc-haxe](https://github.com/vantreeseba/coc-haxe) plugin, then run `:CocInstall coc-haxe`.
 
-Otherwise, either use the language server that comes with VS Code, or build it yourself: see [vshaxe/haxe-language-server](https://github.com/vshaxe/haxe-language-server).
+Otherwise, you can use the language server that comes with VS Code, or manually build it yourself: see [vshaxe/haxe-language-server](https://github.com/vshaxe/haxe-language-server), and then use the following json-settings.
 
 ```jsonc
 {
