@@ -28,6 +28,7 @@
   - [GraphQL](#graphql)
   - [Groovy](#groovy)
   - [Haskell](#haskell)
+  - [Haxe](#haxe)
   - [Html](#html)
   - [Javascript/Typescript](#javascripttypescript)
   - [Json](#json)
@@ -695,6 +696,33 @@ Using [Haskell IDE Engine](https://github.com/haskell/haskell-ide-engine)
   }
 }
 ```
+
+### Haxe
+
+Install the [coc-haxe](https://github.com/vantreeseba/coc-haxe) plugin, then run `:CocInstall coc-haxe`.
+
+Otherwise, either use the language server that comes with VS Code, or build it yourself: see [vshaxe/haxe-language-server](https://github.com/vshaxe/haxe-language-server).
+
+```jsonc
+{
+    "languageserver": {
+        "haxe": {
+            "command": "node",
+            "args": ["<path-to-server.js>"],
+            "filetypes": ["haxe"],
+            "trace.server": "verbose",
+            "initializationOptions": {
+                "displayArguments": ["build.hxml"]
+            },
+            "settings": {
+                "haxe.executable": "haxe"
+            }
+        }
+    }
+}
+```
+
+Where <path-to-server.js> can either be a server.js you built from source or simply downloaded as part of the Haxe Visual Studio Code extension ("/<you-home-folder>/.vscode/extensions/nadako.vshaxe-<version>/bin/server.js").
 
 ### Html
 
