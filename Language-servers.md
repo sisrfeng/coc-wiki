@@ -1241,13 +1241,11 @@ Make sure solargraph is in your \$PATH (sudo gem install solargraph) or use `sol
 #### Using [TypeProf](https://github.com/ruby/typeprof):
 
 ```json
-{
-  "languageserver": {
-    "typeprof": {
-      "command": "typeprof",
-      "args": ["--lsp", "--stdio"],
-      "filetypes": ["ruby"]
-    }
+"languageserver": {
+  "typeprof": {
+    "command": "typeprof",
+    "args": ["--lsp", "--stdio"],
+    "filetypes": ["ruby"]
   }
 }
 ```
