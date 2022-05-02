@@ -51,6 +51,7 @@
   - [Ruby](#ruby)
   - [Ruby Sorbet](#using-sorbet)
   - [Ruby Steep](#using-steep)
+  - [Ruby TypeProf](#using-typeprof)
   - [Rust](#rust)
   - [SQL](#sql)
   - [Scala](#scala)
@@ -1233,6 +1234,20 @@ Make sure solargraph is in your \$PATH (sudo gem install solargraph) or use `sol
     "command": "steep",
     "args" : ["langserver"],
     "filetypes": ["ruby"]
+  }
+}
+```
+
+#### Using [TypeProf](https://github.com/ruby/typeprof):
+
+```json
+{
+  "languageserver": {
+    "typeprof": {
+      "command": "typeprof",
+      "args": ["--lsp", "--stdio"],
+      "filetypes": ["ruby"]
+    }
   }
 }
 ```
