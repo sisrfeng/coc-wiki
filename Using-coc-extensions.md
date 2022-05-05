@@ -204,7 +204,8 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-docker](https://github.com/josa42/coc-docker)** for `dockerfile`.
 * **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
 * **[coc-elixir](https://github.com/elixir-lsp/coc-elixir)** for `elixir`, based on [elixir-ls](https://github.com/elixir-lsp/elixir-ls/).
-* **[coc-ember](https://github.com/NullVoxPopuli/coc-ember)** for ember projects.
+* **[coc-ember](https://github.com/NullVoxPopuli/coc-ember)** for ember projects. Wraps [@lifeart](https://github.com/lifeart)'s [ember-language-server](https://github.com/lifeart/ember-language-server)
+* **[coc-glint](https://github.com/NullVoxPopuli/coc-glint)** for typed ember projects. Wraps [typed-ember](https://github.com/typed-ember)'s [glint-language-server](https://github.com/typed-ember/glint/tree/main/packages/core/bin)
 * **[coc-emmet](https://github.com/neoclide/coc-emmet)** provides emmet suggestions in completion list.
 * **[coc-erlang_ls](https://github.com/hyhugh/coc-erlang_ls)** for `erlang`, based on [erlang_ls](https://github.com/erlang-ls/erlang_ls)
 * **[coc-esbonio](https://github.com/yaegassy/coc-esbonio)** for `rst` (reStructuredText), [esbonio](https://pypi.org/project/esbonio/) ([Sphinx] Python Documentation Generator) language server extension.
