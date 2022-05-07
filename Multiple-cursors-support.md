@@ -1,4 +1,4 @@
-With the multiple cursors feature, you can change many places of current document at one time.
+With the multiple cursors feature, you can change many places of the current document at one time.
 
 Multiple cursors are actually multiple text ranges.
 
@@ -37,7 +37,7 @@ nmap <silent> <C-d> <Plug>(coc-cursors-word)*
 xmap <silent> <C-d> y/\V<C-r>=escape(@",'/\')<CR><CR>gN<Plug>(coc-cursors-range)gn
 ```
 
-Or more vscode like behavior:
+Or more VSCode like behavior:
 
 ``` viml
 nmap <expr> <silent> <C-d> <SID>select_current_word()
@@ -62,7 +62,7 @@ call CocAction('runCommand', 'editor.action.addRanges', hlRanges)
 
 ## Rename current variable
 
-One common task is rename the variable name under cursor.
+One common task is to rename the variable name under cursor.
 
 Use command `:CocCommand document.renameCurrentWord` to start cursors session with ranges contain current word.
 
@@ -88,11 +88,11 @@ The key-mappings would be created when cursors session activated, and removed wh
 
 Use `"cursors.cancelKey"` to cancel cursors session, default to `<Esc>`.
 
-The session would also be canceled when buffer change can't be applied for ranges or the cursor jump to another window.
+The session would also be canceled when buffer change can't be applied for ranges.
 
 ## Use refactor action
 
-Use `<Plug>(coc-refactor)` for create a refactor window of current symbol.
+Use `<Plug>(coc-refactor)` for creating a refactor window of current symbol.
 
 **Note:** it requires rename feature of language server to work.
 
@@ -115,9 +115,9 @@ Available configurations for refactor:
 
 ## Use CocSearch command
 
-For rename variable across files in current cwd, use `:CocSearch` command which requires [ripgrep](https://github.com/BurntSushi/ripgrep) to work.
+For rename variable across files in current cwd, use `:CocSearch` command, which requires [ripgrep](https://github.com/BurntSushi/ripgrep) to work.
 
-Each range of lines would be added to refactor window asynchronously and matched ranges would be added to cursors session for rename.
+Each range of lines would be added to refactor window asynchronously, and matched ranges would be added to cursors session for rename.
 
 <img width="620" alt="Screen Shot 2019-07-26 at 7 25 53 PM" src="https://user-images.githubusercontent.com/251450/61948853-8aa0bf80-afdb-11e9-8e81-107eaed53c4b.png">
 
