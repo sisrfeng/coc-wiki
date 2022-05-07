@@ -92,14 +92,14 @@ autocmd User CocStatusChange call s:StatusNotify()
 
 `coc.nvim` uses echo* commands to write variety of messages. In order to intercept those, monkey patching it by utilizing vim's `after` directory (see `:help after-directory`) is one approach. 
 
-First, create `coc/util.vim` file in the `autoload` after-directory in your vim's runtime path (e.g. `~/.vim/after/autoload`). For instance, place the following content in the file `~/.vim/after/autoload/coc/util.vim` --
+First, create `coc/ui.vim` file in the `autoload` after-directory in your vim's runtime path (e.g. `~/.vim/after/autoload`). For instance, place the following content in the file `~/.vim/after/autoload/coc/ui.vim` --
 
 ```vim
 scriptencoding utf-8
 
 if has("nvim")
-  " overwrite coc#util#echo_messages function to use notify
-  function! coc#util#echo_messages(hl, msgs)
+  " overwrite coc#ui#echo_messages function to use notify
+  function! coc#ui#echo_messages(hl, msgs)
     if a:hl !~# 'Error' && (mode() !~# '\v^(i|n)$')
       return
     endif
@@ -121,7 +121,7 @@ if has("nvim")
     call v:lua.coc_notify(msg, level)
   endfunction
 
-  function! coc#util#echo_lines(lines)
+  function! coc#ui#echo_lines(lines)
     let msg = join(a:lines, "\n")
     call v:lua.coc_notify(msg, 'info')
   endfunction
@@ -135,7 +135,7 @@ Next, manually source this file after coc.nvim has initialized. You can modify `
 ```vim
 function! s:InitCoc() abort
   " load overrides
-  runtime! autoload/coc/util.vim
+  runtime! autoload/coc/ui.vim
   execute "lua vim.notify('Initialized coc.nvim for LSP support', 'info', { title = 'LSP Status' })"
 endfunction
 
