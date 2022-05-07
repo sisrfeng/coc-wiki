@@ -75,7 +75,7 @@ When cursors session is activated, you can change one placeholder to reflect cha
 * You can change the text any way you want to, like normal command or insert text.
 * You can change around the text by command like `ysiw"` (with `tpope/vim-surround` installed).
 * You can undo & redo the changes.
-* You **can't** insert new line, it would cancel cursors session.
+* You **can't** insert new line in ranges of cursors, it would cancel cursors session.
 
 ## Jump between ranges of cursors
 
