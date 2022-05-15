@@ -159,11 +159,15 @@ nnoremap <silent> <leader>h :call CocActionAsync('doHover')<cr>
 
 ## Cursor disappeared after exit CocList
 
-Possible bug with `guicursor` option on your terminal, you can disable transparent cursor by `let g:coc_disable_transparent_cursor = 1` in your .vimrc.
+Possible bug with `guicursor` option on your terminal, you can disable transparent cursor by 
+```vim
+let g:coc_disable_transparent_cursor = 1
+```
+in your .vimrc.
 
 ## Invalid insert state when type `#` after completion
 
 Bug of vim https://github.com/neovim/neovim/issues/18565, use key-mappings like
-```
+```vim
 inoremap # <space><backspace>#
 ```
