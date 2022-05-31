@@ -4,7 +4,7 @@ It's json that supports comments, like:
 ``` jsonc
 {
   // my variable
-  "foo": "bar"
+  "key.sub-key": "value"
 }
 ```
 
