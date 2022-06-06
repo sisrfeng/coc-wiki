@@ -18,6 +18,7 @@
   - [Dhall](#dhall)
   - [Dockerfile](#dockerfile)
   - [Elixir](#elixir)
+  - [Elvish](#elvish)
   - [Erlang](#erlang)
   - [Elm](#elm)
   - [Flow](#flow)
@@ -420,6 +421,22 @@ If you want to use @spec suggestions you have to enable codelens.
   "elixirLS": {
     "command": "/absolute/path/to/elixir-ls/release/language_server.sh",
     "filetypes": ["elixir", "eelixir"]
+  }
+}
+```
+
+### Elvish
+
+Using the [builtin language server](https://elv.sh/ref/command.html#command-line-flags)
+
+```jsonc
+{
+  "languageserver": {
+    "elvish": {
+      "command": "elvish",
+      "args": ["-lsp"],
+      "filetypes": ["elvish"]
+    }
   }
 }
 ```
