@@ -662,6 +662,8 @@ Using [Haskell Language Server](https://github.com/haskell/haskell-language-serv
 
 With this you can avoid building anything from scratch and can start coding Haskell files right away.
 
+--
+
 Using [ghcide](https://github.com/haskell/ghcide) with `stack exec`
 
 1. Build `ghcide` with the `copy-compiler-tool` flag i.e. Instead of using
@@ -689,6 +691,8 @@ Using [ghcide](https://github.com/haskell/ghcide) with `stack exec`
      //...
    }
    ```
+
+--
 
 Using [Haskell IDE Engine](https://github.com/haskell/haskell-ide-engine)
 
