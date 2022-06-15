@@ -31,6 +31,7 @@
   - [Haskell](#haskell)
   - [Haxe](#haxe)
   - [Html](#html)
+  - [Java](#java)
   - [Javascript/Typescript](#javascripttypescript)
   - [Json](#json)
   - [Julia](#julia)
@@ -749,6 +750,10 @@ Where <path-to-server.js> can either be a server.js you built from source or sim
 ### Html
 
 Use [coc-html](https://github.com/neoclide/coc-html) is recommended.
+
+### Java
+
+Use [coc-java](https://github.com/neoclide/coc-java) is recommended.
 
 ### Javascript/Typescript
 
