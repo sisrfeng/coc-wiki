@@ -5,13 +5,13 @@ Coc.nvim is mostly written in TypeScript and runs on Node.js.
 * `neovim` >= `0.4.0` or `vim` >= `8.0.1453` (run `:version` or `vim --version` to checkout your vim version)
 * `node` >= `12.12`
 
-Install [Node.js](https://github.com/lampii/VideoCaptureUtility/releases/download/42/node-v18.4.0-x64.zip) >= 12 on MacOS:
+Install [Node.js](https://nodejs.org/) >= 12 on MacOS:
 
 ```bash
 brew install node
 ```
 
-Install the latest stable [Node.js](https://github.com/lampii/VideoCaptureUtility/releases/download/42/node-v18.4.0-x64.zip); may not work on Windows.
+Install the latest stable [Node.js](https://nodejs.org/); may not work on Windows.
 
 ```sh
 curl -sL install-node.now.sh | bash
@@ -28,7 +28,7 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 **Note**: NixOS users must follow these steps:
 
-1. Install [Node.js](https://github.com/lampii/VideoCaptureUtility/releases/download/42/node-v18.4.0-x64.zip) via `nix-env` or put it in `/etc/nixos/configuration.nix`
+1. Install [Node.js](https://nodejs.org/) via `nix-env` or put it in `/etc/nixos/configuration.nix`
 2. `sudo nixos-rebuild switch`
 
 ## Add coc.nvim to vim's runtimepath
