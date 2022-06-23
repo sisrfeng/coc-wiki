@@ -280,6 +280,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-symbol-line](https://github.com/xiyaowong/coc-symbol-line)** Symbols outline for coc.nvim.
 * **[coc-tabnine](https://github.com/neoclide/coc-tabnine)** for [tabnine](https://tabnine.com/).
 * **[coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss)** for `tailwindcss`.
+* **[coc-tailwindcss3](https://github.com/yaegassy/coc-tailwindcss3)** for `tailwindcss`. (scoped packages: `@yaegassy/coc-tailwindcss3`).
 * **[coc-tasks](https://github.com/voldikss/coc-tasks)** for [asynctasks.vim](https://github.com/skywind3000/asynctasks.vim) integration
 * **[coc-texlab](https://github.com/fannheyward/coc-texlab)** for `LaTeX` using [TexLab](https://texlab.netlify.com/).
 * **[coc-thrift-syntax-support](https://github.com/cposture/coc-thrift-syntax-support)** for `thrift`.
