@@ -235,7 +235,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-julia](https://github.com/fannheyward/coc-julia)** for [`julia`](https://julialang.org/).
 * **[coc-just-complete](https://github.com/voldikss/coc-just-complete)** Press `_` to trigger buffer source completion.
 * **[coc-lists](https://github.com/neoclide/coc-lists)** provides some basic lists like fzf.vim.
-* **[coc-lightbulb](https://github.com/xiyaowong/coc-lightbulb-)** VSCode 💡 for coc.nvim
+* **[coc-lightbulb](https://github.com/xiyaowong/coc-lightbulb-)** Code action 💡 for coc.nvim
 * **[coc-lsp-wl](https://github.com/voldikss/coc-lsp-wl)** for `wolfram mathematica`, fork of [vscode-lsp-wl](https://github.com/kenkangxgwe/vscode-lsp-wl).
 * **[coc-ltex](https://valentjn.github.io/ltex/vscode-ltex/installation-usage-coc-ltex.html)** grammar/spell checker
 * **[coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)** for markdown linting
