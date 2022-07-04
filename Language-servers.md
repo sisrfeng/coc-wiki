@@ -612,7 +612,15 @@ Using [sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
 
 ### Godot
 
-Using [`coc-godot`](https://github.com/j3d42/coc-godot).
+```json
+"languageserver": {
+    "godot": {
+      "host": "127.0.0.1",
+      "filetypes": ["gd", "gdscript3"],
+      "port": 6008
+    }
+}
+```
 
 ### GraphQL
 
