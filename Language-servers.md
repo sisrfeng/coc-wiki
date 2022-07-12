@@ -1206,11 +1206,11 @@ Using the [racket-langserver](https://github.com/jeapostrophe/racket-langserver)
     "racket": {
       "command": "racket",
       "args": [
-        "--lib",
+        "-l",
         "racket-langserver"
       ],
       "filetypes": [
-        "scheme"
+        "scheme", "rkt"
       ]
     }
   }
