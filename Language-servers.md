@@ -4,7 +4,7 @@
 - [Register custom language servers](#register-custom-language-servers)
 - [Example language server configuration](#example-language-server-configuration)
   - [Ada/SPARK](#adaspark)
-  - [Apache Camel](#Apache camel)
+  - [Apache Camel](#Apachecamel)
   - [Arduino](#Arduino)
   - [Bash](#bash)
   - [C/C++/Objective-C](#ccobjective-c)
@@ -160,7 +160,7 @@ Via [coc-als](https://github.com/de-passage/coc-als), or:
   }
 }
 ```
-### Apache camel
+### Apachecamel
 
 Use [`coc-camel`](https://github.com/camel-tooling/coc-camel)
 
