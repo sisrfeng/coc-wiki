@@ -202,6 +202,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-dash-complete](https://github.com/voldikss/coc-dash-complete)** Press `-` to trigger buffer source completion.
 * **[coc-dot-complete](https://github.com/voldikss/coc-dot-complete)** Press `.` to trigger buffer source completion.
 * **[coc-docker](https://github.com/josa42/coc-docker)** for `dockerfile`.
+* **[coc-dlang](https://github.com/vushu/coc-dlang)** for `d code completion`, based on [serve-d](https://github.com/Pure-D/serve-d).
 * **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
 * **[coc-elixir](https://github.com/elixir-lsp/coc-elixir)** for `elixir`, based on [elixir-ls](https://github.com/elixir-lsp/elixir-ls/).
 * **[coc-ember](https://github.com/NullVoxPopuli/coc-ember)** for ember projects. Wraps [@lifeart](https://github.com/lifeart)'s [ember-language-server](https://github.com/lifeart/ember-language-server)
