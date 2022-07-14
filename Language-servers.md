@@ -4,6 +4,7 @@
 - [Register custom language servers](#register-custom-language-servers)
 - [Example language server configuration](#example-language-server-configuration)
   - [Ada/SPARK](#adaspark)
+  - [Apache Camel](#Apache camel)
   - [Arduino](#Arduino)
   - [Bash](#bash)
   - [C/C++/Objective-C](#ccobjective-c)
@@ -158,6 +159,13 @@ Via [coc-als](https://github.com/de-passage/coc-als), or:
     "filetypes": ["ada"]
   }
 }
+```
+### Apache camel
+
+Use [`coc-camel`](https://github.com/camel-tooling/coc-camel)
+
+```
+:CocInstall coc-camel
 ```
 
 ### Arduino
