@@ -1,11 +1,10 @@
 ## Highlights of coc.nvim's completion
 
-* **Full LSP completion support**, especially snippet and `additionalTextEdit` feature. You'll understand why it's awesome when you experience it with a coc extension like `coc-tsserver`.
-* **Completion resolving on completion item change**, it does async completion resolve on completion item change and the detail and documentation will be shown in a float window when possible.
+* **Full LSP completion support**, especially snippet and `additionalTextEdit` feature.
+* **Completion resolving on completion item change**, it does asynchronous completion resolve on completion item change and the detail and documentation will be shown in a float window when possible.
 * **Asynchronous and parallel completion request**. Unless using vim sources, your vim will never be blocked.
 * **Incomplete request and cancel request support**, only incomplete completion requests will be triggered on filtering completion items and cancellation requests are sent to servers only when necessary.
-* **Start completion without timer**. The completion will start after you type the first letter of a word by default and is filtered with new input after the completion has finished. Other completion engines use a timer to trigger completion, so you always have to wait after the typed character.
-* **Realtime buffer keywords**. Coc will generate buffer keywords on buffer change in the background (with debounce), while some completion engines use a cache which isn't always correct.  Plus, [Locality bonus feature](https://code.visualstudio.com/docs/editor/intellisense#_locality-bonus) from VSCode is enabled by default.
+* **Real-time buffer keywords**. Coc will generate buffer keywords on buffer change in the background (with debounce), while some completion engines use a cache which isn't always correct.  Plus, [Locality bonus feature](https://code.visualstudio.com/docs/editor/intellisense#_locality-bonus) from VSCode is enabled by default.
 * **Filter completion items when possible.** When you do a fuzzy filter with completion items, some completion engines will trigger a new completion, but coc.nvim will filter the items when possible, which makes it much faster.
 
 ## Trigger mode of completion
@@ -18,43 +17,38 @@ There are 3 different trigger modes:
 
 Lots of completion behavior can be changed by [using the configuration file](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file), check out `:h coc-config-suggest` for details.
 
-
 ## Limitation of coc.nvim's completion
-
-By default, coc.nvim use its own `completeopt` option during completion to provide the best auto-completion experience.
 
 There's no function of coc.nvim that can be used as `omnifunc` because it's not possible to support all LSP completion features when using `omnifunc`.
 
-For features like `textEdit` and `additionalTextEdits`(mostly used by automatic import feature) of LSP to work, you **have to** confirm completion, which is `<C-y>` by default in vim. Read the next section for example key-mappings.
+For features like `textEdit` and `additionalTextEdits`(mostly used by automatic import feature) of LSP to work, you **have to** confirm completion by `coc#pum#confirm()`
 
 ## Use `<cr>` to confirm completion
 
-You have to remap `<cr>` to make sure it confirms completion when popup menu is visible, since default behavior of `<CR>` could be different in regard to current completion state and `completeopt` option (`:h popupmenu-keys`).
+You have to remap `<cr>` to make it confirms completion.
 
 ``` vim
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+```
+
+To make `<cr>` select the first completion item and confirm the completion when no item has been selected:
+
+``` vim
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 ```
 
 **Note:** `\<C-g>u` is used to break undo level.
    
-To make `<cr>` select the first completion item and confirm the completion when no item has been selected:
+To make coc.nvim format your code on `<cr>`:
 
 ``` vim
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 ```
 
-to make coc.nvim format your code on `<cr>`:
-
-``` vim
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-```
-
-Use `complete_info()` if you need to confirm completion, only when there's selected complete item:
+Use `coc#pum#info()` if you need to confirm completion, only when there's selected complete item:
 
 ```vim
-if exists('*complete_info')
-  inoremap <silent><expr> <cr> complete_info(['selected'])['selected'] != -1 ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
+inoremap <silent><expr> <cr> coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#confirm() : "\<C-g>u\<CR>"
 ```
 
 ## Use `<Tab>` or custom key for trigger completion
@@ -63,14 +57,14 @@ You can make use of `coc#refresh()` to trigger completion like this:
 
 ``` vim
 " use <tab> for trigger completion and navigate to the next complete item
-function! s:check_back_space() abort
+function! CheckBackspace() abort
   let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
+  return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 inoremap <silent><expr> <Tab>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 ```
 
@@ -79,18 +73,15 @@ inoremap <silent><expr> <Tab>
 ``` vim
 " use <c-space>for trigger completion
 inoremap <silent><expr> <c-space> coc#refresh()
-```
-Some terminals may send \<NUL> when you press \<c-space>, so you could instead:
-``` vim
-" use <c-space>for trigger completion
-inoremap <silent><expr> <NUL> coc#refresh()
+" Use <C-@> on vim
+inoremap <silent><expr> <c-@> coc#refresh()
 ```
 
 ## Use `<Tab>` and `<S-Tab>` to navigate the completion list:
 
 ``` vim
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 ```
 
 ## Completion sources
