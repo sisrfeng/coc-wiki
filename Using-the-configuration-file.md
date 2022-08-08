@@ -14,6 +14,14 @@ To get correct comment highlighting, you can install [vim-jsonc](https://github.
 ```
 to your `.vimrc` or `init.vim`.
 
+You can also use modeline to set filetype as jsonc. Add:
+
+``` vim
+// vim: filetype=jsonc
+```
+
+to the start or end of `coc-settings.json`. See [`:h modeline`](https://vimhelp.org/options.txt.html#modeline) for more information.
+
 ## Opening the configuration file
 
 Use the command `:CocConfig` to open your user configuration file, you can create a shortcut for the command like this:
