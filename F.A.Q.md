@@ -1,5 +1,23 @@
 Here are some common problems that you may need to understand when working with coc.nvim.
 
+## Some highlight groups not work after colorscheme command?
+
+Most color scheme clears existing highlights when loaded, make
+sure set your highlights with `ColorScheme` autocmd, like:
+```vim
+autocmd ColorScheme * call Highlight()
+
+function! Highlight() abort
+  hi Conceal ctermfg=239 guifg=#504945
+  hi CocSearch ctermfg=12 guifg=#18A3FF
+endfunction
+```
+And you have to use nested autocmd to make `ColorScheme` autocmd
+fired when using autocmd to change color scheme.
+```vim
+autocmd vimenter * ++nested colorscheme gruvbox
+```
+
 ## Can't get keywords completion items from other buffer.
 
 The buffer source only provide keywords from buffers meet these conditions:
@@ -10,7 +28,6 @@ The buffer source only provide keywords from buffers meet these conditions:
 ## Environment node doesn't meet the requirement.
 
 Use `let g:coc_node_path = '/path/to/node'` to make coc.nvim use custom node executable.
-
 
 ## How could I use omnifunc option to trigger completion of coc.nvim?
 
@@ -26,13 +43,6 @@ Note that some terminals send `<NUL>` when you press `<c-space>`, so you could u
 ``` vim
   inoremap <silent><expr> <NUL> coc#refresh()
 ```
-
-## How to make preview window shown aside with pum?
-
-For vim, make sure `echo has('textprop') && has('patch-8.1.1719')` echo `1`.
-For neovim, make sure `:echo exists('##CompleteChanged') && exists('*nvim_open_win')` echo `1`.
-
-To preview expanded snippet body, you can use [coc-snippets](https://github.com/neoclide/coc-snippets).
 
 ## My vim is blocked sometimes.
 
@@ -112,13 +122,6 @@ let g:coc_disable_transparent_cursor = 1
 ```
 in your .vimrc.
 
-## Invalid insert state when type `#` after completion
-
-Bug of vim https://github.com/neovim/neovim/issues/18565, use key-mappings like
-```vim
-inoremap # <space><backspace>#
-```
-
 ## Floating window position is wrong after scroll the screen.
 
 It's expected since the float windows/popups are absolutely positioned.
@@ -144,4 +147,4 @@ Checkout `:h coc#float#has_scroll()`
 
 ## How to open link in float window?
 
-Focus the window by `<C-w>w` if it's focusable and invoke `:call CocAction('openlink')`
+Focus the window by `<C-w>w` if it's focusable on neovim and invoke `:call CocAction('openlink')`
