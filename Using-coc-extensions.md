@@ -193,6 +193,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-clangd](https://github.com/clangd/coc-clangd)** for C/C++/Objective-C, use [clangd](https://clangd.github.io)
 * **[coc-clang-format-style-options](https://www.npmjs.com/package/coc-clang-format-style-options)** coc.nvim extension, helps you write `.clang-format` more easily.
 * **[coc-cmake](https://github.com/voldikss/coc-cmake)** for cmake code completion
+* **[coc-copilot](https://github.com/yuki-yano/coc-copilot)** for GitHub Copilot completion
 * **[coc-css](https://github.com/neoclide/coc-css)** for `css`, `scss` and `less`.
 * **[coc-cssmodules](https://github.com/antonk52/coc-cssmodules)** css modules intellisense.
 * **[coc-deno](https://github.com/fannheyward/coc-deno)** for [deno](https://github.com/denoland/deno),  fork of [vscode_deno](https://github.com/denoland/vscode_deno).
