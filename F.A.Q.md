@@ -1,5 +1,13 @@
 Here are some common problems that you may need to understand when working with coc.nvim.
 
+## Unexpected diagnostics when using easymotion.
+
+Use autocmd like:
+```vim
+autocmd User EasyMotionPromptBegin :let b:coc_diagnostic_disable = 1
+autocmd User EasyMotionPromptEnd :let b:coc_diagnostic_disable = 0
+```
+
 ## Some highlight groups not work after colorscheme command?
 
 Most color scheme clears existing highlights when loaded, make
