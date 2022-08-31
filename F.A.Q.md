@@ -26,6 +26,20 @@ fired when using autocmd to change color scheme.
 autocmd vimenter * ++nested colorscheme gruvbox
 ```
 
+## The selection highlight not looks good.
+
+`CocMenuSel` is used for highlight select item, the highlight group uses background color from `PmenuSel`. 
+However, many color schemes not considered other highlights inside it. 
+
+You can change the highlight group by:
+```vim
+hi CocMenuSel ctermbg=237 guibg=#13354A
+```
+in your vimrc, to survive after color scheme change, use:
+```vim
+autocmd ColorScheme * hi CocMenuSel ctermbg=237 guibg=#13354A
+```
+
 ## Can't get keywords completion items from other buffer.
 
 The buffer source only provide keywords from buffers meet these conditions:
