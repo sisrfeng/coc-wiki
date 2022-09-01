@@ -201,7 +201,7 @@ You can find available coc extensions by searching [coc.nvim on npm](https://www
 * **[coc-discord](https://github.com/amiralies/coc-discord)** discord rich presence for coc.nvim
 * **[coc-discord-rpc](https://github.com/LeonardSSH/coc-discord-rpc)** fully customizable discord rpc integration with support for over 130+ of the most popular languages
 * **[coc-dash-complete](https://github.com/voldikss/coc-dash-complete)** Press `-` to trigger buffer source completion.
-* **[coc-dot-complete](https://github.com/voldikss/coc-dot-complete)** Press `.` to trigger buffer source completion.
+* **[coc-dot-complete](https://github.com/voldikss/coc-dot-complete)** Press `.` to trigger buffer source completion. *(Not maintained anymore)*
 * **[coc-docker](https://github.com/josa42/coc-docker)** for `dockerfile`.
 * **[coc-dlang](https://github.com/vushu/coc-dlang)** for `d` code completion, based on [serve-d](https://github.com/Pure-D/serve-d).
 * **[coc-ecdict](https://github.com/fannheyward/coc-ecdict)** ECDICT extension
