@@ -328,7 +328,7 @@ Make sure you have `crystalline` available in your PATH
 
 ### Css/Less/Sass
 
-Use [coc-css](https://github.com/neoclide/coc-css/issues/21) is recommended.
+Use [coc-css](https://github.com/neoclide/coc-css) is recommended.
 
 ### Dart
 
