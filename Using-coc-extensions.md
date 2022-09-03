@@ -1,6 +1,12 @@
 ### Why are coc extensions needed?
 
-The main reason for having extensions is to achieve better user experience. Some language servers provided by the community do not behave as well as VSCode extensions. Coc extensions can be forked from VSCode extensions and should provide similar or better user experience.
+The main reason for having extensions
+is to achieve better user experience.
+Some language servers provided by
+the community do not behave as well as VSCode extensions.
+Coc extensions can be forked from VSCode extensions and
+should provide similar or
+better user experience.
 
 Compared to configured language servers, extensions allow more features.
 
